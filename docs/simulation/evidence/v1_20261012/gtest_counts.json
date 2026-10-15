@@ -1,0 +1,173 @@
+{
+  "cases": 284,
+  "suites": [
+    {
+      "package": "mtc_core_cpp",
+      "file": "test_core_types.gtest.xml",
+      "tests": 22,
+      "failures": 0,
+      "errors": 0,
+      "disabled": 0
+    },
+    {
+      "package": "mtc_core_cpp",
+      "file": "test_error_codes_msg_parity.gtest.xml",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "disabled": 0
+    },
+    {
+      "package": "mtc_manipulation_cpp",
+      "file": "test_pick_place_audit.gtest.xml",
+      "tests": 16,
+      "failures": 0,
+      "errors": 0,
+      "disabled": 0
+    },
+    {
+      "package": "mtc_manipulation_cpp",
+      "file": "test_pick_place_fsm_v1.gtest.xml",
+      "tests": 13,
+      "failures": 0,
+      "errors": 0,
+      "disabled": 0
+    },
+    {
+      "package": "mtc_manipulation_cpp",
+      "file": "test_pick_place_fsm_v2.gtest.xml",
+      "tests": 14,
+      "failures": 0,
+      "errors": 0,
+      "disabled": 0
+    },
+    {
+      "package": "mtc_manipulation_cpp",
+      "file": "test_pick_place_safety.gtest.xml",
+      "tests": 42,
+      "failures": 0,
+      "errors": 0,
+      "disabled": 0
+    },
+    {
+      "package": "mtc_manipulation_cpp",
+      "file": "test_pick_place_tables.gtest.xml",
+      "tests": 20,
+      "failures": 0,
+      "errors": 0,
+      "disabled": 0
+    },
+    {
+      "package": "mtc_manipulation_cpp",
+      "file": "test_tool_strategy.gtest.xml",
+      "tests": 15,
+      "failures": 0,
+      "errors": 0,
+      "disabled": 0
+    },
+    {
+      "package": "mtc_motion_execution_cpp",
+      "file": "test_executor_concurrency.gtest.xml",
+      "tests": 16,
+      "failures": 0,
+      "errors": 0,
+      "disabled": 0
+    },
+    {
+      "package": "mtc_motion_execution_cpp",
+      "file": "test_executor_core.gtest.xml",
+      "tests": 18,
+      "failures": 0,
+      "errors": 0,
+      "disabled": 0
+    },
+    {
+      "package": "mtc_motion_execution_cpp",
+      "file": "test_in_flight_guard.gtest.xml",
+      "tests": 6,
+      "failures": 0,
+      "errors": 0,
+      "disabled": 0
+    },
+    {
+      "package": "mtc_motion_execution_cpp",
+      "file": "test_mock_adapter.gtest.xml",
+      "tests": 27,
+      "failures": 0,
+      "errors": 0,
+      "disabled": 0
+    },
+    {
+      "package": "mtc_motion_execution_cpp",
+      "file": "test_validation.gtest.xml",
+      "tests": 21,
+      "failures": 0,
+      "errors": 0,
+      "disabled": 0
+    },
+    {
+      "package": "mtc_moveit_planner",
+      "file": "test_ee_limited_retiming.gtest.xml",
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "disabled": 0
+    },
+    {
+      "package": "mtc_moveit_planner",
+      "file": "test_fsm_accepts_planner_output.gtest.xml",
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "disabled": 0
+    },
+    {
+      "package": "mtc_moveit_planner",
+      "file": "test_moveit_planner_port.gtest.xml",
+      "tests": 23,
+      "failures": 0,
+      "errors": 0,
+      "disabled": 0
+    },
+    {
+      "package": "mtc_moveit_planner",
+      "file": "test_pose_math.gtest.xml",
+      "tests": 5,
+      "failures": 0,
+      "errors": 0,
+      "disabled": 0
+    },
+    {
+      "package": "mtc_moveit_planner",
+      "file": "test_scene_ids.gtest.xml",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "disabled": 0
+    },
+    {
+      "package": "mtc_moveit_planner",
+      "file": "test_start_consistency.gtest.xml",
+      "tests": 5,
+      "failures": 0,
+      "errors": 0,
+      "disabled": 0
+    },
+    {
+      "package": "mtc_moveit_planner",
+      "file": "test_tool_model.gtest.xml",
+      "tests": 5,
+      "failures": 0,
+      "errors": 0,
+      "disabled": 0
+    },
+    {
+      "package": "mtc_moveit_planner",
+      "file": "test_trajectory_conversion.gtest.xml",
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "disabled": 0
+    }
+  ]
+}

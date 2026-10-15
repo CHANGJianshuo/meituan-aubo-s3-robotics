@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>mtc_moveit_planner</name>
+  <version>0.1.0</version>
+  <description>
+    MoveIt 2 规划适配层：实现 mtc_manipulation_cpp 的 PlannerPort，
+    把 PlanTarget（阶段 / 原语 / 6D 位姿）转换为 MoveIt 2 规划请求，
+    并逐原语返回完整时间参数化轨迹（PlanResult.commands[].trajectory）。
+
+    分两层：
+      mtc_moveit_planner_core   —— 纯 C++（不依赖 MoveIt / rclcpp），可离线 GTest；
+      mtc_moveit_planner_moveit —— MoveGroupInterface + tf2 后端（ROS 外壳）。
+
+    本包只做规划，不执行轨迹、不连接真实设备；输出默认 simulation_only=true，
+    直到 TCP / 工位 / TF 标定为 MEASURED 且团队批准。
+  </description>
+  <maintainer email="changjianshuo00@gmail.com">changjianshuo</maintainer>
+  <license>MIT</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <depend>mtc_core_cpp</depend>
+  <depend>mtc_manipulation_cpp</depend>
+  <depend>mtc_motion_execution_cpp</depend>
+  <depend>rclcpp</depend>
+  <depend>geometry_msgs</depend>
+  <depend>trajectory_msgs</depend>
+  <depend>moveit_msgs</depend>
+  <depend>moveit_core</depend>
+  <depend>moveit_ros_planning</depend>
+  <depend>moveit_ros_planning_interface</depend>
+  <depend>tf2</depend>
+  <depend>tf2_ros</depend>
+  <depend>tf2_geometry_msgs</depend>
+  <depend>geometric_shapes</depend>
+  <depend>shape_msgs</depend>
+
+  <exec_depend>moveit_configs_utils</exec_depend>
+  <exec_depend>aubo_description</exec_depend>
+  <exec_depend>aubo_moveit_config</exec_depend>
+
+  <test_depend>ament_cmake_gtest</test_depend>
+  <test_depend>ament_cmake_pytest</test_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

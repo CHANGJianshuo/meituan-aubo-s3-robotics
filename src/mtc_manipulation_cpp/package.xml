@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>mtc_manipulation_cpp</name>
+  <version>0.1.0</version>
+  <description>
+    单块电池抓放状态机（第二层 PickPlace FSM）的 C++17 迁移实现。
+    对应既有 Python 参考实现
+    src/mtc_manipulation/mtc_manipulation/{pick_place_fsm,tool_strategy}.py。
+
+    迁移范围：22 个状态、端口契约、看门狗、取消与停稳确认、恢复预算、
+    V1（被动舌规）/ V2（电磁锁止）策略切换，以及八条安全语义。
+
+    安全语义由类型与测试双重保障：placement_verified 为 private 且只有
+    VERIFY_PLACED 一个写入口；运动状态未知时锁定自动重发；
+    V2 解锁必须同时满足"已确认落座"与"已卸载"。
+
+    旧 Python 实现**保持不变**，作为本实现的行为基线。
+    本包不依赖 rclcpp，也不连接任何真实设备。
+  </description>
+  <maintainer email="dev@example.com">meituan_challenge_ws maintainers</maintainer>
+  <license>MIT</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <depend>mtc_core_cpp</depend>
+  <depend>mtc_motion_execution_cpp</depend>
+
+  <test_depend>ament_cmake_gtest</test_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

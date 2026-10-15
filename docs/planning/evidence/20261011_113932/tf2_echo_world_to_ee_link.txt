@@ -1,0 +1,52 @@
+[INFO] [1791736796.565247973] [tf2_echo]: Waiting for transform world ->  ee_link: Invalid frame ID "world" passed to canTransform argument target_frame - frame does not exist
+At time 1791736797.464558234
+- Translation: [-0.000, -0.256, 0.807]
+- Rotation: in Quaternion (xyzw) [0.500, -0.500, 0.500, 0.500]
+- Rotation: in RPY (radian) [0.000, -1.571, 0.000]
+- Rotation: in RPY (degree) [0.000, -90.000, 0.000]
+- Matrix:
+  0.000 -1.000  0.000 -0.000
+  0.000 -0.000 -1.000 -0.256
+  1.000  0.000  0.000  0.807
+  0.000  0.000  0.000  1.000
+At time 1791736798.469556186
+- Translation: [-0.000, -0.256, 0.807]
+- Rotation: in Quaternion (xyzw) [0.500, -0.500, 0.500, 0.500]
+- Rotation: in RPY (radian) [0.000, -1.571, 0.000]
+- Rotation: in RPY (degree) [0.000, -90.000, 0.000]
+- Matrix:
+  0.000 -1.000  0.000 -0.000
+  0.000 -0.000 -1.000 -0.256
+  1.000  0.000  0.000  0.807
+  0.000  0.000  0.000  1.000
+At time 1791736799.469598415
+- Translation: [-0.000, -0.256, 0.807]
+- Rotation: in Quaternion (xyzw) [0.500, -0.500, 0.500, 0.500]
+- Rotation: in RPY (radian) [0.000, -1.571, 0.000]
+- Rotation: in RPY (degree) [0.000, -90.000, 0.000]
+- Matrix:
+  0.000 -1.000  0.000 -0.000
+  0.000 -0.000 -1.000 -0.256
+  1.000  0.000  0.000  0.807
+  0.000  0.000  0.000  1.000
+At time 1791736800.474669615
+- Translation: [-0.000, -0.256, 0.807]
+- Rotation: in Quaternion (xyzw) [0.500, -0.500, 0.500, 0.500]
+- Rotation: in RPY (radian) [0.000, -1.571, 0.000]
+- Rotation: in RPY (degree) [0.000, -90.000, 0.000]
+- Matrix:
+  0.000 -1.000  0.000 -0.000
+  0.000 -0.000 -1.000 -0.256
+  1.000  0.000  0.000  0.807
+  0.000  0.000  0.000  1.000
+At time 1791736801.434602823
+- Translation: [-0.000, -0.256, 0.807]
+- Rotation: in Quaternion (xyzw) [0.500, -0.500, 0.500, 0.500]
+- Rotation: in RPY (radian) [0.000, -1.571, 0.000]
+- Rotation: in RPY (degree) [0.000, -90.000, 0.000]
+- Matrix:
+  0.000 -1.000  0.000 -0.000
+  0.000 -0.000 -1.000 -0.256
+  1.000  0.000  0.000  0.807
+  0.000  0.000  0.000  1.000
+[INFO] [1791736802.254948823] [rclcpp]: signal_handler(SIGINT/SIGTERM)

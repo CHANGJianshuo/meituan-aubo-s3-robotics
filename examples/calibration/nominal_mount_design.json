@@ -1,0 +1,9 @@
+{
+  "data_kind": "MOUNT_DESIGN",
+  "status": "ESTIMATED",
+  "length_unit": "m",
+  "camera_model": "D435i",
+  "front_glass_center_in_F": [0.100, 0.0, 0.040],
+  "optical_axes_in_F_xyzw": [0.0, 0.0, 0.0, 1.0],
+  "notes": "Engineering layout proposal; F is a physical flange design datum, not yet verified as wrist3_Link. H is the housing centre on the front cover glass. Optional measured corrections: screw_axis_x_in_H_m (1/4-20 axis from H along optical X) and imager_axis_y_in_H_m (lens centreline from H along optical Y); absent means the zero-offset assumption reported in the output. Not a ROS parameter or real calibration case."
+}

@@ -1,0 +1,17 @@
+{"backoff_m":0.06,"direction":-1.0,"event":"selected","object":"battery_A","sim_time":1.64,"slot":"T0"}
+{"event":"state_entered","object":"battery_A","sim_time":1.64,"state":"RESOLVE_TARGET"}
+{"event":"goal_accepted","object":"battery_A","sim_time":1.64,"state":"RESOLVE_TARGET"}
+{"event":"state_entered","object":"battery_A","sim_time":1.64,"state":"PLAN_ACQUIRE"}
+{"event":"planning_goal","frame":"world","object":"battery_A","primitive":"side_insert","quat":[0.7071067811865477,0.7071067811865475,-5.551115123125783e-17,-5.551115123125783e-17],"sim_time":1.657,"xyz":[0.4505777919818971,0.2147785350063802,0.8204990927851217]}
+{"detail":"ok","event":"plan","fraction":1.0,"method":"cartesian_preferred","object":"battery_A","ok":true,"primitive":"side_insert","reason":"","sim_time":1.702}
+{"event":"planning_goal","frame":"world","object":"battery_A","primitive":"hook_engage","quat":[0.7071067811865477,0.7071067811865475,-5.551115123125783e-17,-5.551115123125783e-17],"sim_time":1.702,"xyz":[0.3905777919818971,0.2147785350063802,0.8204990927851217]}
+{"detail":"ok","event":"plan","fraction":1.0,"method":"cartesian","object":"battery_A","ok":true,"primitive":"hook_engage","reason":"","sim_time":1.704}
+{"event":"planning_goal","frame":"world","object":"battery_A","primitive":"test_lift","quat":[0.7071067811865477,0.7071067811865475,-5.551115123125783e-17,-5.551115123125783e-17],"sim_time":1.705,"xyz":[0.3905777919818971,0.2147785350063802,0.8454990927851216]}
+{"detail":"ok","event":"plan","fraction":1.0,"method":"cartesian","object":"battery_A","ok":true,"primitive":"test_lift","reason":"","sim_time":1.706}
+{"event":"state_entered","object":"battery_A","sim_time":1.708,"state":"MOVE_PRE_ALIGN"}
+{"duration_s":38.425508821675706,"event":"execute","object":"battery_A","primitive":"side_insert","sim_time":1.713}
+{"event":"cancel_requested","object":"battery_A","sim_time":36.006,"stop_verified":false}
+{"detail":"joint/contact feedback lost; wall ages=2.001698/2.017702","event":"motion_failed","object":"battery_A","sim_time":36.006}
+{"event":"fault","object":"battery_A","sim_time":36.006,"state":"MOVE_PRE_ALIGN"}
+{"event":"state_entered","object":"battery_A","sim_time":36.006,"state":"FAULT"}
+{"error_code":230,"event":"object_result","message":"joint/contact feedback lost; wall ages=2.001698/2.017702","object":"battery_A","placement_verified":false,"sim_time":36.006,"slot":"T0","stability_s":0.0,"states":["RESOLVE_TARGET","PLAN_ACQUIRE","MOVE_PRE_ALIGN","FAULT"],"success":false}

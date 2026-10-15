@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>mtc_task_cpp</name>
+  <version>0.1.0</version>
+  <description>
+    Task FSM（第一层）的 C++17 迁移实现。对应既有 Python 参考实现
+    src/mtc_task/mtc_task/task_fsm.py 与 task_validation.py。
+
+    迁移范围：状态、事件、超时、恢复、错误语义、并发 Goal 拒绝、动作意图产出。
+    本包不依赖 rclcpp，也不直接调用 AUBO SDK 或访问硬件；
+    所有外部副作用以 ActionRequest 形式返回，由第二阶段 ROS 2 外壳翻译成真实调用。
+
+    旧 Python 实现**保持不变**，作为本实现的行为基线。
+  </description>
+  <maintainer email="dev@example.com">meituan_challenge_ws maintainers</maintainer>
+  <license>MIT</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <depend>mtc_core_cpp</depend>
+
+  <test_depend>ament_cmake_gtest</test_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

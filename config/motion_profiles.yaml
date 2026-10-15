@@ -1,0 +1,106 @@
+# config/motion_profiles.yaml
+# 各阶段速度 / 加速度 / 距离 / timeout / 停稳容差（设计 §8）。
+#
+# !! 安全声明 !!
+# 本文件**每一项数值都是保守占位值**，未在任何真实 AUBO S3 上标定。
+# 所有数值旁均标注「待实物标定」或「占位值，禁止用于真实运动」。
+# 执行层（mtc_motion_execution）会对缩放因子做上限校验，超出即拒绝执行（500）。
+# 本文件不含任何凭据。
+
+mtc_motion_execution:
+  ros__parameters:
+
+    # 后端：mock 为默认；real / aubo 等取值一律落到 disabled，绝不连真实设备。
+    backend: "mock"                       # 占位值：默认绝不连接真实设备
+
+    # ---- 执行层已审核上限（能力校验硬上限，不得提高） ------------------
+    max_velocity_scaling: 0.2             # 占位值，禁止用于真实运动
+    max_acceleration_scaling: 0.2         # 占位值，禁止用于真实运动
+
+    # ---- 到位停稳判定（位置/速度/持续时间必须同时满足） ----------------
+    settle_position_tolerance_rad: 0.001  # 待实物标定
+    settle_velocity_tolerance_rad_s: 0.001 # 待实物标定
+    settle_duration_s: 0.2                # 待实物标定
+
+    # 关节限位（弧度）。占位值为保守小范围，标定后必须替换为真实软限位。
+    joint_names: ["shoulder_joint", "upperArm_joint", "foreArm_joint",
+                  "wrist1_joint", "wrist2_joint", "wrist3_joint"]
+    joint_lower_limit_rad: [-0.10, -0.10, -0.10, -0.10, -0.10, -0.10]  # 占位值，禁止用于真实运动
+    joint_upper_limit_rad: [0.10, 0.10, 0.10, 0.10, 0.10, 0.10]        # 占位值，禁止用于真实运动
+
+    # ---- 各阶段 profile（距离单位 m，时间单位 ms，速度单位 m/s） -------
+    # 命名与设计 §5.2 / §8 的动作矩阵一致；timeout_ms 必须 > 0。
+    profiles:
+
+      # --- 抓取侧 ---
+      pre_align:
+        max_linear_speed_m_s: 0.05        # 待实物标定（占位值，禁止用于真实运动）
+        max_angular_speed_rad_s: 0.20     # 待实物标定（占位值，禁止用于真实运动）
+        distance_m: 0.10                  # 待实物标定（占位值，禁止用于真实运动）
+        timeout_ms: 30000                 # 待实物标定
+        requires_contact: false
+      engage:
+        max_linear_speed_m_s: 0.01        # 待实物标定（占位值，禁止用于真实运动）
+        max_angular_speed_rad_s: 0.05     # 待实物标定（占位值，禁止用于真实运动）
+        distance_m: 0.03                  # 待实物标定（占位值，禁止用于真实运动）
+        timeout_ms: 15000                 # 待实物标定
+        requires_contact: true            # 接触敏感：必须低速受监护执行
+      test_lift:
+        max_linear_speed_m_s: 0.01        # 待实物标定（占位值，禁止用于真实运动）
+        max_angular_speed_rad_s: 0.05     # 待实物标定（占位值，禁止用于真实运动）
+        distance_m: 0.01                  # 待实物标定（占位值，禁止用于真实运动）
+        timeout_ms: 15000                 # 待实物标定
+        requires_contact: true
+      lift:
+        max_linear_speed_m_s: 0.02        # 待实物标定（占位值，禁止用于真实运动）
+        max_angular_speed_rad_s: 0.05     # 待实物标定（占位值，禁止用于真实运动）
+        distance_m: 0.05                  # 待实物标定（占位值，禁止用于真实运动）
+        timeout_ms: 30000                 # 待实物标定
+        requires_contact: false
+      transport:
+        max_linear_speed_m_s: 0.05        # 待实物标定（占位值，禁止用于真实运动）
+        max_angular_speed_rad_s: 0.20     # 待实物标定（占位值，禁止用于真实运动）
+        distance_m: 0.30                  # 待实物标定（占位值，禁止用于真实运动）
+        timeout_ms: 60000                 # 待实物标定
+        requires_contact: false
+
+      # --- 放置侧 ---
+      pre_seat:
+        max_linear_speed_m_s: 0.05        # 待实物标定（占位值，禁止用于真实运动）
+        max_angular_speed_rad_s: 0.20     # 待实物标定（占位值，禁止用于真实运动）
+        distance_m: 0.20                  # 待实物标定（占位值，禁止用于真实运动）
+        timeout_ms: 30000                 # 待实物标定
+        requires_contact: false
+      seat:
+        max_linear_speed_m_s: 0.01        # 待实物标定（占位值，禁止用于真实运动）
+        max_angular_speed_rad_s: 0.05     # 待实物标定（占位值，禁止用于真实运动）
+        distance_m: 0.02                  # 待实物标定（占位值，禁止用于真实运动）
+        timeout_ms: 20000                 # 待实物标定
+        requires_contact: true
+      unload:
+        max_linear_speed_m_s: 0.01        # 待实物标定（占位值，禁止用于真实运动）
+        max_angular_speed_rad_s: 0.05     # 待实物标定（占位值，禁止用于真实运动）
+        distance_m: 0.005                 # 待实物标定（占位值，禁止用于真实运动）
+        timeout_ms: 15000                 # 待实物标定
+        requires_contact: true
+      disengage:
+        max_linear_speed_m_s: 0.01        # 待实物标定（占位值，禁止用于真实运动）
+        max_angular_speed_rad_s: 0.05     # 待实物标定（占位值，禁止用于真实运动）
+        distance_m: 0.03                  # 待实物标定（占位值，禁止用于真实运动）
+        timeout_ms: 20000                 # 待实物标定
+        requires_contact: true
+      retreat:
+        max_linear_speed_m_s: 0.05        # 待实物标定（占位值，禁止用于真实运动）
+        max_angular_speed_rad_s: 0.20     # 待实物标定（占位值，禁止用于真实运动）
+        distance_m: 0.10                  # 待实物标定（占位值，禁止用于真实运动）
+        timeout_ms: 30000                 # 待实物标定
+        requires_contact: false
+
+    # ---- 规划能力声明（不得夸大） --------------------------------------
+    # 当前仅声明关节目标能力；不声明时间参数化轨迹与笛卡尔运动能力。
+    declare_joint_goal_supported: true
+    declare_timed_trajectory_supported: false   # 未实测：禁止改为 true
+    declare_cartesian_motion_supported: false   # 未实测：禁止改为 true
+    declare_cancel_supported: true
+    # 严禁把轨迹拆成多次 moveJoint 调用（设计 §4.2 / INTERFACE_CHANGELOG §3）。
+    forbid_trajectory_split: true               # 禁止改为 false

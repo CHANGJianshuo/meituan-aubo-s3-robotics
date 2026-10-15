@@ -1,0 +1,15 @@
+[INFO] [launch]: All log files can be found below /tmp/aubo_s3_mock_logs/2026-10-11-07-59-06-290979-CJS-LAPTOP-30316
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [plan_fixed_pose-1]: process started with pid [30319]
+[plan_fixed_pose-1] [INFO] [1791723546.546549085] [moveit_2991281001.moveit.ros.rdf_loader]: Loaded robot model in 0.00229178 seconds
+[plan_fixed_pose-1] [INFO] [1791723546.546634716] [moveit_2991281001.moveit.core.robot_model]: Loading robot model 'aubo_robot'...
+[plan_fixed_pose-1] [INFO] [1791723546.552180975] [moveit_2991281001.moveit.kinematics.kdl_kinematics_plugin]: Joint weights for group 'manipulator': 1 1 1 1 1 1
+[plan_fixed_pose-1] [INFO] [1791723546.564351913] [moveit_2991281001.moveit.ros.move_group_interface]: Ready to take commands for planning group manipulator.
+[plan_fixed_pose-1] [INFO] [1791723546.564486907] [mtc_plan_fixed_pose]: planning frame='world' ee_link='ee_link' group='manipulator' pipeline='ompl' planner='RRTConnectkConfigDefault'
+[plan_fixed_pose-1] [INFO] [1791723546.565038460] [moveit_2991281001.moveit.ros.current_state_monitor]: Listening to joint states on topic 'joint_states'
+[plan_fixed_pose-1] [INFO] [1791723546.567999083] [moveit_2991281001.moveit.ros.move_group_interface]: MoveGroup action client/server ready
+[plan_fixed_pose-1] [INFO] [1791723546.568691774] [moveit_2991281001.moveit.ros.move_group_interface]: Planning request accepted
+[plan_fixed_pose-1] [INFO] [1791723546.608998098] [moveit_2991281001.moveit.ros.move_group_interface]: Planning request complete!
+[plan_fixed_pose-1] [INFO] [1791723546.609549156] [moveit_2991281001.moveit.ros.move_group_interface]: time taken to generate plan: 0.0216395 seconds
+[plan_fixed_pose-1] [INFO] [1791723546.671460064] [mtc_plan_fixed_pose]: PLAN OK: planning_time=0.042 s, duration=15.727 s, points=159, final_pos_err=9.87e-05 m, final_rot_err=9.27e-04 rad -> /home/operator/meituan/meituan_challenge_ws/docs/planning/evidence/20261011_075828/fixed_pose_plan_20261011_075906.yaml
+[INFO] [plan_fixed_pose-1]: process has finished cleanly [pid 30319]

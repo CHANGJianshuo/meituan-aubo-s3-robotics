@@ -1,0 +1,69 @@
+# config/manipulation.yaml
+# 抓放（PickPlace / Manipulation FSM）参数。
+# 结构依据：docs/architecture/AUBO_S3_ROS2_状态机与接口技术设计_v0.1.md §8。
+#
+# !! 安全声明 !!
+# 本文件所有时间/距离/速度数值均为**保守占位值**，未在任何真实 AUBO S3 上标定。
+# 任何可能驱动真实运动的数值旁都标注了「待实物标定」或「占位值，禁止用于真实运动」。
+# 本文件**不含任何凭据**（无账号、无 Token、无控制柜地址、无真实 IP）。
+# 默认后端为 mock；真实通路默认禁用，需现场明确授权。
+
+mtc_manipulation:
+  ros__parameters:
+
+    # ---- 工具与工位 ----------------------------------------------------
+    # tool_type 必须是以下两者之一（互斥，非法值必须导致配置校验失败）
+    #   passive_hook_v1   —— V1 纯机械舌规，不依赖电磁 IO
+    #   magnetic_latch_v2 —— V2 顶部插入 + 机械锁止 + 电磁解锁
+    tool_type: "passive_hook_v1"          # 占位值，禁止用于真实运动
+
+    # 允许的目标工位（基础任务用 T0，序列任务用 P1..P3；顺序即槽位映射顺序）
+    target_slots: ["T0", "P1", "P2", "P3"]
+
+    # 序列任务槽位映射（P1/P2/P3 固定对应 ordered_colors[0..2]）
+    sequence_slots: ["P1", "P2", "P3"]
+    basic_slot: "T0"
+
+    # ---- 验证开关（默认全部打开，关闭即视为放弃成功判定） --------------
+    verify_test_lift: true                # 试提验证：无挂载证据不得进入运输
+    verify_placement: true                # 放置验证：未验证不得 placement_verified=true
+
+    # ---- 占位数值（全部待标定） ----------------------------------------
+    # 放置后稳定性观察时长（秒）。必须 > 0。设计 §1.1 要求“释放后稳定 3 秒”。
+    placement_stability_sec: 3.0          # 待实物标定（保守占位：3.0s）
+    # 感知/TF 数据最大允许年龄（秒）。必须 > 0。超过即视为过期，不得据此运动。
+    perception_max_age_sec: 0.3           # 待实物标定（初始建议值 0.3s）
+    # 仅对“确认无载荷且运动状态已知”的可恢复错误生效；0 表示不自动重试。
+    recovery_max_attempts: 1              # 待实物标定
+    # 任务级截止时间（毫秒），必须 > 0。
+    task_timeout_ms: 120000               # 待实物标定
+    # 单项抓放级截止时间（毫秒），必须 > 0。
+    item_timeout_ms: 60000                # 待实物标定
+
+    # ---- 运动缩放（不得超过执行层已审核上限） --------------------------
+    # 占位值，禁止用于真实运动：执行层 ValidationConfig 默认上限为 0.2。
+    default_velocity_scaling: 0.1         # 占位值，禁止用于真实运动
+    default_acceleration_scaling: 0.1     # 占位值，禁止用于真实运动
+
+    # ---- 后端选择 ------------------------------------------------------
+    # mock         —— 离线 Mock，唯一允许在无授权环境使用的取值
+    # capability_checked —— 先查能力再决定（真实通路默认 disabled）
+    motion_backend: "mock"                # 占位值：默认绝不连接真实设备
+
+    # 关节名顺序必须与执行层 expected_joint_names 一致，禁止假定 J1..J6。
+    joint_names: ["shoulder_joint", "upperArm_joint", "foreArm_joint",
+                  "wrist1_joint", "wrist2_joint", "wrist3_joint"]
+
+    # ---- 感知与颜色 ----------------------------------------------------
+    # 颜色枚举（BatteryDetection.msg）：0 UNKNOWN / 1 RED / 2 BLUE / 3 YELLOW / 4 GREEN
+    # 0（UNKNOWN）不得作为任务口令目标颜色。
+    valid_colors: [1, 2, 3, 4]
+    require_unique_detection: true        # 颜色不唯一时必须拒绝，不得任选其一
+    min_detection_confidence: 0.5         # 待实物标定（占位值）
+
+    # ---- 槽位几何（占位：仅用于 Mock/仿真，禁止真实运动） --------------
+    # 单位：米。frame_id 必须可转换到 base_link（见 docs/architecture/TF_CONVENTIONS.md）。
+    slot_pose_frame_id: "base_link"
+    slot_x_offset_m: 0.0                  # 占位值，禁止用于真实运动
+    slot_y_spacing_m: 0.15                # 占位值，禁止用于真实运动
+    slot_approach_height_m: 0.10          # 占位值，禁止用于真实运动

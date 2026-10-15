@@ -1,0 +1,7 @@
+{
+  "fault": "pause Gazebo physics during an active trajectory",
+  "gz_partition": "mtc_v1_6c362303b0de430a9062a0f9ef2d04e4",
+  "service_returncode": 0,
+  "response": "data: true\n\n",
+  "stderr": ""
+}

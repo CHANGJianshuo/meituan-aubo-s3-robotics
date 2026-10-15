@@ -1,0 +1,4 @@
+<library path="mtc_sim_planning_only">
+  <class name="mtc_simulation/PlanningOnly" type="mtc::simulation::PlanningOnly"
+         base_class_type="moveit_controller_manager::MoveItControllerManager"/>
+</library>

@@ -1,0 +1,18 @@
+{
+  "ssh_host": "operator@nuc.example.invalid",
+  "remote_python": "/path/to/sdk-environment/bin/python",
+  "remote_bridge": "/path/to/deployed/remote_bridge.py",
+  "remote_bridge_sha256": "REPLACE_WITH_VERIFIED_SHA256",
+  "remote_package": "/path/to/deployed/commissioning/package",
+  "package": "/path/to/local/commissioning/package",
+  "manifest_sha256": "REPLACE_WITH_VERIFIED_SHA256",
+  "source_trajectory_sha256": "REPLACE_WITH_VERIFIED_SHA256",
+  "preview_dir": "/path/to/current/camera-preview",
+  "preflight_file": "/path/to/current/webui_preflight.json",
+  "claim_file": "/path/to/current/webui_claim.json",
+  "placement_reference": "/path/to/reviewed/final-reference.png",
+  "placement_reference_sha256": "REPLACE_WITH_VERIFIED_SHA256",
+  "placement_checks": [],
+  "stage_offset": 0,
+  "trajectory_label": "本站点已核验的原始起点与轨迹"
+}

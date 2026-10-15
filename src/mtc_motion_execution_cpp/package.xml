@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>mtc_motion_execution_cpp</name>
+  <version>0.1.0</version>
+  <description>
+    运动执行适配层的 C++17 迁移实现。对应既有 Python 参考实现
+    src/mtc_motion_execution/mtc_motion_execution/{backends,executor_core}.py。
+
+    第一阶段交付：MotionAdapter 抽象接口、唯一执行权（InFlightGuard）、
+    执行前校验、七步握手执行核心（PREPARE/ACCEPT/VALIDATE/SEND/MONITOR/
+    CONFIRM/STOP-FAULT）、Mock 与 Disabled 适配器。
+
+    能力边界：不实现轨迹规划；单目标 6 关节运动之外的多点时间参数化轨迹
+    以 TimedTrajectory 类型预留，Mock 默认**显式拒绝**而非降级为多次单点调用。
+    标准 ROS 2 Action 外壳属于第二阶段。
+
+    本包不依赖 rclcpp，也不连接任何真实设备。
+  </description>
+  <maintainer email="dev@example.com">meituan_challenge_ws maintainers</maintainer>
+  <license>MIT</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <depend>mtc_core_cpp</depend>
+
+  <test_depend>ament_cmake_gtest</test_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

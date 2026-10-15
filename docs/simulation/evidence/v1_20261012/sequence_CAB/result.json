@@ -1,0 +1,159 @@
+{
+  "contacts": {
+    "current": {
+      "mtc::table::table::top / mtc::battery_A::body::part_0": {
+        "depth_m": 1.8765749378035768e-08,
+        "kind": "support"
+      },
+      "mtc::table::table::top / mtc::battery_B::body::part_0": {
+        "depth_m": 1.8765799782161086e-08,
+        "kind": "support"
+      },
+      "mtc::table::table::top / mtc::battery_C::body::part_0": {
+        "depth_m": 1.876605424527833e-08,
+        "kind": "support"
+      },
+      "mtc::table::table::top / mtc::battery_D::body::part_0": {
+        "depth_m": 1.8765733390824213e-08,
+        "kind": "support"
+      }
+    },
+    "gazebo_control_plugin": true,
+    "session_id": "c59bd67206e647e5be88795755be494e",
+    "sim_time": 466.40000000000003,
+    "total": {
+      "mtc::battery_A::body::part_3 / mtc::mtc_s3::v1_hook::v1_hook_fixed_joint_lump__v1_tongue_collision_collision_2": {
+        "kind": "tool_contact",
+        "last_sim_time": 309.906,
+        "max_depth_m": 1.2324429283957529e-05,
+        "steps": 53598
+      },
+      "mtc::battery_B::body::part_3 / mtc::mtc_s3::v1_hook::v1_hook_fixed_joint_lump__v1_tongue_collision_collision_2": {
+        "kind": "tool_contact",
+        "last_sim_time": 438.81600000000003,
+        "max_depth_m": 1.1732881441066378e-05,
+        "steps": 53608
+      },
+      "mtc::battery_C::body::part_3 / mtc::mtc_s3::v1_hook::v1_hook_fixed_joint_lump__v1_tongue_collision_collision_2": {
+        "kind": "tool_contact",
+        "last_sim_time": 100.57700000000001,
+        "max_depth_m": 1.0407764373492057e-05,
+        "steps": 61987
+      },
+      "mtc::table::table::top / mtc::battery_A::body::part_0": {
+        "kind": "support",
+        "last_sim_time": 466.40000000000003,
+        "max_depth_m": 2.899999999992492e-05,
+        "steps": 412793
+      },
+      "mtc::table::table::top / mtc::battery_B::body::part_0": {
+        "kind": "support",
+        "last_sim_time": 466.40000000000003,
+        "max_depth_m": 2.899999999992492e-05,
+        "steps": 412785
+      },
+      "mtc::table::table::top / mtc::battery_C::body::part_0": {
+        "kind": "support",
+        "last_sim_time": 466.40000000000003,
+        "max_depth_m": 2.899999999992492e-05,
+        "steps": 404405
+      },
+      "mtc::table::table::top / mtc::battery_D::body::part_0": {
+        "kind": "support",
+        "last_sim_time": 466.40000000000003,
+        "max_depth_m": 2.899999999992492e-05,
+        "steps": 466386
+      }
+    }
+  },
+  "objects": [
+    {
+      "error_code": 0,
+      "message": "",
+      "object": "battery_C",
+      "placement_verified": true,
+      "slot": "P1",
+      "stability_s": 3.000000000000014,
+      "states": [
+        "RESOLVE_TARGET",
+        "PLAN_ACQUIRE",
+        "MOVE_PRE_ALIGN",
+        "ENGAGE",
+        "VERIFY_ENGAGEMENT",
+        "TEST_LIFT",
+        "VERIFY_ATTACHED",
+        "LIFT",
+        "TRANSPORT",
+        "MOVE_PRE_SEAT",
+        "SEAT",
+        "VERIFY_SEATED",
+        "UNLOAD",
+        "DISENGAGE",
+        "RETREAT",
+        "VERIFY_PLACED",
+        "SUCCESS"
+      ],
+      "success": true
+    },
+    {
+      "error_code": 0,
+      "message": "",
+      "object": "battery_A",
+      "placement_verified": true,
+      "slot": "P2",
+      "stability_s": 3.0,
+      "states": [
+        "RESOLVE_TARGET",
+        "PLAN_ACQUIRE",
+        "MOVE_PRE_ALIGN",
+        "ENGAGE",
+        "VERIFY_ENGAGEMENT",
+        "TEST_LIFT",
+        "VERIFY_ATTACHED",
+        "LIFT",
+        "TRANSPORT",
+        "MOVE_PRE_SEAT",
+        "SEAT",
+        "VERIFY_SEATED",
+        "UNLOAD",
+        "DISENGAGE",
+        "RETREAT",
+        "VERIFY_PLACED",
+        "SUCCESS"
+      ],
+      "success": true
+    },
+    {
+      "error_code": 0,
+      "message": "",
+      "object": "battery_B",
+      "placement_verified": true,
+      "slot": "P3",
+      "stability_s": 3.0,
+      "states": [
+        "RESOLVE_TARGET",
+        "PLAN_ACQUIRE",
+        "MOVE_PRE_ALIGN",
+        "ENGAGE",
+        "VERIFY_ENGAGEMENT",
+        "TEST_LIFT",
+        "VERIFY_ATTACHED",
+        "LIFT",
+        "TRANSPORT",
+        "MOVE_PRE_SEAT",
+        "SEAT",
+        "VERIFY_SEATED",
+        "UNLOAD",
+        "DISENGAGE",
+        "RETREAT",
+        "VERIFY_PLACED",
+        "SUCCESS"
+      ],
+      "success": true
+    }
+  ],
+  "order": "CAB",
+  "simulation_only": true,
+  "success": true,
+  "task": "sequence"
+}

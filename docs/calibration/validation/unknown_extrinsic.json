@@ -1,0 +1,6 @@
+{
+  "status": "REJECTED",
+  "code": "UNKNOWN_CALIBRATION",
+  "message": "UNKNOWN_CALIBRATION: wrist3_Link <- camera_link is UNKNOWN",
+  "motion_authorized": false
+}

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>mtc_aubo_bridge</name>
+  <version>0.1.0</version>
+  <description>
+    ROS 2 与 AUBO S3 SDK（pyaubo-sdk / RPC / RTDE）之间的适配层。
+    默认 disabled：不连接控制柜、不发送任何运动命令、不触发电磁 IO。
+    真实启用需现场明确授权并完成实测验证。
+  </description>
+  <maintainer email="team@example.invalid">meituan_challenge team</maintainer>
+  <license>Apache-2.0</license>
+
+  <depend>rclpy</depend>
+  <depend>mtc_interfaces</depend>
+  <depend>std_msgs</depend>
+  <depend>sensor_msgs</depend>
+
+  <test_depend>python3-pytest</test_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>

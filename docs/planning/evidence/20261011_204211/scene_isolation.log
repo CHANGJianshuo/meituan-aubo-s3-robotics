@@ -1,0 +1,7 @@
+seeded world objects: ['mtc_moveit_planner/old_fixture', 'perception/battery_3', 'table']
+world objects after planner apply_scene: ['mtc_moveit_planner/table', 'perception/battery_3', 'table']
+PASS foreign objects untouched
+PASS stale owned object removed
+PASS planner table is namespaced
+PASS no other planner object outside namespace
+after cleanup: ['mtc_moveit_planner/table']

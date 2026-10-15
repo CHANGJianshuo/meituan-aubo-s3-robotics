@@ -1,0 +1,18 @@
+[INFO] [launch]: All log files can be found below /tmp/aubo_s3_mock_logs/2026-10-11-07-59-08-372494-CJS-LAPTOP-30369
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [plan_battery_sequence-1]: process started with pid [30372]
+[plan_battery_sequence-1] [INFO] [1791723548.618182082] [moveit_1780270161.moveit.ros.rdf_loader]: Loaded robot model in 0.0023605 seconds
+[plan_battery_sequence-1] [INFO] [1791723548.618283350] [moveit_1780270161.moveit.core.robot_model]: Loading robot model 'aubo_robot'...
+[plan_battery_sequence-1] [INFO] [1791723548.624593475] [moveit_1780270161.moveit.kinematics.kdl_kinematics_plugin]: Joint weights for group 'manipulator': 1 1 1 1 1 1
+[plan_battery_sequence-1] [INFO] [1791723548.637004666] [moveit_1780270161.moveit.ros.move_group_interface]: Ready to take commands for planning group manipulator.
+[plan_battery_sequence-1] [INFO] [1791723548.654236207] [mtc_plan_battery_sequence]: [ACQUIRE] ok=true code=0 planned 2 primitive(s) in frame 'world' for 'ee_link'; simulation_only=true (uncalibrated: TCP=PLACEHOLDER)
+[plan_battery_sequence-1] [INFO] [1791723548.654289115] [mtc_plan_battery_sequence]:   top_insert    FREE_SPACE cartesian_preferred ok=true  plan=0.007s dur=13.18s pts=35 scale=3.93 v=0.020m/s w=0.007rad/s watchdog=30s explicit_start_state
+[plan_battery_sequence-1] [INFO] [1791723548.654299954] [mtc_plan_battery_sequence]:   test_lift     CARTESIAN  cartesian           ok=true  plan=0.001s dur=1.88s pts=9 scale=2.52 v=0.010m/s w=0.000rad/s watchdog=15s simulated ENGAGE_INSERT 0.03 m along TCP axis 2 (ToolPort motion, not emitted)
+[plan_battery_sequence-1] [INFO] [1791723548.683654745] [mtc_plan_battery_sequence]: [TRANSPORT] ok=true code=0 planned 5 primitive(s) in frame 'world' for 'ee_link'; simulation_only=true (uncalibrated: slot T0=PLACEHOLDER TCP=PLACEHOLDER)
+[plan_battery_sequence-1] [INFO] [1791723548.683699083] [mtc_plan_battery_sequence]:   lift          CARTESIAN  cartesian           ok=true  plan=0.002s dur=3.28s pts=18 scale=1.99 v=0.029m/s w=0.000rad/s watchdog=30s explicit_start_state
+[plan_battery_sequence-1] [INFO] [1791723548.683708345] [mtc_plan_battery_sequence]:   transport     FREE_SPACE cartesian_preferred ok=true  plan=0.005s dur=2.25s pts=24 scale=1.00 v=0.134m/s w=0.000rad/s watchdog=60s previous_primitive_end
+[plan_battery_sequence-1] [INFO] [1791723548.683713894] [mtc_plan_battery_sequence]:   pre_seat      CARTESIAN  cartesian           ok=true  plan=0.003s dur=5.13s pts=23 scale=2.40 v=0.029m/s w=0.000rad/s watchdog=30s previous_primitive_end
+[plan_battery_sequence-1] [INFO] [1791723548.683719031] [mtc_plan_battery_sequence]:   seat_contact  CARTESIAN  cartesian           ok=true  plan=0.001s dur=7.75s pts=12 scale=7.27 v=0.005m/s w=0.000rad/s watchdog=20s [contact intent only] previous_primitive_end
+[plan_battery_sequence-1] [INFO] [1791723548.683724442] [mtc_plan_battery_sequence]:   retreat       CARTESIAN  cartesian           ok=true  plan=0.003s dur=5.86s pts=26 scale=2.44 v=0.029m/s w=0.000rad/s watchdog=30s simulated WITHDRAW 0.03 m along TCP axis 2 (ToolPort motion, not emitted)
+[plan_battery_sequence-1] [INFO] [1791723548.685060654] [mtc_plan_battery_sequence]: SEQUENCE PLAN OK -> /home/operator/meituan/meituan_challenge_ws/docs/planning/evidence/20261011_075828/battery_sequence_magnetic_latch_v2_T0_20261011_075908.yaml
+[INFO] [plan_battery_sequence-1]: process has finished cleanly [pid 30372]

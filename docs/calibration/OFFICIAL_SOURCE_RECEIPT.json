@@ -1,0 +1,95 @@
+{
+  "retrieved_on": "2026-10-11",
+  "local_evidence_directory": "D:\\RA\\美团比赛\\报告附件\\官方资料",
+  "documents_embedded_in_delta_archive": false,
+  "sources": [
+    {
+      "name": "aubo_S3.urdf",
+      "url": "https://raw.githubusercontent.com/AuboRobot/aubo_description/47fa5e02fa873f27f7e812d31f31e3f4cf5e56b1/urdf/aubo_S3.urdf",
+      "bytes": 8895,
+      "sha256": "2ad1d85b3ab53b82f1944a373e3e41b36ca2535e0edf5b70c9c32641679e1924"
+    },
+    {
+      "name": "aubo_ros2_macro.xacro",
+      "url": "https://raw.githubusercontent.com/AuboRobot/aubo_description/47fa5e02fa873f27f7e812d31f31e3f4cf5e56b1/urdf/xacro/inc/aubo_ros2_macro.xacro",
+      "bytes": 3538,
+      "sha256": "8bbf8f5e127650dd79760f3b2d3025d734fae4b6cfaaee3a923e923022e7a3b7"
+    },
+    {
+      "name": "link6.DAE",
+      "url": "https://raw.githubusercontent.com/AuboRobot/aubo_description/47fa5e02fa873f27f7e812d31f31e3f4cf5e56b1/meshes/aubo_S3/visual/link6.DAE",
+      "bytes": 401011,
+      "sha256": "c54dfeda3c8ab4e44039d35ab220b118c8e175792b522f5faaf3959fc8aff92c"
+    },
+    {
+      "name": "link6.STL",
+      "url": "https://raw.githubusercontent.com/AuboRobot/aubo_description/47fa5e02fa873f27f7e812d31f31e3f4cf5e56b1/meshes/aubo_S3/collision/link6.STL",
+      "bytes": 14484,
+      "sha256": "cbe69bf761e7d25110633f6c7fdf62481de52a2847a4960a9fc5c49288ba3eea"
+    },
+    {
+      "name": "RealSense_D400_Datasheet_202410.pdf",
+      "url": "https://realsenseai.com/wp-content/uploads/2024/10/Intel-RealSense-D400-Series-Datasheet-October-2024.pdf",
+      "bytes": 5433772,
+      "sha256": "b477ea8222e71a96b77d4c13667b804c94b2ef0a27bf9db150082d0c9aa0a590"
+    },
+    {
+      "name": "realsense_ros_README.md",
+      "url": "https://raw.githubusercontent.com/realsenseai/realsense-ros/ros2-master/README.md",
+      "bytes": 78958,
+      "sha256": "405ebcffd6bff44ce23df8c92ec0e1c7f3508d135dbb4199cb554659451df329",
+      "note": "byte-identical to commit 9a11121700cb4780e273e34141f6402fe184321d on 2026-10-11; the installed wrapper version is still unverified"
+    },
+    {
+      "name": "_d435.urdf.xacro",
+      "url": "https://raw.githubusercontent.com/realsenseai/realsense-ros/9a11121700cb4780e273e34141f6402fe184321d/realsense2_description/urdf/_d435.urdf.xacro",
+      "bytes": 7527,
+      "sha256": "ae3f57e8d38b3a6d5cc9de059e4afe545e4b895717d638b75d2ad0642cfb7f1b",
+      "used_for": "nominal camera_link offset from the 1/4-20 screw, glass 0.1 mm behind front plate, optical rpy"
+    },
+    {
+      "name": "_usb_plug.urdf.xacro",
+      "url": "https://raw.githubusercontent.com/realsenseai/realsense-ros/9a11121700cb4780e273e34141f6402fe184321d/realsense2_description/urdf/_usb_plug.urdf.xacro",
+      "bytes": 1798,
+      "sha256": "22531ecdc0b09aa3ab4408641432617b000618933e98dc2f488ac31b88c8ad79",
+      "used_for": "nominal USB-C plug envelope"
+    },
+    {
+      "name": "rs_sensor.h",
+      "url": "https://raw.githubusercontent.com/realsenseai/librealsense/e15c5d6bb1563e778d116f682aeefffbae2daedc/include/librealsense2/h/rs_sensor.h",
+      "bytes": 38742,
+      "sha256": "191b32b7c44df09dc23d82327963f3329cb5303c12c68055261bbd8822cc029d",
+      "used_for": "rs2_extrinsics rotation column-major, translation in metres (lines 111-115)"
+    },
+    {
+      "name": "rs.cpp",
+      "url": "https://raw.githubusercontent.com/realsenseai/librealsense/e15c5d6bb1563e778d116f682aeefffbae2daedc/src/rs.cpp",
+      "bytes": 201602,
+      "sha256": "a8aa0635949c14b23ebad50057d134877b45c8761de9d958d31a255c8ddcef03",
+      "used_for": "rs2_transform_point_to_point: p_to = R * p_from + t (lines 4475-4480)"
+    },
+    {
+      "name": "tf2_echo.cpp",
+      "url": "https://raw.githubusercontent.com/ros2/geometry2/f702874b1c8535d6a038230ab2cda0ba5d521ebd/tf2_ros/src/tf2_echo.cpp",
+      "bytes": 8694,
+      "sha256": "1a678f112c966d38863c3135b5adcff72371f2b9973293078099404c8a247028",
+      "used_for": "tf2_echo A B prints T_A_B (lines 69-72, 193)"
+    }
+  ],
+  "additional_source_copies": "D:\\RA\\美团比赛\\Claude复核\\Claude_independent_review_20261011_1957\\sources (realsense-ros, librealsense and geometry2 files above)",
+  "visual_check": {
+    "RealSense_D400_Datasheet_202410.pdf": [
+      69,
+      89,
+      93,
+      94,
+      146
+    ]
+  },
+  "failed_reference": "AUBO_Robotics_ZH_202410_Catalog.pdf: download failed (HTTP 404 again on 2026-10-11 re-check); indexed drawing title only, no verified flange dimensions",
+  "non_official_files_in_evidence_directory": [
+    "AUBO_JP_Catalog_mirror.pdf is an HTML page from a third-party Japanese site, not an AUBO PDF",
+    "AUBO_catalog_page_6.png renders that page; it has no S3 flange data"
+  ],
+  "model_mesh_is_manufacturing_drawing": false
+}

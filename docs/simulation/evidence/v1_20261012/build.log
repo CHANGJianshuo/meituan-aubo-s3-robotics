@@ -1,0 +1,13 @@
+Starting >>> mtc_core_cpp
+Finished <<< mtc_core_cpp [8.17s]
+Starting >>> mtc_motion_execution_cpp
+Finished <<< mtc_motion_execution_cpp [8.53s]
+Starting >>> mtc_manipulation_cpp
+Finished <<< mtc_manipulation_cpp [8.96s]
+Starting >>> mtc_moveit_planner
+Finished <<< mtc_moveit_planner [20.4s]
+Starting >>> mtc_simulation
+[Processing: mtc_simulation]
+Finished <<< mtc_simulation [59.5s]
+
+Summary: 5 packages finished [1min 46s]

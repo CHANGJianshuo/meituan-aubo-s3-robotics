@@ -1,0 +1,9 @@
+# TriggerUnlock.srv（拟新增，来源：状态机设计 V0.1 §4.10）
+# 仅允许 tool_manager 在 VERIFY_SEATED + UNLOAD 之后调用。
+# accepted=true 只表示解锁脉冲请求已受理，不表示电池已释放。
+
+string request_id
+uint32 pulse_ms
+---
+bool accepted
+string message

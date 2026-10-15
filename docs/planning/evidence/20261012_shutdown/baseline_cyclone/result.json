@@ -1,0 +1,26 @@
+{
+  "mode": "direct",
+  "rmw": "rmw_cyclonedds_cpp",
+  "domain": 135,
+  "pin_plugins": false,
+  "allow_trajectory_execution": true,
+  "command": [
+    "/opt/ros/jazzy/lib/moveit_ros_move_group/move_group",
+    "--ros-args",
+    "--params-file",
+    "/tmp/mtc_shutdown_audit/final_baseline_cyclone/move_group.yaml"
+  ],
+  "core_pattern": "|/wsl-capture-crash %t %E %p %s",
+  "motion_requests": 0,
+  "ready": true,
+  "escalated": false,
+  "versions": "ros-jazzy-moveit-ros-move-group\t2.12.4-1noble.20260915.202214\nros-jazzy-moveit-ros-planning\t2.12.4-1noble.20260915.195310\nros-jazzy-rclcpp\t28.1.22-1noble.20260911.105434\nros-jazzy-rmw-cyclonedds-cpp\t2.2.4-1noble.20260911.095700\nros-jazzy-rmw-fastrtps-cpp\t8.4.4-1noble.20260911.100940\n",
+  "core_dump_observation": {
+    "status": "Name:\tmove_group\nUmask:\t0022\nState:\tD (disk sleep)\nTgid:\t107960\nNgid:\t0\nPid:\t107960\nPPid:\t107886\nTracerPid:\t0\nUid:\t1000\t1000\t1000\t1000\nGid:\t1000\t1000\t1000\t1000\nFDSize:\t64\nGroups:\t4 24 27 30 46 100 1000 \nNStgid:\t107960\nNSpid:\t107960\nNSpgid:\t107960\nNSsid:\t107960\nKthread:\t0\nVmPeak:\t 2852196 kB\nVmSize:\t 2605444 kB\nVmLck:\t       0 kB\nVmPin:\t       0 kB\nVmHWM:\t   76584 kB\nVmRSS:\t   62580 kB\nRssAnon:\t   16488 kB\nRssFile:\t   45580 kB\nRssShmem:\t     512 kB\nVmData:\t  169772 kB\nVmStk:\t     140 kB\nVmExe:\t     176 kB\nVmLib:\t   46324 kB\nVmPTE:\t     464 kB\nVmSwap:\t       0 kB\nHugetlbPages:\t       0 kB\nCoreDumping:\t1\nTHP_enabled:\t1\nuntag_mask:\t0xffffffffffffffff\nThreads:\t12\nSigQ:\t2/120265\nSigPnd:\t0000000000000000\nShdPnd:\t0000000000000000\nSigBlk:\tfffffffe7ffbfaff\nSigIgn:\t0000000000000000\nSigCgt:\t00000001418000fc\nCapInh:\t0000000000000000\nCapPrm:\t0000000000000000\nCapEff:\t0000000000000000\nCapBnd:\t000001ffffffffff\nCapAmb:\t0000000000000000\nNoNewPrivs:\t0\nSeccomp:\t2\nSeccomp_filters:\t1\nSpeculation_Store_Bypass:\tthread vulnerable\nSpeculationIndirectBranch:\tconditional enabled\nCpus_allowed:\tffffffff\nCpus_allowed_list:\t0-31\nMems_allowed:\t00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001\nMems_allowed_list:\t0\nvoluntary_ctxt_switches:\t142\nnonvoluntary_ctxt_switches:\t8\n",
+    "wchan": "call_usermodehelper_exec",
+    "seconds_after_sigint": 0.129
+  },
+  "seconds_after_sigint": 2.235,
+  "supervisor_returncode": -11,
+  "clean_exit": false
+}

@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>mtc_task</name>
+  <version>0.1.0</version>
+  <description>
+    美团挑战赛 AUBO S3：整轮比赛任务状态机（第一层 Task FSM）。
+    受理 ExecuteTask Action，校验口令，按次序调用 PickPlace，
+    并实现单 Goal 并发拒绝、取消等待停稳确认、限次恢复与故障锁定等联锁。
+    状态机核心为纯 Python（不依赖 rclpy），ROS 2 节点为薄外壳。
+    默认 Mock/离线；不得据此驱动真实机械臂。
+  </description>
+  <maintainer email="team@example.invalid">meituan_challenge team</maintainer>
+  <license>Apache-2.0</license>
+
+  <depend>rclpy</depend>
+  <depend>mtc_interfaces</depend>
+  <depend>std_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>ament_index_python</depend>
+
+  <exec_depend>rosidl_runtime_py</exec_depend>
+  <exec_depend>launch</exec_depend>
+  <exec_depend>launch_ros</exec_depend>
+
+  <test_depend>ament_copyright</test_depend>
+  <test_depend>ament_flake8</test_depend>
+  <test_depend>ament_pep257</test_depend>
+  <test_depend>python3-pytest</test_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>

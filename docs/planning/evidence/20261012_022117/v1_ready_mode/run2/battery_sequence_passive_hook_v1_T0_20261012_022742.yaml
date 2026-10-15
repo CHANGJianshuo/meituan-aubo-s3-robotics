@@ -1,0 +1,850 @@
+# mtc_moveit_planner plan_battery_sequence 证据（Mock，仅规划，未执行）
+# 提环位姿与工位均为占位值；接触段只代表规划意图，不代表可安全执行。
+tool: plan_battery_sequence
+wall_time: "20261012_022741"
+tool_type: "passive_hook_v1"
+slot: "T0"
+start: "ready pose (see ready_pose)"
+ready_pose:
+  derived_from: "side_insert goal + 0.02 m back along insertion axis"
+  joint_names: ["shoulder_joint", "upperArm_joint", "foreArm_joint", "wrist1_joint", "wrist2_joint", "wrist3_joint"]
+  positions_rad: [0.391146, -0.128051, 2.30293, -0.710614, -1.17965, -3.54938e-09]
+  ik_info: "ik solutions=21, min joint-limit margin 2.22% of range"
+  setup_move_reference_only:
+    from: "home"
+    ok: true
+    method: "joint_interpolated_ik"
+    duration_s: 17.7401
+    max_linear_speed_m_s: 0.05
+    max_angular_speed_rad_s: 0.2
+    note: "one-time move outside PickPlace; no FSM state/watchdog owns it yet"
+ring_pose:
+  frame_id: "base_link"
+  position_m: [0.4, -0.05, 0.13]
+  orientation_xyzw: [0, 0.70710678, 0, 0.70710678]
+tcp:
+  status: "PLACEHOLDER"
+  xyz: [0, 0, 0]
+phases:
+  - phase: "ACQUIRE"
+    ok: true
+    error_code: 0
+    message: "planned 2 primitive(s) in frame 'world' for 'ee_link'; simulation_only=true (uncalibrated: TCP=PLACEHOLDER payload=PLACEHOLDER)"
+    planning_frame: "world"
+    end_effector_link: "ee_link"
+    simulation_only: true
+    uncalibrated_inputs: ["TCP=PLACEHOLDER", "payload=PLACEHOLDER"]
+    start_state:
+      joint_names: ["shoulder_joint", "upperArm_joint", "foreArm_joint", "wrist1_joint", "wrist2_joint", "wrist3_joint"]
+      positions_rad: [0.3911455567, -0.128050527, 2.302928077, -0.7106140489, -1.179650767, -3.549375154e-09]
+    primitives:
+      - primitive_name: "side_insert"
+        ok: true
+        message: ""
+        mode: "FREE_SPACE"
+        method: "cartesian_preferred"
+        backend_message: "ok"
+        payload_attached: false
+        goal_kind: "RING_STANDOFF"
+        start_assumption: "explicit_start_state"
+        contact_intent_only: false
+        ee_goal:
+          frame_id: "world"
+          position_m: [0.37, -0.05, 0.13]
+          orientation_xyzw: [0, 0.7071067812, 0, 0.7071067812]
+        planning_time_s: 0.003354486
+        cartesian_fraction: 1
+        time_scale_applied: 1.801852245
+        max_ee_linear_speed_m_s: 0.01960784314
+        max_ee_angular_speed_rad_s: 0
+        duration_s: 1.940741314
+        point_count: 12
+        timeout_ms: 3912
+        state_watchdog_s: 30
+      - primitive_name: "test_lift"
+        ok: true
+        message: ""
+        mode: "CARTESIAN"
+        method: "cartesian"
+        backend_message: "ok"
+        payload_attached: true
+        goal_kind: "RELATIVE_UP"
+        start_assumption: "simulated ENGAGE_INSERT 0.03 m along TCP axis 2 (ToolPort motion, not emitted)"
+        contact_intent_only: false
+        ee_goal:
+          frame_id: "world"
+          position_m: [0.3999999945, -0.05000000084, 0.1400000004]
+          orientation_xyzw: [-4.342085923e-11, 0.707106781, -2.272378913e-09, 0.7071067814]
+        planning_time_s: 0.003026582
+        cartesian_fraction: 1
+        time_scale_applied: 2.447956854
+        max_ee_linear_speed_m_s: 0.009803921569
+        max_ee_angular_speed_rad_s: 0
+        duration_s: 1.860051181
+        point_count: 9
+        timeout_ms: 3791
+        state_watchdog_s: 15
+    commands:
+      - primitive_name: "side_insert"
+        command_id: ""  # FSM 在派发时赋值
+        velocity_scaling: 0.1
+        acceleration_scaling: 0.1
+        timeout_ms: 3912
+        requires_contact: false
+        simulation_only: true
+        target_rad: []
+        trajectory:
+          trajectory_id: ""
+          header_frame_id: "world"
+          stamp_s: 68811.50558
+          shape_is_valid: true
+          duration_s: 1.940741314
+          point_count: 12
+          joint_names: ["shoulder_joint", "upperArm_joint", "foreArm_joint", "wrist1_joint", "wrist2_joint", "wrist3_joint"]
+          points:
+            - time_from_start_s: 0
+              positions_rad: [0.3911455567, -0.128050527, 2.302928077, -0.7106140489, -1.179650767, -3.549375154e-09]
+              velocities_rad_s: [-7.534885076e-05, -0.0001400841143, -0.0001748201057, -3.47359914e-05, -7.534885076e-05, 5.864350236e-14]
+              accelerations_rad_s2: [-0.04181744144, -0.07774450689, -0.0970224424, -0.01927793552, -0.04181744144, 3.254623264e-11]
+            - time_from_start_s: 0.1801852245
+              positions_rad: [0.3904667192, -0.1293125813, 2.301353077, -0.7109269945, -1.180329604, -3.548846819e-09]
+              velocities_rad_s: [-0.007610233926, -0.01414849555, -0.01765683068, -0.003508335131, -0.007610233926, 5.922993739e-12]
+              accelerations_rad_s2: [-0.04181744144, -0.07774450689, -0.0970224424, -0.01927793552, -0.04181744144, 3.254623264e-11]
+            - time_from_start_s: 0.3603704491
+              positions_rad: [0.3884311909, -0.1330979229, 2.296628076, -0.7118666539, -1.182365133, -3.547262688e-09]
+              velocities_rad_s: [-0.01504915228, -0.02800842603, -0.0349840194, -0.006975593374, -0.01504915228, 1.170946363e-11]
+              accelerations_rad_s2: [-0.04130921398, -0.07732093034, -0.0970245711, -0.01970364077, -0.04130921398, 3.209512962e-11]
+            - time_from_start_s: 0.5405556736
+              positions_rad: [0.3850583578, -0.1393903802, 2.288753026, -0.7134492472, -1.185737966, -3.544639967e-09]
+              velocities_rad_s: [-0.02233684437, -0.04187528077, -0.05261314551, -0.01073786475, -0.02233684437, 1.734753544e-11]
+              accelerations_rad_s2: [-0.03793229637, -0.07450384002, -0.0970327425, -0.0225289025, -0.03793229637, 2.909805626e-11]
+            - time_from_start_s: 0.7207408982
+              positions_rad: [0.380436274, -0.1481165334, 2.277727732, -0.7157483872, -1.19036005, -3.541056732e-09]
+              velocities_rad_s: [-0.02895858907, -0.05509220262, -0.07002734079, -0.01493513818, -0.02895858907, 2.240662325e-11]
+              accelerations_rad_s2: [-0.03451658573, -0.07166795174, -0.09703510624, -0.0253671545, -0.03451658573, 2.609268326e-11]
+            - time_from_start_s: 0.9009261227
+              positions_rad: [0.3746713161, -0.1591881017, 2.263552099, -0.7188524525, -1.196125008, -3.536606537e-09]
+              velocities_rad_s: [-0.03500612672, -0.06788254814, -0.08754913891, -0.01966659078, -0.03500612672, 2.695997408e-11]
+              accelerations_rad_s2: [-0.03098510537, -0.06877145825, -0.09703578988, -0.02826433164, -0.03098510537, 2.304322054e-11]
+            - time_from_start_s: 1.081111347
+              positions_rad: [0.3683320434, -0.1716054804, 2.247417928, -0.722569244, -1.20246428, -3.531735913e-09]
+              velocities_rad_s: [-0.03217730236, -0.06368993414, -0.08337701345, -0.01968707932, -0.03217730236, 2.466392975e-11]
+              accelerations_rad_s2: [0.04446922047, 0.07988629678, 0.09700737548, 0.01712107872, 0.04446922047, -3.479493716e-11]
+            - time_from_start_s: 1.261296572
+              positions_rad: [0.3632220603, -0.1818137843, 2.233966879, -0.7258119896, -1.207574263, -3.527827192e-09]
+              velocities_rad_s: [-0.02464656062, -0.04969328996, -0.06589685979, -0.01620356984, -0.02464656062, 1.881496034e-11]
+              accelerations_rad_s2: [0.04066934762, 0.07674392813, 0.09701118501, 0.02026725689, 0.04066934762, -3.1470483e-11]
+            - time_from_start_s: 1.441481796
+              positions_rad: [0.359414672, -0.1895448486, 2.223665646, -0.7283821578, -1.211381652, -3.524925047e-09]
+              velocities_rad_s: [-0.01770385347, -0.0361794705, -0.04841450247, -0.01223503197, -0.01770385347, 1.347623266e-11]
+              accelerations_rad_s2: [0.03758151784, 0.07421776496, 0.0970154164, 0.02279765145, 0.03758151784, -2.881094499e-11]
+            - time_from_start_s: 1.621667021
+              positions_rad: [0.356816692, -0.1948749823, 2.216514357, -0.7302033137, -1.213979632, -3.522949106e-09]
+              velocities_rad_s: [-0.01120104559, -0.02303027387, -0.03094315871, -0.007912884845, -0.01120104559, 8.515239791e-12]
+              accelerations_rad_s2: [0.04194450786, 0.07545115637, 0.09182331684, 0.01637216049, 0.04194450786, -3.273801499e-11]
+            - time_from_start_s: 1.801852245
+              positions_rad: [0.3553676323, -0.1978543673, 2.212511297, -0.7312269883, -1.215428691, -3.521847504e-09]
+              velocities_rad_s: [-0.004872771246, -0.0100188197, -0.01346114814, -0.003442328436, -0.004872771246, 3.704369853e-12]
+              accelerations_rad_s2: [0.03512093937, 0.07221154894, 0.0970224424, 0.02481089346, 0.03512093937, -2.669958067e-11]
+            - time_from_start_s: 1.940741314
+              positions_rad: [0.3550288878, -0.198550854, 2.211575507, -0.7314662915, -1.215767436, -3.521589984e-09]
+              velocities_rad_s: [2.064364336e-19, 4.244503393e-19, 5.702856287e-19, 1.458352895e-19, 2.064364336e-19, -1.569367537e-28]
+              accelerations_rad_s2: [0.03512093937, 0.07221154895, 0.0970224424, 0.02481089346, 0.03512093937, -2.669958067e-11]
+      - primitive_name: "test_lift"
+        command_id: ""  # FSM 在派发时赋值
+        velocity_scaling: 0.1
+        acceleration_scaling: 0.1
+        timeout_ms: 3791
+        requires_contact: false
+        simulation_only: true
+        target_rad: []
+        trajectory:
+          trajectory_id: ""
+          header_frame_id: "world"
+          stamp_s: 68811.50558
+          shape_is_valid: true
+          duration_s: 1.860051181
+          point_count: 9
+          joint_names: ["shoulder_joint", "upperArm_joint", "foreArm_joint", "wrist1_joint", "wrist2_joint", "wrist3_joint"]
+          points:
+            - time_from_start_s: 0
+              positions_rad: [0.3124044336, -0.296009976, 2.072198817, -0.7733838595, -1.25839189, -3.489765376e-09]
+              velocities_rad_s: [0, 8.067510332e-05, -5.004615489e-05, -0.0001307212582, 0, 1.560638216e-20]
+              accelerations_rad_s2: [0, 0.03295609691, -0.02044405105, -0.05340014797, 0, 6.375268477e-18]
+            - time_from_start_s: 0.2447956854
+              positions_rad: [0.3124044336, -0.2950225301, 2.071586263, -0.7749838595, -1.25839189, -3.489765376e-09]
+              velocities_rad_s: [0, 0.008067510332, -0.005004615489, -0.01307212582, 0, 1.560638216e-18]
+              accelerations_rad_s2: [0, 0.03295609691, -0.02044405105, -0.05340014797, 0, 6.375268477e-18]
+            - time_from_start_s: 0.4895913708
+              positions_rad: [0.3124044336, -0.2920614133, 2.069747383, -0.7797838567, -1.25839189, -3.489765375e-09]
+              velocities_rad_s: [-4.83664104e-16, 0.01611754782, -0.01004157923, -0.02615912705, 0, 2.989302963e-18]
+              accelerations_rad_s2: [3.215656825e-16, 0.03261448894, -0.02078598287, -0.05340047181, 0, 4.66009661e-18]
+            - time_from_start_s: 0.7343870562
+              positions_rad: [0.3124044336, -0.2871460746, 2.066662731, -0.787783847, -1.25839189, -3.489765374e-09]
+              velocities_rad_s: [-2.666764904e-16, 0.02406150079, -0.01527917997, -0.03934068077, -1.066705961e-15, 3.581723257e-18]
+              accelerations_rad_s2: [2.308049932e-15, 0.0313434327, -0.02205760643, -0.05340103913, 9.232199729e-15, -1.964076726e-18]
+            - time_from_start_s: 0.9791827416
+              positions_rad: [0.3124044336, -0.2804145254, 2.062323388, -0.7988547399, -1.25839189, -3.489765374e-09]
+              velocities_rad_s: [2.679191095e-16, 0.02836245267, -0.01856494947, -0.04692740214, 0, 1.794028151e-18]
+              accelerations_rad_s2: [2.193987116e-15, -0.03397367438, 0.01942540077, 0.05339907515, 0, -1.757250359e-17]
+            - time_from_start_s: 1.223978427
+              positions_rad: [0.3124044336, -0.2744543795, 2.058369072, -0.8087692016, -1.25839189, -3.489765373e-09]
+              velocities_rad_s: [1.856005837e-16, 0.02024323197, -0.0136120823, -0.03385531427, 0, -8.863743848e-19]
+              accelerations_rad_s2: [-2.215941159e-15, -0.03284548208, 0.02055394404, 0.05339942612, 0, -8.796516462e-18]
+            - time_from_start_s: 1.468774112
+              positions_rad: [0.3124044336, -0.2704526259, 2.055656347, -0.8154836804, -1.25839189, -3.489765374e-09]
+              velocities_rad_s: [0, 0.01236273028, -0.008421949775, -0.02078468006, 0, -1.2688926e-18]
+              accelerations_rad_s2: [0, -0.03588950603, 0.01695214674, 0.05284165277, 0, -4.639448373e-17]
+            - time_from_start_s: 1.713569798
+              positions_rad: [0.3124044336, -0.2683620085, 2.054232141, -0.8189985034, -1.25839189, -3.489765374e-09]
+              velocities_rad_s: [0, 0.004587428217, -0.003125126017, -0.007712554235, 0, -4.708469395e-19]
+              accelerations_rad_s2: [0, -0.03176241465, 0.02163773332, 0.05340014797, 0, 3.2600479e-18]
+            - time_from_start_s: 1.860051181
+              positions_rad: [0.3124044336, -0.2680212487, 2.054000003, -0.8195714015, -1.25839189, -3.489765374e-09]
+              velocities_rad_s: [0, 3.37833309e-18, -2.301445633e-18, -5.679778723e-18, 0, -3.467471796e-34]
+              accelerations_rad_s2: [0, -0.03176241465, 0.02163773332, 0.05340014797, 0, 3.2600479e-18]
+  - phase: "TRANSPORT"
+    ok: true
+    error_code: 0
+    message: "planned 5 primitive(s) in frame 'world' for 'ee_link'; simulation_only=true (uncalibrated: payload=PLACEHOLDER slot T0=PLACEHOLDER TCP=PLACEHOLDER)"
+    planning_frame: "world"
+    end_effector_link: "ee_link"
+    simulation_only: true
+    uncalibrated_inputs: ["payload=PLACEHOLDER", "slot T0=PLACEHOLDER", "TCP=PLACEHOLDER"]
+    start_state:
+      joint_names: ["shoulder_joint", "upperArm_joint", "foreArm_joint", "wrist1_joint", "wrist2_joint", "wrist3_joint"]
+      positions_rad: [0.3124044336, -0.2680212487, 2.054000003, -0.8195714015, -1.25839189, -3.489765374e-09]
+    primitives:
+      - primitive_name: "lift"
+        ok: true
+        message: ""
+        mode: "CARTESIAN"
+        method: "cartesian"
+        backend_message: "ok"
+        payload_attached: true
+        goal_kind: "RELATIVE_UP"
+        start_assumption: "explicit_start_state"
+        contact_intent_only: false
+        ee_goal:
+          frame_id: "world"
+          position_m: [0.3999999942, -0.05000000094, 0.1899999993]
+          orientation_xyzw: [-4.342097879e-11, 0.707106781, -2.272378834e-09, 0.7071067814]
+        planning_time_s: 0.005229184
+        cartesian_fraction: 1
+        time_scale_applied: 1.95894718
+        max_ee_linear_speed_m_s: 0.02941176471
+        max_ee_angular_speed_rad_s: 0
+        duration_s: 3.307841479
+        point_count: 18
+        timeout_ms: 5962
+        state_watchdog_s: 30
+      - primitive_name: "transport"
+        ok: true
+        message: ""
+        mode: "FREE_SPACE"
+        method: "cartesian_preferred"
+        backend_message: "ok"
+        payload_attached: true
+        goal_kind: "SLOT_OFFSET"
+        start_assumption: "previous_primitive_end"
+        contact_intent_only: false
+        ee_goal:
+          frame_id: "world"
+          position_m: [0.35, -0.2, 0.23]
+          orientation_xyzw: [-4.342099898e-11, 0.707106781, -2.272378781e-09, 0.7071067814]
+        planning_time_s: 0.012452865
+        cartesian_fraction: 1
+        time_scale_applied: 1
+        max_ee_linear_speed_m_s: 0.08882212733
+        max_ee_angular_speed_rad_s: 0
+        duration_s: 2.847609697
+        point_count: 30
+        timeout_ms: 5272
+        state_watchdog_s: 60
+      - primitive_name: "pre_seat"
+        ok: true
+        message: ""
+        mode: "CARTESIAN"
+        method: "cartesian"
+        backend_message: "ok"
+        payload_attached: true
+        goal_kind: "SLOT_OFFSET"
+        start_assumption: "previous_primitive_end"
+        contact_intent_only: false
+        ee_goal:
+          frame_id: "world"
+          position_m: [0.35, -0.2, 0.15]
+          orientation_xyzw: [-4.338325454e-11, 0.707106781, -2.272341531e-09, 0.7071067814]
+        planning_time_s: 0.008743437
+        cartesian_fraction: 1
+        time_scale_applied: 2.537603295
+        max_ee_linear_speed_m_s: 0.02941176471
+        max_ee_angular_speed_rad_s: 0
+        duration_s: 5.252757701
+        point_count: 22
+        timeout_ms: 8880
+        state_watchdog_s: 30
+      - primitive_name: "seat_contact"
+        ok: true
+        message: ""
+        mode: "CARTESIAN"
+        method: "cartesian"
+        backend_message: "ok"
+        payload_attached: true
+        goal_kind: "SLOT_OFFSET"
+        start_assumption: "previous_primitive_end"
+        contact_intent_only: true
+        ee_goal:
+          frame_id: "world"
+          position_m: [0.35, -0.2, 0.13]
+          orientation_xyzw: [-4.338313527e-11, 0.707106781, -2.272341668e-09, 0.7071067814]
+        planning_time_s: 0.00310153
+        cartesian_fraction: 1
+        time_scale_applied: 7.350996133
+        max_ee_linear_speed_m_s: 0.004901960784
+        max_ee_angular_speed_rad_s: 0
+        duration_s: 7.628651512
+        point_count: 12
+        timeout_ms: 12443
+        state_watchdog_s: 20
+      - primitive_name: "retreat"
+        ok: true
+        message: ""
+        mode: "CARTESIAN"
+        method: "cartesian"
+        backend_message: "ok"
+        payload_attached: false
+        goal_kind: "RELATIVE_UP"
+        start_assumption: "simulated WITHDRAW 0.03 m along TCP axis 2 (ToolPort motion, not emitted)"
+        contact_intent_only: false
+        ee_goal:
+          frame_id: "world"
+          position_m: [0.3199999958, -0.2000000007, 0.2299999967]
+          orientation_xyzw: [-4.33889501e-11, 0.707106781, -2.272347614e-09, 0.7071067814]
+        planning_time_s: 0.008371887
+        cartesian_fraction: 1
+        time_scale_applied: 2.428611262
+        max_ee_linear_speed_m_s: 0.02941176471
+        max_ee_angular_speed_rad_s: 0
+        duration_s: 5.858825994
+        point_count: 26
+        timeout_ms: 9789
+        state_watchdog_s: 30
+    commands:
+      - primitive_name: "lift"
+        command_id: ""  # FSM 在派发时赋值
+        velocity_scaling: 0.1
+        acceleration_scaling: 0.1
+        timeout_ms: 5962
+        requires_contact: false
+        simulation_only: true
+        target_rad: []
+        trajectory:
+          trajectory_id: ""
+          header_frame_id: "world"
+          stamp_s: 68811.52688
+          shape_is_valid: true
+          duration_s: 3.307841479
+          point_count: 18
+          joint_names: ["shoulder_joint", "upperArm_joint", "foreArm_joint", "wrist1_joint", "wrist2_joint", "wrist3_joint"]
+          points:
+            - time_from_start_s: 0
+              positions_rad: [0.3124044336, -0.2680212487, 2.054000003, -0.8195714015, -1.25839189, -3.489765374e-09]
+              velocities_rad_s: [0, 9.48816824e-05, -6.847136935e-05, -0.0001633530517, 0, 2.188984134e-21]
+              accelerations_rad_s2: [0, 0.04843503867, -0.03495314731, -0.08338818599, 0, 1.11742887e-18]
+            - time_from_start_s: 0.195894718
+              positions_rad: [0.3124044336, -0.2670919077, 2.053329344, -0.8211714015, -1.25839189, -3.489765374e-09]
+              velocities_rad_s: [0, 0.00948816824, -0.006847136935, -0.01633530517, 0, 2.188984134e-19]
+              accelerations_rad_s2: [0, 0.04843503867, -0.03495314731, -0.08338818599, 0, 1.11742887e-18]
+            - time_from_start_s: 0.3917894359
+              positions_rad: [0.3124044336, -0.2643038846, 2.051317367, -0.8259714015, -1.25839189, -3.489765374e-09]
+              velocities_rad_s: [0, 0.01897633648, -0.01369427387, -0.03267061035, 0, 4.378024569e-19]
+              accelerations_rad_s2: [0, 0.04843503867, -0.03495314731, -0.08338818599, 0, 1.117443241e-18]
+            - time_from_start_s: 0.5876841539
+              positions_rad: [0.3124044336, -0.2596657579, 2.047955242, -0.8339716534, -1.25839189, -3.489765374e-09]
+              velocities_rad_s: [-5.82551139e-16, 0.02839177757, -0.02077053865, -0.04916231623, 0, 8.103171789e-19]
+              accelerations_rad_s2: [2.034927968e-16, 0.04641885009, -0.03697014639, -0.08338899648, 0, 2.985582911e-18]
+            - time_from_start_s: 0.7835788718
+              positions_rad: [0.3124044336, -0.2532364039, 2.04318433, -0.8451719186, -1.25839189, -3.489765374e-09]
+              velocities_rad_s: [-5.756099989e-16, 0.03729435724, -0.02813809683, -0.06543245407, -1.021947155e-15, 2.285351152e-18]
+              accelerations_rad_s2: [1.050278049e-16, 0.04398380722, -0.03940535998, -0.0833891672, -1.304198546e-14, 1.480789088e-17]
+            - time_from_start_s: 0.9794735898
+              positions_rad: [0.3124044336, -0.2451028723, 2.036917577, -0.8595722038, -1.25839189, -3.489765372e-09]
+              velocities_rad_s: [-4.738554745e-17, 0.04576370092, -0.0360393006, -0.08180300151, 0, 1.682056994e-17]
+              accelerations_rad_s2: [6.44327108e-15, 0.04124998289, -0.04213901436, -0.08338899725, 0, 1.585045486e-16]
+            - time_from_start_s: 1.175368308
+              positions_rad: [0.3124044336, -0.2353673062, 2.029052839, -0.8771725079, -1.25839189, -3.489765367e-09]
+              velocities_rad_s: [2.632865419e-16, 0.0536032817, -0.04445312482, -0.09805640651, 0, 3.243042725e-17]
+              accelerations_rad_s2: [3.131313678e-15, 0.03795133642, -0.04543725739, -0.08338859381, 0, 6.482363076e-19]
+            - time_from_start_s: 1.371263026
+              positions_rad: [0.3124044336, -0.2241533718, 2.019466463, -0.8979728182, -1.25839189, -3.489765361e-09]
+              velocities_rad_s: [2.931837835e-17, 0.06083578499, -0.05366238817, -0.1144981732, 0, 2.758866754e-17]
+              accelerations_rad_s2: [-6.242672597e-15, 0.03399152456, -0.04939636989, -0.08338789445, 0, -6.028973432e-17]
+            - time_from_start_s: 1.567157744
+              positions_rad: [0.3124044336, -0.2116070916, 2.00801245, -0.9219731111, -1.25839189, -3.489765356e-09]
+              velocities_rad_s: [-2.981909641e-16, 0.06721699784, -0.0635745409, -0.1307915387, 0, 3.071871248e-17]
+              accelerations_rad_s2: [3.100215046e-15, 0.02972508472, -0.05366183872, -0.08338692344, 0, 9.891902024e-17]
+            - time_from_start_s: 1.763052462
+              positions_rad: [0.3124044336, -0.1983760856, 1.995036337, -0.9481802302, -1.25839189, -3.489765349e-09]
+              velocities_rad_s: [0, 0.06378298682, -0.06494051698, -0.1287235038, 0, 1.886029339e-17]
+              accelerations_rad_s2: [0, -0.05425214475, 0.02913449356, 0.08338663831, 0, -2.110511941e-16]
+            - time_from_start_s: 1.95894718
+              positions_rad: [0.3124044336, -0.1868672539, 1.982910305, -0.9718150936, -1.25839189, -3.489765347e-09]
+              velocities_rad_s: [4.848276181e-17, 0.05373571311, -0.05865257807, -0.1123882912, 0, 2.034039706e-17]
+              accelerations_rad_s2: [6.2376906e-15, -0.05000498976, 0.03338264653, 0.08338763628, 0, 1.980547095e-16]
+            - time_from_start_s: 2.154841898
+              positions_rad: [0.3124044336, -0.1772504334, 1.972092264, -0.9922499558, -1.25839189, -3.48976534e-09]
+              velocities_rad_s: [0, 0.04446579184, -0.05158710098, -0.09605289283, 0, 5.809079276e-17]
+              accelerations_rad_s2: [0, -0.04614154567, 0.03724681444, 0.08338836011, 0, 2.185475814e-16]
+            - time_from_start_s: 2.350736616
+              positions_rad: [0.3124044336, -0.1693817413, 1.962726091, -1.009484821, -1.25839189, -3.489765326e-09]
+              velocities_rad_s: [-6.590938513e-17, 0.03587779751, -0.04383992498, -0.07971772248, 0, 7.118375164e-17]
+              accelerations_rad_s2: [-6.44671639e-15, -0.04284836706, 0.04054043729, 0.08338880434, 0, -3.801781693e-17]
+            - time_from_start_s: 2.546631333
+              positions_rad: [0.3124044336, -0.1631384892, 1.954934511, -1.023519653, -1.25839189, -3.489765314e-09]
+              velocities_rad_s: [0, 0.02785882736, -0.03552311304, -0.0633819404, 0, 4.312731785e-17]
+              accelerations_rad_s2: [0, -0.04013343758, 0.04325557451, 0.08338901209, 0, -2.41890586e-16]
+            - time_from_start_s: 2.742526051
+              positions_rad: [0.3124044336, -0.1584187208, 1.948819523, -1.034354409, -1.25839189, -3.489765309e-09]
+              velocities_rad_s: [0, 0.02033187083, -0.02671452412, -0.04704639495, 0, 1.297463448e-17]
+              accelerations_rad_s2: [0, -0.03762202368, 0.04576683117, 0.08338885485, 0, -1.144384427e-16]
+            - time_from_start_s: 2.938420769
+              positions_rad: [0.3124044336, -0.1551345239, 1.944468993, -1.041989136, -1.25839189, -3.489765308e-09]
+              velocities_rad_s: [0, 0.0131831484, -0.01752722533, -0.03071037373, 0, 3.341217769e-18]
+              accelerations_rad_s2: [0, -0.03928105088, 0.04442050368, 0.08370155456, 0, -2.024897859e-16]
+            - time_from_start_s: 3.134315487
+              positions_rad: [0.3124044336, -0.1532308678, 1.94193805, -1.046423736, -1.25839189, -3.489765307e-09]
+              velocities_rad_s: [0, 0.006170835422, -0.008204233132, -0.01437506855, 0, 1.563977013e-18]
+              accelerations_rad_s2: [0, -0.03579633516, 0.04759185083, 0.08338818598, 0, -9.071044596e-18]
+            - time_from_start_s: 3.307841479
+              positions_rad: [0.3124044336, -0.1526919312, 1.941221524, -1.047679198, -1.25839189, -3.489765307e-09]
+              velocities_rad_s: [-0, -4.959293793e-18, 6.593467443e-18, 1.155276124e-17, -0, -1.256915954e-33]
+              accelerations_rad_s2: [-0, -0.03579633516, 0.04759185083, 0.08338818599, -0, -9.072458021e-18]
+      - primitive_name: "transport"
+        command_id: ""  # FSM 在派发时赋值
+        velocity_scaling: 0.1
+        acceleration_scaling: 0.1
+        timeout_ms: 5272
+        requires_contact: false
+        simulation_only: true
+        target_rad: []
+        trajectory:
+          trajectory_id: ""
+          header_frame_id: "world"
+          stamp_s: 68811.52688
+          shape_is_valid: true
+          duration_s: 2.847609697
+          point_count: 30
+          joint_names: ["shoulder_joint", "upperArm_joint", "foreArm_joint", "wrist1_joint", "wrist2_joint", "wrist3_joint"]
+          points:
+            - time_from_start_s: 0
+              positions_rad: [0.3124044336, -0.1526919312, 1.941221524, -1.047679198, -1.25839189, -3.489765307e-09]
+              velocities_rad_s: [-0.000315, 9.367466293e-05, -5.652476027e-06, -9.932713903e-05, -0.000315, 2.312542823e-13]
+              accelerations_rad_s2: [-0.315, 0.09367466293, -0.005652476027, -0.09932713903, -0.315, 2.312542823e-10]
+            - time_from_start_s: 0.1
+              positions_rad: [0.3108294336, -0.1522235579, 1.941193262, -1.048175833, -1.25996689, -3.488609036e-09]
+              velocities_rad_s: [-0.031815, 0.009461140956, -0.0005709000787, -0.01003204104, -0.031815, 2.335668251e-11]
+              accelerations_rad_s2: [-0.315, 0.09367466294, -0.005652476028, -0.09932713903, -0.315, 2.312542823e-10]
+            - time_from_start_s: 0.2
+              positions_rad: [0.3061044356, -0.1508207191, 1.941106147, -1.049665787, -1.264691888, -3.485140922e-09]
+              velocities_rad_s: [-0.06303588348, 0.01862354931, -0.001255704739, -0.01987925406, -0.06303588348, 4.623975657e-11]
+              accelerations_rad_s2: [-0.3150028991, 0.08984424097, -0.00956264249, -0.09940688352, -0.3150028991, 2.300810623e-10]
+            - time_from_start_s: 0.3
+              positions_rad: [0.2982294357, -0.1485208388, 1.940921986, -1.052149828, -1.272566888, -3.479372444e-09]
+              velocities_rad_s: [-0.09479973191, 0.02714290511, -0.002771260104, -0.02991416523, -0.09479973191, 6.927471e-11]
+              accelerations_rad_s2: [-0.3150078541, 0.07422356098, -0.02550457589, -0.09972813693, -0.3150078541, 2.25294179e-10]
+            - time_from_start_s: 0.4
+              positions_rad: [0.2872043975, -0.1454517022, 1.940510512, -1.055630439, -1.283591926, -3.471342598e-09]
+              velocities_rad_s: [-0.1261750246, 0.03407205736, -0.005777952653, -0.03985001004, -0.1261750246, 9.157989047e-11]
+              accelerations_rad_s2: [-0.3150073944, 0.05837666406, -0.04150762521, -0.09988428932, -0.3150073944, 2.206264433e-10]
+            - time_from_start_s: 0.5
+              positions_rad: [0.2730293084, -0.1417681995, 1.939715207, -1.060109247, -1.297767015, -3.461097056e-09]
+              velocities_rad_s: [-0.1577435782, 0.03933942384, -0.01051719192, -0.0498566158, -0.1577435782, 1.135309385e-10]
+              accelerations_rad_s2: [-0.3150051605, 0.03908539167, -0.06079947326, -0.09988486497, -0.3150051605, 2.152116166e-10]
+            - time_from_start_s: 0.6
+              positions_rad: [0.2557041819, -0.1376563591, 1.938349928, -1.065586366, -1.315092142, -3.448688034e-09]
+              velocities_rad_s: [-0.1890859385, 0.04256803102, -0.01721502641, -0.05978305746, -0.1890859385, 1.34781171e-10]
+              accelerations_rad_s2: [-0.3150011773, 0.01706594726, -0.08259519811, -0.0996611454, -0.3150011773, 2.094801958e-10]
+            - time_from_start_s: 0.7
+              positions_rad: [0.2352290526, -0.1333317948, 1.936200995, -1.072059863, -1.335567271, -3.434171807e-09]
+              velocities_rad_s: [-0.220791188, 0.04352243763, -0.02627254859, -0.06979498626, -0.220791188, 1.557017035e-10]
+              accelerations_rad_s2: [-0.3149953545, -0.007711242849, -0.106950473, -0.09923923017, -0.3149953545, 2.036636153e-10]
+            - time_from_start_s: 0.8
+              positions_rad: [0.2116039738, -0.129035017, 1.933031703, -1.079525933, -1.35919235, -3.417605017e-09]
+              velocities_rad_s: [-0.2522099001, 0.04196095831, -0.03771143405, -0.0796723924, -0.2522099001, 1.758808822e-10]
+              accelerations_rad_s2: [-0.3149879013, -0.03417174308, -0.1328977363, -0.09872599319, -0.3149879013, 1.983201654e-10]
+            - time_from_start_s: 0.9
+              positions_rad: [0.1848290144, -0.1250263483, 1.928586404, -1.0879799, -1.385967309, -3.399040517e-09]
+              velocities_rad_s: [-0.283646742, 0.03772546647, -0.05178585697, -0.08951132348, -0.283646742, 1.955843277e-10]
+              accelerations_rad_s2: [-0.3149788974, -0.06204464789, -0.1603664987, -0.09832185074, -0.3149788974, 1.939546028e-10]
+            - time_from_start_s: 1
+              positions_rad: [0.1549042816, -0.1215775553, 1.922596896, -1.097418202, -1.415892042, -3.378521523e-09]
+              velocities_rad_s: [-0.315, 0.03081447006, -0.06849160545, -0.09930607554, -0.315, 2.148791309e-10]
+              accelerations_rad_s2: [-0.2193393875, -0.09733195046, -0.1655700604, -0.06823810994, -0.2193393875, 1.262640056e-10]
+            - time_from_start_s: 1.1
+              positions_rad: [0.1234042922, -0.1190613757, 1.915185783, -1.107345494, -1.447392031, -3.357140516e-09]
+              velocities_rad_s: [-0.315, 0.01966719319, -0.07959428079, -0.099261474, -0.315, 2.128576402e-10]
+              accelerations_rad_s2: [9.654113687e-12, -0.1109446364, -0.1109121742, 3.246225111e-05, 9.709597099e-12, -1.839937273e-11]
+            - time_from_start_s: 1.2
+              positions_rad: [0.09190429194, -0.1176431623, 1.906676382, -1.117273109, -1.478892032, -3.3359412e-09]
+              velocities_rad_s: [-0.315, 0.008810902563, -0.09051261845, -0.09932352104, -0.315, 2.112381865e-10]
+              accelerations_rad_s2: [9.37669666e-12, -0.1065575087, -0.1078339395, -0.001276430746, 9.321213248e-12, -1.404340638e-11]
+            - time_from_start_s: 1.3
+              positions_rad: [0.06040429166, -0.1172893379, 1.897089366, -1.127213949, -1.510392032, -3.314882184e-09]
+              velocities_rad_s: [-0.315, -0.001633926771, -0.1011695842, -0.0995356574, -0.315, 2.100494356e-10]
+              accelerations_rad_s2: [-6.35839906e-11, -0.1028030618, -0.1057803676, -0.00297730577, -6.35839906e-11, -9.780997592e-12]
+            - time_from_start_s: 1.4
+              positions_rad: [0.02890429139, -0.1179618821, 1.886445859, -1.137184912, -1.541892032, -3.293920857e-09]
+              velocities_rad_s: [-0.315, -0.01172918586, -0.1116634828, -0.0999342969, -0.315, 2.092823477e-10]
+              accelerations_rad_s2: [3.47326163e-11, -0.09964440361, -0.104663725, -0.005019321341, 3.478809971e-11, -5.597556024e-12]
+            - time_from_start_s: 1.5
+              positions_rad: [-0.002595708877, -0.1196288708, 1.87475748, -1.147206302, -1.573392033, -3.273015432e-09]
+              velocities_rad_s: [-0.315, -0.02153671716, -0.1220882198, -0.1005515026, -0.315, 2.089296037e-10]
+              accelerations_rad_s2: [-1.448117075e-11, -0.09712203091, -0.1044889453, -0.007366914321, -1.437020393e-11, -1.474052251e-12]
+            - time_from_start_s: 1.6
+              positions_rad: [-0.03409570914, -0.1222645315, 1.8620266, -1.157301522, -1.604892033, -3.252124656e-09]
+              velocities_rad_s: [-0.315, -0.03111296829, -0.1325315919, -0.1014186236, -0.315, 2.089899964e-10]
+              accelerations_rad_s2: [-1.525793861e-11, -0.09509056626, -0.1051328237, -0.01004225733, -1.520245519e-11, 2.69280859e-12]
+            - time_from_start_s: 1.7
+              positions_rad: [-0.06559570941, -0.1258482299, 1.848247259, -1.167497164, -1.636392033, -3.231207022e-09]
+              velocities_rad_s: [-0.315, -0.04050867617, -0.1430756078, -0.1025669317, -0.315, 2.094669066e-10]
+              accelerations_rad_s2: [-3.428874948e-11, -0.09358421788, -0.1066067941, -0.0130225762, -3.428874948e-11, 6.891720853e-12]
+            - time_from_start_s: 1.8
+              positions_rad: [-0.09709570968, -0.1303633302, 1.833406737, -1.177822586, -1.667892033, -3.210220911e-09]
+              velocities_rad_s: [-0.315, -0.04976537869, -0.1537874027, -0.104022024, -0.315, 2.103602428e-10]
+              accelerations_rad_s2: [-3.955967398e-11, -0.09238446679, -0.1086018371, -0.01621737029, -3.944870715e-11, 1.1064297e-11]
+            - time_from_start_s: 1.9
+              positions_rad: [-0.1281662261, -0.1357067204, 1.817722947, -1.188162985, -1.69896255, -3.189415173e-09]
+              velocities_rad_s: [-0.2983597054, -0.05560005634, -0.1557703226, -0.1001702663, -0.2983597054, 2.004507272e-10]
+              accelerations_rad_s2: [0.3150339034, -0.02737318467, 0.06000388946, 0.08737707417, 0.3150339034, -1.974017e-10]
+            - time_from_start_s: 2
+              positions_rad: [-0.1564448808, -0.141340947, 1.802513709, -1.197737997, -1.727241204, -3.17035263e-09]
+              velocities_rad_s: [-0.2668306001, -0.05667511228, -0.1478717913, -0.09119667898, -0.2668306001, 1.805643489e-10]
+              accelerations_rad_s2: [0.3150369205, -0.002792727025, 0.08732864944, 0.09012137648, 0.3150369205, -1.985971503e-10]
+            - time_from_start_s: 2.1
+              positions_rad: [-0.1815716871, -0.1469671776, 1.78822477, -1.206400706, -1.752368011, -3.153286457e-09]
+              velocities_rad_s: [-0.2353236098, -0.05545637748, -0.137353257, -0.08189687951, -0.2353236098, 1.604888053e-10]
+              accelerations_rad_s2: [0.3150381933, 0.01929966747, 0.1131933234, 0.0938936559, 0.3150381933, -2.012468304e-10]
+            - time_from_start_s: 2.2
+              positions_rad: [-0.2035478017, -0.1523684549, 1.775110245, -1.214113953, -1.774344125, -3.138242324e-09]
+              velocities_rad_s: [-0.2038159182, -0.05219937946, -0.124387836, -0.07218845647, -0.2038159182, 1.40099586e-10]
+              accelerations_rad_s2: [0.3150378835, 0.03871099452, 0.1369316494, 0.09822065484, 0.3150378835, -2.04734962e-10]
+            - time_from_start_s: 2.3
+              positions_rad: [-0.222373436, -0.1573542486, 1.763403493, -1.220834911, -1.79316976, -3.125254708e-09]
+              velocities_rad_s: [-0.1723136073, -0.04717111045, -0.1092090906, -0.06203798014, -0.1723136073, 1.193422326e-10]
+              accelerations_rad_s2: [0.315036057, 0.05550633805, 0.1582866906, 0.1027803525, 0.315036057, -2.08646802e-10]
+            - time_from_start_s: 2.4
+              positions_rad: [-0.2380486378, -0.1617603126, 1.753313608, -1.226518732, -1.808844961, -3.114362077e-09]
+              velocities_rad_s: [-0.1408082527, -0.04063147078, -0.09207047352, -0.05143900271, -0.1408082527, 9.819166426e-11]
+              accelerations_rad_s2: [0.3150327949, 0.06970098672, 0.1769564728, 0.1072554861, 0.3150327949, -2.126074365e-10]
+            - time_from_start_s: 2.5
+              positions_rad: [-0.2505736653, -0.1654486714, 1.745022066, -1.231121916, -1.821369989, -3.10560283e-09]
+              velocities_rad_s: [-0.1093095191, -0.03284559409, -0.0732709901, -0.04042539599, -0.1093095191, 7.6673258e-11]
+              accelerations_rad_s2: [0.3150282708, 0.08128314788, 0.1925720978, 0.1112889499, 0.3150282708, -2.162303023e-10]
+            - time_from_start_s: 2.6
+              positions_rad: [-0.2599486761, -0.1683059674, 1.738681944, -1.234604742, -1.830745, -3.099012611e-09]
+              velocities_rad_s: [-0.07780712006, -0.02398938325, -0.05300265434, -0.02901327107, -0.07780712006, 5.479301985e-11]
+              accelerations_rad_s2: [0.3150158448, 0.09199418477, 0.2074463351, 0.1154521503, 0.3150158448, -2.200085081e-10]
+            - time_from_start_s: 2.7
+              positions_rad: [-0.2661735268, -0.1702372206, 1.73442481, -1.236930623, -1.83696985, -3.094624684e-09]
+              velocities_rad_s: [-0.046305, -0.01439877494, -0.03171321115, -0.01731443621, -0.046305, 3.265227954e-11]
+              accelerations_rad_s2: [0.3161823258, 0.09605173058, 0.2133897318, 0.1173380012, 0.3161823258, -2.221493228e-10]
+            - time_from_start_s: 2.8
+              positions_rad: [-0.2692482323, -0.1711933158, 1.732319016, -1.238080321, -1.840044556, -3.092456535e-09]
+              velocities_rad_s: [-0.014805, -0.004603689946, -0.01013959812, -0.005535908175, -0.014805, 1.043984448e-11]
+              accelerations_rad_s2: [0.315, 0.0979508499, 0.2157361303, 0.1177852803, 0.315, -2.221243506e-10]
+            - time_from_start_s: 2.847609697
+              positions_rad: [-0.2696052349, -0.1713043276, 1.732074513, -1.238213812, -1.840401559, -3.092204792e-09]
+              velocities_rad_s: [-3.249586483e-17, -1.010475422e-17, -2.225565755e-17, -1.215090333e-17, -3.249586483e-17, 2.291467579e-26]
+              accelerations_rad_s2: [0.315, 0.09795084992, 0.2157361303, 0.1177852803, 0.315, -2.221243506e-10]
+      - primitive_name: "pre_seat"
+        command_id: ""  # FSM 在派发时赋值
+        velocity_scaling: 0.1
+        acceleration_scaling: 0.1
+        timeout_ms: 8880
+        requires_contact: false
+        simulation_only: true
+        target_rad: []
+        trajectory:
+          trajectory_id: ""
+          header_frame_id: "world"
+          stamp_s: 68811.52688
+          shape_is_valid: true
+          duration_s: 5.252757701
+          point_count: 22
+          joint_names: ["shoulder_joint", "upperArm_joint", "foreArm_joint", "wrist1_joint", "wrist2_joint", "wrist3_joint"]
+          points:
+            - time_from_start_s: 0
+              positions_rad: [-0.2696052349, -0.1713043276, 1.732074513, -1.238213812, -1.840401559, -3.092204792e-09]
+              velocities_rad_s: [-3.437788707e-12, -3.586376061e-05, 9.023948045e-05, 0.0001261032411, -3.437784332e-12, 1.281629552e-20]
+              accelerations_rad_s2: [-1.354738431e-09, -0.0141329264, 0.03556090924, 0.04969383564, -1.354736707e-09, 5.05055126e-18]
+            - time_from_start_s: 0.2537603295
+              positions_rad: [-0.269605235, -0.1717593676, 1.733219473, -1.236613812, -1.840401559, -3.092204792e-09]
+              velocities_rad_s: [-3.472168067e-10, -0.003622239821, 0.009114187525, 0.01273642735, -3.472168067e-10, 1.294443652e-18]
+              accelerations_rad_s2: [-1.354767454e-09, -0.0141329264, 0.03556090924, 0.04969383564, -1.354852797e-09, 5.050118793e-18]
+            - time_from_start_s: 0.507520659
+              positions_rad: [-0.2696052351, -0.1731244875, 1.736654353, -1.231813812, -1.840401559, -3.092204791e-09]
+              velocities_rad_s: [-6.910865202e-10, -0.007228540152, 0.01812321167, 0.02535175182, -6.910865202e-10, 2.41392699e-18]
+              accelerations_rad_s2: [-1.372609611e-09, -0.01805873117, 0.03262035816, 0.05067908933, -1.372609611e-09, -2.689772157e-17]
+            - time_from_start_s: 0.7612809885
+              positions_rad: [-0.2696052353, -0.1754127983, 1.742367319, -1.223812536, -1.840401559, -3.092204791e-09]
+              velocities_rad_s: [-1.034317422e-09, -0.01095605814, 0.02699891782, 0.03795497596, -1.034317486e-09, 2.436266299e-18]
+              accelerations_rad_s2: [-1.351203872e-09, -0.01557974127, 0.03411566424, 0.04969540551, -1.351199698e-09, -7.664673882e-18]
+            - time_from_start_s: 1.015041318
+              positions_rad: [-0.2696052356, -0.1786915011, 1.750289961, -1.212611191, -1.840401559, -3.09220479e-09]
+              velocities_rad_s: [-1.375496705e-09, -0.01501613085, 0.03549825732, 0.05051438817, -1.37549626e-09, -5.756990438e-19]
+              accelerations_rad_s2: [-1.347377121e-09, -0.01711569616, 0.03258020044, 0.0496958966, -1.347377183e-09, -2.113431661e-17]
+            - time_from_start_s: 1.268801647
+              positions_rad: [-0.269605236, -0.1830547734, 1.760328136, -1.198209744, -1.84040156, -3.092204791e-09]
+              velocities_rad_s: [-1.717749807e-09, -0.01950935993, 0.04364242455, 0.06315178448, -1.717749713e-09, -7.010197249e-18]
+              accelerations_rad_s2: [-1.342666151e-09, -0.01890831766, 0.03078775728, 0.04969607495, -1.342652745e-09, -3.522383117e-17]
+            - time_from_start_s: 1.522561977
+              positions_rad: [-0.2696052365, -0.1886147844, 1.77237, -1.180607868, -1.84040156, -3.092204794e-09]
+              velocities_rad_s: [-2.056358253e-09, -0.02445373269, 0.05124796052, 0.07570169321, -2.056358457e-09, -1.305040037e-17]
+              accelerations_rad_s2: [-1.336939489e-09, -0.02105478667, 0.02864130475, 0.04969609142, -1.336941353e-09, -1.402273372e-17]
+            - time_from_start_s: 1.776322306
+              positions_rad: [-0.2696052371, -0.1955066973, 1.786280429, -1.159805526, -1.840401561, -3.092204797e-09]
+              velocities_rad_s: [-2.397248813e-09, -0.03003986569, 0.05835408732, 0.08839395301, -2.397249253e-09, -1.209853598e-17]
+              accelerations_rad_s2: [-1.330167912e-09, -0.02359729741, 0.02609861908, 0.04969591649, -1.330167894e-09, 2.536014538e-17]
+            - time_from_start_s: 2.030082636
+              positions_rad: [-0.2696052377, -0.2038892494, 1.801900335, -1.135803069, -1.840401561, -3.0922048e-09]
+              velocities_rad_s: [-2.733316307e-09, -0.03624700678, 0.06472499069, 0.1009719975, -2.733315428e-09, -1.60228909e-17]
+              accelerations_rad_s2: [-1.322759114e-09, -0.02647722102, 0.02321830225, 0.04969552327, -1.322759142e-09, -6.116845397e-17]
+            - time_from_start_s: 2.283842965
+              positions_rad: [-0.2696052384, -0.2139445927, 1.819047543, -1.108600518, -1.840401562, -3.092204806e-09]
+              velocities_rad_s: [-3.067713683e-09, -0.04321834017, 0.07033927029, 0.1135576105, -3.06771437e-09, -2.355269991e-17]
+              accelerations_rad_s2: [-1.315145281e-09, -0.02971165843, 0.01998322355, 0.04969488199, -1.315139797e-09, 2.107942962e-18]
+            - time_from_start_s: 2.537603295
+              positions_rad: [-0.2696052393, -0.2258750953, 1.837519619, -1.078197939, -1.840401563, -3.092204812e-09]
+              velocities_rad_s: [-3.399300694e-09, -0.05098069123, 0.07512254983, 0.1261032411, -3.399300665e-09, -2.227933468e-17]
+              accelerations_rad_s2: [-8.302156601e-10, -0.02573914929, 0.006192226235, 0.03193137552, -8.302305462e-10, 1.272734603e-17]
+            - time_from_start_s: 2.791363624
+              positions_rad: [-0.2696052401, -0.2391376603, 1.856112528, -1.046342465, -1.840401564, -3.092204817e-09]
+              velocities_rad_s: [-3.287065507e-09, -0.05239565797, 0.06979577083, 0.1221914288, -3.287066105e-09, -2.502978337e-17]
+              accelerations_rad_s2: [1.363065604e-09, 0.009048650022, -0.04064130648, -0.0496899565, 1.363074853e-09, -3.524031403e-17]
+            - time_from_start_s: 3.045123954
+              positions_rad: [-0.2696052409, -0.252091203, 1.87259755, -1.0169039, -1.840401565, -3.092204824e-09]
+              velocities_rad_s: [-2.942832095e-09, -0.04950291353, 0.06008005588, 0.1095829694, -2.942831148e-09, -2.436247629e-17]
+              accelerations_rad_s2: [1.353089515e-09, 0.01243773496, -0.03725344411, -0.04969117907, 1.353096849e-09, 3.457981385e-17]
+            - time_from_start_s: 3.298884283
+              positions_rad: [-0.2696052416, -0.2642085316, 1.886719067, -0.9906650538, -1.840401565, -3.092204829e-09]
+              velocities_rad_s: [-2.60080173e-09, -0.04579589306, 0.05117710416, 0.09697299722, -2.600801453e-09, -1.694914767e-17]
+              accelerations_rad_s2: [1.344822927e-09, 0.01558724661, -0.03410493886, -0.04969218548, 1.344828458e-09, 2.665689153e-17]
+            - time_from_start_s: 3.552644613
+              positions_rad: [-0.2696052422, -0.2752920431, 1.898674477, -0.9676261327, -1.840401566, -3.092204833e-09]
+              velocities_rad_s: [-2.260518396e-09, -0.04135692057, 0.04300606156, 0.08436298214, -2.260518552e-09, -1.527440487e-17]
+              accelerations_rad_s2: [1.33874822e-09, 0.01834440173, -0.03134853357, -0.0496929353, 1.338753789e-09, -1.054106902e-17]
+            - time_from_start_s: 3.806404942
+              positions_rad: [-0.2696052428, -0.2851681959, 1.908637304, -0.9477871533, -1.840401566, -3.092204837e-09]
+              velocities_rad_s: [-1.921469394e-09, -0.03628374132, 0.03546908606, 0.07175282738, -1.921469735e-09, -1.519172574e-17]
+              accelerations_rad_s2: [1.334581231e-09, 0.02071787289, -0.02897559264, -0.04969346553, 1.334571787e-09, 8.039007785e-18]
+            - time_from_start_s: 4.060165272
+              positions_rad: [-0.2696052432, -0.293688048, 1.916756448, -0.9311481566, -1.840401567, -3.092204841e-09]
+              velocities_rad_s: [-1.583208868e-09, -0.03067259847, 0.02846989024, 0.05914248871, -1.583208176e-09, -1.236165293e-17]
+              accelerations_rad_s2: [1.332088374e-09, 0.02271277656, -0.02698103402, -0.04969381058, 1.332090363e-09, 1.376765248e-17]
+            - time_from_start_s: 4.313925601
+              positions_rad: [-0.2696052436, -0.3007269698, 1.923156519, -0.9177091641, -1.840401567, -3.092204843e-09]
+              velocities_rad_s: [-1.245412929e-09, -0.0246188278, 0.02191331355, 0.04653214134, -1.245413046e-09, -9.401122666e-18]
+              accelerations_rad_s2: [1.330630818e-09, 0.02433298011, -0.02536102359, -0.04969400369, 1.330636752e-09, 1.030932506e-17]
+            - time_from_start_s: 4.567685931
+              positions_rad: [-0.2696052438, -0.3061825677, 1.927939912, -0.907470173, -1.840401567, -3.092204845e-09]
+              velocities_rad_s: [-9.078343741e-10, -0.01818049985, 0.0157413633, 0.03392186315, -9.078347429e-10, -6.824429198e-18]
+              accelerations_rad_s2: [1.330160097e-09, 0.02587210874, -0.02382190036, -0.0496940091, 1.330153672e-09, 1.00726205e-17]
+            - time_from_start_s: 4.82144626
+              positions_rad: [-0.269605244, -0.3099669686, 1.931194504, -0.9004311802, -1.840401568, -3.092204847e-09]
+              velocities_rad_s: [-5.703338039e-10, -0.01147098226, 0.009840465479, 0.02131144774, -5.703330364e-10, -4.282614183e-18]
+              accelerations_rad_s2: [1.32989906e-09, 0.02674792975, -0.02294590589, -0.04969383564, 1.32989727e-09, 9.986159923e-18]
+            - time_from_start_s: 5.07520659
+              positions_rad: [-0.2696052441, -0.3120333152, 1.932967135, -0.8965922031, -1.840401568, -3.092204848e-09]
+              velocities_rad_s: [-2.328581803e-10, -0.004683418792, 0.00401770484, 0.008701123633, -2.328578669e-10, -1.74852295e-18]
+              accelerations_rad_s2: [1.32989906e-09, 0.02674792975, -0.02294590589, -0.04969383564, 1.32989727e-09, 9.986159923e-18]
+            - time_from_start_s: 5.252757701
+              positions_rad: [-0.2696052442, -0.3124549214, 1.933328813, -0.895808919, -1.840401568, -3.092204848e-09]
+              velocities_rad_s: [3.003237368e-25, 6.040336789e-18, -5.181746803e-18, -1.122208359e-17, 3.003233327e-25, 2.255119171e-33]
+              accelerations_rad_s2: [1.32989906e-09, 0.02674792975, -0.02294590588, -0.04969383563, 1.32989727e-09, 9.986159922e-18]
+      - primitive_name: "seat_contact"
+        command_id: ""  # FSM 在派发时赋值
+        velocity_scaling: 0.1
+        acceleration_scaling: 0.1
+        timeout_ms: 12443
+        requires_contact: true
+        simulation_only: true
+        target_rad: []
+        trajectory:
+          trajectory_id: ""
+          header_frame_id: "world"
+          stamp_s: 68811.52688
+          shape_is_valid: true
+          duration_s: 7.628651512
+          point_count: 12
+          joint_names: ["shoulder_joint", "upperArm_joint", "foreArm_joint", "wrist1_joint", "wrist2_joint", "wrist3_joint"]
+          points:
+            - time_from_start_s: 0
+              positions_rad: [-0.2696052442, -0.3124549214, 1.933328813, -0.895808919, -1.840401568, -3.092204848e-09]
+              velocities_rad_s: [0, -2.416270805e-05, 1.936880716e-05, 4.353151521e-05, 6.041211311e-18, -4.395728533e-21]
+              accelerations_rad_s2: [0, -0.003286997791, 0.002634854761, 0.005921852552, 8.218221315e-16, -5.979772609e-19]
+            - time_from_start_s: 0.7350996133
+              positions_rad: [-0.2696052442, -0.3133430212, 1.934040713, -0.894208919, -1.840401568, -3.092204848e-09]
+              velocities_rad_s: [0, -0.002416270805, 0.001936880716, 0.004353151521, 6.041211311e-16, -4.395728533e-19]
+              accelerations_rad_s2: [0, -0.003286997791, 0.002634854761, 0.005921852552, 8.218221315e-16, -5.979772609e-19]
+            - time_from_start_s: 1.470199227
+              positions_rad: [-0.2696052442, -0.3160073208, 1.936176413, -0.889408919, -1.840401568, -3.092204848e-09]
+              velocities_rad_s: [0, -0.004862062193, 0.00388736156, 0.008749423753, 0, -9.245765199e-19]
+              accelerations_rad_s2: [6.814275173e-15, -0.00365142972, 0.002242480737, 0.005893910457, 5.451420139e-14, -3.38899981e-18]
+            - time_from_start_s: 2.20529884
+              positions_rad: [-0.2696052442, -0.3204593086, 1.939724119, -0.8814092251, -1.840401568, -3.092204849e-09]
+              velocities_rad_s: [-6.640653742e-17, -0.007323865183, 0.005776639824, 0.01310050501, 3.553596338e-16, -1.707212706e-18]
+              accelerations_rad_s2: [-2.416738897e-16, -0.003450522153, 0.002471268251, 0.005921790404, -1.024606662e-15, -1.800705221e-18]
+            - time_from_start_s: 2.940398453
+              positions_rad: [-0.2696052442, -0.3267638001, 1.944619284, -0.8702095693, -1.840401568, -3.092204851e-09]
+              velocities_rad_s: [0, -0.009891912404, 0.007544446937, 0.01743635934, 0, -2.845945408e-18]
+              accelerations_rad_s2: [0, -0.003629970602, 0.002291770763, 0.005921741366, 0, -1.466443271e-18]
+            - time_from_start_s: 3.675498067
+              positions_rad: [-0.2696052442, -0.3350110179, 1.950771658, -0.8558099766, -1.840401568, -3.092204853e-09]
+              velocities_rad_s: [7.940703009e-17, -0.01260396395, 0.009194902525, 0.02179886648, 3.176281203e-16, -7.538465758e-19]
+              accelerations_rad_s2: [2.574452607e-16, -0.003808637228, 0.002113062463, 0.005921699691, 1.029781043e-15, 8.715552979e-18]
+            - time_from_start_s: 4.41059768
+              positions_rad: [-0.2696052442, -0.3440547442, 1.957222368, -0.8403155411, -1.840401568, -3.092204852e-09]
+              velocities_rad_s: [1.535480581e-16, -0.01121411588, 0.007809181756, 0.01902329763, 0, 7.921537507e-19]
+              accelerations_rad_s2: [4.328015835e-18, 0.00317145563, -0.002750499552, -0.005921955182, 0, -3.524183203e-18]
+            - time_from_start_s: 5.145697293
+              positions_rad: [-0.2696052442, -0.3514289183, 1.962256928, -0.8279068061, -1.840401568, -3.092204853e-09]
+              velocities_rad_s: [6.447366534e-17, -0.008789251208, 0.005881046099, 0.01467029731, 0, -2.713752721e-18]
+              accelerations_rad_s2: [-2.359483873e-16, 0.003351744601, -0.002570208503, -0.005921953104, 0, -6.814495256e-18]
+            - time_from_start_s: 5.880796907
+              positions_rad: [-0.2696052442, -0.3569760373, 1.96591855, -0.8186980658, -1.840401568, -3.092204855e-09]
+              velocities_rad_s: [0, -0.006236078727, 0.004080920851, 0.01031699958, 0, -4.124529089e-18]
+              accelerations_rad_s2: [0, 0.003536775752, -0.002385112834, -0.005921888586, 0, 6.46381672e-19]
+            - time_from_start_s: 6.61589652
+              positions_rad: [-0.2696052442, -0.3606132253, 1.968290046, -0.8126893819, -1.840401568, -3.092204858e-09]
+              velocities_rad_s: [0, -0.003611815824, 0.00235200176, 0.005963817584, -4.360845571e-16, -2.666597262e-18]
+              accelerations_rad_s2: [1.510023545e-14, 0.003586400901, -0.002335451651, -0.005921852552, -5.932319229e-14, 2.647872046e-18]
+            - time_from_start_s: 7.350996133
+              positions_rad: [-0.2696052442, -0.3623142197, 1.969397727, -0.809880706, -1.840401568, -3.092204859e-09]
+              velocities_rad_s: [0, -0.0009754539088, 0.000635212154, 0.001610666063, -1.177746614e-16, -7.201759029e-19]
+              accelerations_rad_s2: [0, 0.003586400901, -0.002335451651, -0.005921852552, 4.330160021e-16, 2.647833469e-18]
+            - time_from_start_s: 7.628651512
+              positions_rad: [-0.2696052442, -0.3624524621, 1.96948775, -0.8096524407, -1.840401568, -3.092204859e-09]
+              velocities_rad_s: [-0, 2.570051779e-19, -1.673608678e-19, -4.243660457e-19, 3.103037216e-32, 1.897464702e-34]
+              accelerations_rad_s2: [-0, 0.003586400901, -0.002335451651, -0.005921852552, 4.330160021e-16, 2.647833469e-18]
+      - primitive_name: "retreat"
+        command_id: ""  # FSM 在派发时赋值
+        velocity_scaling: 0.1
+        acceleration_scaling: 0.1
+        timeout_ms: 9789
+        requires_contact: false
+        simulation_only: true
+        target_rad: []
+        trajectory:
+          trajectory_id: ""
+          header_frame_id: "world"
+          stamp_s: 68811.52688
+          shape_is_valid: true
+          duration_s: 5.858825994
+          point_count: 26
+          joint_names: ["shoulder_joint", "upperArm_joint", "foreArm_joint", "wrist1_joint", "wrist2_joint", "wrist3_joint"]
+          points:
+            - time_from_start_s: 0
+              positions_rad: [-0.3022557269, -0.2942593288, 2.074825534, -0.7725077905, -1.873052051, -3.068783528e-09]
+              velocities_rad_s: [0, 8.102870386e-05, -5.073384086e-05, -0.0001317625447, 0, 1.729176165e-20]
+              accelerations_rad_s2: [0, 0.03336421318, -0.02089006242, -0.0542542756, 0, 7.120020369e-18]
+            - time_from_start_s: 0.2428611262
+              positions_rad: [-0.3022557269, -0.2932753927, 2.07420947, -0.7741077905, -1.873052051, -3.068783528e-09]
+              velocities_rad_s: [1.539048636e-16, 0.00818389909, -0.005124117927, -0.01330801702, 0, 1.746467927e-18]
+              accelerations_rad_s2: [3.168577574e-14, 0.03336421318, -0.02089006242, -0.0542542756, 0, 7.120020369e-18]
+            - time_from_start_s: 0.4857222524
+              positions_rad: [-0.3022557269, -0.2903235844, 2.072361278, -0.7789077905, -1.873052051, -3.068783527e-09]
+              velocities_rad_s: [3.047621061e-16, 0.01620574077, -0.01014676817, -0.02635250895, 0, 3.45835233e-18]
+              accelerations_rad_s2: [6.274411037e-16, 0.03336421318, -0.02089006242, -0.0542542756, 0, 7.120020369e-18]
+            - time_from_start_s: 0.7285833785
+              positions_rad: [-0.3022557269, -0.2854136651, 2.069270705, -0.7869082825, -1.873052051, -3.068783526e-09]
+              velocities_rad_s: [4.698945075e-16, 0.02424495953, -0.01541075876, -0.03965571829, 0, 6.374117908e-18]
+              accelerations_rad_s2: [-1.323289338e-16, 0.03199925961, -0.02225581468, -0.05425507429, 0, 1.839185979e-17]
+            - time_from_start_s: 0.9714445047
+              positions_rad: [-0.3022557269, -0.2786056048, 2.064878248, -0.7981088005, -1.873052051, -3.068783524e-09]
+              velocities_rad_s: [0, 0.03186619744, -0.02091306305, -0.05277926049, 0, 1.178106205e-17]
+              accelerations_rad_s2: [0, 0.03046166229, -0.02379362479, -0.05425528708, 0, 3.084302184e-17]
+            - time_from_start_s: 1.214305631
+              positions_rad: [-0.3022557269, -0.2699848787, 2.059098417, -0.8125093574, -1.873052051, -3.06878352e-09]
+              velocities_rad_s: [0, 0.03914740301, -0.02683650683, -0.06598390984, 0, 2.010454397e-17]
+              accelerations_rad_s2: [0, 0.02869479336, -0.0255604689, -0.05425526226, 0, 4.266732109e-17]
+            - time_from_start_s: 1.457166757
+              positions_rad: [-0.3022557269, -0.2596527614, 2.051829934, -0.8301099578, -1.873052051, -3.068783514e-09]
+              velocities_rad_s: [0, 0.04592055867, -0.03317357565, -0.07909413431, 0, 2.729669321e-17]
+              accelerations_rad_s2: [0, 0.02656498987, -0.02769009915, -0.05425508902, 0, 1.717615797e-17]
+            - time_from_start_s: 1.700027883
+              positions_rad: [-0.3022557269, -0.247732081, 2.042950158, -0.8509104143, -1.873052051, -3.068783507e-09]
+              velocities_rad_s: [0, 0.0522136082, -0.04014140464, -0.09235501284, 0, 3.092866491e-17]
+              accelerations_rad_s2: [0, 0.0240178503, -0.03023688109, -0.05425473139, 0, 1.171140129e-17]
+            - time_from_start_s: 1.942889009
+              positions_rad: [-0.3022557269, -0.2343684066, 2.032313504, -0.8749107422, -1.873052051, -3.0687835e-09]
+              velocities_rad_s: [0, 0.05780416615, -0.04769355873, -0.1054977249, 9.618317438e-16, 2.021905515e-17]
+              accelerations_rad_s2: [0, 0.02109606424, -0.03315809706, -0.0542541613, -8.065182722e-15, -1.131657818e-16]
+            - time_from_start_s: 2.185750136
+              positions_rad: [-0.3022557269, -0.2197306751, 2.01975092, -0.9021110575, -1.873052051, -3.068783497e-09]
+              velocities_rad_s: [-4.168295272e-16, 0.06265545924, -0.0559927099, -0.1186481691, -8.754925849e-16, 1.331914023e-17]
+              accelerations_rad_s2: [-7.956550708e-15, 0.01776358554, -0.0364897517, -0.05425333724, -7.945479817e-15, 5.950236227e-17]
+            - time_from_start_s: 2.428611262
+              positions_rad: [-0.3022557269, -0.2040097575, 2.005071605, -0.9325112906, -1.873052051, -3.068783493e-09]
+              velocities_rad_s: [-1.781832179e-17, 0.06668366567, -0.06507887906, -0.1317625447, 0, 1.533059599e-17]
+              accelerations_rad_s2: [8.119032348e-15, 0.005766398887, -0.03150195683, -0.03726835572, 0, -4.903400617e-17]
+            - time_from_start_s: 2.671472388
+              positions_rad: [-0.3022557269, -0.1881873691, 1.988894003, -0.9645112805, -1.873052051, -3.06878349e-09]
+              velocities_rad_s: [2.284626411e-16, 0.06361895374, -0.06814359098, -0.1317625447, 0, 1.700790738e-17]
+              accelerations_rad_s2: [-1.882856726e-15, -0.0128638499, -0.01286384991, -1.062040512e-11, 0, 6.422512662e-17]
+            - time_from_start_s: 2.914333514
+              positions_rad: [-0.3022557269, -0.1731166919, 1.97196468, -0.9965112807, -1.873052051, -3.068783484e-09]
+              velocities_rad_s: [2.28642266e-16, 0.06048402647, -0.07127851825, -0.1317625447, 0, 3.440258718e-17]
+              accelerations_rad_s2: [1.883588068e-15, -0.01296436465, -0.01296436465, 4.411842356e-12, 0, 7.908586845e-17]
+            - time_from_start_s: 3.15719464
+              positions_rad: [-0.3022557269, -0.158810333, 1.954271039, -1.028511281, -1.873052051, -3.068783474e-09]
+              velocities_rad_s: [0, 0.05732466994, -0.07443787479, -0.1317625447, 5.678241954e-21, 3.777309049e-17]
+              accelerations_rad_s2: [0, -0.01307481246, -0.01307481245, 7.920621066e-12, -1.5072536e-14, -5.132057459e-17]
+            - time_from_start_s: 3.400055766
+              positions_rad: [-0.3022557269, -0.1452692376, 1.935812134, -1.060511281, -1.873052051, -3.068783467e-09]
+              velocities_rad_s: [1.651684699e-17, 0.05414433973, -0.07761820499, -0.1317625447, 9.657883879e-16, 1.600003079e-17]
+              accelerations_rad_s2: [3.986226831e-15, -0.01341534016, -0.01341534015, 1.088379884e-11, 8.127879828e-15, -1.308382145e-16]
+            - time_from_start_s: 3.642916893
+              positions_rad: [-0.3022557269, -0.1329688527, 1.917336804, -1.091286997, -1.873052051, -3.068783465e-09]
+              velocities_rad_s: [4.300240548e-16, 0.04662456967, -0.07355705911, -0.1201816288, 8.600481095e-16, 1.229399744e-17]
+              accelerations_rad_s2: [-3.969222568e-15, -0.03273149876, 0.02152373054, 0.0542552293, -7.938445137e-15, 9.320603431e-17]
+            - time_from_start_s: 3.885778019
+              positions_rad: [-0.3022557269, -0.122550726, 1.900153844, -1.118888083, -1.873052051, -3.068783461e-09]
+              velocities_rad_s: [2.134214654e-16, 0.03924774366, -0.06775998241, -0.1070077261, 8.536858616e-16, 9.743568571e-18]
+              accelerations_rad_s2: [-1.99600807e-15, -0.0293052756, 0.02495064412, 0.05425591972, -7.984032278e-15, -1.025188246e-16]
+            - time_from_start_s: 4.128639145
+              positions_rad: [-0.3022557269, -0.1138293281, 1.884474193, -1.143289132, -1.873052051, -3.068783461e-09]
+              velocities_rad_s: [0, 0.03264449003, -0.06118434693, -0.09382883695, 0, 5.905143728e-20]
+              accelerations_rad_s2: [0, -0.02622650176, 0.0280298576, 0.05425635936, 0, 1.040278471e-17]
+            - time_from_start_s: 4.371500271
+              positions_rad: [-0.3022557269, -0.1066269028, 1.87047616, -1.16448959, -1.873052051, -3.06878346e-09]
+              velocities_rad_s: [-2.509017157e-16, 0.02672971896, -0.0539205103, -0.08065022926, 0, 1.484867519e-17]
+              accelerations_rad_s2: [-2.061637045e-15, -0.02351442937, 0.03074214273, 0.0542565721, 0, 1.126292307e-16]
+            - time_from_start_s: 4.614361397
+              positions_rad: [-0.3022557269, -0.1007870834, 1.858315928, -1.182489641, -1.873052051, -3.068783454e-09]
+              velocities_rad_s: [0, 0.02141289183, -0.04606004506, -0.06747293689, 0, 2.230253746e-17]
+              accelerations_rad_s2: [0, -0.02118105748, 0.03307552775, 0.05425658523, 0, -3.113056625e-17]
+            - time_from_start_s: 4.857222524
+              positions_rad: [-0.3022557269, -0.09617591618, 1.84812731, -1.197289426, -1.873052051, -3.06878345e-09]
+              velocities_rad_s: [0, 0.01660024688, -0.03769548463, -0.05429573151, 1.049408758e-15, 1.322592508e-17]
+              accelerations_rad_s2: [0, -0.01923475723, 0.03502167022, 0.05425642746, 8.704037954e-15, -4.638147485e-17]
+            - time_from_start_s: 5.10008365
+              positions_rad: [-0.3022557269, -0.0926818769, 1.840021606, -1.20888917, -1.873052051, -3.068783448e-09]
+              velocities_rad_s: [0, 0.01220606416, -0.02891398588, -0.04112005004, 0, 5.065176167e-18]
+              accelerations_rad_s2: [0, -0.01760646119, 0.03664956755, 0.05425602874, 0, -2.905627712e-17]
+            - time_from_start_s: 5.342944776
+              positions_rad: [-0.3022557269, -0.09021158775, 1.834092162, -1.217288903, -1.873052051, -3.068783447e-09]
+              velocities_rad_s: [2.982212323e-16, 0.008153426896, -0.01978023259, -0.02793365948, 0, 1.378228914e-18]
+              accelerations_rad_s2: [1.22794964e-13, -0.0317541427, 0.02636854483, 0.05812268753, 0, -2.23287391e-16]
+            - time_from_start_s: 5.585805902
+              positions_rad: [-0.3022557269, -0.08869454785, 1.83041182, -1.222486285, -1.873052051, -3.068783447e-09]
+              velocities_rad_s: [0, 0.004307470813, -0.0104499342, -0.01475740501, 0, 7.281223634e-19]
+              accelerations_rad_s2: [-6.545203267e-14, -0.01583603001, 0.03841824559, 0.0542542756, 0, -2.676283493e-18]
+            - time_from_start_s: 5.828667028
+              positions_rad: [-0.3022557269, -0.08811154118, 1.828997444, -1.224483668, -1.873052051, -3.068783447e-09]
+              velocities_rad_s: [0, 0.00046151473, -0.001119635807, -0.001581150537, 0, 7.801311037e-20]
+              accelerations_rad_s2: [0, -0.01583603001, 0.03841824559, 0.0542542756, 0, -2.676876548e-18]
+            - time_from_start_s: 5.858825994
+              positions_rad: [-0.3022557269, -0.08810433924, 1.828979972, -1.224508342, -1.873052051, -3.068783447e-09]
+              velocities_rad_s: [-0, -2.550026028e-18, 6.186369067e-18, 8.736395095e-18, -0, -4.310489982e-34]
+              accelerations_rad_s2: [-0, -0.01583603002, 0.03841824559, 0.05425427561, -0, -2.676876548e-18]

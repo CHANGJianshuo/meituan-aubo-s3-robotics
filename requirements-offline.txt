@@ -1,0 +1,7 @@
+# ROS 2 dependencies are installed with rosdep/apt, not pip.
+numpy>=1.26,<3
+scipy>=1.11,<2
+opencv-python>=4.6,<5
+PyYAML>=6,<7
+pytest>=7,<9
+matplotlib>=3.6,<4

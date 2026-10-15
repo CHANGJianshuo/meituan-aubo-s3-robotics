@@ -1,0 +1,8 @@
+# 碰撞反证：目标位于桌面内部（base_link z=-0.03），有桌面障碍物时必须规划失败。
+/**:
+  ros__parameters:
+    target:
+      mode: "pose"
+      frame_id: "base_link"
+      xyz: [0.35, 0.0, -0.03]
+      quat_xyzw: [1.0, 0.0, 0.0, 0.0]

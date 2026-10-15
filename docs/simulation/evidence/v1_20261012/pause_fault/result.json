@@ -1,0 +1,72 @@
+{
+  "contacts": {
+    "current": {
+      "mtc::table::table::top / mtc::battery_A::body::part_0": {
+        "depth_m": 1.8767088195981163e-08,
+        "kind": "support"
+      },
+      "mtc::table::table::top / mtc::battery_B::body::part_0": {
+        "depth_m": 1.8767088195981163e-08,
+        "kind": "support"
+      },
+      "mtc::table::table::top / mtc::battery_C::body::part_0": {
+        "depth_m": 1.8767088195981163e-08,
+        "kind": "support"
+      },
+      "mtc::table::table::top / mtc::battery_D::body::part_0": {
+        "depth_m": 1.8767088195981163e-08,
+        "kind": "support"
+      }
+    },
+    "gazebo_control_plugin": true,
+    "session_id": "bed70e15795c4ecf8080d579df7eca92",
+    "sim_time": 36.0,
+    "total": {
+      "mtc::table::table::top / mtc::battery_A::body::part_0": {
+        "kind": "support",
+        "last_sim_time": 36.0,
+        "max_depth_m": 2.899999999992492e-05,
+        "steps": 35986
+      },
+      "mtc::table::table::top / mtc::battery_B::body::part_0": {
+        "kind": "support",
+        "last_sim_time": 36.0,
+        "max_depth_m": 2.899999999992492e-05,
+        "steps": 35986
+      },
+      "mtc::table::table::top / mtc::battery_C::body::part_0": {
+        "kind": "support",
+        "last_sim_time": 36.0,
+        "max_depth_m": 2.899999999992492e-05,
+        "steps": 35986
+      },
+      "mtc::table::table::top / mtc::battery_D::body::part_0": {
+        "kind": "support",
+        "last_sim_time": 36.0,
+        "max_depth_m": 2.899999999992492e-05,
+        "steps": 35986
+      }
+    }
+  },
+  "objects": [
+    {
+      "error_code": 230,
+      "message": "joint/contact feedback lost; wall ages=2.001698/2.017702",
+      "object": "battery_A",
+      "placement_verified": false,
+      "slot": "T0",
+      "stability_s": 0.0,
+      "states": [
+        "RESOLVE_TARGET",
+        "PLAN_ACQUIRE",
+        "MOVE_PRE_ALIGN",
+        "FAULT"
+      ],
+      "success": false
+    }
+  ],
+  "order": "A",
+  "simulation_only": true,
+  "success": false,
+  "task": "basic"
+}

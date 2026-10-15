@@ -1,0 +1,29 @@
+# ExecuteJointMove.action —— 六关节目标移动 Action（拟新增 MVP，来源：设计 V0.1 §4.8）
+# 提供方：mtc_motion_execution/motion_executor
+# 语义：只适配“给定六关节目标并验证真实到位”的能力。
+#       不承诺中间点逐点时间同步；禁止把轨迹拆成高频调用本接口来伪装轨迹控制。
+
+string COMMAND_OK=ok
+string COMMAND_REJECTED=rejected
+string COMMAND_UNKNOWN=unknown
+
+# --- Goal ---
+string command_id
+string[6] joint_names     # 必须与 target_rad 按索引一一对应，禁止假定 J1..J6 顺序
+float64[6] target_rad
+float32 velocity_scaling      # 相对“已审核运动原语上限”的缩放，0 < x <= 1
+float32 acceleration_scaling  # 同上
+uint32 timeout_ms
+---
+# --- Result ---
+bool success
+bool stop_confirmed       # 仅在后端确认静止后为 true
+float64[6] final_position_rad
+uint16 error_code
+string message
+---
+# --- Feedback ---
+float64[6] actual_position_rad
+float64[6] actual_velocity_rad_s
+float32 progress
+string execution_state    # 见 ExecuteJointMove 的执行状态枚举

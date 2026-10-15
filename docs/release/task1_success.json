@@ -1,0 +1,15 @@
+{
+  "status": "COMPLETED_WITH_INDEPENDENT_STATIONARY_RECONCILIATION",
+  "stages": 10,
+  "task": "red_to_T0",
+  "complete_motion_and_checks_s": 90.439,
+  "previous_complete_motion_and_checks_s": 175.872,
+  "nominal_motion_s": 55.605,
+  "following_error_peak_deg": 0.450986,
+  "final_joint_error_deg": 0.003268,
+  "visual_stability_s": 9.53,
+  "visual_frames": 60,
+  "source": "outputs/task1_real_scene_20261014/revision_01/physical_attempt_20261014T184851Z/half_time_01/RESULT.md",
+  "source_sha256": "c51d29584f282051283f83f7f2b0c54a0eb3ddfcfde0abcaeadddaabd19700bd",
+  "note": "RTDE teardown timed out after completed; independent read-only verification confirmed stillness; no replay. Timing excludes login and teardown."
+}

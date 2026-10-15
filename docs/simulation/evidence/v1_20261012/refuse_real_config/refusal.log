@@ -1,0 +1,4 @@
+[WARN] [1791807744.445132931] [rcl]: ROS_LOCALHOST_ONLY is deprecated but still honored if it is enabled. Use ROS_AUTOMATIC_DISCOVERY_RANGE and ROS_STATIC_PEERS instead.
+[WARN] [1791807744.445176681] [rcl]: 'localhost_only' is enabled, 'automatic_discovery_range' and 'static_peers' will be ignored.
+[ERROR] [1791807744.607863654] [v1_task]: explicit V1 simulation configuration required
+[ros2run]: Process exited with failure 1

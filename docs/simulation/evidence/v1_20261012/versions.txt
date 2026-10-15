@@ -1,0 +1,6 @@
+ros-jazzy-gz-ros2-control	1.2.20-1noble.20261006.040504
+ros-jazzy-gz-sim-vendor	0.0.13-1noble.20260905.073557
+ros-jazzy-joint-trajectory-controller	4.42.1-1noble.20260924.190511
+ros-jazzy-moveit-ros-move-group	2.12.4-1noble.20260915.202214
+ros-jazzy-ros-gz	1.0.24-1noble.20261006.041805
+ros-jazzy-ros2-control	4.48.1-1noble.20261006.040510

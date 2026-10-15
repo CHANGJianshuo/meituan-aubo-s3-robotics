@@ -1,0 +1,28 @@
+# ExecuteTask.action —— 整轮比赛任务 Action（拟新增，来源：状态机设计 V0.1 §4.3）
+# 提供方：mtc_task/task_executor    使用方：比赛启动程序 / 上位机
+# 语义：一次只受理一个 Goal；非法口令必须拒绝，不得猜测或补全。
+
+# --- Goal ---
+uint8 MODE_BASIC=1
+uint8 MODE_SEQUENCE=2
+
+string task_id          # 本轮唯一任务 ID，用于全链路日志关联
+uint8 mode              # MODE_BASIC 或 MODE_SEQUENCE
+uint8[] ordered_colors  # 按次序的颜色口令；颜色取值见 BatteryDetection.msg
+uint32 timeout_ms       # 任务级截止时间（毫秒），必须 > 0
+float32 placement_stability_sec  # 追加：放置稳定性观察时长（秒），缺省由参数提供
+---
+# --- Result ---
+bool success
+uint8 completed_count
+string[] completed_slots
+uint16 error_code       # 取值见 ErrorCodes.msg
+string message
+---
+# --- Feedback ---
+uint8 current_index
+uint8 total_count
+string state            # 当前 Task FSM 状态名
+string current_slot
+string current_object_id
+string substate         # 追加：当前 PickPlace 子状态，便于 UI 观察

@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="770" viewBox="0 0 1100 770">
+ <title>AUBO S3 / D435i / V1 坐标交接图：模型链已查，安装与工位待测</title>
+ <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#64748b"/></marker></defs>
+ <rect width="1100" height="770" fill="#f8fafc"/>
+ <g font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" fill="#0f172a">
+  <text x="45" y="47" font-size="25" font-weight="bold">S3 · 法兰附近 D435i · V1 舌规</text>
+  <text x="45" y="77" font-size="16">2026-10-11｜坐标关系交接图；虚线为待测关系，不代表已发布 TF</text>
+  <g stroke="#64748b" stroke-width="2" fill="none" marker-end="url(#arrow)">
+   <path d="M250 145L250 197"/><path d="M250 255L250 355"/>
+   <path d="M355 385L545 385"/>
+   <path d="M250 415L250 495" stroke-dasharray="7 6"/>
+   <path d="M355 399L495 399L495 525L545 525" stroke-dasharray="7 6"/>
+   <path d="M250 555L250 650"/>
+   <path d="M355 225L860 225L860 295" stroke-dasharray="7 6"/>
+   <path d="M860 355L860 475" stroke-dasharray="7 6"/>
+   <path d="M860 535L860 650" stroke-dasharray="7 6"/>
+  </g>
+  <g fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5">
+   <rect x="145" y="100" width="210" height="45" rx="9"/>
+   <rect x="145" y="197" width="210" height="58" rx="9"/>
+   <rect x="145" y="355" width="210" height="60" rx="9"/>
+   <rect x="545" y="355" width="210" height="60" rx="9"/>
+   <rect x="145" y="495" width="280" height="60" rx="9"/>
+   <rect x="545" y="495" width="190" height="60" rx="9"/>
+   <rect x="145" y="650" width="305" height="62" rx="9"/>
+   <rect x="755" y="295" width="260" height="60" rx="9"/>
+   <rect x="755" y="475" width="260" height="60" rx="9"/>
+   <rect x="755" y="650" width="260" height="62" rx="9"/>
+  </g>
+  <g font-size="18">
+   <text x="217" y="129">world</text><text x="191" y="232">base_link</text>
+   <text x="184" y="390">wrist3_Link</text><text x="610" y="390">ee_link</text>
+   <text x="172" y="531">D435i camera_link*</text><text x="588" y="522" font-size="17">hook_tcp_v1*</text><text x="612" y="544" font-size="14" fill="#b45309">UNKNOWN</text>
+   <text x="167" y="680">实际 color/depth optical frame*</text><text x="185" y="700" font-size="14">视觉 ring_pose：采集时刻、完整 6D</text>
+   <text x="815" y="331">table_frame*</text><text x="806" y="510">T0_frame* · 优先</text>
+   <text x="800" y="686">P1 / P2 / P3*</text>
+  </g>
+  <g font-size="14" fill="#475569">
+   <text x="270" y="179">模型固定关系</text><text x="271" y="299">动态机器人链</text><text x="271" y="321">按观测时刻查询</text>
+   <text x="385" y="362">模型 Rz(+π/2)</text><text x="265" y="454" fill="#b45309">安装外参 UNKNOWN</text>
+   <text x="275" y="633">设备内部 TF：待读取</text><text x="680" y="210" fill="#b45309">台面外参 UNKNOWN</text>
+   <text x="877" y="410" fill="#b45309">T0 标定 UNKNOWN</text><text x="877" y="591" fill="#b45309">工位标定 UNKNOWN</text>
+   <text x="45" y="748">* 相机、TCP、工位名称为提案或占位名称；运行 frame 与测量数据需核验。未提供实物标定值。</text>
+  </g>
+ </g>
+</svg>

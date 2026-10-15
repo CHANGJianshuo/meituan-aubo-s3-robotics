@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>mtc_safety</name>
+  <version>0.1.0</version>
+  <description>
+    软件安全联锁与故障监控。联锁核心逻辑（interlocks.py）为纯 Python，
+    不依赖 rclpy，可离线单元测试；rclpy 外壳（safety_supervisor.py）只负责
+    订阅 /mtc/robot/state 与 /mtc/tool/state，并在状态未知/失联/超时时调用
+    /mtc/motion/request_stop 发出软件停止**请求**。本包不实现运动执行，
+    也不替代实体急停。
+  </description>
+  <maintainer email="team@example.invalid">meituan_challenge team</maintainer>
+  <license>Apache-2.0</license>
+
+  <depend>rclpy</depend>
+  <depend>mtc_interfaces</depend>
+  <depend>std_msgs</depend>
+
+  <test_depend>python3-pytest</test_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>

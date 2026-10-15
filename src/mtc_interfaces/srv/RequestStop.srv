@@ -1,0 +1,8 @@
+# RequestStop.srv（拟新增，来源：状态机设计 V0.1 §4.10）
+# 软件停止请求，不是紧急停止，也不保证网络失效时机械臂能停下。
+# request_delivered 只表示请求送达执行适配层；stop_confirmed 必须另行确认。
+
+string reason
+---
+bool request_delivered
+string message

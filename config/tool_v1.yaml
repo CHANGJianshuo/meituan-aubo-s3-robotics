@@ -1,0 +1,47 @@
+# config/tool_v1.yaml
+# V1 末端执行器：passive_hook_v1（纯机械舌规）。
+# 动作矩阵（设计 §5.2）：side_insert → hook_engage → unload → side_withdraw
+#
+# !! 安全声明 !!
+# 本文件所有几何/速度数值均为**保守占位值**，未经任何实物标定。
+# V1 **不使用电磁 IO**（uses_unlock_io=false）：任何解锁 IO 调用次数必须为 0。
+# 本文件不含任何凭据。
+
+mtc_tool:
+  ros__parameters:
+
+    tool_type: "passive_hook_v1"          # 占位值，禁止用于真实运动
+    # V1 硬约束：不接收、不保存、也不得调用 UnlockIoPort。
+    uses_unlock_io: false
+    io_channels: []                       # 必须为空：V1 零电磁通道
+    unlock_pulse_ms: 0                    # 必须为 0：V1 不发送任何脉冲
+
+    # ---- 接合（ENGAGE）几何 -------------------------------------------
+    # 单位：米。侧向进环的预对位偏移（负值表示从 -X 方向接近）。
+    side_approach_offset_m: -0.06         # 待实物标定（占位值，禁止用于真实运动）
+    # 穿环插入深度。
+    insert_depth_m: 0.03                  # 待实物标定（占位值，禁止用于真实运动）
+    # 挂钩上提量（穿环完成后适当上提）。
+    hook_lift_m: 0.01                     # 待实物标定（占位值，禁止用于真实运动）
+
+    # ---- 释放（UNLOAD / DISENGAGE / RETREAT）几何 ----------------------
+    unload_drop_m: -0.005                 # 待实物标定（占位值，禁止用于真实运动）
+    retreat_offset_m: -0.08               # 待实物标定（占位值，禁止用于真实运动）
+
+    # ---- 速度上限（接触阶段必须低速受监护） ---------------------------
+    contact_linear_speed_m_s: 0.01        # 待实物标定（占位值，禁止用于真实运动）
+    contact_angular_speed_rad_s: 0.05     # 待实物标定（占位值，禁止用于真实运动）
+    free_linear_speed_m_s: 0.05           # 待实物标定（占位值，禁止用于真实运动）
+    free_angular_speed_rad_s: 0.20        # 待实物标定（占位值，禁止用于真实运动）
+
+    # ---- 证据等级要求 --------------------------------------------------
+    # 证据等级（ToolState.msg）：0 NONE / 1 COMMAND_ONLY / 2 GEOMETRY / 3 SENSOR_OR_VISION
+    # 仅命令级证据（1）不得用于宣告“已挂载”，必须 >= 2。
+    min_attach_evidence_level: 2          # 待实物标定
+    min_release_evidence_level: 2         # 待实物标定
+    # 试提验证：必须取得随动/几何证据后才允许运输。
+    require_test_lift_evidence: true
+
+    # ---- TCP / 工具坐标系（占位） --------------------------------------
+    tcp_frame_id: "tool0_v1"              # 占位值：标定后替换为真实 TF 名
+    tcp_calibration_version: "uncalibrated"   # 待实物标定

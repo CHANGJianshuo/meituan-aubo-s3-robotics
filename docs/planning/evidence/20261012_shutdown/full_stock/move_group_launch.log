@@ -1,0 +1,256 @@
+[INFO] [launch]: All log files can be found below /tmp/aubo_s3_mock_logs/2026-10-12-05-41-31-071396-CJS-LAPTOP-108473
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [move_group-1]: process started with pid [108479]
+[move_group-1] [INFO] [1791801691.418220095] [move_group.moveit.moveit.ros.rdf_loader]: Loaded robot model in 0.0047541 seconds
+[move_group-1] [INFO] [1791801691.418408053] [move_group.moveit.moveit.core.robot_model]: Loading robot model 'aubo_robot'...
+[move_group-1] [INFO] [1791801691.425265850] [move_group.moveit.moveit.kinematics.kdl_kinematics_plugin]: Joint weights for group 'manipulator': 1 1 1 1 1 1
+[move_group-1] [INFO] [1791801691.448255937] [move_group.moveit.moveit.ros.planning_scene_monitor]: Publishing maintained planning scene on 'monitored_planning_scene'
+[move_group-1] [INFO] [1791801691.448476990] [move_group.moveit.moveit.ros.moveit_cpp]: Listening to 'joint_states' for joint states
+[move_group-1] [INFO] [1791801691.449023169] [move_group.moveit.moveit.ros.current_state_monitor]: Listening to joint states on topic 'joint_states'
+[move_group-1] [INFO] [1791801691.449634938] [move_group.moveit.moveit.ros.planning_scene_monitor]: Listening to '/attached_collision_object' for attached collision objects
+[move_group-1] [INFO] [1791801691.449670809] [move_group.moveit.moveit.ros.planning_scene_monitor]: Stopping existing planning scene publisher.
+[move_group-1] [INFO] [1791801691.449842282] [move_group.moveit.moveit.ros.planning_scene_monitor]: Stopped publishing maintained planning scene.
+[move_group-1] [INFO] [1791801691.450730658] [move_group.moveit.moveit.ros.planning_scene_monitor]: Publishing maintained planning scene on 'monitored_planning_scene'
+[move_group-1] [INFO] [1791801691.450855959] [move_group.moveit.moveit.ros.planning_scene_monitor]: Starting planning scene monitor
+[move_group-1] [INFO] [1791801691.451628903] [move_group.moveit.moveit.ros.planning_scene_monitor]: Listening to '/planning_scene'
+[move_group-1] [INFO] [1791801691.451660674] [move_group.moveit.moveit.ros.planning_scene_monitor]: Starting world geometry update monitor for collision objects, attached objects, octomap updates.
+[move_group-1] [INFO] [1791801691.452030061] [move_group.moveit.moveit.ros.planning_scene_monitor]: Listening to 'collision_object'
+[move_group-1] [INFO] [1791801691.452401856] [move_group.moveit.moveit.ros.planning_scene_monitor]: Listening to 'planning_scene_world' for planning scene world geometry
+[move_group-1] [WARN] [1791801691.452858203] [move_group.moveit.moveit.ros.occupancy_map_monitor]: Resolution not specified for Octomap. Assuming resolution = 0.1 instead
+[move_group-1] [ERROR] [1791801691.452901082] [move_group.moveit.moveit.ros.occupancy_map_monitor]: No 3D sensor plugin(s) defined for octomap updates
+[move_group-1] [INFO] [1791801691.475361445] [move_group.moveit.moveit.ros.planning_pipeline]: Successfully loaded planner 'OMPL'
+[move_group-1] [INFO] [1791801691.477738824] [move_group]: Try loading adapter 'default_planning_request_adapters/ResolveConstraintFrames'
+[move_group-1] [INFO] [1791801691.479979288] [move_group]: Loaded adapter 'default_planning_request_adapters/ResolveConstraintFrames'
+[move_group-1] [INFO] [1791801691.480023835] [move_group]: Try loading adapter 'default_planning_request_adapters/ValidateWorkspaceBounds'
+[move_group-1] [INFO] [1791801691.480724279] [move_group]: Loaded adapter 'default_planning_request_adapters/ValidateWorkspaceBounds'
+[move_group-1] [INFO] [1791801691.480779715] [move_group]: Try loading adapter 'default_planning_request_adapters/CheckStartStateBounds'
+[move_group-1] [INFO] [1791801691.480841238] [move_group]: Loaded adapter 'default_planning_request_adapters/CheckStartStateBounds'
+[move_group-1] [INFO] [1791801691.480847506] [move_group]: Try loading adapter 'default_planning_request_adapters/CheckStartStateCollision'
+[move_group-1] [INFO] [1791801691.480881334] [move_group]: Loaded adapter 'default_planning_request_adapters/CheckStartStateCollision'
+[move_group-1] [INFO] [1791801691.482661406] [move_group]: Try loading adapter 'default_planning_response_adapters/AddTimeOptimalParameterization'
+[move_group-1] [INFO] [1791801691.485397126] [move_group]: Loaded adapter 'default_planning_response_adapters/AddTimeOptimalParameterization'
+[move_group-1] [INFO] [1791801691.485433857] [move_group]: Try loading adapter 'default_planning_response_adapters/ValidateSolution'
+[move_group-1] [INFO] [1791801691.486775612] [move_group]: Loaded adapter 'default_planning_response_adapters/ValidateSolution'
+[move_group-1] [INFO] [1791801691.486813501] [move_group]: Try loading adapter 'default_planning_response_adapters/DisplayMotionPath'
+[move_group-1] [INFO] [1791801691.487536034] [move_group]: Loaded adapter 'default_planning_response_adapters/DisplayMotionPath'
+[move_group-1] [INFO] [1791801691.518564158] [move_group.moveit.moveit.plugins.simple_controller_manager]: Added FollowJointTrajectory controller for joint_trajectory_controller
+[move_group-1] [INFO] [1791801691.518851753] [move_group.moveit.moveit.plugins.simple_controller_manager]: Returned 1 controllers in list
+[move_group-1] [INFO] [1791801691.518923654] [move_group.moveit.moveit.plugins.simple_controller_manager]: Returned 1 controllers in list
+[move_group-1] [INFO] [1791801691.519193792] [move_group.moveit.moveit.ros.trajectory_execution_manager]: Trajectory execution is not managing controllers
+[move_group-1] [INFO] [1791801691.519212681] [move_group]: MoveGroup debug mode is ON
+[move_group-1] [INFO] [1791801691.543089845] [move_group.moveit.moveit.ros.move_group.executable]: 
+[move_group-1] 
+[move_group-1] ********************************************************
+[move_group-1] * MoveGroup using: 
+[move_group-1] *     - apply_planning_scene_service
+[move_group-1] *     - clear_octomap_service
+[move_group-1] *     - get_group_urdf
+[move_group-1] *     - load_geometry_from_file
+[move_group-1] *     - CartesianPathService
+[move_group-1] *     - execute_trajectory_action
+[move_group-1] *     - get_planning_scene_service
+[move_group-1] *     - kinematics_service
+[move_group-1] *     - move_action
+[move_group-1] *     - motion_plan_service
+[move_group-1] *     - query_planners_service
+[move_group-1] *     - state_validation_service
+[move_group-1] *     - save_geometry_to_file
+[move_group-1] ********************************************************
+[move_group-1] 
+[move_group-1] [INFO] [1791801691.543185505] [move_group.moveit.moveit.ros.move_group.context]: MoveGroup context using pipeline ompl
+[move_group-1] [INFO] [1791801691.543197974] [move_group.moveit.moveit.ros.move_group.context]: MoveGroup context initialization complete
+[move_group-1] [96mLoading 'move_group/ApplyPlanningSceneService'...[0m
+[move_group-1] [96mLoading 'move_group/ClearOctomapService'...[0m
+[move_group-1] [96mLoading 'move_group/GetUrdfService'...[0m
+[move_group-1] [96mLoading 'move_group/LoadGeometryFromFileService'...[0m
+[move_group-1] [96mLoading 'move_group/MoveGroupCartesianPathService'...[0m
+[move_group-1] [96mLoading 'move_group/MoveGroupExecuteTrajectoryAction'...[0m
+[move_group-1] [96mLoading 'move_group/MoveGroupGetPlanningSceneService'...[0m
+[move_group-1] [96mLoading 'move_group/MoveGroupKinematicsService'...[0m
+[move_group-1] [96mLoading 'move_group/MoveGroupMoveAction'...[0m
+[move_group-1] [96mLoading 'move_group/MoveGroupPlanService'...[0m
+[move_group-1] [96mLoading 'move_group/MoveGroupQueryPlannersService'...[0m
+[move_group-1] [96mLoading 'move_group/MoveGroupStateValidationService'...[0m
+[move_group-1] [96mLoading 'move_group/SaveGeometryToFileService'...[0m
+[move_group-1] 
+[move_group-1] [92mYou can start planning now![0m
+[move_group-1] 
+[move_group-1] [INFO] [1791801730.130393238] [move_group.moveit.moveit.ros.move_group.move_action]: MoveGroupMoveAction: Received request
+[move_group-1] [INFO] [1791801730.130797035] [move_group.moveit.moveit.ros.move_group.move_action]: executing..
+[move_group-1] [INFO] [1791801730.132759428] [move_group.moveit.moveit.ros.move_group.move_action]: Planning request received for MoveGroup action. Forwarding to planning pipeline.
+[move_group-1] [INFO] [1791801730.132811965] [move_group.moveit.moveit.ros.move_group.capability]: Using planning pipeline 'ompl'
+[move_group-1] [INFO] [1791801730.133036042] [move_group]: Calling PlanningRequestAdapter 'ResolveConstraintFrames'
+[move_group-1] [INFO] [1791801730.133115699] [move_group]: Calling PlanningRequestAdapter 'ValidateWorkspaceBounds'
+[move_group-1] [WARN] [1791801730.133125078] [move_group.moveit.moveit.ros.validate_workspace_bounds]: It looks like the planning volume was not specified. Using default values.
+[move_group-1] [INFO] [1791801730.133154915] [move_group]: Calling PlanningRequestAdapter 'CheckStartStateBounds'
+[move_group-1] [INFO] [1791801730.133217369] [move_group]: Calling PlanningRequestAdapter 'CheckStartStateCollision'
+[move_group-1] [INFO] [1791801730.181186951] [move_group.moveit.moveit.planners.ompl.model_based_planning_context]: Planner configuration 'manipulator[RRTConnectkConfigDefault]' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.
+[move_group-1] [INFO] [1791801730.182669765] [move_group]: Calling Planner 'OMPL'
+[move_group-1] [INFO] [1791801730.182950049] [move_group.moveit.moveit.planners.ompl.model_based_planning_context]: manipulator[RRTConnectkConfigDefault]: Allocating specialized state sampler for state space
+[move_group-1] [INFO] [1791801730.193496894] [move_group.moveit.moveit.core.kinematic_constraints]: Constraint satisfied:: Joint name: 'shoulder_joint', actual value: 0.388225, desired value: 0.388252, tolerance_above: 0.000100, tolerance_below: 0.000100
+[move_group-1] [INFO] [1791801730.193582765] [move_group.moveit.moveit.core.kinematic_constraints]: Constraint satisfied:: Joint name: 'upperArm_joint', actual value: -2.849753, desired value: -2.849802, tolerance_above: 0.000100, tolerance_below: 0.000100
+[move_group-1] [INFO] [1791801730.193595645] [move_group.moveit.moveit.core.kinematic_constraints]: Constraint satisfied:: Joint name: 'foreArm_joint', actual value: -2.353352, desired value: -2.353310, tolerance_above: 0.000000, tolerance_below: 0.000200
+[move_group-1] [INFO] [1791801730.193606176] [move_group.moveit.moveit.core.kinematic_constraints]: Constraint satisfied:: Joint name: 'wrist1_joint', actual value: -1.074454, desired value: -1.074305, tolerance_above: 0.000000, tolerance_below: 0.000200
+[move_group-1] [INFO] [1791801730.193615282] [move_group.moveit.moveit.core.kinematic_constraints]: Constraint satisfied:: Joint name: 'wrist2_joint', actual value: 1.570725, desired value: 1.570796, tolerance_above: 0.000100, tolerance_below: 0.000100
+[move_group-1] [INFO] [1791801730.193624447] [move_group.moveit.moveit.core.kinematic_constraints]: Constraint satisfied:: Joint name: 'wrist3_joint', actual value: 0.388208, desired value: 0.388152, tolerance_above: 0.000200, tolerance_below: 0.000000
+[move_group-1] [INFO] [1791801730.193635468] [move_group.moveit.moveit.core.kinematic_constraints]: Constraint satisfied:: Joint name: 'foreArm_joint', actual value: -2.353352, desired value: 0.000000, tolerance_above: 2.410000, tolerance_below: 2.410000
+[move_group-1] [INFO] [1791801730.193644639] [move_group.moveit.moveit.core.kinematic_constraints]: Constraint satisfied:: Joint name: 'wrist1_joint', actual value: -1.074454, desired value: 0.000000, tolerance_above: 2.660000, tolerance_below: 2.660000
+[move_group-1] [INFO] [1791801730.193655038] [move_group.moveit.moveit.core.kinematic_constraints]: Constraint satisfied:: Joint name: 'wrist3_joint', actual value: 0.388208, desired value: 0.000000, tolerance_above: 2.230000, tolerance_below: 2.230000
+[move_group-1] [INFO] [1791801730.193684564] [move_group.moveit.moveit.core.moveit_collision_detection_fcl]: Found a contact between 'mtc_moveit_planner/table' (type 'Object') and 'upperArm_Link' (type 'Robot link'), which constitutes a collision. Contact information is not stored.
+[move_group-1] [INFO] [1791801730.193695351] [move_group.moveit.moveit.core.moveit_collision_detection_fcl]: Collision checking is considered complete (collision was found and 0 contacts are stored)
+[move_group-1] [ERROR] [1791801730.203361219] [move_group.moveit.moveit.planners.ompl.planner_manager]: ./src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:265 - manipulator/manipulator[RRTConnectkConfigDefault]: Unable to sample any valid states for goal tree
+[move_group-1] [WARN] [1791801730.203533576] [move_group.moveit.moveit.planners.ompl.model_based_planning_context]: Invalid goal state
+[move_group-1] [ERROR] [1791801730.203593580] [move_group.moveit.moveit.planners.ompl.model_based_planning_context]: Unable to solve the planning problem
+[move_group-1] [ERROR] [1791801730.203696136] [move_group]: Planner 'OMPL' failed with error code GOAL_STATE_INVALID
+[move_group-1] [ERROR] [1791801730.203714077] [move_group.moveit.moveit.ros.move_group.move_action]: Generating a plan with planning pipeline failed.
+[move_group-1] [INFO] [1791801730.203753972] [move_group.moveit.moveit.ros.move_group.move_action]: FAILURE
+[move_group-1] [INFO] [1791801730.205956538] [move_group.moveit.moveit.ros.move_group.move_action]: MoveGroupMoveAction: Received request
+[move_group-1] [INFO] [1791801730.206298664] [move_group.moveit.moveit.ros.move_group.move_action]: executing..
+[move_group-1] [INFO] [1791801730.207883640] [move_group.moveit.moveit.ros.move_group.move_action]: Planning request received for MoveGroup action. Forwarding to planning pipeline.
+[move_group-1] [INFO] [1791801730.207950325] [move_group.moveit.moveit.ros.move_group.capability]: Using planning pipeline 'ompl'
+[move_group-1] [INFO] [1791801730.208206788] [move_group]: Calling PlanningRequestAdapter 'ResolveConstraintFrames'
+[move_group-1] [INFO] [1791801730.208387996] [move_group]: Calling PlanningRequestAdapter 'ValidateWorkspaceBounds'
+[move_group-1] [WARN] [1791801730.208399880] [move_group.moveit.moveit.ros.validate_workspace_bounds]: It looks like the planning volume was not specified. Using default values.
+[move_group-1] [INFO] [1791801730.208436804] [move_group]: Calling PlanningRequestAdapter 'CheckStartStateBounds'
+[move_group-1] [INFO] [1791801730.208514053] [move_group]: Calling PlanningRequestAdapter 'CheckStartStateCollision'
+[move_group-1] [INFO] [1791801730.209287746] [move_group.moveit.moveit.planners.ompl.model_based_planning_context]: Planner configuration 'manipulator[RRTConnectkConfigDefault]' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.
+[move_group-1] [INFO] [1791801730.209498359] [move_group]: Calling Planner 'OMPL'
+[move_group-1] [INFO] [1791801730.209611383] [move_group.moveit.moveit.planners.ompl.model_based_planning_context]: manipulator[RRTConnectkConfigDefault]: Allocating specialized state sampler for state space
+[move_group-1] [WARN] [1791801730.210926418] [move_group.moveit.moveit.planners.ompl.constrained_goal_sampler]: More than 80% of the sampled goal states fail to satisfy the constraints imposed on the goal sampler. Is the constrained sampler working correctly?
+[move_group-1] [ERROR] [1791801733.945743823] [move_group.moveit.moveit.planners.ompl.planner_manager]: ./src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:265 - manipulator/manipulator[RRTConnectkConfigDefault]: Unable to sample any valid states for goal tree
+[move_group-1] [WARN] [1791801733.945902441] [move_group.moveit.moveit.planners.ompl.model_based_planning_context]: Invalid goal state
+[move_group-1] [ERROR] [1791801733.947591763] [move_group.moveit.moveit.planners.ompl.model_based_planning_context]: Unable to solve the planning problem
+[move_group-1] [ERROR] [1791801733.947764367] [move_group]: Planner 'OMPL' failed with error code GOAL_STATE_INVALID
+[move_group-1] [ERROR] [1791801733.947784131] [move_group.moveit.moveit.ros.move_group.move_action]: Generating a plan with planning pipeline failed.
+[move_group-1] [INFO] [1791801733.947801162] [move_group.moveit.moveit.ros.move_group.move_action]: FAILURE
+[move_group-1] [INFO] [1791801736.898913470] [move_group.moveit.moveit.ros.move_group.move_action]: MoveGroupMoveAction: Received request
+[move_group-1] [INFO] [1791801736.899180175] [move_group.moveit.moveit.ros.move_group.move_action]: executing..
+[move_group-1] [INFO] [1791801736.902665813] [move_group.moveit.moveit.ros.move_group.move_action]: Planning request received for MoveGroup action. Forwarding to planning pipeline.
+[move_group-1] [INFO] [1791801736.902718877] [move_group.moveit.moveit.ros.move_group.capability]: Using planning pipeline 'ompl'
+[move_group-1] [INFO] [1791801736.902919398] [move_group]: Calling PlanningRequestAdapter 'ResolveConstraintFrames'
+[move_group-1] [INFO] [1791801736.902970130] [move_group]: Calling PlanningRequestAdapter 'ValidateWorkspaceBounds'
+[move_group-1] [WARN] [1791801736.902975021] [move_group.moveit.moveit.ros.validate_workspace_bounds]: It looks like the planning volume was not specified. Using default values.
+[move_group-1] [INFO] [1791801736.903000445] [move_group]: Calling PlanningRequestAdapter 'CheckStartStateBounds'
+[move_group-1] [INFO] [1791801736.903061323] [move_group]: Calling PlanningRequestAdapter 'CheckStartStateCollision'
+[move_group-1] [INFO] [1791801736.903463314] [move_group.moveit.moveit.planners.ompl.model_based_planning_context]: Planner configuration 'manipulator[RRTConnectkConfigDefault]' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.
+[move_group-1] [INFO] [1791801736.903571730] [move_group]: Calling Planner 'OMPL'
+[move_group-1] [INFO] [1791801736.903651620] [move_group.moveit.moveit.planners.ompl.model_based_planning_context]: manipulator[RRTConnectkConfigDefault]: Allocating specialized state sampler for state space
+[move_group-1] [INFO] [1791801736.916257447] [move_group.moveit.moveit.core.kinematic_constraints]: Constraint satisfied:: Joint name: 'shoulder_joint', actual value: 0.388253, desired value: 0.388252, tolerance_above: 0.000100, tolerance_below: 0.000100
+[move_group-1] [INFO] [1791801736.916338978] [move_group.moveit.moveit.core.kinematic_constraints]: Constraint satisfied:: Joint name: 'upperArm_joint', actual value: -0.327446, desired value: -0.327392, tolerance_above: 0.000100, tolerance_below: 0.000100
+[move_group-1] [INFO] [1791801736.916350829] [move_group.moveit.moveit.core.kinematic_constraints]: Constraint satisfied:: Joint name: 'foreArm_joint', actual value: 2.363626, desired value: 2.363480, tolerance_above: 0.000200, tolerance_below: 0.000000
+[move_group-1] [INFO] [1791801736.916361160] [move_group.moveit.moveit.core.kinematic_constraints]: Constraint satisfied:: Joint name: 'wrist1_joint', actual value: 1.120273, desired value: 1.120075, tolerance_above: 0.000200, tolerance_below: 0.000000
+[move_group-1] [INFO] [1791801736.916370429] [move_group.moveit.moveit.core.kinematic_constraints]: Constraint satisfied:: Joint name: 'wrist2_joint', actual value: 1.570792, desired value: 1.570796, tolerance_above: 0.000100, tolerance_below: 0.000100
+[move_group-1] [INFO] [1791801736.916379349] [move_group.moveit.moveit.core.kinematic_constraints]: Constraint satisfied:: Joint name: 'wrist3_joint', actual value: 0.388210, desired value: 0.388152, tolerance_above: 0.000200, tolerance_below: 0.000000
+[move_group-1] [INFO] [1791801736.916390389] [move_group.moveit.moveit.core.kinematic_constraints]: Constraint satisfied:: Joint name: 'foreArm_joint', actual value: 2.363626, desired value: 0.000000, tolerance_above: 2.410000, tolerance_below: 2.410000
+[move_group-1] [INFO] [1791801736.916399303] [move_group.moveit.moveit.core.kinematic_constraints]: Constraint satisfied:: Joint name: 'wrist1_joint', actual value: 1.120273, desired value: 0.000000, tolerance_above: 2.660000, tolerance_below: 2.660000
+[move_group-1] [INFO] [1791801736.916409622] [move_group.moveit.moveit.core.kinematic_constraints]: Constraint satisfied:: Joint name: 'wrist3_joint', actual value: 0.388210, desired value: 0.000000, tolerance_above: 2.230000, tolerance_below: 2.230000
+[move_group-1] [INFO] [1791801736.916432318] [move_group.moveit.moveit.core.moveit_collision_detection_fcl]: Found a contact between 'mtc_moveit_planner/table' (type 'Object') and 'mtc_moveit_planner/tool_lip' (type 'Robot attached'), which constitutes a collision. Contact information is not stored.
+[move_group-1] [INFO] [1791801736.916468567] [move_group.moveit.moveit.core.moveit_collision_detection_fcl]: Collision checking is considered complete (collision was found and 0 contacts are stored)
+[move_group-1] [ERROR] [1791801736.923844234] [move_group.moveit.moveit.planners.ompl.planner_manager]: ./src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:265 - manipulator/manipulator[RRTConnectkConfigDefault]: Unable to sample any valid states for goal tree
+[move_group-1] [WARN] [1791801736.923944874] [move_group.moveit.moveit.planners.ompl.model_based_planning_context]: Invalid goal state
+[move_group-1] [ERROR] [1791801736.923962876] [move_group.moveit.moveit.planners.ompl.model_based_planning_context]: Unable to solve the planning problem
+[move_group-1] [ERROR] [1791801736.924034736] [move_group]: Planner 'OMPL' failed with error code GOAL_STATE_INVALID
+[move_group-1] [ERROR] [1791801736.924050203] [move_group.moveit.moveit.ros.move_group.move_action]: Generating a plan with planning pipeline failed.
+[move_group-1] [INFO] [1791801736.924067727] [move_group.moveit.moveit.ros.move_group.move_action]: FAILURE
+[move_group-1] [INFO] [1791801736.924985168] [move_group.moveit.moveit.ros.move_group.move_action]: MoveGroupMoveAction: Received request
+[move_group-1] [INFO] [1791801736.925195387] [move_group.moveit.moveit.ros.move_group.move_action]: executing..
+[move_group-1] [INFO] [1791801736.927646737] [move_group.moveit.moveit.ros.move_group.move_action]: Planning request received for MoveGroup action. Forwarding to planning pipeline.
+[move_group-1] [INFO] [1791801736.927708091] [move_group.moveit.moveit.ros.move_group.capability]: Using planning pipeline 'ompl'
+[move_group-1] [INFO] [1791801736.927890224] [move_group]: Calling PlanningRequestAdapter 'ResolveConstraintFrames'
+[move_group-1] [INFO] [1791801736.927952510] [move_group]: Calling PlanningRequestAdapter 'ValidateWorkspaceBounds'
+[move_group-1] [WARN] [1791801736.927958607] [move_group.moveit.moveit.ros.validate_workspace_bounds]: It looks like the planning volume was not specified. Using default values.
+[move_group-1] [INFO] [1791801736.927995242] [move_group]: Calling PlanningRequestAdapter 'CheckStartStateBounds'
+[move_group-1] [INFO] [1791801736.928062882] [move_group]: Calling PlanningRequestAdapter 'CheckStartStateCollision'
+[move_group-1] [INFO] [1791801736.928511171] [move_group.moveit.moveit.planners.ompl.model_based_planning_context]: Planner configuration 'manipulator[RRTConnectkConfigDefault]' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.
+[move_group-1] [INFO] [1791801736.928612104] [move_group]: Calling Planner 'OMPL'
+[move_group-1] [INFO] [1791801736.928691594] [move_group.moveit.moveit.planners.ompl.model_based_planning_context]: manipulator[RRTConnectkConfigDefault]: Allocating specialized state sampler for state space
+[move_group-1] [WARN] [1791801736.941758742] [move_group.moveit.moveit.planners.ompl.constrained_goal_sampler]: More than 80% of the sampled goal states fail to satisfy the constraints imposed on the goal sampler. Is the constrained sampler working correctly?
+[move_group-1] [INFO] [1791801737.838235024] [move_group.moveit.moveit.core.kinematic_constraints]: Constraint satisfied:: Joint name: 'foreArm_joint', actual value: -2.363664, desired value: 0.000000, tolerance_above: 2.410000, tolerance_below: 2.410000
+[move_group-1] [INFO] [1791801737.838347494] [move_group.moveit.moveit.core.kinematic_constraints]: Constraint satisfied:: Joint name: 'wrist1_joint', actual value: -1.682268, desired value: 0.000000, tolerance_above: 2.660000, tolerance_below: 2.660000
+[move_group-1] [INFO] [1791801737.838362841] [move_group.moveit.moveit.core.kinematic_constraints]: Constraint satisfied:: Joint name: 'wrist3_joint', actual value: 0.389146, desired value: 0.000000, tolerance_above: 2.230000, tolerance_below: 2.230000
+[move_group-1] [INFO] [1791801737.838374502] [move_group.moveit.moveit.core.kinematic_constraints]: Position constraint satisfied on link 'ee_link'. Desired: 0.350000, 0.000000, 0.090000, current: 0.349982, 0.000050, 0.090082
+[move_group-1] [INFO] [1791801737.838386004] [move_group.moveit.moveit.core.kinematic_constraints]: Differences 1.77808e-05 -4.97589e-05 -8.23623e-05
+[move_group-1] [INFO] [1791801737.838398770] [move_group.moveit.moveit.core.kinematic_constraints]: Orientation constraint satisfied for link 'ee_link'. Quaternion desired: 1.000000 0.000000 0.000000 0.000000, quaternion actual: 1.000000 -0.000492 0.000042 -0.000375, error: x=0.000750, y=0.000084, z=0.000983, tolerance: x=0.001000, y=0.001000, z=0.001000
+[move_group-1] [INFO] [1791801737.838462935] [move_group.moveit.moveit.core.kinematic_constraints]: Constraint satisfied:: Joint name: 'foreArm_joint', actual value: -2.363664, desired value: 0.000000, tolerance_above: 2.410000, tolerance_below: 2.410000
+[move_group-1] [INFO] [1791801737.838478919] [move_group.moveit.moveit.core.kinematic_constraints]: Constraint satisfied:: Joint name: 'wrist1_joint', actual value: -1.682268, desired value: 0.000000, tolerance_above: 2.660000, tolerance_below: 2.660000
+[move_group-1] [INFO] [1791801737.838565604] [move_group.moveit.moveit.core.kinematic_constraints]: Constraint satisfied:: Joint name: 'wrist3_joint', actual value: 0.389146, desired value: 0.000000, tolerance_above: 2.230000, tolerance_below: 2.230000
+[move_group-1] [INFO] [1791801737.838640715] [move_group.moveit.moveit.core.moveit_collision_detection_fcl]: Found a contact between 'mtc_moveit_planner/table' (type 'Object') and 'upperArm_Link' (type 'Robot link'), which constitutes a collision. Contact information is not stored.
+[move_group-1] [INFO] [1791801737.838652318] [move_group.moveit.moveit.core.moveit_collision_detection_fcl]: Collision checking is considered complete (collision was found and 0 contacts are stored)
+[move_group-1] [ERROR] [1791801737.937625907] [move_group.moveit.moveit.planners.ompl.planner_manager]: ./src/ompl/geometric/planners/rrt/src/RRTConnect.cpp:265 - manipulator/manipulator[RRTConnectkConfigDefault]: Unable to sample any valid states for goal tree
+[move_group-1] [WARN] [1791801737.937753238] [move_group.moveit.moveit.planners.ompl.model_based_planning_context]: Invalid goal state
+[move_group-1] [ERROR] [1791801737.945856313] [move_group.moveit.moveit.planners.ompl.model_based_planning_context]: Unable to solve the planning problem
+[move_group-1] [ERROR] [1791801737.946018429] [move_group]: Planner 'OMPL' failed with error code GOAL_STATE_INVALID
+[move_group-1] [ERROR] [1791801737.946037583] [move_group.moveit.moveit.ros.move_group.move_action]: Generating a plan with planning pipeline failed.
+[move_group-1] [INFO] [1791801737.946054412] [move_group.moveit.moveit.ros.move_group.move_action]: FAILURE
+[move_group-1] [INFO] [1791801739.018191518] [move_group.moveit.moveit.ros.move_group.cartesian_path_service_capability]: Received request to compute Cartesian path
+[move_group-1] [INFO] [1791801739.018431318] [move_group.moveit.moveit.ros.move_group.cartesian_path_service_capability]: Attempting to follow 1 waypoints for link 'ee_link' using a step of 0.005000 m and jump threshold 0.000000 (in global reference frame)
+[move_group-1] [INFO] [1791801739.027273517] [move_group.moveit.moveit.ros.move_group.cartesian_path_service_capability]: Computed Cartesian path with 36 points (followed 100.000000% of requested trajectory)
+[move_group-1] [INFO] [1791801739.037830602] [move_group.moveit.moveit.ros.move_group.cartesian_path_service_capability]: Received request to compute Cartesian path
+[move_group-1] [INFO] [1791801739.037939994] [move_group.moveit.moveit.ros.move_group.cartesian_path_service_capability]: Attempting to follow 1 waypoints for link 'ee_link' using a step of 0.005000 m and jump threshold 0.000000 (in global reference frame)
+[move_group-1] [INFO] [1791801739.040660392] [move_group.moveit.moveit.ros.move_group.cartesian_path_service_capability]: Computed Cartesian path with 14 points (followed 100.000000% of requested trajectory)
+[move_group-1] [INFO] [1791801739.044515652] [move_group.moveit.moveit.ros.move_group.cartesian_path_service_capability]: Received request to compute Cartesian path
+[move_group-1] [INFO] [1791801739.044597248] [move_group.moveit.moveit.ros.move_group.cartesian_path_service_capability]: Attempting to follow 1 waypoints for link 'ee_link' using a step of 0.005000 m and jump threshold 0.000000 (in global reference frame)
+[move_group-1] [INFO] [1791801739.045412209] [move_group.moveit.moveit.ros.move_group.cartesian_path_service_capability]: Computed Cartesian path with 4 points (followed 100.000000% of requested trajectory)
+[move_group-1] [INFO] [1791801739.048615424] [move_group.moveit.moveit.ros.move_group.cartesian_path_service_capability]: Received request to compute Cartesian path
+[move_group-1] [INFO] [1791801739.048712491] [move_group.moveit.moveit.ros.move_group.cartesian_path_service_capability]: Attempting to follow 1 waypoints for link 'ee_link' using a step of 0.005000 m and jump threshold 0.000000 (in global reference frame)
+[move_group-1] [INFO] [1791801739.050955073] [move_group.moveit.moveit.ros.move_group.cartesian_path_service_capability]: Computed Cartesian path with 11 points (followed 100.000000% of requested trajectory)
+[move_group-1] [INFO] [1791801739.055201164] [move_group.moveit.moveit.ros.move_group.cartesian_path_service_capability]: Received request to compute Cartesian path
+[move_group-1] [INFO] [1791801739.055304056] [move_group.moveit.moveit.ros.move_group.cartesian_path_service_capability]: Attempting to follow 1 waypoints for link 'ee_link' using a step of 0.005000 m and jump threshold 0.000000 (in global reference frame)
+[move_group-1] [INFO] [1791801739.062713761] [move_group.moveit.moveit.ros.move_group.cartesian_path_service_capability]: Computed Cartesian path with 34 points (followed 100.000000% of requested trajectory)
+[move_group-1] [INFO] [1791801739.071080884] [move_group.moveit.moveit.ros.move_group.cartesian_path_service_capability]: Received request to compute Cartesian path
+[move_group-1] [INFO] [1791801739.071218181] [move_group.moveit.moveit.ros.move_group.cartesian_path_service_capability]: Attempting to follow 1 waypoints for link 'ee_link' using a step of 0.005000 m and jump threshold 0.000000 (in global reference frame)
+[move_group-1] [INFO] [1791801739.074437802] [move_group.moveit.moveit.ros.move_group.cartesian_path_service_capability]: Computed Cartesian path with 17 points (followed 100.000000% of requested trajectory)
+[move_group-1] [INFO] [1791801739.079356985] [move_group.moveit.moveit.ros.move_group.cartesian_path_service_capability]: Received request to compute Cartesian path
+[move_group-1] [INFO] [1791801739.079459221] [move_group.moveit.moveit.ros.move_group.cartesian_path_service_capability]: Attempting to follow 1 waypoints for link 'ee_link' using a step of 0.005000 m and jump threshold 0.000000 (in global reference frame)
+[move_group-1] [INFO] [1791801739.080551217] [move_group.moveit.moveit.ros.move_group.cartesian_path_service_capability]: Computed Cartesian path with 5 points (followed 100.000000% of requested trajectory)
+[move_group-1] [INFO] [1791801739.083267051] [move_group.moveit.moveit.ros.move_group.cartesian_path_service_capability]: Received request to compute Cartesian path
+[move_group-1] [INFO] [1791801739.083361319] [move_group.moveit.moveit.ros.move_group.cartesian_path_service_capability]: Attempting to follow 1 waypoints for link 'ee_link' using a step of 0.005000 m and jump threshold 0.000000 (in global reference frame)
+[move_group-1] [INFO] [1791801739.085733181] [move_group.moveit.moveit.ros.move_group.cartesian_path_service_capability]: Computed Cartesian path with 13 points (followed 100.000000% of requested trajectory)
+[move_group-1] [INFO] [1791801739.089130750] [move_group.moveit.moveit.ros.move_group.cartesian_path_service_capability]: Received request to compute Cartesian path
+[move_group-1] [INFO] [1791801739.089216086] [move_group.moveit.moveit.ros.move_group.cartesian_path_service_capability]: Attempting to follow 1 waypoints for link 'ee_link' using a step of 0.005000 m and jump threshold 0.000000 (in global reference frame)
+[move_group-1] [INFO] [1791801739.093749524] [move_group.moveit.moveit.ros.move_group.cartesian_path_service_capability]: Computed Cartesian path with 22 points (followed 100.000000% of requested trajectory)
+[move_group-1] [INFO] [1791801740.610050088] [move_group.moveit.moveit.ros.move_group.cartesian_path_service_capability]: Received request to compute Cartesian path
+[move_group-1] [INFO] [1791801740.610151589] [move_group.moveit.moveit.ros.move_group.cartesian_path_service_capability]: Attempting to follow 1 waypoints for link 'ee_link' using a step of 0.005000 m and jump threshold 0.000000 (in global reference frame)
+[move_group-1] [INFO] [1791801740.622353946] [move_group.moveit.moveit.ros.move_group.cartesian_path_service_capability]: Computed Cartesian path with 49 points (followed 100.000000% of requested trajectory)
+[move_group-1] [INFO] [1791801740.634401767] [move_group.moveit.moveit.ros.move_group.cartesian_path_service_capability]: Received request to compute Cartesian path
+[move_group-1] [INFO] [1791801740.634541178] [move_group.moveit.moveit.ros.move_group.cartesian_path_service_capability]: Attempting to follow 1 waypoints for link 'ee_link' using a step of 0.005000 m and jump threshold 0.000000 (in global reference frame)
+[move_group-1] [INFO] [1791801740.635955169] [move_group.moveit.moveit.ros.move_group.cartesian_path_service_capability]: Computed Cartesian path with 8 points (followed 100.000000% of requested trajectory)
+[move_group-1] [INFO] [1791801740.638826499] [move_group.moveit.moveit.ros.move_group.cartesian_path_service_capability]: Received request to compute Cartesian path
+[move_group-1] [INFO] [1791801740.638954028] [move_group.moveit.moveit.ros.move_group.cartesian_path_service_capability]: Attempting to follow 1 waypoints for link 'ee_link' using a step of 0.005000 m and jump threshold 0.000000 (in global reference frame)
+[move_group-1] [INFO] [1791801740.639607345] [move_group.moveit.moveit.ros.move_group.cartesian_path_service_capability]: Computed Cartesian path with 4 points (followed 100.000000% of requested trajectory)
+[move_group-1] [INFO] [1791801740.642680820] [move_group.moveit.moveit.ros.move_group.cartesian_path_service_capability]: Received request to compute Cartesian path
+[move_group-1] [INFO] [1791801740.642794232] [move_group.moveit.moveit.ros.move_group.cartesian_path_service_capability]: Attempting to follow 1 waypoints for link 'ee_link' using a step of 0.005000 m and jump threshold 0.000000 (in global reference frame)
+[move_group-1] [INFO] [1791801740.644670014] [move_group.moveit.moveit.ros.move_group.cartesian_path_service_capability]: Computed Cartesian path with 12 points (followed 100.000000% of requested trajectory)
+[move_group-1] [INFO] [1791801740.648334542] [move_group.moveit.moveit.ros.move_group.cartesian_path_service_capability]: Received request to compute Cartesian path
+[move_group-1] [INFO] [1791801740.648450976] [move_group.moveit.moveit.ros.move_group.cartesian_path_service_capability]: Attempting to follow 1 waypoints for link 'ee_link' using a step of 0.005000 m and jump threshold 0.000000 (in global reference frame)
+[move_group-1] [INFO] [1791801740.654045763] [move_group.moveit.moveit.ros.move_group.cartesian_path_service_capability]: Computed Cartesian path with 34 points (followed 100.000000% of requested trajectory)
+[move_group-1] [INFO] [1791801740.659098193] [move_group.moveit.moveit.ros.move_group.cartesian_path_service_capability]: Received request to compute Cartesian path
+[move_group-1] [INFO] [1791801740.659209048] [move_group.moveit.moveit.ros.move_group.cartesian_path_service_capability]: Attempting to follow 1 waypoints for link 'ee_link' using a step of 0.005000 m and jump threshold 0.000000 (in global reference frame)
+[move_group-1] [INFO] [1791801740.662206951] [move_group.moveit.moveit.ros.move_group.cartesian_path_service_capability]: Computed Cartesian path with 17 points (followed 100.000000% of requested trajectory)
+[move_group-1] [INFO] [1791801740.666601035] [move_group.moveit.moveit.ros.move_group.cartesian_path_service_capability]: Received request to compute Cartesian path
+[move_group-1] [INFO] [1791801740.666706390] [move_group.moveit.moveit.ros.move_group.cartesian_path_service_capability]: Attempting to follow 1 waypoints for link 'ee_link' using a step of 0.005000 m and jump threshold 0.000000 (in global reference frame)
+[move_group-1] [INFO] [1791801740.667651664] [move_group.moveit.moveit.ros.move_group.cartesian_path_service_capability]: Computed Cartesian path with 5 points (followed 100.000000% of requested trajectory)
+[move_group-1] [INFO] [1791801740.670348596] [move_group.moveit.moveit.ros.move_group.cartesian_path_service_capability]: Received request to compute Cartesian path
+[move_group-1] [INFO] [1791801740.670447185] [move_group.moveit.moveit.ros.move_group.cartesian_path_service_capability]: Attempting to follow 1 waypoints for link 'ee_link' using a step of 0.005000 m and jump threshold 0.000000 (in global reference frame)
+[move_group-1] [INFO] [1791801740.671779218] [move_group.moveit.moveit.ros.move_group.cartesian_path_service_capability]: Computed Cartesian path with 8 points (followed 100.000000% of requested trajectory)
+[move_group-1] [INFO] [1791801740.674389331] [move_group.moveit.moveit.ros.move_group.cartesian_path_service_capability]: Received request to compute Cartesian path
+[move_group-1] [INFO] [1791801740.674461291] [move_group.moveit.moveit.ros.move_group.cartesian_path_service_capability]: Attempting to follow 1 waypoints for link 'ee_link' using a step of 0.005000 m and jump threshold 0.000000 (in global reference frame)
+[move_group-1] [INFO] [1791801740.678394864] [move_group.moveit.moveit.ros.move_group.cartesian_path_service_capability]: Computed Cartesian path with 22 points (followed 100.000000% of requested trajectory)
+[WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+[INFO] [move_group-1]: sending signal 'SIGINT' to process[move_group-1]
+[move_group-1] [INFO] [1791801741.123088683] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[move_group-1] [INFO] [1791801741.163586750] [move_group.moveit.moveit.ros.moveit_cpp]: Deleting MoveItCpp
+[move_group-1] Stack trace (most recent call last):
+[move_group-1] #15   Object "", at 0xffffffffffffffff, in 
+[move_group-1] #14   Object "/opt/ros/jazzy/lib/moveit_ros_move_group/move_group", at 0x5ee86dafda14, in _start
+[move_group-1] #13   Source "../csu/libc-start.c", line 360, in __libc_start_main_impl [0x776b5e22a28a]
+[move_group-1] #12   Source "../sysdeps/nptl/libc_start_call_main.h", line 58, in __libc_start_call_main [0x776b5e22a1c9]
+[move_group-1] #11   Object "/opt/ros/jazzy/lib/moveit_ros_move_group/move_group", at 0x5ee86dafc509, in main
+[move_group-1] #10   Object "/opt/ros/jazzy/lib/moveit_ros_move_group/move_group", at 0x5ee86daff129, in 
+[move_group-1] #9    Object "/opt/ros/jazzy/lib/libmoveit_cpp.so.2.12.4", at 0x776b5efacad0, in moveit_cpp::MoveItCpp::~MoveItCpp()
+[move_group-1] #8    Object "/opt/ros/jazzy/lib/libmoveit_cpp.so.2.12.4", at 0x776b5efac989, in 
+[move_group-1] #7    Object "/opt/ros/jazzy/lib/libmoveit_trajectory_execution_manager.so.2.12.4", at 0x776b5e51942a, in trajectory_execution_manager::TrajectoryExecutionManager::~TrajectoryExecutionManager()
+[move_group-1] #6    Object "/opt/ros/jazzy/lib/libmoveit_trajectory_execution_manager.so.2.12.4", at 0x776b5e52b575, in 
+[ERROR] [move_group-1]: process[move_group-1] failed to terminate '5' seconds after receiving 'SIGINT', escalating to 'SIGTERM'
+[INFO] [move_group-1]: sending signal 'SIGTERM' to process[move_group-1]
+[ERROR] [move_group-1]: process has died [pid 108479, exit code -15, cmd '/opt/ros/jazzy/lib/moveit_ros_move_group/move_group --ros-args --params-file /tmp/launch_params_t5m7as_r --params-file /tmp/launch_params_hl8zd4tf'].

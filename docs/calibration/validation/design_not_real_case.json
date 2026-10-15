@@ -1,0 +1,6 @@
+{
+  "status": "REJECTED",
+  "code": "INVALID_CONFIG",
+  "message": "INVALID_CONFIG: expected schema_version 1",
+  "motion_authorized": false
+}

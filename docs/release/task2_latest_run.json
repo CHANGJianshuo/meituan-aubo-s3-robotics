@@ -1,0 +1,63 @@
+{
+  "schema": 1,
+  "onsite_date": "2026-10-14 (America/Chicago)",
+  "recorded_utc": "2026-10-15T01:33:29.988+00:00",
+  "status": "SUCCEEDED",
+  "order": "ABC",
+  "assignments": {
+    "A (red)": "P1",
+    "B (yellow)": "P2",
+    "C (blue)": "P3",
+    "D (green)": "source"
+  },
+  "stages": 30,
+  "move_intents": 30,
+  "stage_completions": 30,
+  "player_returncode": 0,
+  "automatic_retry": false,
+  "ui_elapsed_monotonic_s": 214.525,
+  "nominal_motion_s": 114.0094890693904,
+  "final_joint_error_deg": 0.00383541365657948,
+  "tracking_policy": "task2_tracking_monitor_v1",
+  "tracking_guard_action": "record_only",
+  "tracking_error_peak_by_joint_deg": [
+    0.43974176904513074,
+    0.3714161862030464,
+    0.3890151077886923,
+    0.4430102008903136,
+    0.011184619569264925,
+    0.44831032110834973
+  ],
+  "rtde_samples": 22099,
+  "rpc_motion_samples": 3770,
+  "visual_stability_s": 3.16973394,
+  "visual_centroid_drift_px": 0.06200270644851991,
+  "vision_scope": "Color silhouettes match reviewed upright placements and remain stable; no force, attachment or absolute calibration claim",
+  "sources": [
+    {
+      "path": "outputs/webui_laptop_20261014/runs/20261015T012759_669728Z/hardware-events.jsonl",
+      "sha256": "3c39f09b7b9087e0ff6fd02818fabd2db121d7456c86a9d92396768167f66b6b"
+    },
+    {
+      "path": "outputs/webui_laptop_20261014/runs/20261015T012759_669728Z/player-exit.json",
+      "sha256": "a744baf104bd9dd7aa5f54bde51728060c14ab13ac66bfa66c2992fa37981bac"
+    },
+    {
+      "path": "outputs/webui_laptop_20261014/runs/20261015T012759_669728Z/placement-visual.json",
+      "sha256": "931079b4a0819321d5af1cf640c6046013ec8b5f8a26d77fcffc97e7feab1c76"
+    },
+    {
+      "path": "outputs/webui_laptop_20261014/runs/20261015T012759_669728Z/ui-119c8abd-8942-4cc5-8090-1371ef1e7558.json",
+      "sha256": "9e27a5b814a14a509119e7c7bde896f9d4e535776d0730b7e9c3233d229841a7"
+    },
+    {
+      "path": "outputs/task2_real_scene_20261014/fullflow_4x_webui_tracking_monitor_01/commissioning/01_ABC_fullflow_4x_webui/manifest.json",
+      "sha256": "6b7f877584da304e4bf06d225866ac35f7f6e918239976491186fbb20cb9ba65"
+    }
+  ],
+  "notes": [
+    "Raw logs and camera recordings remain local; summary is a derived audit, not a full public replay of raw physical evidence.",
+    "Monotonic UI elapsed time includes checks; UTC subtraction is not used because clocks adjusted during this session.",
+    "Subpixel color stability and joint error are not physical object-placement accuracy."
+  ]
+}

@@ -1,0 +1,9 @@
+/**:
+  ros__parameters:
+    tool:
+      enabled: false
+    target:
+      mode: "pose"
+      frame_id: "base_link"
+      xyz: [0.35, 0.0, 0.09]
+      quat_xyzw: [1.0, 0.0, 0.0, 0.0]

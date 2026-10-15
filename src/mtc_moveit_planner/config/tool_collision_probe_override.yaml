@@ -1,0 +1,10 @@
+# 工具碰撞反证：法兰朝下停在桌面上方 9 cm（base_link z=0.09，桌面顶 z=-0.005）。
+# 机械臂本体不碰桌面，但舌规沿法兰轴伸出 112.5 mm，会插入桌面 ~2 cm：
+# 工具模型生效时必须规划失败；关掉工具模型（tool.enabled=false）时同一目标应能规划成功。
+/**:
+  ros__parameters:
+    target:
+      mode: "pose"
+      frame_id: "base_link"
+      xyz: [0.35, 0.0, 0.09]
+      quat_xyzw: [1.0, 0.0, 0.0, 0.0]

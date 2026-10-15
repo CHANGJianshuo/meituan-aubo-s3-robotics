@@ -1,0 +1,11 @@
+{
+  "parent_commit": "d9cda080e6f3f12fe66b2555410e7f347c626e46",
+  "scripts_sha256": {
+    "src/mtc_moveit_planner/scripts/run_planning_evidence.sh": "aeaddffd76b54ba40fcfdf0adaac12cc557823aa0098582761594e61ffef96db",
+    "src/mtc_moveit_planner/scripts/probe_move_group_shutdown.py": "71b903ad4cbda71bf1847b2f7a90516550e044cf127eec7904ab953eaaac7e5f",
+    "src/mtc_moveit_planner/scripts/check_launch_shutdown.py": "cac133b109b440f5077bfe62539f9f95f65088deec7f0c327019c2882905e6ad"
+  },
+  "full_stock_script_returncode": 1,
+  "full_retained_script_returncode": 0,
+  "scope": "WSL2 / Fake only, no trajectory execution"
+}

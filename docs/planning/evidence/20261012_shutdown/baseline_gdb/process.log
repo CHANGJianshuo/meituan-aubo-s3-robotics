@@ -1,0 +1,511 @@
+
+This GDB supports auto-downloading debuginfo from the following URLs:
+  <https://debuginfod.ubuntu.com>
+Enable debuginfod for this session? (y or [n]) [answered N; input not from terminal]
+Debuginfod has been disabled.
+To make this setting permanent, add 'set debuginfod enabled off' to .gdbinit.
+SIGINT is used by the debugger.
+Are you sure you want to change it? (y or n) [answered Y; input not from terminal]
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+[New Thread 0x7ffff42416c0 (LWP 108708)]
+[New Thread 0x7ffff3a406c0 (LWP 108709)]
+[New Thread 0x7ffff26246c0 (LWP 108710)]
+[New Thread 0x7ffff1e236c0 (LWP 108711)]
+[New Thread 0x7ffff16226c0 (LWP 108712)]
+[New Thread 0x7ffff0e216c0 (LWP 108713)]
+[New Thread 0x7fffe3fff6c0 (LWP 108714)]
+[New Thread 0x7fffe37fe6c0 (LWP 108715)]
+[New Thread 0x7fffe2ffd6c0 (LWP 108716)]
+[New Thread 0x7fffe27fc6c0 (LWP 108717)]
+[New Thread 0x7fffe1ffb6c0 (LWP 108718)]
+[INFO] [1791801708.444612090] [move_group.moveit.moveit.ros.rdf_loader]: Loaded robot model in 0.0182097 seconds
+[INFO] [1791801708.444748738] [move_group.moveit.moveit.core.robot_model]: Loading robot model 'aubo_robot'...
+[INFO] [1791801708.453635359] [move_group.moveit.moveit.kinematics.kdl_kinematics_plugin]: Joint weights for group 'manipulator': 1 1 1 1 1 1
+[New Thread 0x7fffe13ff6c0 (LWP 108719)]
+[New Thread 0x7fffe0bfe6c0 (LWP 108720)]
+[INFO] [1791801708.492656789] [move_group.moveit.moveit.ros.planning_scene_monitor]: Publishing maintained planning scene on 'monitored_planning_scene'
+[New Thread 0x7fffc3fff6c0 (LWP 108721)]
+[INFO] [1791801708.493389830] [move_group.moveit.moveit.ros.moveit_cpp]: Listening to 'joint_states' for joint states
+[INFO] [1791801708.493906451] [move_group.moveit.moveit.ros.current_state_monitor]: Listening to joint states on topic 'joint_states'
+[INFO] [1791801708.494504090] [move_group.moveit.moveit.ros.planning_scene_monitor]: Listening to '/attached_collision_object' for attached collision objects
+[INFO] [1791801708.494534274] [move_group.moveit.moveit.ros.planning_scene_monitor]: Stopping existing planning scene publisher.
+[Thread 0x7fffc3fff6c0 (LWP 108721) exited]
+[INFO] [1791801708.494857431] [move_group.moveit.moveit.ros.planning_scene_monitor]: Stopped publishing maintained planning scene.
+[INFO] [1791801708.495880047] [move_group.moveit.moveit.ros.planning_scene_monitor]: Publishing maintained planning scene on 'monitored_planning_scene'
+[New Thread 0x7fffc3fff6c0 (LWP 108722)]
+[INFO] [1791801708.496334882] [move_group.moveit.moveit.ros.planning_scene_monitor]: Starting planning scene monitor
+[INFO] [1791801708.497229957] [move_group.moveit.moveit.ros.planning_scene_monitor]: Listening to '/planning_scene'
+[INFO] [1791801708.497257098] [move_group.moveit.moveit.ros.planning_scene_monitor]: Starting world geometry update monitor for collision objects, attached objects, octomap updates.
+[INFO] [1791801708.497569472] [move_group.moveit.moveit.ros.planning_scene_monitor]: Listening to 'collision_object'
+[INFO] [1791801708.497931667] [move_group.moveit.moveit.ros.planning_scene_monitor]: Listening to 'planning_scene_world' for planning scene world geometry
+[WARN] [1791801708.498189309] [move_group.moveit.moveit.ros.occupancy_map_monitor]: Resolution not specified for Octomap. Assuming resolution = 0.1 instead
+[ERROR] [1791801708.498204575] [move_group.moveit.moveit.ros.occupancy_map_monitor]: No 3D sensor plugin(s) defined for octomap updates
+[INFO] [1791801708.545627961] [move_group.moveit.moveit.ros.planning_pipeline]: Successfully loaded planner 'OMPL'
+[INFO] [1791801708.546891032] [move_group]: Try loading adapter 'default_planning_request_adapters/ResolveConstraintFrames'
+[INFO] [1791801708.550826154] [move_group]: Loaded adapter 'default_planning_request_adapters/ResolveConstraintFrames'
+[INFO] [1791801708.550918223] [move_group]: Try loading adapter 'default_planning_request_adapters/ValidateWorkspaceBounds'
+[INFO] [1791801708.551118980] [move_group]: Loaded adapter 'default_planning_request_adapters/ValidateWorkspaceBounds'
+[INFO] [1791801708.551145090] [move_group]: Try loading adapter 'default_planning_request_adapters/CheckStartStateBounds'
+[INFO] [1791801708.551171540] [move_group]: Loaded adapter 'default_planning_request_adapters/CheckStartStateBounds'
+[INFO] [1791801708.551176168] [move_group]: Try loading adapter 'default_planning_request_adapters/CheckStartStateCollision'
+[INFO] [1791801708.551188267] [move_group]: Loaded adapter 'default_planning_request_adapters/CheckStartStateCollision'
+[INFO] [1791801708.552344525] [move_group]: Try loading adapter 'default_planning_response_adapters/AddTimeOptimalParameterization'
+[INFO] [1791801708.565606377] [move_group]: Loaded adapter 'default_planning_response_adapters/AddTimeOptimalParameterization'
+[INFO] [1791801708.565645648] [move_group]: Try loading adapter 'default_planning_response_adapters/ValidateSolution'
+[INFO] [1791801708.569326249] [move_group]: Loaded adapter 'default_planning_response_adapters/ValidateSolution'
+[INFO] [1791801708.569367784] [move_group]: Try loading adapter 'default_planning_response_adapters/DisplayMotionPath'
+[INFO] [1791801708.570421545] [move_group]: Loaded adapter 'default_planning_response_adapters/DisplayMotionPath'
+[INFO] [1791801708.647038572] [move_group.moveit.moveit.plugins.simple_controller_manager]: Added FollowJointTrajectory controller for joint_trajectory_controller
+[New Thread 0x7fffc31ff6c0 (LWP 108723)]
+[INFO] [1791801708.648107992] [move_group.moveit.moveit.plugins.simple_controller_manager]: Returned 1 controllers in list
+[INFO] [1791801708.648173884] [move_group.moveit.moveit.plugins.simple_controller_manager]: Returned 1 controllers in list
+[INFO] [1791801708.648499545] [move_group.moveit.moveit.ros.trajectory_execution_manager]: Trajectory execution is not managing controllers
+[INFO] [1791801708.648517886] [move_group]: MoveGroup debug mode is ON
+[New Thread 0x7fffc29fe6c0 (LWP 108724)]
+[INFO] [1791801708.680394213] [move_group.moveit.moveit.ros.move_group.executable]: 
+
+********************************************************
+* MoveGroup using: 
+*     - apply_planning_scene_service
+*     - clear_octomap_service
+*     - get_group_urdf
+*     - load_geometry_from_file
+*     - CartesianPathService
+*     - execute_trajectory_action
+*     - get_planning_scene_service
+*     - kinematics_service
+*     - move_action
+*     - motion_plan_service
+*     - query_planners_service
+*     - state_validation_service
+*     - save_geometry_to_file
+********************************************************
+
+[INFO] [1791801708.680472234] [move_group.moveit.moveit.ros.move_group.context]: MoveGroup context using pipeline ompl
+[INFO] [1791801708.680484129] [move_group.moveit.moveit.ros.move_group.context]: MoveGroup context initialization complete
+[96mLoading 'move_group/ApplyPlanningSceneService'...[0m
+[96mLoading 'move_group/ClearOctomapService'...[0m
+[96mLoading 'move_group/GetUrdfService'...[0m
+[96mLoading 'move_group/LoadGeometryFromFileService'...[0m
+[96mLoading 'move_group/MoveGroupCartesianPathService'...[0m
+[96mLoading 'move_group/MoveGroupExecuteTrajectoryAction'...[0m
+[96mLoading 'move_group/MoveGroupGetPlanningSceneService'...[0m
+[96mLoading 'move_group/MoveGroupKinematicsService'...[0m
+[96mLoading 'move_group/MoveGroupMoveAction'...[0m
+[96mLoading 'move_group/MoveGroupPlanService'...[0m
+[96mLoading 'move_group/MoveGroupQueryPlannersService'...[0m
+[96mLoading 'move_group/MoveGroupStateValidationService'...[0m
+[96mLoading 'move_group/SaveGeometryToFileService'...[0m
+
+[92mYou can start planning now![0m
+
+[New Thread 0x7fffc21fd6c0 (LWP 108725)]
+[New Thread 0x7fffc19fc6c0 (LWP 108726)]
+[New Thread 0x7fffc11fb6c0 (LWP 108727)]
+[New Thread 0x7fffc09fa6c0 (LWP 108728)]
+[New Thread 0x7fffb3fff6c0 (LWP 108729)]
+[New Thread 0x7fffb37fe6c0 (LWP 108730)]
+[New Thread 0x7fffb2ffd6c0 (LWP 108731)]
+[New Thread 0x7fffb27fc6c0 (LWP 108732)]
+[New Thread 0x7fffb1ffb6c0 (LWP 108733)]
+[New Thread 0x7fffb17fa6c0 (LWP 108734)]
+[New Thread 0x7fffb0ff96c0 (LWP 108735)]
+[New Thread 0x7fffb07f86c0 (LWP 108736)]
+[New Thread 0x7fffafff76c0 (LWP 108737)]
+[New Thread 0x7fffaf7f66c0 (LWP 108738)]
+[New Thread 0x7fffaeff56c0 (LWP 108739)]
+[New Thread 0x7fffae7f46c0 (LWP 108740)]
+[New Thread 0x7fffadff36c0 (LWP 108741)]
+[New Thread 0x7fffad7f26c0 (LWP 108742)]
+[New Thread 0x7fffacff16c0 (LWP 108743)]
+[New Thread 0x7fffac7f06c0 (LWP 108744)]
+[New Thread 0x7fffabfef6c0 (LWP 108745)]
+[New Thread 0x7fffab7ee6c0 (LWP 108746)]
+[New Thread 0x7fffaafed6c0 (LWP 108747)]
+[New Thread 0x7fffaa7ec6c0 (LWP 108748)]
+[New Thread 0x7fffa9feb6c0 (LWP 108749)]
+[New Thread 0x7fffa97ea6c0 (LWP 108750)]
+[New Thread 0x7fffa8fe96c0 (LWP 108751)]
+[New Thread 0x7fffa87e86c0 (LWP 108752)]
+[New Thread 0x7fffa7fe76c0 (LWP 108753)]
+[New Thread 0x7fffa77e66c0 (LWP 108754)]
+[New Thread 0x7fffa6fe56c0 (LWP 108755)]
+
+Thread 1 "move_group" received signal SIGINT, Interrupt.
+[INFO] [1791801709.281813497] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[Thread 0x7fffc31ff6c0 (LWP 108723) exited]
+[Thread 0x7fffe0bfe6c0 (LWP 108720) exited]
+[Thread 0x7fffe13ff6c0 (LWP 108719) exited]
+[Thread 0x7fffa7fe76c0 (LWP 108753) exited]
+[Thread 0x7fffc29fe6c0 (LWP 108724) exited]
+[Thread 0x7fffa8fe96c0 (LWP 108751) exited]
+[Thread 0x7fffc19fc6c0 (LWP 108726) exited]
+[Thread 0x7fffc21fd6c0 (LWP 108725) exited]
+[Thread 0x7fffa77e66c0 (LWP 108754) exited]
+[Thread 0x7fffb37fe6c0 (LWP 108730) exited]
+[Thread 0x7fffb3fff6c0 (LWP 108729) exited]
+[Thread 0x7fffc09fa6c0 (LWP 108728) exited]
+[Thread 0x7fffb2ffd6c0 (LWP 108731) exited]
+[Thread 0x7fffa9feb6c0 (LWP 108749) exited]
+[Thread 0x7fffb17fa6c0 (LWP 108734) exited]
+[Thread 0x7fffb27fc6c0 (LWP 108732) exited]
+[Thread 0x7fffb0ff96c0 (LWP 108735) exited]
+[Thread 0x7fffc11fb6c0 (LWP 108727) exited]
+[Thread 0x7fffafff76c0 (LWP 108737) exited]
+[Thread 0x7fffaf7f66c0 (LWP 108738) exited]
+[Thread 0x7fffae7f46c0 (LWP 108740) exited]
+[Thread 0x7fffad7f26c0 (LWP 108742) exited]
+[Thread 0x7fffabfef6c0 (LWP 108745) exited]
+[Thread 0x7fffac7f06c0 (LWP 108744) exited]
+[Thread 0x7fffadff36c0 (LWP 108741) exited]
+[Thread 0x7fffacff16c0 (LWP 108743) exited]
+[Thread 0x7fffaeff56c0 (LWP 108739) exited]
+[Thread 0x7fffab7ee6c0 (LWP 108746) exited]
+[Thread 0x7fffaafed6c0 (LWP 108747) exited]
+[Thread 0x7fffaa7ec6c0 (LWP 108748) exited]
+[Thread 0x7fffa87e86c0 (LWP 108752) exited]
+[Thread 0x7fffb07f86c0 (LWP 108736) exited]
+[Thread 0x7fffa97ea6c0 (LWP 108750) exited]
+[Thread 0x7fffa6fe56c0 (LWP 108755) exited]
+[Thread 0x7fffb1ffb6c0 (LWP 108733) exited]
+[Thread 0x7ffff1e236c0 (LWP 108711) exited]
+[INFO] [1791801709.300125967] [move_group.moveit.moveit.ros.moveit_cpp]: Deleting MoveItCpp
+
+Thread 1 "move_group" received signal SIGSEGV, Segmentation fault.
+0x00007ffff7b03ba9 in rclcpp::CallbackGroup::~CallbackGroup() () from /opt/ros/jazzy/lib/librclcpp.so
+
+Thread 16 (Thread 0x7fffc3fff6c0 (LWP 108722) "move_group"):
+#0  0x00007ffff7298e51 in __futex_abstimed_wait_common64 (private=21845, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x5555557cebd4) at ./nptl/futex-internal.c:57
+#1  __futex_abstimed_wait_common (cancel=true, private=21845, abstime=0x0, clockid=0, expected=0, futex_word=0x5555557cebd4) at ./nptl/futex-internal.c:87
+#2  __GI___futex_abstimed_wait_cancelable64 (futex_word=futex_word@entry=0x5555557cebd4, expected=expected@entry=0, clockid=clockid@entry=0, abstime=abstime@entry=0x0, private=private@entry=0) at ./nptl/futex-internal.c:139
+#3  0x00007ffff729b8cd in __pthread_cond_wait_common (abstime=0x0, clockid=0, mutex=0x55555580f850, cond=0x5555557ceba8) at ./nptl/pthread_cond_wait.c:503
+#4  ___pthread_cond_wait (cond=0x5555557ceba8, mutex=0x55555580f850) at ./nptl/pthread_cond_wait.c:627
+#5  0x00007ffff7eb2df6 in planning_scene_monitor::PlanningSceneMonitor::scenePublishingThread() () from /opt/ros/jazzy/lib/libmoveit_planning_scene_monitor.so.2.12.4
+#6  0x00007ffff76ecdb4 in ?? () from /lib/x86_64-linux-gnu/libstdc++.so.6
+#7  0x00007ffff729cb84 in start_thread (arg=<optimized out>) at ./nptl/pthread_create.c:447
+#8  0x00007ffff7329ecc in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+
+Thread 12 (Thread 0x7fffe1ffb6c0 (LWP 108718) "move_group"):
+#0  0x00007ffff7298e51 in __futex_abstimed_wait_common64 (private=21845, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x7fffd0000ddc) at ./nptl/futex-internal.c:57
+#1  __futex_abstimed_wait_common (cancel=true, private=21845, abstime=0x0, clockid=0, expected=0, futex_word=0x7fffd0000ddc) at ./nptl/futex-internal.c:87
+#2  __GI___futex_abstimed_wait_cancelable64 (futex_word=futex_word@entry=0x7fffd0000ddc, expected=expected@entry=0, clockid=clockid@entry=0, abstime=abstime@entry=0x0, private=private@entry=0) at ./nptl/futex-internal.c:139
+#3  0x00007ffff729b8cd in __pthread_cond_wait_common (abstime=0x0, clockid=0, mutex=0x7fffd0000d88, cond=0x7fffd0000db0) at ./nptl/pthread_cond_wait.c:503
+#4  ___pthread_cond_wait (cond=0x7fffd0000db0, mutex=0x7fffd0000d88) at ./nptl/pthread_cond_wait.c:627
+#5  0x00007ffff30c75dd in ddsrt_cond_wait () from /opt/ros/jazzy/lib/x86_64-linux-gnu/libddsc.so.0
+#6  0x00007ffff30c7695 in ddsrt_cond_waituntil () from /opt/ros/jazzy/lib/x86_64-linux-gnu/libddsc.so.0
+#7  0x00007ffff30adb39 in ?? () from /opt/ros/jazzy/lib/x86_64-linux-gnu/libddsc.so.0
+#8  0x00007ffff31502c9 in ?? () from /opt/ros/jazzy/lib/librmw_cyclonedds_cpp.so
+#9  0x00007ffff76ecdb4 in ?? () from /lib/x86_64-linux-gnu/libstdc++.so.6
+#10 0x00007ffff729cb84 in start_thread (arg=<optimized out>) at ./nptl/pthread_create.c:447
+#11 0x00007ffff7329ecc in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+
+Thread 11 (Thread 0x7fffe27fc6c0 (LWP 108717) "recvUC"):
+#0  0x00007ffff732c0cb in __recvmsg_syscall (flags=0, msg=0x7fffe27f91c0, fd=40) at ../sysdeps/unix/sysv/linux/recvmsg.c:27
+#1  __libc_recvmsg (fd=40, msg=0x7fffe27f91c0, flags=0) at ../sysdeps/unix/sysv/linux/recvmsg.c:41
+#2  0x00007ffff30c0aa5 in ddsrt_recvmsg () from /opt/ros/jazzy/lib/x86_64-linux-gnu/libddsc.so.0
+#3  0x00007ffff30147e9 in ?? () from /opt/ros/jazzy/lib/x86_64-linux-gnu/libddsc.so.0
+#4  0x00007ffff307bdd5 in ?? () from /opt/ros/jazzy/lib/x86_64-linux-gnu/libddsc.so.0
+#5  0x00007ffff307bfb8 in ?? () from /opt/ros/jazzy/lib/x86_64-linux-gnu/libddsc.so.0
+#6  0x00007ffff307e038 in ?? () from /opt/ros/jazzy/lib/x86_64-linux-gnu/libddsc.so.0
+#7  0x00007ffff30ca0fd in ?? () from /opt/ros/jazzy/lib/x86_64-linux-gnu/libddsc.so.0
+#8  0x00007ffff729cb84 in start_thread (arg=<optimized out>) at ./nptl/pthread_create.c:447
+#9  0x00007ffff7329ecc in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+
+Thread 10 (Thread 0x7fffe2ffd6c0 (LWP 108716) "recv"):
+#0  0x00007ffff7326fa7 in __GI___select (nfds=43, readfds=0x555555686610, writefds=0x0, exceptfds=0x0, timeout=0x0) at ../sysdeps/unix/sysv/linux/select.c:69
+#1  0x00007ffff30c0cd6 in ddsrt_select () from /opt/ros/jazzy/lib/x86_64-linux-gnu/libddsc.so.0
+#2  0x00007ffff307c031 in ?? () from /opt/ros/jazzy/lib/x86_64-linux-gnu/libddsc.so.0
+#3  0x00007ffff307e038 in ?? () from /opt/ros/jazzy/lib/x86_64-linux-gnu/libddsc.so.0
+#4  0x00007ffff30ca0fd in ?? () from /opt/ros/jazzy/lib/x86_64-linux-gnu/libddsc.so.0
+#5  0x00007ffff729cb84 in start_thread (arg=<optimized out>) at ./nptl/pthread_create.c:447
+#6  0x00007ffff7329ecc in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+
+Thread 9 (Thread 0x7fffe37fe6c0 (LWP 108715) "tev"):
+#0  0x00007ffff7298e51 in __futex_abstimed_wait_common64 (private=1431655765, cancel=true, abstime=0x7fffe37fb340, op=393, expected=0, futex_word=0x5555556863dc) at ./nptl/futex-internal.c:57
+#1  __futex_abstimed_wait_common (cancel=true, private=1431655765, abstime=0x7fffe37fb340, clockid=1431655765, expected=0, futex_word=0x5555556863dc) at ./nptl/futex-internal.c:87
+#2  __GI___futex_abstimed_wait_cancelable64 (futex_word=futex_word@entry=0x5555556863dc, expected=expected@entry=0, clockid=clockid@entry=0, abstime=abstime@entry=0x7fffe37fb340, private=private@entry=0) at ./nptl/futex-internal.c:139
+#3  0x00007ffff729bd6e in __pthread_cond_wait_common (abstime=0x7fffe37fb340, clockid=0, mutex=0x555555686388, cond=0x5555556863b0) at ./nptl/pthread_cond_wait.c:503
+#4  ___pthread_cond_timedwait64 (cond=0x5555556863b0, mutex=0x555555686388, abstime=0x7fffe37fb340) at ./nptl/pthread_cond_wait.c:652
+#5  0x00007ffff30c7660 in ddsrt_cond_waituntil () from /opt/ros/jazzy/lib/x86_64-linux-gnu/libddsc.so.0
+#6  0x00007ffff308538f in ?? () from /opt/ros/jazzy/lib/x86_64-linux-gnu/libddsc.so.0
+#7  0x00007ffff307e038 in ?? () from /opt/ros/jazzy/lib/x86_64-linux-gnu/libddsc.so.0
+#8  0x00007ffff30ca0fd in ?? () from /opt/ros/jazzy/lib/x86_64-linux-gnu/libddsc.so.0
+#9  0x00007ffff729cb84 in start_thread (arg=<optimized out>) at ./nptl/pthread_create.c:447
+#10 0x00007ffff7329ecc in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+
+Thread 8 (Thread 0x7fffe3fff6c0 (LWP 108714) "dq.user"):
+#0  0x00007ffff7298e51 in __futex_abstimed_wait_common64 (private=0, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x55555567cd50) at ./nptl/futex-internal.c:57
+#1  __futex_abstimed_wait_common (cancel=true, private=0, abstime=0x0, clockid=0, expected=0, futex_word=0x55555567cd50) at ./nptl/futex-internal.c:87
+#2  __GI___futex_abstimed_wait_cancelable64 (futex_word=futex_word@entry=0x55555567cd50, expected=expected@entry=0, clockid=clockid@entry=0, abstime=abstime@entry=0x0, private=private@entry=0) at ./nptl/futex-internal.c:139
+#3  0x00007ffff729b8cd in __pthread_cond_wait_common (abstime=0x0, clockid=0, mutex=0x55555567cd00, cond=0x55555567cd28) at ./nptl/pthread_cond_wait.c:503
+#4  ___pthread_cond_wait (cond=0x55555567cd28, mutex=0x55555567cd00) at ./nptl/pthread_cond_wait.c:627
+#5  0x00007ffff30c75dd in ddsrt_cond_wait () from /opt/ros/jazzy/lib/x86_64-linux-gnu/libddsc.so.0
+#6  0x00007ffff3076205 in ?? () from /opt/ros/jazzy/lib/x86_64-linux-gnu/libddsc.so.0
+#7  0x00007ffff307e038 in ?? () from /opt/ros/jazzy/lib/x86_64-linux-gnu/libddsc.so.0
+#8  0x00007ffff30ca0fd in ?? () from /opt/ros/jazzy/lib/x86_64-linux-gnu/libddsc.so.0
+#9  0x00007ffff729cb84 in start_thread (arg=<optimized out>) at ./nptl/pthread_create.c:447
+#10 0x00007ffff7329ecc in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+
+Thread 7 (Thread 0x7ffff0e216c0 (LWP 108713) "dq.builtins"):
+#0  0x00007ffff7298e51 in __futex_abstimed_wait_common64 (private=-2147483648, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x55555567b2d0) at ./nptl/futex-internal.c:57
+#1  __futex_abstimed_wait_common (cancel=true, private=-2147483648, abstime=0x0, clockid=0, expected=0, futex_word=0x55555567b2d0) at ./nptl/futex-internal.c:87
+#2  __GI___futex_abstimed_wait_cancelable64 (futex_word=futex_word@entry=0x55555567b2d0, expected=expected@entry=0, clockid=clockid@entry=0, abstime=abstime@entry=0x0, private=private@entry=0) at ./nptl/futex-internal.c:139
+#3  0x00007ffff729b8cd in __pthread_cond_wait_common (abstime=0x0, clockid=0, mutex=0x55555567b280, cond=0x55555567b2a8) at ./nptl/pthread_cond_wait.c:503
+#4  ___pthread_cond_wait (cond=0x55555567b2a8, mutex=0x55555567b280) at ./nptl/pthread_cond_wait.c:627
+#5  0x00007ffff30c75dd in ddsrt_cond_wait () from /opt/ros/jazzy/lib/x86_64-linux-gnu/libddsc.so.0
+#6  0x00007ffff3076205 in ?? () from /opt/ros/jazzy/lib/x86_64-linux-gnu/libddsc.so.0
+#7  0x00007ffff307e038 in ?? () from /opt/ros/jazzy/lib/x86_64-linux-gnu/libddsc.so.0
+#8  0x00007ffff30ca0fd in ?? () from /opt/ros/jazzy/lib/x86_64-linux-gnu/libddsc.so.0
+#9  0x00007ffff729cb84 in start_thread (arg=<optimized out>) at ./nptl/pthread_create.c:447
+#10 0x00007ffff7329ecc in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+
+Thread 6 (Thread 0x7ffff16226c0 (LWP 108712) "gc"):
+#0  0x00007ffff7298e51 in __futex_abstimed_wait_common64 (private=-1, cancel=true, abstime=0x7ffff161f3f0, op=393, expected=0, futex_word=0x555555679a10) at ./nptl/futex-internal.c:57
+#1  __futex_abstimed_wait_common (cancel=true, private=-1, abstime=0x7ffff161f3f0, clockid=0, expected=0, futex_word=0x555555679a10) at ./nptl/futex-internal.c:87
+#2  __GI___futex_abstimed_wait_cancelable64 (futex_word=futex_word@entry=0x555555679a10, expected=expected@entry=0, clockid=clockid@entry=0, abstime=abstime@entry=0x7ffff161f3f0, private=private@entry=0) at ./nptl/futex-internal.c:139
+#3  0x00007ffff729bd6e in __pthread_cond_wait_common (abstime=0x7ffff161f3f0, clockid=0, mutex=0x5555556799c0, cond=0x5555556799e8) at ./nptl/pthread_cond_wait.c:503
+#4  ___pthread_cond_timedwait64 (cond=0x5555556799e8, mutex=0x5555556799c0, abstime=0x7ffff161f3f0) at ./nptl/pthread_cond_wait.c:652
+#5  0x00007ffff30c7660 in ddsrt_cond_waituntil () from /opt/ros/jazzy/lib/x86_64-linux-gnu/libddsc.so.0
+#6  0x00007ffff3068450 in ?? () from /opt/ros/jazzy/lib/x86_64-linux-gnu/libddsc.so.0
+#7  0x00007ffff307e038 in ?? () from /opt/ros/jazzy/lib/x86_64-linux-gnu/libddsc.so.0
+#8  0x00007ffff30ca0fd in ?? () from /opt/ros/jazzy/lib/x86_64-linux-gnu/libddsc.so.0
+#9  0x00007ffff729cb84 in start_thread (arg=<optimized out>) at ./nptl/pthread_create.c:447
+#10 0x00007ffff7329ecc in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+
+Thread 4 (Thread 0x7ffff26246c0 (LWP 108710) "move_group"):
+#0  0x00007ffff7298e51 in __futex_abstimed_wait_common64 (private=0, cancel=true, abstime=0x7ffff26214d0, op=137, expected=0, futex_word=0x555555697d20) at ./nptl/futex-internal.c:57
+#1  __futex_abstimed_wait_common (cancel=true, private=0, abstime=0x7ffff26214d0, clockid=0, expected=0, futex_word=0x555555697d20) at ./nptl/futex-internal.c:87
+#2  __GI___futex_abstimed_wait_cancelable64 (futex_word=futex_word@entry=0x555555697d20, expected=expected@entry=0, clockid=clockid@entry=1, abstime=abstime@entry=0x7ffff26214d0, private=private@entry=0) at ./nptl/futex-internal.c:139
+#3  0x00007ffff729c1f6 in __pthread_cond_wait_common (abstime=<optimized out>, clockid=<optimized out>, mutex=0x555555697cd0, cond=0x555555697cf8) at ./nptl/pthread_cond_wait.c:503
+#4  ___pthread_cond_clockwait64 (abstime=<optimized out>, clockid=<optimized out>, mutex=0x555555697cd0, cond=0x555555697cf8) at ./nptl/pthread_cond_wait.c:691
+#5  ___pthread_cond_clockwait64 (cond=0x555555697cf8, mutex=0x555555697cd0, clockid=<optimized out>, abstime=<optimized out>) at ./nptl/pthread_cond_wait.c:679
+#6  0x00007ffff694a575 in ?? () from /opt/ros/jazzy/lib/librcl_logging_spdlog.so
+#7  0x00007ffff76ecdb4 in ?? () from /lib/x86_64-linux-gnu/libstdc++.so.6
+#8  0x00007ffff729cb84 in start_thread (arg=<optimized out>) at ./nptl/pthread_create.c:447
+#9  0x00007ffff7329ecc in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+
+Thread 3 (Thread 0x7ffff3a406c0 (LWP 108709) "move_group-ust"):
+#0  syscall () at ../sysdeps/unix/sysv/linux/x86_64/syscall.S:38
+#1  0x00007ffff5b5e2fe in ?? () from /lib/x86_64-linux-gnu/liblttng-ust.so.1
+#2  0x00007ffff729cb84 in start_thread (arg=<optimized out>) at ./nptl/pthread_create.c:447
+#3  0x00007ffff7329ecc in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+
+Thread 2 (Thread 0x7ffff42416c0 (LWP 108708) "move_group-ust"):
+#0  0x00007ffff732c0cb in __recvmsg_syscall (flags=0, msg=0x7ffff423dcd0, fd=3) at ../sysdeps/unix/sysv/linux/recvmsg.c:27
+#1  __libc_recvmsg (fd=3, msg=0x7ffff423dcd0, flags=0) at ../sysdeps/unix/sysv/linux/recvmsg.c:41
+#2  0x00007ffff5b897c6 in ?? () from /lib/x86_64-linux-gnu/liblttng-ust.so.1
+#3  0x00007ffff5b5e527 in ?? () from /lib/x86_64-linux-gnu/liblttng-ust.so.1
+#4  0x00007ffff729cb84 in start_thread (arg=<optimized out>) at ./nptl/pthread_create.c:447
+#5  0x00007ffff7329ecc in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+
+Thread 1 (Thread 0x7ffff426b0c0 (LWP 108705) "move_group"):
+#0  0x00007ffff7b03ba9 in rclcpp::CallbackGroup::~CallbackGroup() () from /opt/ros/jazzy/lib/librclcpp.so
+#1  0x00007ffff7affafa in ?? () from /opt/ros/jazzy/lib/librclcpp.so
+#2  0x00007ffff7b544c4 in rclcpp::node_interfaces::NodeBase::~NodeBase() () from /opt/ros/jazzy/lib/librclcpp.so
+#3  0x00007ffff7b54581 in ?? () from /opt/ros/jazzy/lib/librclcpp.so
+#4  0x00007ffff7affa36 in ?? () from /opt/ros/jazzy/lib/librclcpp.so
+#5  0x00007ffff7b55cb5 in rclcpp::Node::~Node() () from /opt/ros/jazzy/lib/librclcpp.so
+#6  0x00007ffff74ef576 in ?? () from /opt/ros/jazzy/lib/libmoveit_trajectory_execution_manager.so.2.12.4
+#7  0x00007ffff74dd42b in trajectory_execution_manager::TrajectoryExecutionManager::~TrajectoryExecutionManager() () from /opt/ros/jazzy/lib/libmoveit_trajectory_execution_manager.so.2.12.4
+#8  0x00007ffff7f7f98a in ?? () from /opt/ros/jazzy/lib/libmoveit_cpp.so.2.12.4
+#9  0x00007ffff7f7fad1 in moveit_cpp::MoveItCpp::~MoveItCpp() () from /opt/ros/jazzy/lib/libmoveit_cpp.so.2.12.4
+#10 0x000055555556c12a in ?? ()
+#11 0x000055555556950a in main ()
+From                To                  Syms Read   Shared Object Library
+0x00007ffff7fc6000  0x00007ffff7ff0195  Yes         /lib64/ld-linux-x86-64.so.2
+0x00007ffff7fb1d40  0x00007ffff7fb9168  Yes (*)     /opt/ros/jazzy/lib/libbackward.so
+0x00007ffff7f9a760  0x00007ffff7fa73a8  Yes (*)     /opt/ros/jazzy/lib/libmoveit_move_group_capabilities_base.so.2.12.4
+0x00007ffff7f7af60  0x00007ffff7f8f94d  Yes (*)     /opt/ros/jazzy/lib/libmoveit_cpp.so.2.12.4
+0x00007ffff7e84a10  0x00007ffff7f24ca0  Yes (*)     /opt/ros/jazzy/lib/libmoveit_planning_scene_monitor.so.2.12.4
+0x00007ffff7d9a860  0x00007ffff7d9dbd7  Yes (*)     /opt/ros/jazzy/lib/libmoveit_utils.so.2.12.4
+0x00007ffff7d89d20  0x00007ffff7d91354  Yes (*)     /opt/ros/jazzy/lib/libclass_loader.so
+0x00007ffff7d73340  0x00007ffff7d73f74  Yes (*)     /lib/x86_64-linux-gnu/libconsole_bridge.so.1.0
+0x00007ffff7d613c0  0x00007ffff7d6a7c6  Yes (*)     /lib/x86_64-linux-gnu/libtinyxml2.so.10
+0x00007ffff7ac79d0  0x00007ffff7c0eea9  Yes (*)     /opt/ros/jazzy/lib/librclcpp.so
+0x00007ffff7d4e890  0x00007ffff7d54cd1  Yes (*)     /opt/ros/jazzy/lib/libament_index_cpp.so
+0x00007ffff7d40c00  0x00007ffff7d46984  Yes (*)     /opt/ros/jazzy/lib/librcpputils.so
+0x00007ffff7d21fa0  0x00007ffff7d2d202  Yes (*)     /opt/ros/jazzy/lib/librcutils.so
+0x00007ffff76a55c0  0x00007ffff77e4ce2  Yes (*)     /lib/x86_64-linux-gnu/libstdc++.so.6
+0x00007ffff7cf2780  0x00007ffff7d15745  Yes (*)     /lib/x86_64-linux-gnu/libgcc_s.so.1
+0x00007ffff7228800  0x00007ffff73b0039  Yes         /lib/x86_64-linux-gnu/libc.so.6
+0x00007ffff79613b0  0x00007ffff79cc473  Yes (*)     /lib/x86_64-linux-gnu/libdw.so.1
+0x00007ffff7cdace0  0x00007ffff7ce6501  Yes (*)     /opt/ros/jazzy/lib/libmoveit_plan_execution.so.2.12.4
+0x00007ffff7cc2a20  0x00007ffff7cd0cd5  Yes (*)     /opt/ros/jazzy/lib/libmoveit_robot_trajectory.so.2.12.4
+0x00007ffff78f8a00  0x00007ffff793ea41  Yes (*)     /opt/ros/jazzy/lib/libmoveit_robot_state.so.2.12.4
+0x00007ffff7563900  0x00007ffff75ccf39  Yes (*)     /lib/x86_64-linux-gnu/liborocos-kdl.so.1.5
+0x00007ffff7ca0ea0  0x00007ffff7cb55d9  Yes (*)     /opt/ros/jazzy/lib/libtf2.so
+0x00007ffff78a7120  0x00007ffff78dd58e  Yes (*)     /opt/ros/jazzy/lib/libmoveit_planning_pipeline_interfaces.so.2.12.4
+0x00007ffff74c9eb0  0x00007ffff752a71e  Yes (*)     /opt/ros/jazzy/lib/libmoveit_trajectory_execution_manager.so.2.12.4
+0x00007ffff7194d30  0x00007ffff71e976a  Yes (*)     /opt/ros/jazzy/lib/libmoveit_planning_pipeline.so.2.12.4
+0x00007ffff7444000  0x00007ffff747b6dc  Yes (*)     /opt/ros/jazzy/lib/libmoveit_planning_scene.so.2.12.4
+0x00007ffff714bfc0  0x00007ffff716f642  Yes (*)     /opt/ros/jazzy/lib/libmoveit_kinematic_constraints.so.2.12.4
+0x00007ffff7107440  0x00007ffff713512b  Yes (*)     /opt/ros/jazzy/lib/libmoveit_robot_model.so.2.12.4
+0x00007ffff70aba70  0x00007ffff70e6631  Yes (*)     /opt/ros/jazzy/lib/libmoveit_ros_occupancy_map_monitor.so.2.12.4
+0x00007ffff7888aa0  0x00007ffff7891647  Yes (*)     /opt/ros/jazzy/lib/libmoveit_robot_model_loader.so.2.12.4
+0x00007ffff7c92560  0x00007ffff7c93e15  Yes (*)     /opt/ros/jazzy/lib/libmoveit_collision_plugin_loader.so.2.12.4
+0x00007ffff7041660  0x00007ffff7080262  Yes (*)     /opt/ros/jazzy/lib/libmoveit_collision_detection.so.2.12.4
+0x00007ffff742a5c0  0x00007ffff742e578  Yes (*)     /opt/ros/jazzy/lib/libmoveit_transforms.so.2.12.4
+0x00007ffff7008440  0x00007ffff7024b67  Yes (*)     /opt/ros/jazzy/lib/libgeometric_shapes.so.2.3.4
+0x00007ffff6fa92f0  0x00007ffff6fe1670  Yes (*)     /opt/ros/jazzy/lib/libtf2_ros.so
+0x00007ffff74214e0  0x00007ffff7422789  Yes (*)     /opt/ros/jazzy/lib/libtf2_msgs__rosidl_typesupport_cpp.so
+0x00007ffff6f332a0  0x00007ffff6f4b856  Yes (*)     /opt/ros/jazzy/lib/libmoveit_msgs__rosidl_typesupport_cpp.so
+0x00007ffff6eec660  0x00007ffff6eed379  Yes (*)     /opt/ros/jazzy/lib/libsensor_msgs__rosidl_typesupport_cpp.so
+0x00007ffff74153e0  0x00007ffff7417032  Yes (*)     /opt/ros/jazzy/lib/liblibstatistics_collector.so
+0x00007ffff6eabd20  0x00007ffff6ed200f  Yes (*)     /opt/ros/jazzy/lib/librcl.so
+0x00007ffff78800a0  0x00007ffff78801e9  Yes (*)     /opt/ros/jazzy/lib/libstatistics_msgs__rosidl_typesupport_cpp.so
+0x00007ffff6e955c0  0x00007ffff6e98900  Yes (*)     /opt/ros/jazzy/lib/librmw.so
+0x00007ffff6e82240  0x00007ffff6e88aab  Yes (*)     /opt/ros/jazzy/lib/libtracetools.so
+0x00007ffff6e5a710  0x00007ffff6e7052d  Yes (*)     /lib/x86_64-linux-gnu/libfmt.so.9
+0x00007ffff6d7e420  0x00007ffff6dfc3a6  Yes         /lib/x86_64-linux-gnu/libm.so.6
+0x00007ffff6d69300  0x00007ffff6d6a288  Yes (*)     /opt/ros/jazzy/lib/librsl.so
+0x00007ffff6d5e820  0x00007ffff6d639a3  Yes (*)     /opt/ros/jazzy/lib/librcl_yaml_param_parser.so
+0x00007ffff6d58160  0x00007ffff6d58389  Yes (*)     /opt/ros/jazzy/lib/librosgraph_msgs__rosidl_typesupport_cpp.so
+0x00007ffff6d51140  0x00007ffff6d5157c  Yes (*)     /opt/ros/jazzy/lib/librcl_logging_interface.so
+0x00007ffff6d46360  0x00007ffff6d4ac12  Yes (*)     /opt/ros/jazzy/lib/librmw_implementation.so
+0x00007ffff6d3f040  0x00007ffff6d3f1fc  Yes (*)     /opt/ros/jazzy/lib/libtype_description_interfaces__rosidl_typesupport_c.so
+0x00007ffff6d2b840  0x00007ffff6d30379  Yes (*)     /opt/ros/jazzy/lib/librcl_interfaces__rosidl_typesupport_cpp.so
+0x00007ffff6d0dcc0  0x00007ffff6d17b3c  Yes (*)     /opt/ros/jazzy/lib/librosidl_dynamic_typesupport.so
+0x00007ffff6d02040  0x00007ffff6d020f9  Yes (*)     /opt/ros/jazzy/lib/librosidl_typesupport_introspection_cpp.so
+0x00007ffff6cea020  0x00007ffff6cf554f  Yes (*)     /opt/ros/jazzy/lib/librosidl_runtime_c.so
+0x00007ffff6cc6700  0x00007ffff6cdb02f  Yes (*)     /lib/x86_64-linux-gnu/libelf.so.1
+0x00007ffff6ca7260  0x00007ffff6cb8c60  Yes (*)     /lib/x86_64-linux-gnu/libz.so.1
+0x00007ffff6bef400  0x00007ffff6c957b2  Yes (*)     /lib/x86_64-linux-gnu/libzstd.so.1
+0x00007ffff6bbc400  0x00007ffff6bdd5ef  Yes (*)     /lib/x86_64-linux-gnu/liblzma.so.5
+0x00007ffff6ba7280  0x00007ffff6bb3ff3  Yes (*)     /lib/x86_64-linux-gnu/libbz2.so.1.0
+0x00007ffff6ba0260  0x00007ffff6ba1090  Yes (*)     /opt/ros/jazzy/lib/libmoveit_exceptions.so.2.12.4
+0x00007ffff6b91540  0x00007ffff6b961d4  Yes (*)     /opt/ros/jazzy/lib/librandom_numbers.so
+0x00007ffff6b79520  0x00007ffff6b872a9  Yes (*)     /opt/ros/jazzy/lib/libmoveit_planning_interface.so.2.12.4
+0x00007ffff6b71400  0x00007ffff6b71969  Yes (*)     /opt/ros/jazzy/lib/libstd_msgs__rosidl_typesupport_cpp.so
+0x00007ffff6b4af60  0x00007ffff6b61b8c  Yes (*)     /opt/ros/jazzy/lib/libmoveit_collision_detection_fcl.so.2.12.4
+0x00007ffff6b0ac80  0x00007ffff6b30e85  Yes (*)     /lib/x86_64-linux-gnu/liboctomap.so.1.9
+0x00007ffff6afb220  0x00007ffff6afce79  Yes (*)     /lib/x86_64-linux-gnu/liboctomath.so.1.9
+0x00007ffff6adfe40  0x00007ffff6af1831  Yes (*)     /opt/ros/jazzy/lib/libsrdfdom.so.2.0.7
+0x00007ffff6a9e340  0x00007ffff6acbc01  Yes (*)     /opt/ros/jazzy/lib/libmoveit_kinematics_plugin_loader.so.2.12.4
+0x00007ffff6a47270  0x00007ffff6a78c79  Yes (*)     /opt/ros/jazzy/lib/libmoveit_rdf_loader.so.2.12.4
+0x00007ffff62df4a0  0x00007ffff67b8d67  Yes (*)     /lib/x86_64-linux-gnu/libassimp.so.5
+0x00007ffff5d18f20  0x00007ffff608405a  Yes (*)     /lib/x86_64-linux-gnu/libfcl.so.0.7
+0x00007ffff69a9580  0x00007ffff69efe58  Yes (*)     /lib/x86_64-linux-gnu/libqhull_r.so.8.0
+0x00007ffff699d540  0x00007ffff699ef66  Yes (*)     /opt/ros/jazzy/lib/libresource_retriever.so
+0x00007ffff6970b90  0x00007ffff698d231  Yes (*)     /opt/ros/jazzy/lib/librclcpp_action.so
+0x00007ffff61e58c0  0x00007ffff61f1ca3  Yes (*)     /opt/ros/jazzy/lib/libtf2_msgs__rosidl_generator_c.so
+0x00007ffff695a2c0  0x00007ffff695a999  Yes (*)     /opt/ros/jazzy/lib/libaction_msgs__rosidl_typesupport_cpp.so
+0x00007ffff6952280  0x00007ffff6953289  Yes (*)     /opt/ros/jazzy/lib/librosidl_typesupport_cpp.so
+0x00007ffff589ff80  0x00007ffff59ede4f  Yes (*)     /opt/ros/jazzy/lib/libmoveit_msgs__rosidl_generator_c.so
+0x00007ffff61a79a0  0x00007ffff61bb39f  Yes (*)     /opt/ros/jazzy/lib/libsensor_msgs__rosidl_generator_c.so
+0x00007ffff69497c0  0x00007ffff694ba8d  Yes (*)     /opt/ros/jazzy/lib/librcl_logging_spdlog.so
+0x00007ffff618d040  0x00007ffff618d51c  Yes (*)     /opt/ros/jazzy/lib/librcl_interfaces__rosidl_typesupport_c.so
+0x00007ffff5beedc0  0x00007ffff5bf5483  Yes (*)     /opt/ros/jazzy/lib/libtype_description_interfaces__rosidl_generator_c.so
+0x00007ffff5bc9240  0x00007ffff5be1c28  Yes (*)     /lib/x86_64-linux-gnu/libyaml-0.so.2
+0x00007ffff693f520  0x00007ffff6940ed6  Yes (*)     /opt/ros/jazzy/lib/libstatistics_msgs__rosidl_generator_c.so
+0x00007ffff5b512e0  0x00007ffff5b9a545  Yes (*)     /lib/x86_64-linux-gnu/liblttng-ust.so.1
+0x00007ffff5b33020  0x00007ffff5b39e6f  Yes (*)     /opt/ros/jazzy/lib/librosgraph_msgs__rosidl_generator_c.so
+0x00007ffff617f280  0x00007ffff61804e9  Yes (*)     /opt/ros/jazzy/lib/librosidl_typesupport_c.so
+0x00007ffff57cb280  0x00007ffff57e3f6f  Yes (*)     /opt/ros/jazzy/lib/librcl_interfaces__rosidl_generator_c.so
+0x00007ffff5791280  0x00007ffff57a0c5f  Yes (*)     /opt/ros/jazzy/lib/libstd_msgs__rosidl_generator_c.so
+0x00007ffff6175420  0x00007ffff6179837  Yes (*)     /opt/ros/jazzy/lib/libmoveit_kinematics_base.so
+0x00007ffff5750140  0x00007ffff5775262  Yes (*)     /opt/ros/jazzy/lib/liburdf.so
+0x00007ffff546b2d0  0x00007ffff565fcb5  Yes (*)     /lib/x86_64-linux-gnu/libdraco.so.8
+0x00007ffff5b21400  0x00007ffff5b28cba  Yes (*)     /lib/x86_64-linux-gnu/libminizip.so.1
+0x00007ffff570f640  0x00007ffff5734b90  Yes (*)     /lib/x86_64-linux-gnu/libpugixml.so.1
+0x00007ffff5b14180  0x00007ffff5b1ba7b  Yes (*)     /lib/x86_64-linux-gnu/libccd.so.2
+0x00007ffff5353ec0  0x00007ffff53dbc98  Yes (*)     /lib/x86_64-linux-gnu/libcurl.so.4
+0x00007ffff56f7c20  0x00007ffff56fffbf  Yes (*)     /opt/ros/jazzy/lib/librcl_action.so
+0x00007ffff53123a0  0x00007ffff5327f27  Yes (*)     /opt/ros/jazzy/lib/libgeometry_msgs__rosidl_generator_c.so
+0x00007ffff56ef180  0x00007ffff56ef98e  Yes (*)     /opt/ros/jazzy/lib/libunique_identifier_msgs__rosidl_generator_c.so
+0x00007ffff56ea260  0x00007ffff56eac37  Yes (*)     /opt/ros/jazzy/lib/libservice_msgs__rosidl_generator_c.so
+0x00007ffff56e4260  0x00007ffff56e517e  Yes (*)     /opt/ros/jazzy/lib/libbuiltin_interfaces__rosidl_generator_c.so
+0x00007ffff56d6a80  0x00007ffff56db183  Yes (*)     /opt/ros/jazzy/lib/libaction_msgs__rosidl_generator_c.so
+0x00007ffff52d71c0  0x00007ffff52ea17f  Yes (*)     /opt/ros/jazzy/lib/libobject_recognition_msgs__rosidl_generator_c.so
+0x00007ffff56c4f20  0x00007ffff56cacf3  Yes (*)     /opt/ros/jazzy/lib/liboctomap_msgs__rosidl_generator_c.so
+0x00007ffff52bcac0  0x00007ffff52bfc77  Yes (*)     /opt/ros/jazzy/lib/libtrajectory_msgs__rosidl_generator_c.so
+0x00007ffff52b0740  0x00007ffff52b2a86  Yes (*)     /opt/ros/jazzy/lib/libshape_msgs__rosidl_generator_c.so
+0x00007ffff5259da0  0x00007ffff5298e50  Yes (*)     /lib/x86_64-linux-gnu/libspdlog.so.1.12
+0x00007ffff521b820  0x00007ffff5221036  Yes (*)     /lib/x86_64-linux-gnu/libnuma.so.1
+0x00007ffff520d6c0  0x00007ffff5213b68  Yes (*)     /lib/x86_64-linux-gnu/liblttng-ust-common.so.1
+0x00007ffff51f0460  0x00007ffff51f67c7  Yes (*)     /lib/x86_64-linux-gnu/liblttng-ust-tracepoint.so.1
+0x00007ffff51c8200  0x00007ffff51dd75b  Yes (*)     /lib/x86_64-linux-gnu/libnghttp2.so.14
+0x00007ffff51a33e0  0x00007ffff51a69b9  Yes (*)     /lib/x86_64-linux-gnu/libidn2.so.0
+0x00007ffff5188da0  0x00007ffff51985a1  Yes (*)     /lib/x86_64-linux-gnu/librtmp.so.1
+0x00007ffff5121620  0x00007ffff5166741  Yes (*)     /lib/x86_64-linux-gnu/libssh.so.4
+0x00007ffff50ff3e0  0x00007ffff5100fa0  Yes (*)     /lib/x86_64-linux-gnu/libpsl.so.5
+0x00007ffff5074ed0  0x00007ffff50d2862  Yes (*)     /lib/x86_64-linux-gnu/libssl.so.3
+0x00007ffff4ab5000  0x00007ffff4de63a2  Yes (*)     /lib/x86_64-linux-gnu/libcrypto.so.3
+0x00007ffff500d470  0x00007ffff5044af8  Yes (*)     /lib/x86_64-linux-gnu/libgssapi_krb5.so.2
+0x00007ffff4fb0fc0  0x00007ffff4fea45d  Yes (*)     /lib/x86_64-linux-gnu/libldap.so.2
+0x00007ffff4f94360  0x00007ffff4f9b741  Yes (*)     /lib/x86_64-linux-gnu/liblber.so.2
+0x00007ffff4f841a0  0x00007ffff4f8bb6a  Yes (*)     /lib/x86_64-linux-gnu/libbrotlidec.so.1
+0x00007ffff48647a0  0x00007ffff489ab85  Yes (*)     /lib/x86_64-linux-gnu/libunistring.so.5
+0x00007ffff468dd00  0x00007ffff47c497d  Yes (*)     /lib/x86_64-linux-gnu/libgnutls.so.30
+0x00007ffff4f41ca0  0x00007ffff4f549bd  Yes (*)     /lib/x86_64-linux-gnu/libhogweed.so.6
+0x00007ffff460f280  0x00007ffff463d285  Yes (*)     /lib/x86_64-linux-gnu/libnettle.so.8
+0x00007ffff4589240  0x00007ffff45eb192  Yes (*)     /lib/x86_64-linux-gnu/libgmp.so.10
+0x00007ffff44d7f50  0x00007ffff453624e  Yes (*)     /lib/x86_64-linux-gnu/libkrb5.so.3
+0x00007ffff448e3c0  0x00007ffff44a86f1  Yes (*)     /lib/x86_64-linux-gnu/libk5crypto.so.3
+0x00007ffff4f333c0  0x00007ffff4f33fc1  Yes (*)     /lib/x86_64-linux-gnu/libcom_err.so.2
+0x00007ffff4f27630  0x00007ffff4f2c934  Yes (*)     /lib/x86_64-linux-gnu/libkrb5support.so.0
+0x00007ffff4473950  0x00007ffff4482aea  Yes (*)     /lib/x86_64-linux-gnu/libsasl2.so.2
+0x00007ffff444e0a0  0x00007ffff444e7be  Yes (*)     /lib/x86_64-linux-gnu/libbrotlicommon.so.1
+0x00007ffff42e1c80  0x00007ffff43b2a70  Yes (*)     /lib/x86_64-linux-gnu/libp11-kit.so.0
+0x00007ffff42964c0  0x00007ffff42a3ed5  Yes (*)     /lib/x86_64-linux-gnu/libtasn1.so.6
+0x00007ffff4f1d260  0x00007ffff4f1e4c8  Yes (*)     /lib/x86_64-linux-gnu/libkeyutils.so.1
+0x00007ffff42846e0  0x00007ffff428cf19  Yes         /lib/x86_64-linux-gnu/libresolv.so.2
+0x00007ffff4277460  0x00007ffff427d07a  Yes (*)     /lib/x86_64-linux-gnu/libffi.so.8
+0x00007ffff3146590  0x00007ffff31932bc  Yes (*)     /opt/ros/jazzy/lib/librmw_cyclonedds_cpp.so
+0x00007ffff300d3a0  0x00007ffff30d6d72  Yes (*)     /opt/ros/jazzy/lib/x86_64-linux-gnu/libddsc.so.0
+0x00007ffff2fc0f60  0x00007ffff2fd23b3  Yes (*)     /opt/ros/jazzy/lib/librmw_dds_common.so
+0x00007ffff2fb50a0  0x00007ffff2fb51e9  Yes (*)     /opt/ros/jazzy/lib/librmw_dds_common__rosidl_typesupport_cpp.so
+0x00007ffff2faf040  0x00007ffff2faf0f9  Yes (*)     /opt/ros/jazzy/lib/librosidl_typesupport_introspection_c.so
+0x00007ffff2f8db80  0x00007ffff2fa11d9  Yes (*)     /opt/ros/jazzy/lib/x86_64-linux-gnu/libiceoryx_binding_c.so
+0x00007ffff2f794c0  0x00007ffff2f7b027  Yes (*)     /opt/ros/jazzy/lib/librmw_dds_common__rosidl_generator_c.so
+0x00007ffff2ec81b0  0x00007ffff2efca2f  Yes (*)     /opt/ros/jazzy/lib/x86_64-linux-gnu/libiceoryx_posh.so
+0x00007ffff2e52fd0  0x00007ffff2e72567  Yes (*)     /opt/ros/jazzy/lib/x86_64-linux-gnu/libiceoryx_hoofs.so
+0x00007ffff2e3e200  0x00007ffff2e3e3a9  Yes (*)     /opt/ros/jazzy/lib/x86_64-linux-gnu/libiceoryx_platform.so
+0x00007ffff2e283b0  0x00007ffff2e2c4df  Yes (*)     /lib/x86_64-linux-gnu/libacl.so.1
+0x00007ffff2e38300  0x00007ffff2e3947c  Yes (*)     /opt/ros/jazzy/lib/librmw_dds_common__rosidl_typesupport_introspection_cpp.so
+0x00007ffff04100a0  0x00007ffff04140c6  Yes (*)     /opt/ros/jazzy/lib/librcl_interfaces__rosidl_typesupport_introspection_c.so
+0x00007ffff2e310e0  0x00007ffff2e3127a  Yes (*)     /opt/ros/jazzy/lib/libservice_msgs__rosidl_typesupport_introspection_c.so
+0x00007ffff03ee0c0  0x00007ffff03ee239  Yes (*)     /opt/ros/jazzy/lib/libbuiltin_interfaces__rosidl_typesupport_introspection_c.so
+0x00007ffff03cf3a0  0x00007ffff03e0a89  Yes (*)     /opt/ros/jazzy/lib/librcl_interfaces__rosidl_typesupport_introspection_cpp.so
+0x00007ffff03af0c0  0x00007ffff03af29c  Yes (*)     /opt/ros/jazzy/lib/libservice_msgs__rosidl_typesupport_introspection_cpp.so
+0x00007ffff03aa040  0x00007ffff03aa1bc  Yes (*)     /opt/ros/jazzy/lib/libbuiltin_interfaces__rosidl_typesupport_introspection_cpp.so
+0x00007ffff03a36c0  0x00007ffff03a4266  Yes (*)     /opt/ros/jazzy/lib/libtype_description_interfaces__rosidl_typesupport_introspection_c.so
+0x00007ffff03986a0  0x00007ffff0399d32  Yes (*)     /opt/ros/jazzy/lib/libsdformat_urdf_plugin.so
+0x00007ffff0381da0  0x00007ffff038fb05  Yes (*)     /opt/ros/jazzy/lib/libsdformat_urdf.so
+0x00007fffe1441510  0x00007fffe159cb59  Yes (*)     /opt/ros/jazzy/opt/sdformat_vendor/lib/libsdformat14.so.14
+0x00007ffff0339a00  0x00007ffff036bdeb  Yes (*)     /opt/ros/jazzy/opt/gz_math_vendor/lib/libgz-math7.so.7
+0x00007ffff0319480  0x00007ffff031edbd  Yes (*)     /opt/ros/jazzy/opt/gz_utils_vendor/lib/libgz-utils2.so.2
+0x00007ffff02ffac0  0x00007ffff030ff7a  Yes (*)     /opt/ros/jazzy/lib/x86_64-linux-gnu/liburdfdom_model.so.4.0
+0x00007ffff02f6580  0x00007ffff02f763a  Yes (*)     /opt/ros/jazzy/lib/liburdf_xml_parser.so
+0x00007ffff02bf5b0  0x00007ffff02e9c59  Yes (*)     /opt/ros/jazzy/lib/libmoveit_kdl_kinematics_plugin.so
+0x00007ffff02ae7c0  0x00007ffff02b1191  Yes (*)     /opt/ros/jazzy/lib/libkdl_parser.so
+0x00007ffff02a1700  0x00007ffff02a5dfc  Yes (*)     /opt/ros/jazzy/lib/libtf2_msgs__rosidl_typesupport_introspection_cpp.so
+0x00007ffff028e440  0x00007ffff0290bac  Yes (*)     /opt/ros/jazzy/lib/libgeometry_msgs__rosidl_typesupport_introspection_cpp.so
+0x00007ffff027e080  0x00007ffff027e21c  Yes (*)     /opt/ros/jazzy/lib/libunique_identifier_msgs__rosidl_typesupport_introspection_cpp.so
+0x00007ffff0273520  0x00007ffff02765ac  Yes (*)     /opt/ros/jazzy/lib/libstd_msgs__rosidl_typesupport_introspection_cpp.so
+0x00007ffff01d6a40  0x00007ffff022d743  Yes (*)     /opt/ros/jazzy/lib/libmoveit_msgs__rosidl_typesupport_introspection_cpp.so
+0x00007ffff014a9e0  0x00007ffff01538dc  Yes (*)     /opt/ros/jazzy/lib/libobject_recognition_msgs__rosidl_typesupport_introspection_cpp.so
+0x00007ffff01365c0  0x00007ffff0138ea9  Yes (*)     /opt/ros/jazzy/lib/liboctomap_msgs__rosidl_typesupport_introspection_cpp.so
+0x00007ffff012a500  0x00007ffff012ca3c  Yes (*)     /opt/ros/jazzy/lib/libtrajectory_msgs__rosidl_typesupport_introspection_cpp.so
+0x00007ffff010fe60  0x00007ffff0117b49  Yes (*)     /opt/ros/jazzy/lib/libsensor_msgs__rosidl_typesupport_introspection_cpp.so
+0x00007ffff00f7280  0x00007ffff00f7dec  Yes (*)     /opt/ros/jazzy/lib/libshape_msgs__rosidl_typesupport_introspection_cpp.so
+0x00007ffff00e0bd0  0x00007ffff00eac8c  Yes (*)     /opt/ros/jazzy/lib/libmoveit_ompl_planner_plugin.so
+0x00007fffe1753a60  0x00007fffe17cc001  Yes (*)     /opt/ros/jazzy/lib/libmoveit_ompl_interface.so.2.12.4
+0x00007fffc332c240  0x00007fffc36b857a  Yes (*)     /opt/ros/jazzy/lib/x86_64-linux-gnu/libompl.so.18
+0x00007ffff0092a20  0x00007ffff00ae650  Yes (*)     /lib/x86_64-linux-gnu/libboost_serialization.so.1.83.0
+0x00007ffff004e120  0x00007ffff0072b72  Yes (*)     /opt/ros/jazzy/lib/libmoveit_constraint_sampler_manager_loader.so.2.12.4
+0x00007ffff001be40  0x00007ffff003616e  Yes (*)     /opt/ros/jazzy/lib/libmoveit_constraint_samplers.so.2.12.4
+0x00007fffe16e9d40  0x00007fffe16fcf48  Yes (*)     /lib/x86_64-linux-gnu/libboost_filesystem.so.1.83.0
+0x00007fffe16cbce0  0x00007fffe16dab4d  Yes (*)     /opt/ros/jazzy/lib/libmoveit_default_planning_request_adapter_plugins.so
+0x00007fffe03cc690  0x00007fffe03ef9e9  Yes (*)     /opt/ros/jazzy/lib/libmoveit_default_planning_response_adapter_plugins.so
+0x00007fffe169b0e0  0x00007fffe16ba977  Yes (*)     /opt/ros/jazzy/lib/libmoveit_trajectory_processing.so.2.12.4
+0x00007ffff00c74a0  0x00007ffff00c98d9  Yes (*)     /opt/ros/jazzy/lib/libvisualization_msgs__rosidl_typesupport_cpp.so
+0x00007fffe039d3e0  0x00007fffe03b7089  Yes (*)     /opt/ros/jazzy/lib/x86_64-linux-gnu/libruckig.so
+0x00007fffe0374cc0  0x00007fffe038499f  Yes (*)     /opt/ros/jazzy/lib/libvisualization_msgs__rosidl_generator_c.so
+0x00007fffe03519c0  0x00007fffe035e2e9  Yes (*)     /opt/ros/jazzy/lib/libvisualization_msgs__rosidl_typesupport_introspection_cpp.so
+0x00007fffe01fdf00  0x00007fffe0251e53  Yes (*)     /opt/ros/jazzy/lib/libcontrol_msgs__rosidl_generator_c.so
+0x00007fffe0177420  0x00007fffe0195a90  Yes (*)     /opt/ros/jazzy/lib/libcontrol_msgs__rosidl_typesupport_introspection_cpp.so
+0x00007ffff000e440  0x00007ffff000fac9  Yes (*)     /opt/ros/jazzy/lib/libaction_msgs__rosidl_typesupport_introspection_cpp.so
+0x00007fffe0033d40  0x00007fffe00397e3  Yes (*)     /opt/ros/jazzy/lib/libstd_srvs__rosidl_generator_c.so
+0x00007fffe00265c0  0x00007fffe0028af9  Yes (*)     /opt/ros/jazzy/lib/libstd_srvs__rosidl_typesupport_introspection_cpp.so
+(*): Shared library is missing debugging information.

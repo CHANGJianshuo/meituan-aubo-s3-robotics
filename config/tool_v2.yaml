@@ -1,0 +1,55 @@
+# config/tool_v2.yaml
+# V2 末端执行器：magnetic_latch_v2（上方插入 + 机械锁止 + 电磁解锁）。
+# 动作矩阵（设计 §5.2）：top_insert → auto_lock → unload → electromagnetic_unlock → withdraw
+#
+# !! 安全声明 !!
+# 本文件所有几何/速度/脉冲数值均为**保守占位值**，未经任何实物标定。
+# 默认不启用任何真实 IO：unlock_io_backend 必须为 mock 或 disabled。
+# 本文件不含任何凭据、设备地址或凭据占位以外的内容。
+
+mtc_tool:
+  ros__parameters:
+
+    tool_type: "magnetic_latch_v2"        # 占位值，禁止用于真实运动
+    uses_unlock_io: true
+    io_channels: ["electromagnetic_unlock"]
+
+    # ---- 解锁脉冲（占位） ---------------------------------------------
+    # 脉冲宽度必须 > 0；0 表示未配置，必须导致配置校验失败。
+    unlock_pulse_ms: 200                  # 待实物标定（占位值，禁止用于真实运动）
+
+    # 解锁 IO 后端：
+    #   mock     —— 离线替身（默认，绝不触碰真实设备）
+    #   disabled —— 明确禁用，任何调用都拒绝并记录
+    #   real     —— 未实现；配置为 real 时 validate_config 必须直接判失败
+    unlock_io_backend: "mock"             # 占位值：默认绝不触发真实电磁铁
+
+    # 解锁前置条件（硬约束，不得放宽）：
+    #   1) seated_verified == true（电池已由台面承托）
+    #   2) unloaded == true（载荷已卸除）
+    require_seated_before_unlock: true    # 禁止改为 false
+    require_unloaded_before_unlock: true  # 禁止改为 false
+    # 解锁受理 != 解锁成功：必须另有独立证据（锁止开关反馈/视觉）。
+    require_independent_unlock_evidence: true
+    min_unlock_evidence_level: 2          # 待实物标定（占位值）
+
+    # ---- 接合（ENGAGE）几何 -------------------------------------------
+    top_approach_height_m: 0.06           # 待实物标定（占位值，禁止用于真实运动）
+    insert_depth_m: 0.015                 # 待实物标定（占位值，禁止用于真实运动）
+    lock_seat_depth_m: 0.003              # 待实物标定（占位值，禁止用于真实运动）
+
+    # ---- 释放几何 ------------------------------------------------------
+    unload_drop_m: -0.004                 # 待实物标定（占位值，禁止用于真实运动）
+    # 退出方向必须由 CAD 装配与实物测试确定；不得假定解锁后必定垂直上退。
+    withdraw_offset_m: 0.05               # 待实物标定（占位值，禁止用于真实运动）
+    withdraw_direction: "calibrate_me"    # 待实物标定（占位值）
+
+    # ---- 速度上限 ------------------------------------------------------
+    contact_linear_speed_m_s: 0.01        # 待实物标定（占位值，禁止用于真实运动）
+    contact_angular_speed_rad_s: 0.05     # 待实物标定（占位值，禁止用于真实运动）
+    free_linear_speed_m_s: 0.05           # 待实物标定（占位值，禁止用于真实运动）
+    free_angular_speed_rad_s: 0.20        # 待实物标定（占位值，禁止用于真实运动）
+
+    # ---- TCP / 工具坐标系（占位） --------------------------------------
+    tcp_frame_id: "tool0_v2"              # 占位值：标定后替换为真实 TF 名
+    tcp_calibration_version: "uncalibrated"   # 待实物标定

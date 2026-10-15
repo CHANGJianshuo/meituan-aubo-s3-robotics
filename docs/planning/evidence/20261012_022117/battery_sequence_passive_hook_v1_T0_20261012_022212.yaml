@@ -1,0 +1,52 @@
+# mtc_moveit_planner plan_battery_sequence 证据（Mock，仅规划，未执行）
+# 提环位姿与工位均为占位值；接触段只代表规划意图，不代表可安全执行。
+tool: plan_battery_sequence
+wall_time: "20261012_022212"
+tool_type: "passive_hook_v1"
+slot: "T0"
+start: "SRDF named state home"
+ring_pose:
+  frame_id: "base_link"
+  position_m: [0.4, -0.05, 0.13]
+  orientation_xyzw: [0, 0.70710678, 0, 0.70710678]
+tcp:
+  status: "PLACEHOLDER"
+  xyz: [0, 0, 0]
+phases:
+  - phase: "ACQUIRE"
+    ok: false
+    error_code: 200
+    message: "[EXCEEDS_STATE_WATCHDOG] side_insert: trajectory lasts 35.0352 s, more than 80% of the MOVE_PRE_ALIGN watchdog (30 s)"
+    planning_frame: "world"
+    end_effector_link: "ee_link"
+    simulation_only: true
+    uncalibrated_inputs: []
+    start_state:
+      joint_names: ["shoulder_joint", "upperArm_joint", "foreArm_joint", "wrist1_joint", "wrist2_joint", "wrist3_joint"]
+      positions_rad: [0, -0.0334, 1.236, -0.3675, 1.5701, 0]
+    primitives:
+      - primitive_name: "side_insert"
+        ok: false
+        reason: "EXCEEDS_STATE_WATCHDOG"
+        message: "trajectory lasts 35.0352 s, more than 80% of the MOVE_PRE_ALIGN watchdog (30 s)"
+        mode: "FREE_SPACE"
+        method: "joint_interpolated_ik"
+        backend_message: "straight line rejected (fraction=0.505556, max_joint_step=0.032000 rad); ik candidates=5 est_s/span_rad=[37.03/2.786(seed_grid), 38.91/3.497(seed_start), 94.07/3.448(seed_grid), 121.1/5.928(seed_grid), 131/7.038(seed_grid)]; ik+rank 0.4057 s (rank 0.07773 s); chosen est 37.03 s, span 2.786 rad (seed_grid); retiming=ee_limited; ok"
+        payload_attached: false
+        goal_kind: "RING_STANDOFF"
+        start_assumption: "explicit_start_state"
+        contact_intent_only: false
+        ee_goal:
+          frame_id: "world"
+          position_m: [0.37, -0.05, 0.13]
+          orientation_xyzw: [0, 0.7071067812, 0, 0.7071067812]
+        planning_time_s: 0.519469346
+        cartesian_fraction: 0
+        time_scale_applied: 1
+        max_ee_linear_speed_m_s: 0.01663595693
+        max_ee_angular_speed_rad_s: 0.09800033656
+        duration_s: 35.03519893
+        point_count: 141
+        timeout_ms: 0
+        state_watchdog_s: 30
+    commands:

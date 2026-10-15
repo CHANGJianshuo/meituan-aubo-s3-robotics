@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "created_on": "2026-10-11",
+  "scope": "面向实机的 ROS 2 Jazzy 操作台客户端与显式可选 Mock；不实现 FSM/驱动/运动规划内核",
+  "implementation": "原生 HTML/CSS/JavaScript 与 Python HTTP 服务；rclpy Action/状态/日志客户端，OpenCV/NumPy 仅用于相机解码与观察画面",
+  "third_party_runtime_packages": [
+    {
+      "name": "rclpy",
+      "tested_version": "7.1.12",
+      "debian_version": "7.1.12-1noble.20260902.053513",
+      "repository": "https://github.com/ros2/rclpy",
+      "license": "Apache License 2.0",
+      "scope": "调用 ROS 客户端 API，未复制或修改其实现"
+    },
+    {
+      "name": "sensor_msgs",
+      "tested_version": "5.3.8",
+      "repository": "https://github.com/ros2/common_interfaces",
+      "license": "Apache License 2.0",
+      "scope": "Image/CompressedImage/JointState 类型"
+    },
+    {
+      "name": "rcl_interfaces",
+      "tested_version": "2.0.4",
+      "repository": "https://github.com/ros2/rcl_interfaces",
+      "license": "Apache License 2.0",
+      "scope": "Log 消息类型"
+    },
+    {
+      "name": "unique_identifier_msgs",
+      "tested_version": "2.5.1",
+      "repository": "https://github.com/ros2/unique_identifier_msgs",
+      "license": "package.xml 声明 BSD，未重新授权",
+      "scope": "Action Goal UUID 消息类型"
+    },
+    {
+      "name": "OpenCV",
+      "tested_version": "4.6.0",
+      "debian_version": "4.6.0+dfsg-13.1ubuntu1",
+      "repository": "https://github.com/opencv/opencv",
+      "license": "Ubuntu copyright: Apache-2.0 AND BSD-3-Clause；随包第三方组件各保留原许可",
+      "scope": "RGB/深度解码、缩放、JPEG 预览；未修改实现"
+    },
+    {
+      "name": "NumPy",
+      "tested_version": "1.26.4",
+      "debian_version": "1:1.26.4+ds-6ubuntu1",
+      "repository": "https://github.com/numpy/numpy",
+      "license": "BSD-3-Clause；随包组件保留原许可",
+      "scope": "Image 缓冲区、端序与深度数据转换；未修改实现"
+    },
+    {
+      "name": "mtc_interfaces",
+      "commit": "1d940f7c5f12561fed6641457c0b4b630a282b05",
+      "repository": "https://github.com/F1u0rite/meituan_challenge_ws",
+      "license": "MIT, Copyright (c) 2026 Fluorite",
+      "scope": "使用工作空间编译生成的 IDL 类型，不归档上游实现"
+    }
+  ],
+  "external_assets": [],
+  "interface_reference": {
+    "source_ids": [
+      "TEAMMATE-FSM-20261011",
+      "TEAMMATE-SDK-20261011"
+    ],
+    "repository": "https://github.com/F1u0rite/meituan_challenge_ws",
+    "commit": "1d940f7c5f12561fed6641457c0b4b630a282b05",
+    "paths": [
+      "src/mtc_interfaces/action/ExecuteTask.action",
+      "src/mtc_interfaces/msg/TaskState.msg",
+      "src/mtc_interfaces/msg/RobotState.msg",
+      "src/mtc_interfaces/msg/ToolState.msg",
+      "src/mtc_interfaces/msg/BatteryDetection.msg",
+      "src/mtc_interfaces/msg/ErrorCodes.msg",
+      "src/mtc_interfaces/srv/RequestStop.srv"
+    ],
+    "license": "MIT, Copyright (c) 2026 Fluorite；仅参考字段/枚举，没有复制 FSM/Action 实现",
+    "modifications": "新增真实 Web/ROS 适配器、HTTP 路由、样本龄期和 Goal 所有权处理；上游接口、FSM、Action 内核、驱动未修改"
+  },
+  "ai_assistance": {
+    "tool": "OpenAI Codex",
+    "date": "2026-10-11",
+    "scope": "页面设计、Python/HTML/CSS/JavaScript 编写、行为测试、浏览器 QA、接口文档及来源同步"
+  },
+  "limitations": [
+    "NUC 与实体设备尚未连接/验收",
+    "隔离 ROS fixture 包含门禁测试用 simulation_mode=false，不是实体硬件证据",
+    "上游完整任务阻断 B03/B05/B06 尚未解决",
+    "相机真值/单位/标定、检测叠图和任务录像未验收",
+    "Web 服务仅监听 loopback，远程访问经 SSH 隧道；不是公网服务"
+  ],
+  "user_scope_source": "USER-HW-20261011-07",
+  "api_references": [
+    {
+      "url": "https://github.com/ros2/rclpy/blob/jazzy/rclpy/rclpy/action/client.py",
+      "accessed_on": "2026-10-11",
+      "version_note": "浏览 jazzy 源码并以安装的 7.1.12 实际回归；分支 URL 非不可变快照",
+      "source_id": "ROS2-RCLPY-20261011"
+    },
+    {
+      "url": "https://github.com/ros2/rclpy/blob/jazzy/rclpy/rclpy/subscription.py",
+      "accessed_on": "2026-10-11",
+      "version_note": "浏览官方 jazzy 源码；实际 7.1.12 的 MessageInfo 字典无逐消息 publisher_gid，取唯一发布端后按节点名核对",
+      "source_id": "ROS2-RCLPY-20261011"
+    }
+  ],
+  "dependency_version_evidence": "docs/experiments/webui-ros-20261011/logs/jazzy-runtime-versions.log 和 ros-package-licenses.log；为测试环境观测，不代表 NUC 安装版本"
+}

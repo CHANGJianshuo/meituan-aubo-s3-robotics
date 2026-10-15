@@ -1,0 +1,1 @@
+sample_id,calibration_version,validation_kind,stamp_ns,time_domain,target_frame,source_frame,predicted_x_m,predicted_y_m,predicted_z_m,reference_x_m,reference_y_m,reference_z_m,position_error_m,orientation_error_rad,position_limit_m,orientation_limit_rad,passed,independent_from_solve,evidence_file,notes

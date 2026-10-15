@@ -1,0 +1,24 @@
+{
+  "status": "DIAGNOSTIC_OK",
+  "frame_id": "base_link",
+  "stamp_ns": 10000000000,
+  "time_domain": "synthetic",
+  "length_unit": "m",
+  "position": [
+    1.0,
+    1.1,
+    0.049999999999999996
+  ],
+  "orientation_xyzw": [
+    -0.7071067811865476,
+    0.0,
+    0.0,
+    0.7071067811865476
+  ],
+  "age_ns": 100000000,
+  "valid": true,
+  "ring_pose_valid": true,
+  "simulation_only": true,
+  "motion_authorized": false,
+  "calibration_status": "SYNTHETIC_ONLY"
+}

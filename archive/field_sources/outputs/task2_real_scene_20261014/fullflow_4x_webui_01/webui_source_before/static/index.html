@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="美团挑战赛机器人任务操作台，实机任务、ROS 状态、相机与日志。">
+  <title>机器人任务操作台 · 美团挑战赛</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳转到主要内容</a>
+  <aside class="sidebar">
+    <a class="brand" href="#console" aria-label="美团挑战赛操作台首页">
+      <span class="brand-mark" aria-hidden="true">M<span>↗</span></span>
+      <span>美团挑战赛<small>2026 · 机器人工作站</small></span>
+    </a>
+    <nav aria-label="工作站导航">
+      <a href="#console" data-view="console" class="nav-link active"><span aria-hidden="true">▦</span>任务操作台</a>
+      <a href="#records" data-view="records" class="nav-link"><span aria-hidden="true">≡</span>任务记录<span id="record-count" class="nav-count">0</span></a>
+      <a href="#connections" data-view="connections" class="nav-link"><span aria-hidden="true">⌘</span>接口状态</a>
+    </nav>
+    <div class="sidebar-note"><span class="dot yellow"></span> <span id="station-mode">实机工作站</span><p>系统集成与验收<br><span id="sidebar-status">等待 ROS 连接</span></p><span class="version">Web UI / v0.2</span></div>
+  </aside>
+
+  <div class="workspace">
+    <header class="topbar">
+      <div><span class="breadcrumb">固定工位 / 初赛任务</span><h1 id="page-title">任务操作台</h1></div>
+      <div class="header-actions"><span id="connection" class="connection"><span class="dot"></span><span>连接中</span></span><button id="pause" class="button quiet" type="button">暂停接收</button></div>
+    </header>
+    <main id="main" tabindex="-1">
+      <div class="environment"><span id="environment-tag" class="tag">实机模式</span><span id="environment-note">读取真实 ROS 状态；未连接时操作不可用。</span><span id="updated" class="updated">等待快照</span></div>
+      <div id="connection-alert" class="alert" role="status" hidden></div>
+      <div id="notice" class="notice" role="status" aria-live="polite" hidden></div>
+
+      <section id="view-console" class="view" aria-label="任务操作台">
+        <div class="console-grid">
+          <section class="panel workcell-panel" aria-labelledby="workcell-title">
+            <div class="panel-heading"><div><h2 id="workcell-title">工位总览</h2><p id="workcell-description">等待设备与任务状态</p></div><span id="task-status" class="tag">待命</span></div>
+            <div id="live-view" class="live-view">
+              <div class="camera-toolbar"><label for="camera-stream">相机观察</label><select id="camera-stream"><option value="color">RGB 彩色</option><option value="depth">深度伪彩</option></select><span id="camera-quality" class="tag">等待数据</span></div>
+              <div class="live-image"><img id="camera-image" alt="相机预览画面" hidden><div id="camera-empty" class="camera-empty"><strong>等待相机数据</strong><p id="camera-message">连接后显示相机预览画面</p><a href="#connections">查看接入状态</a></div></div>
+              <p class="source-note" id="camera-note">来源 — · 图像时间 —</p>
+            </div>
+            <div class="workcell" id="mock-scene" data-mock hidden>
+              <svg viewBox="0 0 780 366" role="img" aria-labelledby="scene-title scene-desc">
+                <title id="scene-title">Mock 电池搬运工位示意</title><desc id="scene-desc">左侧为四种颜色的电池，右侧为放置目标。图形用于任务状态展示，不是实际尺寸、轨迹或相机画面。</desc>
+                <defs><pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="#dfe5ea"/></pattern></defs>
+                <rect width="780" height="366" fill="url(#grid)"/>
+                <rect x="26" y="28" width="728" height="306" rx="22" fill="#fff" stroke="#d8dfe5" stroke-width="2"/>
+                <path d="M396 51v258" stroke="#dfe5ea" stroke-dasharray="5 7"/>
+                <text x="52" y="60" class="svg-label">电池待取区</text><text x="432" y="60" class="svg-label">目标放置区</text>
+                <rect x="52" y="82" width="158" height="222" rx="12" fill="#f2f5f7" stroke="#e1e7eb"/>
+                <g id="battery-1" class="battery red"><rect x="72" y="110" width="50" height="54" rx="6"/><path d="M86 110v-9h21v9"/><text x="97" y="144">红</text></g>
+                <g id="battery-2" class="battery blue"><rect x="141" y="110" width="50" height="54" rx="6"/><path d="M155 110v-9h21v9"/><text x="166" y="144">蓝</text></g>
+                <g id="battery-3" class="battery yellow"><rect x="72" y="222" width="50" height="54" rx="6"/><path d="M86 222v-9h21v9"/><text x="97" y="256">黄</text></g>
+                <g id="battery-4" class="battery green"><rect x="141" y="222" width="50" height="54" rx="6"/><path d="M155 222v-9h21v9"/><text x="166" y="256">绿</text></g>
+                <g class="robot-diagram" aria-hidden="true"><ellipse cx="302" cy="268" rx="62" ry="23" fill="#e7edf2"/><rect x="263" y="246" width="78" height="24" rx="9" fill="#a4b3c1"/><path d="M300 247L274 173L332 121L366 152" fill="none" stroke="#52687b" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/><path d="M300 247L274 173L332 121L366 152" fill="none" stroke="#e4eaf0" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/><circle cx="274" cy="173" r="18" fill="#fff" stroke="#8397aa" stroke-width="7"/><circle cx="332" cy="121" r="14" fill="#ffcc32" stroke="#63788b" stroke-width="5"/><path d="M363 155l-9 14m14-9l5 10" stroke="#52687b" stroke-width="6" stroke-linecap="round"/><text x="300" y="302" text-anchor="middle" class="svg-caption">机械臂示意</text></g>
+                <g id="basic-target"><rect id="slot-T0" class="target-shape" x="470" y="122" width="220" height="136" rx="12"/><text x="580" y="177" class="target-name">T0</text><text id="target-label-T0" x="580" y="208" class="target-color">等待口令</text></g>
+                <g id="sequence-targets" hidden>
+                  <g><circle id="slot-P1" class="target-shape" cx="480" cy="144" r="48"/><text x="480" y="140" class="target-name">P1</text><text id="target-label-P1" x="480" y="166" class="target-color">待指定</text></g>
+                  <g><circle id="slot-P2" class="target-shape" cx="663" cy="144" r="48"/><text x="663" y="140" class="target-name">P2</text><text id="target-label-P2" x="663" y="166" class="target-color">待指定</text></g>
+                  <g><circle id="slot-P3" class="target-shape" cx="572" cy="259" r="48"/><text x="572" y="255" class="target-name">P3</text><text id="target-label-P3" x="572" y="281" class="target-color">待指定</text></g>
+                </g>
+              </svg>
+              <div class="scene-caption"><span><span class="dot yellow"></span> 当前目标 <span class="dot green-dot"></span> 已完成</span><span>示意布局，不表示真实尺寸或运动轨迹</span></div>
+            </div>
+            <div class="task-progress"><div><span id="progress-label">尚未提交任务</span><strong id="progress-count">0 / 0</strong></div><progress id="progress" value="0" max="1" aria-label="服务端确认的完成数"></progress></div>
+            <ol id="lifecycle" class="lifecycle" aria-label="任务生命周期"><li data-stage="ready">待命</li><li data-stage="accepted">已受理</li><li data-stage="running">执行中</li><li data-stage="canceling">取消中</li><li data-stage="finished">已结束</li></ol>
+            <div class="fsm-line"><span>FSM <strong id="fsm-state">未知</strong></span><span id="external-task"></span></div><div class="task-identifiers"><span>任务 <code id="task-id">—</code></span><span>耗时 <strong id="elapsed">—</strong></span></div>
+            <div id="task-result" class="result" role="status" hidden></div>
+          </section>
+
+          <section class="panel command-panel" aria-labelledby="command-title">
+            <div class="panel-heading"><div><h2 id="command-title">任务口令</h2><p>正式口令以比赛日通知为准</p></div><span class="form-icon" aria-hidden="true">↗</span></div>
+            <form id="task-form">
+              <fieldset id="goal-fields">
+                <legend class="sr-only">设置任务口令</legend>
+                <div class="mode-picker"><label><input type="radio" name="mode" value="1" checked><span>基础任务</span></label><label><input type="radio" name="mode" value="2"><span>序列任务</span></label></div>
+                <div class="field-heading"><span>颜色与放置顺序</span><span id="color-count">1 个目标</span></div>
+                <div class="color-row"><span id="slot-label-0" class="slot-label">T0</span><label for="color-0" class="sr-only">第一个目标颜色</label><select id="color-0" required><option value="">选择颜色</option><option value="1">红色</option><option value="2">蓝色</option><option value="3">黄色</option><option value="4">绿色</option></select><span class="color-swatch" id="swatch-0"></span></div>
+                <div class="color-row sequence-field" hidden><span class="slot-label">P2</span><label for="color-1" class="sr-only">第二个目标颜色</label><select id="color-1" disabled><option value="">选择颜色</option><option value="1">红色</option><option value="2">蓝色</option><option value="3">黄色</option><option value="4">绿色</option></select><span class="color-swatch" id="swatch-1"></span></div>
+                <div class="color-row sequence-field" hidden><span class="slot-label">P3</span><label for="color-2" class="sr-only">第三个目标颜色</label><select id="color-2" disabled><option value="">选择颜色</option><option value="1">红色</option><option value="2">蓝色</option><option value="3">黄色</option><option value="4">绿色</option></select><span class="color-swatch" id="swatch-2"></span></div>
+                <div class="parameter-row"><label for="timeout">任务超时 <span>秒</span><input type="number" id="timeout" min="1" max="600" value="120" required></label><div>放置稳定观察<strong>3 <span>秒</span></strong><small>固定观察时长</small></div></div>
+                <div data-mock hidden><label class="field-heading" for="scenario">Mock 演练场景</label><select id="scenario"><option value="success">正常完成</option><option value="perception_failure">目标识别失败</option><option value="timeout">任务超时（2 秒）</option><option value="unconfirmed_stop">取消后停稳未确认</option></select></div>
+              </fieldset>
+              <p id="form-error" class="form-error" role="alert" hidden></p>
+              <button id="submit" class="button primary" type="submit" disabled>提交</button>
+              <button id="cancel" class="button cancel" type="button" disabled>取消当前任务</button>
+              <button id="software-stop" class="button software-stop" type="button" disabled>请求软件停止</button><p id="stop-reply" class="operation-hint" hidden></p>
+              <p id="operation-hint" class="operation-hint">等待操作台连接</p>
+            </form>
+          </section>
+        </div>
+
+        <div class="observations-grid">
+          <section class="panel" aria-labelledby="device-title"><div class="panel-heading compact"><h2 id="device-title">设备与工具</h2><span id="sample-quality" class="tag">等待数据</span></div>
+            <dl class="device-list"><div><dt>机器人通信</dt><dd id="robot-communication">未知</dd></div><div><dt>机器人就绪</dt><dd id="robot-ready">未知</dd></div><div><dt>运动状态</dt><dd id="robot-motion">未知</dd></div><div><dt>停稳确认</dt><dd id="robot-stop">未知</dd></div><div><dt>安全联锁</dt><dd id="robot-safety">未知</dd></div><div><dt>控制器模式</dt><dd id="robot-controller">未知</dd></div><div><dt>工具估计</dt><dd id="tool-state">未知</dd></div><div><dt>独立验证</dt><dd id="tool-verified">未知</dd></div></dl>
+            <p class="source-note" id="source-note">数据源尚未连接</p>
+          </section>
+          <section class="panel" aria-labelledby="joints-title"><div class="panel-heading compact"><h2 id="joints-title">关节反馈</h2><span id="joints-quality" class="tag">等待数据</span></div><div id="joints" class="joint-grid"><p class="muted">尚未收到 JointState</p></div><p id="joints-note" class="source-note">显示实际位置反馈，单位 °；不提供点动指令。</p></section>
+        </div>
+
+        <section class="panel events-panel" aria-labelledby="events-title"><div class="panel-heading compact"><div class="inline-title"><h2 id="events-title">事件时间线</h2><span id="event-count" class="muted">0 条</span></div><div class="event-tools"><label for="event-filter" class="sr-only">时间线范围</label><select id="event-filter"><option value="current">当前任务</option><option value="all">整个会话</option><option value="errors">警告与错误</option></select><a class="button quiet small" href="/api/export" download>导出会话</a></div></div><ol id="events" class="events"></ol><p class="source-note">事件按 task / goal ID 关联；保留失败记录。</p></section>
+      </section>
+
+      <section id="view-records" class="view" aria-label="任务记录" hidden>
+        <section class="panel"><div class="panel-heading"><div><h2>本次会话的任务</h2><p>成功、失败与取消记录均保留；可下载完整事件和结果。</p></div><a class="button quiet" href="/api/export" download>导出全部记录</a></div><div class="table-scroll"><table><thead><tr><th>任务 ID / 创建时间</th><th>结果</th><th>完成数</th><th>错误码</th><th>操作</th></tr></thead><tbody id="history"></tbody></table></div><div id="history-empty" class="empty-state"><strong>还没有任务记录</strong><p>提交任务后，可在这里检查真实 Action 回执和结果。</p><a href="#console" class="button quiet">前往任务操作台</a></div></section>
+        <section id="record-detail" class="panel record-detail" hidden><div class="panel-heading"><div><h2 id="record-detail-title">任务详情</h2><p id="record-detail-subtitle"></p></div><button id="close-record" class="button quiet" type="button">关闭详情</button></div><pre id="record-json"></pre></section>
+        <p class="page-note">服务器重启会创建新的会话；此前原始记录保留在 outputs/webui-*，不会覆盖。</p>
+      </section>
+
+      <section id="view-connections" class="view" aria-label="接口状态" hidden>
+        <section class="panel"><div class="panel-heading"><div><h2>数据连接</h2><p id="ros-connection-detail">等待 ROS 连接</p></div><span id="connection-mode" class="tag">ROS 2 Jazzy</span></div><dl class="connection-details"><div><dt>浏览器连接</dt><dd id="api-status">等待快照</dd></div><div><dt>数据提供方</dt><dd id="data-provider">ROS / rclpy</dd></div><div><dt>ROS Domain</dt><dd id="domain-id">未配置</dd></div><div><dt>操作权限</dt><dd id="control-mode">等待连接</dd></div><div><dt>会话 ID</dt><dd id="session-id">—</dd></div><div><dt>目标接口基线</dt><dd>ExecuteTask / PickPlace v0.1；源码见本轮 SOP</dd></div></dl>
+          <div class="table-scroll"><table><thead><tr><th>接口</th><th>用途</th><th>当前状态</th></tr></thead><tbody id="ros-interfaces"></tbody></table></div></section>
+        <section class="panel demo-settings" data-mock hidden><div class="panel-heading"><div><h2>连接与故障演练</h2><p>仅影响本地 Mock 数据，用于检查缺失、过期和取消反馈。</p></div></div><div class="settings-body"><div class="settings-field"><label for="condition">设备数据条件</label><select id="condition"><option value="normal">正常 Mock 数据</option><option value="stale">模拟过期（15 秒）</option><option value="missing">模拟缺失</option></select></div><button id="confirm-stop" class="button quiet" type="button" disabled>补发 Mock 停稳反馈</button><p>“暂停接收”只暂停此浏览器的快照读取。恢复后重新读取当前状态，不自动重发任务。</p></div></section>
+        <section class="panel ros-setup" id="ros-setup"><div class="panel-heading"><div><h2>连接配置</h2><p>话题与节点来自仓库默认值；可通过启动配置覆盖。</p></div></div><div class="settings-body"><p id="connection-reasons">等待状态核验</p><p id="discovered-cameras">相机话题：等待发现</p><p>修改配置后重启操作台。软件停止调用 RequestStop；现场实体急停独立使用。</p><pre id="connection-config"></pre></div></section>
+      </section>
+      <footer>美团挑战赛 2026 <span id="footer-note">系统集成工作站 · 状态与结果以设备反馈为准</span></footer>
+    </main>
+  </div>
+</body>
+</html>

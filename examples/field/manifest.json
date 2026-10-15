@@ -1,0 +1,23 @@
+{
+  "scope": "offline_reference_only",
+  "files": [
+    {
+      "file": "task2_abc_4x_trajectory.json",
+      "source": "outputs/task2_real_scene_20261014/fullflow_4x_webui_tracking_monitor_01/commissioning/01_ABC_fullflow_4x_webui/full_trajectory.json",
+      "source_sha256": "076e3de3ad28975c26ddb7156c3028b4f7da826627adedbef54a7012ee931226",
+      "public_sha256": "1345756ee09e6299b1c7b8150d625a71902300ab4f19082caed260c1d08cd298",
+      "trajectory_numeric_samples_unchanged": true,
+      "stages": 30,
+      "nominal_motion_s": 114.00948906939038
+    },
+    {
+      "file": "task1_red_t0_trajectory.json",
+      "source": "outputs/task1_real_scene_20261014/revision_01/physical_attempt_20261014T184851Z/half_time_01/saved_trajectory/task_one_trajectory.json",
+      "source_sha256": "c790a519b8e67ef0bc842d937d3d45b93d512d2e3149894d0a39cf8024061b8f",
+      "public_sha256": "0bd3fa463adb3445700d4bb8b8b4033eb0e2efed3a77b67fd258f0aa27ec5c4e",
+      "trajectory_numeric_samples_unchanged": true,
+      "stages": 10,
+      "nominal_motion_s": 55.6054886425288
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "passed": true,
+  "requested_order_verified": true,
+  "tool_contacts_over_1mm": {},
+  "objects": [
+    {
+      "object": "battery_A",
+      "slot": "T0",
+      "passed": true,
+      "max_lift_m": 0.2845260644740977,
+      "final_center_error_m": 3.6285760281908795e-05,
+      "final_xyz": [
+        0.2998818472208615,
+        -0.11502430202572268,
+        0.6499999135580057
+      ],
+      "stable_from_trace_s": 28.92
+    }
+  ],
+  "unexpected_contacts_over_1mm": {},
+  "acceptance": "15 mm center tolerance, 2 mm base height tolerance, upright, >=3 s stable; not competition scoring",
+  "inner_circle_footprint_fits": false,
+  "model_limits": {
+    "battery_mass_kg": 0.4,
+    "battery_friction": 0.8,
+    "joint_acceleration_jerk": "simulation commissioning limits, not certified AUBO specifications",
+    "tool": "passive_hook_v1; contact dynamics only, no attachment constraint",
+    "perception": "Gazebo ground truth, not camera recognition",
+    "arm_control": "Gazebo position servo; not motor torque validation",
+    "camera": "static overview camera; wrist camera not modeled"
+  }
+}

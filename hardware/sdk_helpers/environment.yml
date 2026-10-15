@@ -1,0 +1,9 @@
+name: aubo-s3-hardware
+channels:
+  - conda-forge
+  - nodefaults
+dependencies:
+  - python=3.10
+  - pip
+  - pip:
+      - pyaubo-sdk==0.24.1

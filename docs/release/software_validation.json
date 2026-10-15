@@ -1,0 +1,120 @@
+{
+  "published_snapshot": true,
+  "hardware_motion_performed_for_publication": false,
+  "python_field_webui_passed": 159,
+  "publication_configuration_passed": 6,
+  "player_tests": {
+    "tracking_monitor": 27,
+    "guarded_05": 24,
+    "j4_06": 27,
+    "all_06": 27
+  },
+  "sdk_wrapper_passed": 39,
+  "cpp_build": {
+    "packages": 7,
+    "passed": true
+  },
+  "cpp_test": {
+    "packages": 5,
+    "colcon_reported_tests": 386,
+    "errors": 0,
+    "failures": 0,
+    "skipped": 0
+  },
+  "trajectories": {
+    "offline_only": true,
+    "passed": true,
+    "trajectories": [
+      {
+        "file": "task2_abc_4x_trajectory.json",
+        "nominal_duration_s": 114.0094890693904,
+        "segments": 30,
+        "peak_velocity_deg_s": [
+          12.615575841244446,
+          10.681692168949088,
+          11.159788048373802,
+          12.615575831039077,
+          0.010694666952899614,
+          12.615567302501505
+        ],
+        "peak_acceleration_deg_s2": [
+          22.636964551172273,
+          20.0716896080354,
+          23.398092520058526,
+          23.543272268839388,
+          0.021265223331098978,
+          22.639887891452307
+        ],
+        "minimum_deg": [
+          -13.51324830456652,
+          -41.58701531306997,
+          54.18438420682925,
+          -1.9011504404035797,
+          89.75081285338774,
+          -197.99935875034276
+        ],
+        "maximum_deg": [
+          62.17064442399442,
+          23.664332532526835,
+          134.44209712290146,
+          52.03763888794852,
+          89.7988570030731,
+          -122.2936459631025
+        ],
+        "maximum_join_difference_deg": 7.63333123551244e-14
+      },
+      {
+        "file": "task1_red_t0_trajectory.json",
+        "nominal_duration_s": 55.60548864252879,
+        "segments": 10,
+        "peak_velocity_deg_s": [
+          12.76561294444957,
+          8.146764780642721,
+          12.698968583685673,
+          12.871286892448502,
+          0.0075890842895817295,
+          12.871282906138312
+        ],
+        "peak_acceleration_deg_s2": [
+          7.345614916165225,
+          7.887590512964193,
+          11.448491011709146,
+          9.266893937340205,
+          0.02924916442505287,
+          7.4103088862017215
+        ],
+        "minimum_deg": [
+          7.003977893768969,
+          -34.24998779300797,
+          40.99004477521832,
+          -30.130727474935266,
+          89.76492635597045,
+          -177.4764092433321
+        ],
+        "maximum_deg": [
+          50.15373236678433,
+          6.254840903653755,
+          129.18053171075601,
+          50.78026592691403,
+          89.79605126480308,
+          -133.87053230070418
+        ],
+        "maximum_join_difference_deg": 2.5444437451708134e-14
+      }
+    ]
+  },
+  "demo_http": {
+    "mode": "mock",
+    "page_status": 200,
+    "snapshot_status": 200,
+    "invalid_host_status": 403,
+    "robot_connection": false
+  },
+  "python_compileall_passed": true,
+  "secret_review": {
+    "live_credentials_published": false,
+    "private_manual_content_removed": true,
+    "dummy_test_passwords_retained": true
+  },
+  "scope": "Offline code publication validation; no new physical run or Gazebo replay performed"
+}

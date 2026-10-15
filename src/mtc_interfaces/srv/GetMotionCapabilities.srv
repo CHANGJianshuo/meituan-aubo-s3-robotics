@@ -1,0 +1,11 @@
+# GetMotionCapabilities.srv（拟新增，来源：状态机设计 V0.1 §4.9）
+# capability 表示“当前已连接且经实测启用”的控制通路能力；
+# 不得仅因 SDK 声称存在某方法就置 true。
+
+---
+bool joint_goal_supported
+bool timed_trajectory_supported
+bool cartesian_motion_supported
+bool cancel_supported
+string backend_name
+string detail

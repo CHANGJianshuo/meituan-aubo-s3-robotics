@@ -1,0 +1,28 @@
+{
+  "success": true,
+  "task": "basic",
+  "order": "A",
+  "simulation_only": true,
+  "physics": "passive contacts; no fixed attachment",
+  "perception": "Gazebo ground truth",
+  "output": "/tmp/mtc_v1_basic_19",
+  "domain": 86,
+  "gz_partition": "mtc_v1_52a20baafc134519b5b67916513b9d95",
+  "rmw": "rmw_fastrtps_cpp",
+  "fastdds_transports": "UDPv4",
+  "task_exit_code": 0,
+  "process_exit_codes": {
+    "gazebo": 0,
+    "state_publisher": 0,
+    "bridge": 0,
+    "camera": 0,
+    "spawn": 0,
+    "joint_state_broadcaster": 0,
+    "arm_controller": 0,
+    "move_group": 0,
+    "task": 0
+  },
+  "moveit_plugin_pinning": true,
+  "child_failures": {},
+  "shutdown_clean": true
+}

@@ -1,0 +1,32 @@
+Arguments (pass arguments as '<name>:=<value>'):
+
+    'task':
+        no description given
+        (default: 'basic')
+
+    'order':
+        no description given
+        (default: '')
+
+    'output':
+        New output directory for logs, video and acceptance
+
+    'domain':
+        no description given
+        (default: '86')
+
+    'timeout':
+        no description given
+        (default: '1800')
+
+    'gui':
+        no description given
+        (default: 'true')
+
+    'observe_only':
+        no description given
+        (default: 'false')
+
+    'pin_moveit_plugins':
+        no description given
+        (default: 'false')

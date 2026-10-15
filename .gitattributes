@@ -1,0 +1,7 @@
+# Preserve imported CAD/mesh bytes and their recorded source hashes.
+src/mtc_simulation/assets/** -text
+src/mtc_simulation/assets/cad/** binary
+src/mtc_simulation/assets/meshes/** binary
+src/mtc_simulation/assets/boards/*.dae binary
+# Upstream notices are retained verbatim, including Markdown hard line breaks.
+src/mtc_simulation/assets/upstream_aubo/** -whitespace

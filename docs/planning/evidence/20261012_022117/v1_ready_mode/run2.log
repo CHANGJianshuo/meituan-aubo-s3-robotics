@@ -1,0 +1,21 @@
+[INFO] [launch]: All log files can be found below /tmp/aubo_s3_mock_logs/2026-10-12-02-27-39-044145-CJS-LAPTOP-91047
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [plan_battery_sequence-1]: process started with pid [91050]
+[plan_battery_sequence-1] [INFO] [1791790060.168064346] [moveit_1353867990.moveit.ros.rdf_loader]: Loaded robot model in 0.0164511 seconds
+[plan_battery_sequence-1] [INFO] [1791790060.168530959] [moveit_1353867990.moveit.core.robot_model]: Loading robot model 'aubo_robot'...
+[plan_battery_sequence-1] [INFO] [1791790060.199965899] [moveit_1353867990.moveit.kinematics.kdl_kinematics_plugin]: Joint weights for group 'manipulator': 1 1 1 1 1 1
+[plan_battery_sequence-1] [INFO] [1791790060.249933408] [moveit_1353867990.moveit.ros.move_group_interface]: Ready to take commands for planning group manipulator.
+[plan_battery_sequence-1] [INFO] [1791790060.306417024] [mtc_plan_battery_sequence]: planning scene: 1 static obstacle(s) applied
+[plan_battery_sequence-1] [INFO] [1791790061.236677016] [mtc_plan_battery_sequence]: ready pose (side_insert + 0.020 m back along insertion axis): shoulder_joint=0.3911, upperArm_joint=-0.1281, foreArm_joint=2.3029, wrist1_joint=-0.7106, wrist2_joint=-1.1797, wrist3_joint=-0.0000; ik solutions=21, min joint-limit margin 2.22% of range
+[plan_battery_sequence-1] [INFO] [1791790061.952263883] [mtc_plan_battery_sequence]: setup move home -> ready (reference only, caps 0.050 m/s 0.200 rad/s): ok method=joint_interpolated_ik duration=17.74s 
+[plan_battery_sequence-1] [INFO] [1791790061.972968998] [mtc_plan_battery_sequence]: [ACQUIRE] ok=true code=0 planned 2 primitive(s) in frame 'world' for 'ee_link'; simulation_only=true (uncalibrated: TCP=PLACEHOLDER payload=PLACEHOLDER)
+[plan_battery_sequence-1] [INFO] [1791790061.973122565] [mtc_plan_battery_sequence]:   side_insert   FREE_SPACE cartesian_preferred           ok=true  plan=0.003s dur=1.94s pts=12 scale=1.80 v=0.020m/s w=0.000rad/s watchdog=30s explicit_start_state
+[plan_battery_sequence-1] [INFO] [1791790061.973147994] [mtc_plan_battery_sequence]:   test_lift     CARTESIAN  cartesian           [payload] ok=true  plan=0.003s dur=1.86s pts=9 scale=2.45 v=0.010m/s w=0.000rad/s watchdog=15s simulated ENGAGE_INSERT 0.03 m along TCP axis 2 (ToolPort motion, not emitted)
+[plan_battery_sequence-1] [INFO] [1791790062.052063857] [mtc_plan_battery_sequence]: [TRANSPORT] ok=true code=0 planned 5 primitive(s) in frame 'world' for 'ee_link'; simulation_only=true (uncalibrated: payload=PLACEHOLDER slot T0=PLACEHOLDER TCP=PLACEHOLDER)
+[plan_battery_sequence-1] [INFO] [1791790062.052174923] [mtc_plan_battery_sequence]:   lift          CARTESIAN  cartesian           [payload] ok=true  plan=0.005s dur=3.31s pts=18 scale=1.96 v=0.029m/s w=0.000rad/s watchdog=30s explicit_start_state
+[plan_battery_sequence-1] [INFO] [1791790062.052196271] [mtc_plan_battery_sequence]:   transport     FREE_SPACE cartesian_preferred [payload] ok=true  plan=0.012s dur=2.85s pts=30 scale=1.00 v=0.089m/s w=0.000rad/s watchdog=60s previous_primitive_end
+[plan_battery_sequence-1] [INFO] [1791790062.052208674] [mtc_plan_battery_sequence]:   pre_seat      CARTESIAN  cartesian           [payload] ok=true  plan=0.009s dur=5.25s pts=22 scale=2.54 v=0.029m/s w=0.000rad/s watchdog=30s previous_primitive_end
+[plan_battery_sequence-1] [INFO] [1791790062.052219490] [mtc_plan_battery_sequence]:   seat_contact  CARTESIAN  cartesian           [payload] ok=true  plan=0.003s dur=7.63s pts=12 scale=7.35 v=0.005m/s w=0.000rad/s watchdog=20s [contact intent only] previous_primitive_end
+[plan_battery_sequence-1] [INFO] [1791790062.052231274] [mtc_plan_battery_sequence]:   retreat       CARTESIAN  cartesian                     ok=true  plan=0.008s dur=5.86s pts=26 scale=2.43 v=0.029m/s w=0.000rad/s watchdog=30s simulated WITHDRAW 0.03 m along TCP axis 2 (ToolPort motion, not emitted)
+[plan_battery_sequence-1] [INFO] [1791790062.056658921] [mtc_plan_battery_sequence]: SEQUENCE PLAN OK -> /home/operator/meituan/meituan_challenge_ws/docs/planning/evidence/20261012_022117/v1_ready_mode/run2/battery_sequence_passive_hook_v1_T0_20261012_022742.yaml
+[INFO] [plan_battery_sequence-1]: process has finished cleanly [pid 91050]

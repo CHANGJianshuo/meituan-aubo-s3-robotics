@@ -1,0 +1,108 @@
+{
+  "all_passed": true,
+  "evidence_kind": "FAKE_RUNTIME_CAPTURE",
+  "real_calibration_verified": false,
+  "motion_authorized": false,
+  "checks": {
+    "fake_zero_initial_state": true,
+    "s3_joint_names": true,
+    "srdf_base_and_tip": true,
+    "world_base_identity": true,
+    "wrist_ee_positive_quarter_turn": true
+  },
+  "logs": {
+    "tf2_echo_world_to_base_link.txt": {
+      "passed": true,
+      "samples": 5,
+      "first_stamp_text": "0.0",
+      "last_stamp_text": "0.0",
+      "max_translation_component_difference_m": 0.0,
+      "max_rotation_matrix_component_difference": 0.0
+    },
+    "tf2_echo_base_link_to_ee_link.txt": {
+      "passed": true,
+      "samples": 5,
+      "first_stamp_text": "1791723527.404980616",
+      "last_stamp_text": "1791723531.359971157",
+      "max_translation_component_difference_m": 0.00019999999999997797,
+      "max_rotation_matrix_component_difference": 1.8519323399573677e-15
+    },
+    "tf2_echo_world_to_ee_link.txt": {
+      "passed": true,
+      "samples": 7,
+      "first_stamp_text": "1791723533.41307182",
+      "last_stamp_text": "1791723539.386979562",
+      "max_translation_component_difference_m": 0.00019999999999997797,
+      "max_rotation_matrix_component_difference": 1.8519323399573677e-15
+    }
+  },
+  "sha256_lf_normalized": {
+    "aubo_S3_fake_expanded.urdf": "6be44f5bd3ededc1ab46c76f4b713d4a19f1b164caf82565d2ccec50bda7f160",
+    "aubo_robot.srdf": "926b1306a6817aa4f13aff016ebb1a4247fe689e2f68794bde0a6b69fd8b9471",
+    "tf2_echo_world_to_base_link.txt": "2b671387667911fd1b68f4521dd91ebbe02505e764c858ca6392197c035ada92",
+    "tf2_echo_base_link_to_ee_link.txt": "493613cb2273ef5332ee9247f290cc3c8f9693905193bdb16bb1c046d985b4ea",
+    "tf2_echo_world_to_ee_link.txt": "12be8d25a48889efe07b6b3e45b3b6c1f7f9f5fc21856d42c0fb7bed3aedd38c"
+  },
+  "T_base_ee_q0": {
+    "translation_m": [
+      -5.638273863274414e-17,
+      -0.2562,
+      0.8072
+    ],
+    "matrix": [
+      [
+        -6.123233995736778e-17,
+        -1.0,
+        1.8519323399573677e-15,
+        -5.638273863274414e-17
+      ],
+      [
+        1.2246467991473544e-16,
+        -1.8519323399573677e-15,
+        -1.0,
+        -0.2562
+      ],
+      [
+        1.0,
+        -6.123233995736756e-17,
+        1.2246467991473554e-16,
+        0.8072
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ]
+  },
+  "T_wrist3_ee": {
+    "matrix": [
+      [
+        6.123233995736766e-17,
+        -1.0,
+        0.0,
+        0.0
+      ],
+      [
+        1.0,
+        6.123233995736766e-17,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ]
+  },
+  "scope": "Archived fake capture only. No time-synchronized real joint states, camera/TCP or physical flange proof."
+}

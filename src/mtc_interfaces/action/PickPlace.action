@@ -1,0 +1,22 @@
+# PickPlace.action —— 单块电池抓放 Action（拟新增，来源：状态机设计 V0.1 §4.4）
+# 提供方：mtc_manipulation/pick_place_server    使用方：mtc_task
+# 语义：object_id 在任务执行前由感知选定，执行过程中不得静默切换目标。
+
+# --- Goal ---
+string request_id       # 唯一请求 ID
+string object_id        # 感知给出的唯一目标对象 ID
+uint8 expected_color    # 防抓错的双重校验颜色
+string target_slot      # 仅允许 T0 / P1 / P2 / P3
+float32 placement_stability_sec  # 追加：本项稳定性观察时长（秒）
+---
+# --- Result ---
+bool success
+bool placement_verified # 仅当 VERIFY_PLACED 通过后才允许为 true
+uint16 error_code
+string message
+---
+# --- Feedback ---
+string substate         # 当前 PickPlace 子状态名
+float32 progress        # 0.0 - 1.0
+bool object_attached_estimated
+string detail

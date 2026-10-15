@@ -1,0 +1,16 @@
+[INFO] [launch]: All log files can be found below /tmp/aubo_s3_mock_logs/2026-10-11-07-59-07-229726-CJS-LAPTOP-30339
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [plan_battery_sequence-1]: process started with pid [30342]
+[plan_battery_sequence-1] [INFO] [1791723547.470893566] [moveit_954062111.moveit.ros.rdf_loader]: Loaded robot model in 0.00228333 seconds
+[plan_battery_sequence-1] [INFO] [1791723547.470977567] [moveit_954062111.moveit.core.robot_model]: Loading robot model 'aubo_robot'...
+[plan_battery_sequence-1] [INFO] [1791723547.477650025] [moveit_954062111.moveit.kinematics.kdl_kinematics_plugin]: Joint weights for group 'manipulator': 1 1 1 1 1 1
+[plan_battery_sequence-1] [INFO] [1791723547.490726767] [moveit_954062111.moveit.ros.move_group_interface]: Ready to take commands for planning group manipulator.
+[plan_battery_sequence-1] [INFO] [1791723547.520431372] [moveit_954062111.moveit.ros.move_group_interface]: MoveGroup action client/server ready
+[plan_battery_sequence-1] [INFO] [1791723547.520850465] [moveit_954062111.moveit.ros.move_group_interface]: Planning request accepted
+[plan_battery_sequence-1] [INFO] [1791723547.591267593] [moveit_954062111.moveit.ros.move_group_interface]: Planning request complete!
+[plan_battery_sequence-1] [INFO] [1791723547.591894218] [moveit_954062111.moveit.ros.move_group_interface]: time taken to generate plan: 0.0614699 seconds
+[plan_battery_sequence-1] [INFO] [1791723547.625709751] [mtc_plan_battery_sequence]: [ACQUIRE] ok=false code=200 [EXCEEDS_STATE_WATCHDOG] side_insert: trajectory lasts 116.093 s, more than 80% of the MOVE_PRE_ALIGN watchdog (30 s)
+[plan_battery_sequence-1] [INFO] [1791723547.625791976] [mtc_plan_battery_sequence]:   side_insert   FREE_SPACE ompl                ok=false plan=0.101s dur=116.09s pts=116 scale=10.18 v=0.020m/s w=0.054rad/s watchdog=30s EXCEEDS_STATE_WATCHDOG: trajectory lasts 116.093 s, more than 80% of the MOVE_PRE_ALIGN watchdog (30 s)
+[plan_battery_sequence-1] [INFO] [1791723547.625804795] [mtc_plan_battery_sequence]:       backend: trajectory lasts 116.093 s, more than 80% of the MOVE_PRE_ALIGN watchdog (30 s)
+[plan_battery_sequence-1] [INFO] [1791723547.626011787] [mtc_plan_battery_sequence]: SEQUENCE PLAN FAILED -> /home/operator/meituan/meituan_challenge_ws/docs/planning/evidence/20261011_075828/battery_sequence_passive_hook_v1_T0_20261011_075907.yaml
+[ERROR] [plan_battery_sequence-1]: process has died [pid 30342, exit code 1, cmd '/home/operator/meituan/meituan_challenge_ws/install/planner/mtc_moveit_planner/lib/mtc_moveit_planner/plan_battery_sequence --ros-args --params-file /tmp/launch_params_15i6gv06 --params-file /home/operator/meituan/meituan_challenge_ws/install/planner/mtc_moveit_planner/share/mtc_moveit_planner/config/planner.yaml --params-file /tmp/launch_params_li1zq_b5'].

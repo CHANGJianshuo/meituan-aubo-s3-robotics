@@ -1,0 +1,41 @@
+{
+  "source_distro": "Ubuntu-22.04",
+  "source_root": "/home/operator/gap/legacy/meituan_challenge",
+  "battery_cad_sha256": "534c0892b173f1dc7e198648672784bfd221ecb35741f93dab98248399544a50",
+  "copied_files": {
+    "assets/arm.urdf": "7a88cf0cd6c4fa751ae871ce52301dfda3555bea5e72067b7fcf049c9c20a20b",
+    "assets/boards/board_basic.dae": "e8d1394ebcaa3a1b175b2ad46ecda0ddce133dd6ae72fffb94fd9afd9242a69e",
+    "assets/boards/board_basic.png": "14223c5a20e19f29f367f0c0a6c2c5c5c6cdf102dc2fe2b09daea7e30d2130c6",
+    "assets/boards/board_sequence.dae": "ddfe1a5582b160ab4ad073be892627ec2e31fc36a38f1e2a15c848bddbfd0778",
+    "assets/boards/board_sequence.png": "3a2d65f0de89c6e54c0f2362b7306eb458c52b20dc34dba85559c5191fae0087",
+    "assets/cad/battery.stp": "534c0892b173f1dc7e198648672784bfd221ecb35741f93dab98248399544a50",
+    "assets/meshes/aubo_S3/collision/link0.STL": "bbb97a54dd3565af71abc7bda2f8e4aac31af14bf4ae52d7b1dbf95934f18112",
+    "assets/meshes/aubo_S3/collision/link1.STL": "042239de7eb96ea067c29571e40428f6bf860a8d238739862188ea2200708d66",
+    "assets/meshes/aubo_S3/collision/link2.STL": "a3771555e15ea4fbdb3db5f582603dd30f10ac8fd068774273eee702c4aab8e4",
+    "assets/meshes/aubo_S3/collision/link3.STL": "65ec78ea90bb39c4f7b7c0af629df04e151262203b0ccdb90326ea1d23eda52c",
+    "assets/meshes/aubo_S3/collision/link4.STL": "de4d4fd00a6fb5e31ec968e9ec473f18b11dc8a005d14cd6b077493f209cc429",
+    "assets/meshes/aubo_S3/collision/link5.STL": "c5636b84972e3cb52afdb69bcfddeee745f12f66b6c124120dc351af2a073dfe",
+    "assets/meshes/aubo_S3/collision/link6.STL": "cbe69bf761e7d25110633f6c7fdf62481de52a2847a4960a9fc5c49288ba3eea",
+    "assets/meshes/aubo_S3/visual/link0.DAE": "af640d62dfad4ab79efd5b540723a4a9f4ef01eb73e133e47bd6e6a0b4247e77",
+    "assets/meshes/aubo_S3/visual/link1.DAE": "d4d87020eefe08a39d87735414720a5c9a8dec7cefb75ddb6b37e9fdce601f0e",
+    "assets/meshes/aubo_S3/visual/link2.DAE": "b9bfc6a2f04cd9d90af74c48d8a28d30b9c4c543ce0e1643c6a2db9d3de0053f",
+    "assets/meshes/aubo_S3/visual/link3.DAE": "b648d05ad8bd6d7f21390bd3e5acf9780c9fde2bb6110d46b68d5317abc05b4b",
+    "assets/meshes/aubo_S3/visual/link4.DAE": "59d1ba9c03860ca71c206f4053577d2121edaddfe42ffa7fd5909658d6abeeae",
+    "assets/meshes/aubo_S3/visual/link5.DAE": "241f8691e8bbc485fd983016cd85ada8d8582b48b6df43332765cd1d4cc34d35",
+    "assets/meshes/aubo_S3/visual/link6.DAE": "c54dfeda3c8ab4e44039d35ab220b118c8e175792b522f5faaf3959fc8aff92c",
+    "assets/meshes/battery.stl": "bb0925687536d7297830bdfd3f12e302dfa6e4bac3e6bfe65dc621f89e5978fb",
+    "assets/meshes/battery_body_collision.stl": "9c63caae89eb1c1bbd040a49f623d618700e810bd18ee153ea282d882c4983ca",
+    "assets/cad/hook_v1.step": "b21d2a54ce314b660066eafc1e020ba4dc66f7abb9d5c89973ad70dfe09588e9",
+    "assets/upstream_aubo/package.xml": "2f0fa992a99df5c5c5852395c86189cdc6368639d3390fe02275ff381d8568b4",
+    "assets/upstream_aubo/README.md": "4ced0ad85cfdf4928403b76f21244d83c15ee322a43a0ae705a7c46c4c742f65"
+  },
+  "original_world_sha256": {
+    "basic": "13fffc8112e82f3581ca4b05d0e161e16a7ee916642c3295e0e427aefc22a0b0",
+    "sequence": "3739afa36a6e76a5c17dec94791acf7cdbbaca5157388c6bf3a26d0ff8a63e6f"
+  },
+  "hook_cad": {
+    "source": "Claude session 07daaf44-ab60-4cbc-8619-b8c07eef5ca8 user V1 STEP attachment",
+    "sha256": "b21d2a54ce314b660066eafc1e020ba4dc66f7abb9d5c89973ad70dfe09588e9",
+    "model": "same nominal dimensions as src/mtc_moveit_planner/config/planner.yaml tool section"
+  }
+}

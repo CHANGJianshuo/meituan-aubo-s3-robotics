@@ -1,0 +1,20 @@
+[INFO] [launch]: All log files can be found below /tmp/aubo_s3_mock_logs/2026-10-11-11-40-10-007019-CJS-LAPTOP-43075
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [plan_fixed_pose-1]: process started with pid [43078]
+[plan_fixed_pose-1] [INFO] [1791736810.276207422] [moveit_1960798864.moveit.ros.rdf_loader]: Loaded robot model in 0.00262417 seconds
+[plan_fixed_pose-1] [INFO] [1791736810.276321850] [moveit_1960798864.moveit.core.robot_model]: Loading robot model 'aubo_robot'...
+[plan_fixed_pose-1] [INFO] [1791736810.282718730] [moveit_1960798864.moveit.kinematics.kdl_kinematics_plugin]: Joint weights for group 'manipulator': 1 1 1 1 1 1
+[plan_fixed_pose-1] [INFO] [1791736810.298274809] [moveit_1960798864.moveit.ros.move_group_interface]: Ready to take commands for planning group manipulator.
+[plan_fixed_pose-1] [INFO] [1791736810.310831124] [mtc_plan_fixed_pose]: planning scene: 1 static obstacle(s) applied
+[plan_fixed_pose-1] [INFO] [1791736810.310888905] [mtc_plan_fixed_pose]: planning frame='world' ee_link='ee_link' group='manipulator' pipeline='ompl' planner='RRTConnectkConfigDefault'
+[plan_fixed_pose-1] [INFO] [1791736810.311452508] [moveit_1960798864.moveit.ros.current_state_monitor]: Listening to joint states on topic 'joint_states'
+[plan_fixed_pose-1] [INFO] [1791736810.431889453] [moveit_1960798864.moveit.ros.move_group_interface]: MoveGroup action client/server ready
+[plan_fixed_pose-1] [INFO] [1791736810.432510534] [moveit_1960798864.moveit.ros.move_group_interface]: Planning request accepted
+[plan_fixed_pose-1] [INFO] [1791736810.457447515] [moveit_1960798864.moveit.ros.move_group_interface]: Planning request aborted
+[plan_fixed_pose-1] [ERROR] [1791736810.458322108] [moveit_1960798864.moveit.ros.move_group_interface]: MoveGroupInterface::plan() failed or timeout reached
+[plan_fixed_pose-1] [INFO] [1791736810.458627224] [moveit_1960798864.moveit.ros.move_group_interface]: MoveGroup action client/server ready
+[plan_fixed_pose-1] [INFO] [1791736810.459305202] [moveit_1960798864.moveit.ros.move_group_interface]: Planning request accepted
+[plan_fixed_pose-1] [INFO] [1791736811.467997518] [moveit_1960798864.moveit.ros.move_group_interface]: Planning request aborted
+[plan_fixed_pose-1] [ERROR] [1791736811.468482285] [moveit_1960798864.moveit.ros.move_group_interface]: MoveGroupInterface::plan() failed or timeout reached
+[plan_fixed_pose-1] [ERROR] [1791736811.469244224] [mtc_plan_fixed_pose]: PLAN FAILED [NO_PLAN] joint interpolation rejected (joint-interpolated state 209/295 invalid (1 contact(s))); OMPL to seeded-IK joint goal returned FAILURE; MoveIt plan() returned FAILURE -> /home/operator/meituan/meituan_challenge_ws/docs/planning/evidence/20261011_113932/collision_probe/fixed_pose_plan_20261011_114011.yaml
+[ERROR] [plan_fixed_pose-1]: process has died [pid 43078, exit code 1, cmd '/home/operator/meituan/meituan_challenge_ws/install/pr_check/mtc_moveit_planner/lib/mtc_moveit_planner/plan_fixed_pose --ros-args --params-file /tmp/launch_params_e6evy6w4 --params-file /home/operator/meituan/meituan_challenge_ws/install/pr_check/mtc_moveit_planner/share/mtc_moveit_planner/config/planner.yaml --params-file /home/operator/meituan/meituan_challenge_ws/install/pr_check/mtc_moveit_planner/share/mtc_moveit_planner/config/collision_probe_override.yaml --params-file /tmp/launch_params_s96n4f4m'].

@@ -1,0 +1,61 @@
+## nodes
+/aubohardwareinterface
+/controller_manager
+/joint_state_broadcaster
+/joint_trajectory_controller
+/move_group
+/move_group_private_108624716914928
+/move_group/moveit
+/moveit_3070414827
+/moveit_simple_controller_manager
+/mtc_ros_graph_snapshot
+/robot_state_publisher
+/transform_listener_impl_62cb29b5b1f0
+## topics
+/attached_collision_object [moveit_msgs/msg/AttachedCollisionObject]
+/collision_object [moveit_msgs/msg/CollisionObject]
+/controller_manager/activity [controller_manager_msgs/msg/ControllerManagerActivity]
+/controller_manager/introspection_data/full [pal_statistics_msgs/msg/Statistics]
+/controller_manager/introspection_data/names [pal_statistics_msgs/msg/StatisticsNames]
+/controller_manager/introspection_data/values [pal_statistics_msgs/msg/StatisticsValues]
+/controller_manager/statistics/full [pal_statistics_msgs/msg/Statistics]
+/controller_manager/statistics/names [pal_statistics_msgs/msg/StatisticsNames]
+/controller_manager/statistics/values [pal_statistics_msgs/msg/StatisticsValues]
+/diagnostics [diagnostic_msgs/msg/DiagnosticArray]
+/display_contacts [visualization_msgs/msg/MarkerArray]
+/display_planned_path [moveit_msgs/msg/DisplayTrajectory]
+/dynamic_joint_states [control_msgs/msg/DynamicJointState]
+/joint_state_broadcaster/transition_event [lifecycle_msgs/msg/TransitionEvent]
+/joint_states [sensor_msgs/msg/JointState]
+/joint_trajectory_controller/controller_state [control_msgs/msg/JointTrajectoryControllerState]
+/joint_trajectory_controller/joint_trajectory [trajectory_msgs/msg/JointTrajectory]
+/joint_trajectory_controller/speed_scaling_input [control_msgs/msg/SpeedScalingFactor]
+/joint_trajectory_controller/transition_event [lifecycle_msgs/msg/TransitionEvent]
+/monitored_planning_scene [moveit_msgs/msg/PlanningScene]
+/parameter_events [rcl_interfaces/msg/ParameterEvent]
+/pipeline_state [moveit_msgs/msg/PipelineState]
+/planning_scene [moveit_msgs/msg/PlanningScene]
+/planning_scene_world [moveit_msgs/msg/PlanningSceneWorld]
+/robot_description [std_msgs/msg/String]
+/robot_description_semantic [std_msgs/msg/String]
+/rosout [rcl_interfaces/msg/Log]
+/tf [tf2_msgs/msg/TFMessage]
+/tf_static [tf2_msgs/msg/TFMessage]
+/trajectory_execution_event [std_msgs/msg/String]
+## actions
+/execute_trajectory [moveit_msgs/action/ExecuteTrajectory]
+/joint_trajectory_controller/follow_joint_trajectory [control_msgs/action/FollowJointTrajectory]
+/move_action [moveit_msgs/action/MoveGroup]
+## controllers (/controller_manager/list_controllers)
+joint_state_broadcaster type=joint_state_broadcaster/JointStateBroadcaster state=active claimed=[]
+joint_trajectory_controller type=joint_trajectory_controller/JointTrajectoryController state=active claimed=['shoulder_joint/position', 'upperArm_joint/position', 'foreArm_joint/position', 'wrist1_joint/position', 'wrist2_joint/position', 'wrist3_joint/position']
+## hardware components (/controller_manager/list_hardware_components)
+auboHardwareInterface type=system plugin=mock_components/GenericSystem state=active
+## joint_states (one message)
+stamp=1791789690.432246713
+foreArm_joint: 0.000000
+shoulder_joint: 0.000000
+upperArm_joint: 0.000000
+wrist1_joint: 0.000000
+wrist2_joint: 0.000000
+wrist3_joint: 0.000000

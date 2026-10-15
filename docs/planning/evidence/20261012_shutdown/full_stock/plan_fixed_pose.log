@@ -1,0 +1,12 @@
+[INFO] [launch]: All log files can be found below /tmp/aubo_s3_mock_logs/2026-10-12-05-42-04-710034-CJS-LAPTOP-108977
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [plan_fixed_pose-1]: process started with pid [108991]
+[plan_fixed_pose-1] [INFO] [1791801725.081340755] [moveit_4130930696.moveit.ros.rdf_loader]: Loaded robot model in 0.00320655 seconds
+[plan_fixed_pose-1] [INFO] [1791801725.081453569] [moveit_4130930696.moveit.core.robot_model]: Loading robot model 'aubo_robot'...
+[plan_fixed_pose-1] [INFO] [1791801725.089986242] [moveit_4130930696.moveit.kinematics.kdl_kinematics_plugin]: Joint weights for group 'manipulator': 1 1 1 1 1 1
+[plan_fixed_pose-1] [INFO] [1791801725.110536564] [moveit_4130930696.moveit.ros.move_group_interface]: Ready to take commands for planning group manipulator.
+[plan_fixed_pose-1] [INFO] [1791801725.126880146] [mtc_plan_fixed_pose]: planning scene: 1 static obstacle(s) applied
+[plan_fixed_pose-1] [INFO] [1791801725.126944575] [mtc_plan_fixed_pose]: planning frame='world' ee_link='ee_link' group='manipulator' pipeline='ompl' planner='RRTConnectkConfigDefault'
+[plan_fixed_pose-1] [INFO] [1791801725.127491664] [moveit_4130930696.moveit.ros.current_state_monitor]: Listening to joint states on topic 'joint_states'
+[plan_fixed_pose-1] [INFO] [1791801725.448766445] [mtc_plan_fixed_pose]: PLAN OK: planning_time=0.306 s, duration=5.907 s, points=80, final_pos_err=3.65e-06 m, final_rot_err=1.95e-07 rad -> /tmp/mtc_shutdown_audit/full_stock/fixed_pose_plan_20261012_054205.yaml
+[INFO] [plan_fixed_pose-1]: process has finished cleanly [pid 108991]

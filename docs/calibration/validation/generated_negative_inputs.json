@@ -1,0 +1,102 @@
+[
+  {
+    "name": "overflow_snapshot",
+    "command": "python -B scripts/calibration/check_calibration.py <tmp>\\overflow_snapshot.json",
+    "exit_code": 2,
+    "expected_exit_code": 2,
+    "expected_fields": {
+      "status": "REJECTED",
+      "code": "INVALID_VECTOR"
+    },
+    "note": "synthetic case, first translation = 10**400",
+    "passed": true,
+    "problems": [],
+    "result": {
+      "status": "REJECTED",
+      "code": "INVALID_VECTOR",
+      "message": "INVALID_VECTOR: translation m cannot be represented as finite floats",
+      "motion_authorized": false
+    },
+    "stderr_tail": ""
+  },
+  {
+    "name": "overflow_mount",
+    "command": "python -B scripts/calibration/derive_nominal_mount.py <tmp>\\overflow_mount.json",
+    "exit_code": 2,
+    "expected_exit_code": 2,
+    "expected_fields": {
+      "status": "REJECTED",
+      "code": "INVALID_VECTOR"
+    },
+    "note": "design, glass x = 10**400",
+    "passed": true,
+    "problems": [],
+    "result": {
+      "status": "REJECTED",
+      "code": "INVALID_VECTOR",
+      "message": "INVALID_VECTOR: translation m cannot be represented as finite floats",
+      "motion_authorized": false
+    },
+    "stderr_tail": ""
+  },
+  {
+    "name": "deep_nesting_snapshot",
+    "command": "python -B scripts/calibration/check_calibration.py <tmp>\\deep_nesting.json",
+    "exit_code": 2,
+    "expected_exit_code": 2,
+    "expected_fields": {
+      "status": "REJECTED",
+      "code": "INVALID_INPUT"
+    },
+    "note": "200000 nested JSON arrays",
+    "passed": true,
+    "problems": [],
+    "result": {
+      "status": "REJECTED",
+      "code": "INVALID_INPUT",
+      "message": "JSON nesting exceeds the parser recursion limit",
+      "motion_authorized": false
+    },
+    "stderr_tail": ""
+  },
+  {
+    "name": "deep_nesting_mount",
+    "command": "python -B scripts/calibration/derive_nominal_mount.py <tmp>\\deep_nesting.json",
+    "exit_code": 2,
+    "expected_exit_code": 2,
+    "expected_fields": {
+      "status": "REJECTED",
+      "code": "INVALID_INPUT"
+    },
+    "note": "200000 nested JSON arrays",
+    "passed": true,
+    "problems": [],
+    "result": {
+      "status": "REJECTED",
+      "code": "INVALID_INPUT",
+      "message": "JSON nesting exceeds the parser recursion limit",
+      "motion_authorized": false
+    },
+    "stderr_tail": ""
+  },
+  {
+    "name": "mm_typed_as_m_mount",
+    "command": "python -B scripts/calibration/derive_nominal_mount.py <tmp>\\mm_typed_as_m_mount.json",
+    "exit_code": 2,
+    "expected_exit_code": 2,
+    "expected_fields": {
+      "status": "REJECTED",
+      "code": "IMPLAUSIBLE_DESIGN"
+    },
+    "note": "design, [100, 0, 40] under length_unit m",
+    "passed": true,
+    "problems": [],
+    "result": {
+      "status": "REJECTED",
+      "code": "IMPLAUSIBLE_DESIGN",
+      "message": "IMPLAUSIBLE_DESIGN: front glass more than 1.0 m from the flange; mm entered as m?",
+      "motion_authorized": false
+    },
+    "stderr_tail": ""
+  }
+]

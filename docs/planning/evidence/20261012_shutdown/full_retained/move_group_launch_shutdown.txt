@@ -1,0 +1,1 @@
+PASS clean shutdown: every launched process exited cleanly

@@ -1,0 +1,94 @@
+[INFO] [1791801609.008193620] [move_group.moveit.moveit.ros.rdf_loader]: Loaded robot model in 0.00280342 seconds
+[INFO] [1791801609.008309447] [move_group.moveit.moveit.core.robot_model]: Loading robot model 'aubo_robot'...
+[INFO] [1791801609.013696700] [move_group.moveit.moveit.kinematics.kdl_kinematics_plugin]: Joint weights for group 'manipulator': 1 1 1 1 1 1
+[INFO] [1791801609.033662358] [move_group.moveit.moveit.ros.planning_scene_monitor]: Publishing maintained planning scene on 'monitored_planning_scene'
+[INFO] [1791801609.033862970] [move_group.moveit.moveit.ros.moveit_cpp]: Listening to 'joint_states' for joint states
+[INFO] [1791801609.034357510] [move_group.moveit.moveit.ros.current_state_monitor]: Listening to joint states on topic 'joint_states'
+[INFO] [1791801609.034818159] [move_group.moveit.moveit.ros.planning_scene_monitor]: Listening to '/attached_collision_object' for attached collision objects
+[INFO] [1791801609.034835102] [move_group.moveit.moveit.ros.planning_scene_monitor]: Stopping existing planning scene publisher.
+[INFO] [1791801609.035028561] [move_group.moveit.moveit.ros.planning_scene_monitor]: Stopped publishing maintained planning scene.
+[INFO] [1791801609.035860212] [move_group.moveit.moveit.ros.planning_scene_monitor]: Publishing maintained planning scene on 'monitored_planning_scene'
+[INFO] [1791801609.035970816] [move_group.moveit.moveit.ros.planning_scene_monitor]: Starting planning scene monitor
+[INFO] [1791801609.036700877] [move_group.moveit.moveit.ros.planning_scene_monitor]: Listening to '/planning_scene'
+[INFO] [1791801609.036717534] [move_group.moveit.moveit.ros.planning_scene_monitor]: Starting world geometry update monitor for collision objects, attached objects, octomap updates.
+[INFO] [1791801609.037020653] [move_group.moveit.moveit.ros.planning_scene_monitor]: Listening to 'collision_object'
+[INFO] [1791801609.037409193] [move_group.moveit.moveit.ros.planning_scene_monitor]: Listening to 'planning_scene_world' for planning scene world geometry
+[WARN] [1791801609.037655237] [move_group.moveit.moveit.ros.occupancy_map_monitor]: Resolution not specified for Octomap. Assuming resolution = 0.1 instead
+[ERROR] [1791801609.037692148] [move_group.moveit.moveit.ros.occupancy_map_monitor]: No 3D sensor plugin(s) defined for octomap updates
+[INFO] [1791801609.052555540] [move_group.moveit.moveit.ros.planning_pipeline]: Successfully loaded planner 'OMPL'
+[INFO] [1791801609.053690525] [move_group]: Try loading adapter 'default_planning_request_adapters/ResolveConstraintFrames'
+[INFO] [1791801609.054651075] [move_group]: Loaded adapter 'default_planning_request_adapters/ResolveConstraintFrames'
+[INFO] [1791801609.054674450] [move_group]: Try loading adapter 'default_planning_request_adapters/ValidateWorkspaceBounds'
+[INFO] [1791801609.054800897] [move_group]: Loaded adapter 'default_planning_request_adapters/ValidateWorkspaceBounds'
+[INFO] [1791801609.054810323] [move_group]: Try loading adapter 'default_planning_request_adapters/CheckStartStateBounds'
+[INFO] [1791801609.054831631] [move_group]: Loaded adapter 'default_planning_request_adapters/CheckStartStateBounds'
+[INFO] [1791801609.054835705] [move_group]: Try loading adapter 'default_planning_request_adapters/CheckStartStateCollision'
+[INFO] [1791801609.054847167] [move_group]: Loaded adapter 'default_planning_request_adapters/CheckStartStateCollision'
+[INFO] [1791801609.055786976] [move_group]: Try loading adapter 'default_planning_response_adapters/AddTimeOptimalParameterization'
+[INFO] [1791801609.057854504] [move_group]: Loaded adapter 'default_planning_response_adapters/AddTimeOptimalParameterization'
+[INFO] [1791801609.057887252] [move_group]: Try loading adapter 'default_planning_response_adapters/ValidateSolution'
+[INFO] [1791801609.059037828] [move_group]: Loaded adapter 'default_planning_response_adapters/ValidateSolution'
+[INFO] [1791801609.059059488] [move_group]: Try loading adapter 'default_planning_response_adapters/DisplayMotionPath'
+[INFO] [1791801609.059643544] [move_group]: Loaded adapter 'default_planning_response_adapters/DisplayMotionPath'
+[INFO] [1791801609.071395039] [move_group.moveit.moveit.plugins.simple_controller_manager]: Added FollowJointTrajectory controller for joint_trajectory_controller
+[INFO] [1791801609.071613245] [move_group.moveit.moveit.plugins.simple_controller_manager]: Returned 1 controllers in list
+[INFO] [1791801609.071640119] [move_group.moveit.moveit.plugins.simple_controller_manager]: Returned 1 controllers in list
+[INFO] [1791801609.071864329] [move_group.moveit.moveit.ros.trajectory_execution_manager]: Trajectory execution is not managing controllers
+[INFO] [1791801609.071881245] [move_group]: MoveGroup debug mode is ON
+[INFO] [1791801609.088514796] [move_group.moveit.moveit.ros.move_group.executable]: 
+
+********************************************************
+* MoveGroup using: 
+*     - apply_planning_scene_service
+*     - clear_octomap_service
+*     - get_group_urdf
+*     - load_geometry_from_file
+*     - CartesianPathService
+*     - execute_trajectory_action
+*     - get_planning_scene_service
+*     - kinematics_service
+*     - move_action
+*     - motion_plan_service
+*     - query_planners_service
+*     - state_validation_service
+*     - save_geometry_to_file
+********************************************************
+
+[INFO] [1791801609.088598758] [move_group.moveit.moveit.ros.move_group.context]: MoveGroup context using pipeline ompl
+[INFO] [1791801609.088610492] [move_group.moveit.moveit.ros.move_group.context]: MoveGroup context initialization complete
+[96mLoading 'move_group/ApplyPlanningSceneService'...[0m
+[96mLoading 'move_group/ClearOctomapService'...[0m
+[96mLoading 'move_group/GetUrdfService'...[0m
+[96mLoading 'move_group/LoadGeometryFromFileService'...[0m
+[96mLoading 'move_group/MoveGroupCartesianPathService'...[0m
+[96mLoading 'move_group/MoveGroupExecuteTrajectoryAction'...[0m
+[96mLoading 'move_group/MoveGroupGetPlanningSceneService'...[0m
+[96mLoading 'move_group/MoveGroupKinematicsService'...[0m
+[96mLoading 'move_group/MoveGroupMoveAction'...[0m
+[96mLoading 'move_group/MoveGroupPlanService'...[0m
+[96mLoading 'move_group/MoveGroupQueryPlannersService'...[0m
+[96mLoading 'move_group/MoveGroupStateValidationService'...[0m
+[96mLoading 'move_group/SaveGeometryToFileService'...[0m
+
+[92mYou can start planning now![0m
+
+[INFO] [1791801609.608818847] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[INFO] [1791801609.626676967] [move_group.moveit.moveit.ros.moveit_cpp]: Deleting MoveItCpp
+Stack trace (most recent call last):
+#15   Object "", at 0xffffffffffffffff, in 
+#14   Object "/opt/ros/jazzy/lib/moveit_ros_move_group/move_group", at 0x5fc9e598da14, in _start
+#13   Source "../csu/libc-start.c", line 360, in __libc_start_main_impl [0x7fbb8322a28a]
+#12   Source "../sysdeps/nptl/libc_start_call_main.h", line 58, in __libc_start_call_main [0x7fbb8322a1c9]
+#11   Object "/opt/ros/jazzy/lib/moveit_ros_move_group/move_group", at 0x5fc9e598c509, in main
+#10   Object "/opt/ros/jazzy/lib/moveit_ros_move_group/move_group", at 0x5fc9e598f129, in 
+#9    Object "/opt/ros/jazzy/lib/libmoveit_cpp.so.2.12.4", at 0x7fbb83ee9ad0, in moveit_cpp::MoveItCpp::~MoveItCpp()
+#8    Object "/opt/ros/jazzy/lib/libmoveit_cpp.so.2.12.4", at 0x7fbb83ee9989, in 
+#7    Object "/opt/ros/jazzy/lib/libmoveit_trajectory_execution_manager.so.2.12.4", at 0x7fbb8346542a, in trajectory_execution_manager::TrajectoryExecutionManager::~TrajectoryExecutionManager()
+#6    Object "/opt/ros/jazzy/lib/libmoveit_trajectory_execution_manager.so.2.12.4", at 0x7fbb83477575, in 
+#5    Object "/opt/ros/jazzy/lib/librclcpp.so", at 0x7fbb83b55cb4, in rclcpp::Node::~Node()
+#4    Object "/opt/ros/jazzy/lib/librclcpp.so", at 0x7fbb83affa35, in 
+#3    Object "/opt/ros/jazzy/lib/librclcpp.so", at 0x7fbb83b54580, in 
+#2    Object "/opt/ros/jazzy/lib/librclcpp.so", at 0x7fbb83b544c3, in rclcpp::node_interfaces::NodeBase::~NodeBase()
+#1    Object "/opt/ros/jazzy/lib/librclcpp.so", at 0x7fbb83affaf9, in 
+#0    Object "/opt/ros/jazzy/lib/librclcpp.so", at 0x7fbb83b03ba9, in rclcpp::CallbackGroup::~CallbackGroup()
+Segmentation fault (Address not mapped to object [0x7fbb742b4da0])

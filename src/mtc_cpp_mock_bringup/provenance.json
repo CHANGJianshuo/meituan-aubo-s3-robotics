@@ -1,0 +1,30 @@
+{
+  "source_repository": "https://github.com/AfonsoZhang/meituan-robotics-challenge-2026",
+  "source_commit": "96b76245da4c9ffe856d26d156bbd72f7f956a84",
+  "imported_directory": "webui",
+  "import_sha256": {
+    "webui/README.md": "5269fd75435dafcd0e648717c110d25009c7067139e4ee0be161627d63238bec",
+    "webui/ros_backend.py": "96e75d5cf9788c8f29cfbaa12e80fc476dc109b92fe7adfe99dbb7492871aba3",
+    "webui/connection.example.json": "0dc6c8fddfc0132c634c0a50d15123ad14044062ea3b436e793c21bbc2591442",
+    "webui/ros_integration_check.py": "81ce86f570f00f00ebe034e15935d482873cf06cb91db9b8e25c1da1b6c08597",
+    "webui/mock_backend.py": "8968e85ac2e526bce5c9acd18f05b6caf79336e650c5eaa9c01058c254e9d6f5",
+    "webui/__init__.py": "3aca5545b424f135fff74819b578943d1b58c0127865259487cf22d3dd0dd095",
+    "webui/server.py": "ef5ca34ab36ef45d48687abde07af8955651af9f1ddb3e9259265d931a1b4208",
+    "webui/ros_transport.py": "70b78484c06cd84e666ad6921a9fcfb4704324bb7631cca318ad412329a1f582",
+    "webui/provenance.json": "3bc10a631d81fbc44f4c62c70322994d558e66b362e9baca61c1d9625a4d5e3c",
+    "webui/test_mock_backend.py": "7e8adb1efb9ddd8f411df10c15a3ce6411b055c102a238a1d159f2b7ed423d95",
+    "webui/test_ros_backend.py": "b232728e1d2686ea467091ac7d023fc42f63ba5f9707015bbdd7c22fe59c4556",
+    "webui/config.py": "1c2c31118adf9b8973dae379114dbc637215fbba86808031dc21ab3f97bfc087",
+    "webui/run.sh": "d71f153e0c13c1659ce3ff739a78d42edd477f85ba47b7c2e4bbfab50c37d74a",
+    "webui/static/favicon.svg": "926554080f4b882f38d4f5c0b8ad3592cd47c61b2aa671edbf2979449bf8dccd",
+    "webui/static/styles.css": "58ef9797cd86a2c569c7f605efb8a2ce025ddf30a4965fc712b336d8284c8af1",
+    "webui/static/app.js": "ab415e01932c3314333de29cc6f12ffc6cebec6ede81a4b4ba2e64adfc402ea3",
+    "webui/static/index.html": "1e7854f259e6063bd2088ba7000def6f18bd51ad888eb2b9a5d94bd9d08b5917"
+  },
+  "authorization": "User expressly authorized transfer/integration of own Web UI into teammate repository via independent PR, 2026-10-12. Original project has no root LICENSE; no third-party rights inferred. Runtime dependency notices remain webui/provenance.json.",
+  "upstream_base": "f7eaa2c0d2887aeada4fd635112c63c237962ff7",
+  "scope": "Launch/config/read-only observation/Action UUID logs/ROS-connected cpp_mock UI; no FSM, admission, cancel or motion core changes.",
+  "ai_assistance": "OpenAI Codex, 2026-10-12; implementation, tests, documentation",
+  "destination_directory": "src/mtc_cpp_mock_bringup/mtc_webui",
+  "integration_note": "Renamed Python module webui to mtc_webui to avoid importing the earlier workbench UI from the caller current directory."
+}

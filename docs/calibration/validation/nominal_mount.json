@@ -1,0 +1,108 @@
+{
+  "status": "ESTIMATED",
+  "data_kind": "MOUNT_DESIGN",
+  "camera_model": "D435i",
+  "reference_frame": "flange_design_F",
+  "length_unit": "m",
+  "quaternion_order": "xyzw",
+  "T_F_front_glass_center": {
+    "translation": [
+      0.1,
+      0.0,
+      0.04
+    ],
+    "rotation_xyzw": [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  "T_H_depth_optical_nominal": {
+    "translation": [
+      -0.0175,
+      0.0,
+      -0.0042
+    ],
+    "rotation_xyzw": [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  "T_F_depth_optical": {
+    "translation": [
+      0.0825,
+      0.0,
+      0.0358
+    ],
+    "rotation_xyzw": [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  "T_F_camera_link_nominal": {
+    "translation": [
+      0.0825,
+      0.0,
+      0.0358
+    ],
+    "rotation_xyzw": [
+      0.5,
+      -0.5,
+      0.5,
+      0.5
+    ]
+  },
+  "assumptions": [
+    {
+      "item": "screw_axis_x_in_H_m",
+      "value": 0.0,
+      "status": "ASSUMED",
+      "basis": "1/4-20 centreline assumed on the housing width centre; not dimensioned in Fig.10-9 (the official ROS description makes the same approximation)"
+    },
+    {
+      "item": "imager_axis_y_in_H_m",
+      "value": 0.0,
+      "status": "ASSUMED",
+      "basis": "lens centreline (-C-) assumed at the housing height centre; not dimensioned in Fig.10-9"
+    },
+    {
+      "item": "R_H_depth_optical",
+      "value": "identity",
+      "status": "ASSUMED",
+      "basis": "housing axes parallel to the calibrated optical axes; no datasheet angular tolerance"
+    },
+    {
+      "item": "left_imager_from_screw_axis_m",
+      "value": 0.0175,
+      "status": "DATASHEET_REFERENCE",
+      "basis": "p146 Fig.10-9 reference dimension, from the 1/4-20 centreline towards optical -X"
+    },
+    {
+      "item": "zero_depth_behind_glass_m",
+      "value": 0.0042,
+      "status": "DATASHEET",
+      "basis": "p94 Table 4-16 for D435i; H lies on the front cover glass, about 0.1 mm behind the front aluminium plate"
+    },
+    {
+      "item": "camera_link_origin",
+      "value": "depth optical origin",
+      "status": "WRAPPER_CONVENTION",
+      "basis": "realsense-ros README: camera_link = left IR = depth origin; verify installed wrapper TF"
+    }
+  ],
+  "deployment_ready": false,
+  "motion_authorized": false,
+  "pending": [
+    "verify flange_design_F relative to deployed robot frame",
+    "check V1 tool and bracket geometry, holes, occlusion and cable space",
+    "measure rear M3 holes against the 1/4-20 axis or left imager if the bracket uses them",
+    "confirm the camera model label (f variants have a different zero-depth offset)",
+    "read actual depth/color/internal TF from this D435i",
+    "verify installation and calibration errors against task tolerance"
+  ]
+}

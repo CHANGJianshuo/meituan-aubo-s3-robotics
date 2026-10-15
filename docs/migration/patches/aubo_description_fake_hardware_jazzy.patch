@@ -1,0 +1,32 @@
+diff --git a/urdf/xacro/inc/aubo.ros2_control.xacro b/urdf/xacro/inc/aubo.ros2_control.xacro
+index 1a1a8b8..d682468 100644
+--- a/urdf/xacro/inc/aubo.ros2_control.xacro
++++ b/urdf/xacro/inc/aubo.ros2_control.xacro
+@@ -5,20 +5,20 @@
+     <ros2_control name="${name}" type="system">
+       <hardware>
+         <!-- ros2_control simulation -->
+-        <!-- xacro:if value="${use_fake_hardware}">
+-          <plugin>fake_components/GenericSystem</plugin>
+-          <param name="fake_sensor_commands">false</param>
+-          <param name="state_following_offset">0.0</param>
+-        </xacro:if -->
++        <xacro:if value="${use_fake_hardware}">
++          <plugin>mock_components/GenericSystem</plugin>
++          <param name="mock_sensor_commands">false</param>
++          <param name="position_state_following_offset">0.0</param>
++        </xacro:if>
+         <!-- physical hardware or RobotStudio simulation -->
+-        <!-- xacro:unless value="${use_fake_hardware}" -->
++        <xacro:unless value="${use_fake_hardware}">
+           <plugin>aubo_driver/AuboHardwareInterface</plugin>
+           <param name="robot_ip">${robot_ip}</param>
+           <!-- The following parameter is used for non-MultiMove only -->
+           <!-- The following parameters are used for the MultiMove example only -->
+           <!-- <param name="rob1egm_port">6511</param> -->
+           <!-- <param name="extaxegm_port">6512</param> -->
+-        <!-- /xacro:unless -->
++        </xacro:unless>
+       </hardware>
+       <joint name="shoulder_joint">
+         <command_interface name="position">

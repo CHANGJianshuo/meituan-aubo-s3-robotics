@@ -1,0 +1,1 @@
+sample_id,stamp_ns,time_domain,base_frame,ee_frame,base_ee_x_m,base_ee_y_m,base_ee_z_m,base_ee_qx,base_ee_qy,base_ee_qz,base_ee_qw,fixed_point_id,contact_verified,evidence_file,tool_version,operator,notes

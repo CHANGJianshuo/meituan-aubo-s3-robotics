@@ -1,0 +1,17 @@
+{
+  "domain_id": null,
+  "read_only": false,
+  "task_action": "/mtc/task/execute",
+  "task_topic": "/mtc/task/state",
+  "task_publisher": "/task_executor",
+  "robot_topic": "/mtc/robot/state",
+  "robot_publisher": "/mtc_aubo_bridge",
+  "tool_topic": "/mtc/tool/state",
+  "tool_publisher": "",
+  "joint_topic": "/joint_states",
+  "joint_publisher": "",
+  "stop_service": "/mtc/bridge/request_stop",
+  "color_topic": "",
+  "depth_topic": "",
+  "freshness_ms": 3000
+}

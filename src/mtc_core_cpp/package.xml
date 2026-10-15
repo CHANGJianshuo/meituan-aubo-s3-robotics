@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>mtc_core_cpp</name>
+  <version>0.1.0</version>
+  <description>
+    AUBO S3 竞赛任务的 C++17 状态机共享核心类型：错误码、工具状态与证据等级、
+    6D 位姿保真类型、运动原语/轨迹类型、端口结果契约、可注入时钟。
+
+    本包刻意不依赖 rclcpp 或任何 ROS 消息包，以便状态机核心可在无 ROS 图、
+    无硬件、无真实设备的环境下被 GTest 完整验证。ROS 2 通信外壳属于第二阶段。
+  </description>
+  <maintainer email="dev@example.com">meituan_challenge_ws maintainers</maintainer>
+  <license>MIT</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <test_depend>ament_cmake_gtest</test_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

@@ -1,0 +1,32 @@
+# mtc_moveit_planner plan_fixed_pose 证据（Mock / Fake Hardware，仅规划，未执行）
+tool: plan_fixed_pose
+wall_time: "20261011_114011"
+ros_time_s: 1791736811
+configuration:
+  planning_group: "manipulator"
+  planning_frame: "world"
+  end_effector_link: "ee_link"
+  planning_pipeline: "ompl"
+  planner_id: "RRTConnectkConfigDefault"
+  velocity_scaling: 0.1
+  acceleration_scaling: 0.1
+  planning_time_limit_s: 1
+start_state:
+  joint_names: ["shoulder_joint", "upperArm_joint", "foreArm_joint", "wrist1_joint", "wrist2_joint", "wrist3_joint"]
+  positions_rad: [0, 0, 0, 0, 0, 0]
+target:
+  mode: "pose"
+  ee_link_pose:
+    frame_id: "base_link"
+    position_m: [0.35, 0, -0.03]
+    orientation_xyzw: [1, 0, 0, 0]
+result:
+  ok: false
+  reason: "NO_PLAN"
+  message: "joint interpolation rejected (joint-interpolated state 209/295 invalid (1 contact(s))); OMPL to seeded-IK joint goal returned FAILURE; MoveIt plan() returned FAILURE"
+  planning_time_s: 1.153184862
+  time_scale_applied: 1
+  max_ee_linear_speed_m_s: 0
+  max_ee_angular_speed_rad_s: 0
+  final_position_error_m: -1
+  final_orientation_error_rad: -1

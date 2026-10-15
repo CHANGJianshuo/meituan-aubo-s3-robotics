@@ -1,0 +1,100 @@
+{
+  "repository": "https://github.com/AuboRobot/aubo_description",
+  "commit": "47fa5e02fa873f27f7e812d31f31e3f4cf5e56b1",
+  "model": "aubo_S3",
+  "fetched_subset": "Canonical S3 URDF/SRDF, all 14 referenced meshes, upstream package metadata and README",
+  "license_declared_in_package_xml": "BSD",
+  "standalone_license_file_found": false,
+  "files": [
+    {
+      "path": "README.md",
+      "size_bytes": 13054,
+      "git_blob_sha1": "380c93076c5bc8f22d3c0ec69d053bb31fd9f248"
+    },
+    {
+      "path": "meshes/aubo_S3/collision/link0.STL",
+      "size_bytes": 7684,
+      "git_blob_sha1": "3bc6aa1bf3e8d205c5b06443ded9c545b4e56831"
+    },
+    {
+      "path": "meshes/aubo_S3/collision/link1.STL",
+      "size_bytes": 17284,
+      "git_blob_sha1": "ff0848de8df0adccd24aebc92ad30decdc538be7"
+    },
+    {
+      "path": "meshes/aubo_S3/collision/link2.STL",
+      "size_bytes": 15484,
+      "git_blob_sha1": "5922048a16fcc8d4ac03f5bc0839936174a7e495"
+    },
+    {
+      "path": "meshes/aubo_S3/collision/link3.STL",
+      "size_bytes": 9284,
+      "git_blob_sha1": "b22cb27f102d3c9deb2053d89a2b52c764814ef2"
+    },
+    {
+      "path": "meshes/aubo_S3/collision/link4.STL",
+      "size_bytes": 16084,
+      "git_blob_sha1": "5094bb625b6c86c466d44aeb31611783ffa4603d"
+    },
+    {
+      "path": "meshes/aubo_S3/collision/link5.STL",
+      "size_bytes": 16084,
+      "git_blob_sha1": "4c18ee3bf4c789ab543ec9ed718c48eedd3f0823"
+    },
+    {
+      "path": "meshes/aubo_S3/collision/link6.STL",
+      "size_bytes": 14484,
+      "git_blob_sha1": "7fbad75e153311296cfb55e5eb562a8f3a7a3ef0"
+    },
+    {
+      "path": "meshes/aubo_S3/visual/link0.DAE",
+      "size_bytes": 275318,
+      "git_blob_sha1": "f1aaca708b4fae85a17f98ce759f3b46b5852b2f"
+    },
+    {
+      "path": "meshes/aubo_S3/visual/link1.DAE",
+      "size_bytes": 566106,
+      "git_blob_sha1": "25e86c35eb465a8d2ac7194a6432f70b2e522773"
+    },
+    {
+      "path": "meshes/aubo_S3/visual/link2.DAE",
+      "size_bytes": 352224,
+      "git_blob_sha1": "601ee9c7fe36db4982c6bc7f10ab883d8c26fdab"
+    },
+    {
+      "path": "meshes/aubo_S3/visual/link3.DAE",
+      "size_bytes": 647289,
+      "git_blob_sha1": "9e54dd6bc884da293a6a48123f0e7ae74d817806"
+    },
+    {
+      "path": "meshes/aubo_S3/visual/link4.DAE",
+      "size_bytes": 683656,
+      "git_blob_sha1": "6bf395c77d8e669e67e9119a7c3fb534080e4514"
+    },
+    {
+      "path": "meshes/aubo_S3/visual/link5.DAE",
+      "size_bytes": 683655,
+      "git_blob_sha1": "098c25aa78a8880017811c33d094904529e2ec54"
+    },
+    {
+      "path": "meshes/aubo_S3/visual/link6.DAE",
+      "size_bytes": 401011,
+      "git_blob_sha1": "cb75f888ce7a951f718d8ced72aaa258e3078edb"
+    },
+    {
+      "path": "package.xml",
+      "size_bytes": 1201,
+      "git_blob_sha1": "67d3dd5222e85fe87ea046acd5c8833d9c6e693f"
+    },
+    {
+      "path": "urdf/aubo_S3.srdf",
+      "size_bytes": 2493,
+      "git_blob_sha1": "2e47d2860f2966749ab81765848a3ba1d4e6f5b9"
+    },
+    {
+      "path": "urdf/aubo_S3.urdf",
+      "size_bytes": 8895,
+      "git_blob_sha1": "8a32f5c61324655191d65e69f5e54b52a7e08c47"
+    }
+  ]
+}

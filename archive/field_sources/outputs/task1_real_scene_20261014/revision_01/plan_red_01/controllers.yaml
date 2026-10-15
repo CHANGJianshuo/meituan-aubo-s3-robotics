@@ -1,0 +1,45 @@
+arm_controller:
+  ros__parameters:
+    allow_partial_joints_goal: false
+    command_interfaces:
+    - position
+    constraints:
+      foreArm_joint:
+        goal: 0.005
+        trajectory: 0.08
+      goal_time: 2.0
+      shoulder_joint:
+        goal: 0.005
+        trajectory: 0.08
+      stopped_velocity_tolerance: 0.02
+      upperArm_joint:
+        goal: 0.005
+        trajectory: 0.08
+      wrist1_joint:
+        goal: 0.005
+        trajectory: 0.08
+      wrist2_joint:
+        goal: 0.005
+        trajectory: 0.08
+      wrist3_joint:
+        goal: 0.005
+        trajectory: 0.08
+    joints:
+    - shoulder_joint
+    - upperArm_joint
+    - foreArm_joint
+    - wrist1_joint
+    - wrist2_joint
+    - wrist3_joint
+    state_interfaces:
+    - position
+    - velocity
+controller_manager:
+  ros__parameters:
+    arm_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+    enforce_command_limits: true
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+    update_rate: 250
+    use_sim_time: true

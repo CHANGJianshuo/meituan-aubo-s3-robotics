@@ -1,0 +1,30 @@
+{
+  "success": false,
+  "task": "basic",
+  "order": "A",
+  "simulation_only": true,
+  "physics": "passive contacts; no fixed attachment",
+  "perception": "Gazebo ground truth",
+  "output": "/tmp/mtc_v1_pause_fault",
+  "domain": 88,
+  "gz_partition": "mtc_v1_6c362303b0de430a9062a0f9ef2d04e4",
+  "task_exit_code": 0,
+  "process_exit_codes": {
+    "gazebo": 0,
+    "state_publisher": 0,
+    "bridge": 0,
+    "camera": 0,
+    "spawn": 0,
+    "joint_state_broadcaster": 0,
+    "arm_controller": 0,
+    "move_group": 0,
+    "task": 0
+  },
+  "moveit_plugin_pinning": true,
+  "child_failures": {
+    "task": [
+      "process has died [pid 136166, exit code 1, cmd '/home/operator/meituan/meituan_challenge_ws/install/v1_sim/mtc_simulation/lib/mtc_simulation/v1_task --ros-args --params-file /tmp/launch_params_zbp6nhfa']."
+    ]
+  },
+  "shutdown_clean": false
+}

@@ -1,0 +1,52 @@
+# mtc_moveit_planner plan_battery_sequence 证据（Mock，仅规划，未执行）
+# 提环位姿与工位均为占位值；接触段只代表规划意图，不代表可安全执行。
+tool: plan_battery_sequence
+wall_time: "20261012_032126"
+tool_type: "passive_hook_v1"
+slot: "T0"
+start: "SRDF named state home"
+ring_pose:
+  frame_id: "base_link"
+  position_m: [0.4, -0.05, 0.13]
+  orientation_xyzw: [0, 0.70710678, 0, 0.70710678]
+tcp:
+  status: "PLACEHOLDER"
+  xyz: [0, 0, 0]
+phases:
+  - phase: "ACQUIRE"
+    ok: false
+    error_code: 200
+    message: "[NO_PLAN] side_insert: straight line rejected (fraction=0.777778, max_joint_step=0.032000 rad); ik candidates=5 est_s/span_rad=[40.92/2.515(seed_grid), 52.78/3.142(seed_grid), 52.79/3.141(seed_grid), 91.48/6.282(seed_grid), 123.9/5.992(continuation)]; ik+rank 0.3274 s (rank 0.05089 s); joint interpolation rejected (joint-interpolated state 81/126 invalid (1 contact(s))); joint interpolation rejected (joint-interpolated state 131/158 invalid (2 contact(s))); joint interpolation rejected (joint-interpolated state 144/158 invalid (2 contact(s))); joint interpolation rejected (joint-interpolated state 268/315 invalid (1 contact(s))); joint interpolation rejected (joint-interpolated state 248/300 invalid (2 contact(s))); OMPL to seeded-IK joint goal returned FAILURE; MoveIt plan() returned FAILURE"
+    planning_frame: "world"
+    end_effector_link: "ee_link"
+    simulation_only: true
+    uncalibrated_inputs: []
+    start_state:
+      joint_names: ["shoulder_joint", "upperArm_joint", "foreArm_joint", "wrist1_joint", "wrist2_joint", "wrist3_joint"]
+      positions_rad: [0, -0.0334, 1.236, -0.3675, 1.5701, 0]
+    primitives:
+      - primitive_name: "side_insert"
+        ok: false
+        reason: "NO_PLAN"
+        message: "straight line rejected (fraction=0.777778, max_joint_step=0.032000 rad); ik candidates=5 est_s/span_rad=[40.92/2.515(seed_grid), 52.78/3.142(seed_grid), 52.79/3.141(seed_grid), 91.48/6.282(seed_grid), 123.9/5.992(continuation)]; ik+rank 0.3274 s (rank 0.05089 s); joint interpolation rejected (joint-interpolated state 81/126 invalid (1 contact(s))); joint interpolation rejected (joint-interpolated state 131/158 invalid (2 contact(s))); joint interpolation rejected (joint-interpolated state 144/158 invalid (2 contact(s))); joint interpolation rejected (joint-interpolated state 268/315 invalid (1 contact(s))); joint interpolation rejected (joint-interpolated state 248/300 invalid (2 contact(s))); OMPL to seeded-IK joint goal returned FAILURE; MoveIt plan() returned FAILURE"
+        mode: "FREE_SPACE"
+        method: "ompl"
+        backend_message: "straight line rejected (fraction=0.777778, max_joint_step=0.032000 rad); ik candidates=5 est_s/span_rad=[40.92/2.515(seed_grid), 52.78/3.142(seed_grid), 52.79/3.141(seed_grid), 91.48/6.282(seed_grid), 123.9/5.992(continuation)]; ik+rank 0.3274 s (rank 0.05089 s); joint interpolation rejected (joint-interpolated state 81/126 invalid (1 contact(s))); joint interpolation rejected (joint-interpolated state 131/158 invalid (2 contact(s))); joint interpolation rejected (joint-interpolated state 144/158 invalid (2 contact(s))); joint interpolation rejected (joint-interpolated state 268/315 invalid (1 contact(s))); joint interpolation rejected (joint-interpolated state 248/300 invalid (2 contact(s))); OMPL to seeded-IK joint goal returned FAILURE; MoveIt plan() returned FAILURE"
+        payload_attached: false
+        goal_kind: "RING_STANDOFF"
+        start_assumption: "explicit_start_state"
+        contact_intent_only: false
+        ee_goal:
+          frame_id: "world"
+          position_m: [0.295, -0.05, 0.2405]
+          orientation_xyzw: [5.551115123e-17, 1, 6.162975822e-33, 2.220446049e-16]
+        planning_time_s: 1.756556251
+        cartesian_fraction: 0
+        time_scale_applied: 1
+        max_ee_linear_speed_m_s: 0
+        max_ee_angular_speed_rad_s: 0
+        duration_s: 0
+        point_count: 0
+        timeout_ms: 0
+        state_watchdog_s: 0
+    commands:

@@ -1,0 +1,10 @@
+# 在 planner.yaml 之上覆盖：V1 从"就绪位"出发（工具已与提环对齐，位于预对准位后方 2 cm），
+# 并按 Python mtc_tool 的自由空间速度（0.05 m/s / 0.2 rad/s）给出 home -> 就绪位 的参考准备动作。
+# 仅用于量化"快速接近 + 低速预对准"拆分是否可行；就绪位与准备动作目前不属于任何 FSM 状态。
+/**:
+  ros__parameters:
+    sequence:
+      start_mode: "ready"
+      ready_backoff_m: 0.02                # 占位几何下 0.02 m 可达，0.05 m 无解
+      setup_max_linear_speed: 0.05
+      setup_max_angular_speed: 0.2

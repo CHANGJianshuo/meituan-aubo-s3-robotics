@@ -1,0 +1,1 @@
+sample_id,image_file,stamp_ns,time_domain,base_frame,ee_frame,optical_frame,board_frame,base_ee_x_m,base_ee_y_m,base_ee_z_m,base_ee_qx,base_ee_qy,base_ee_qz,base_ee_qw,camera_board_x_m,camera_board_y_m,camera_board_z_m,camera_board_qx,camera_board_qy,camera_board_qz,camera_board_qw,reprojection_error_px,use_for_solve,evidence_file,operator,notes

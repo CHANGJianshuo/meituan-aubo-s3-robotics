@@ -1,0 +1,21 @@
+{
+  "mode": "direct",
+  "rmw": "rmw_cyclonedds_cpp",
+  "domain": 136,
+  "pin_plugins": true,
+  "allow_trajectory_execution": true,
+  "command": [
+    "/opt/ros/jazzy/lib/moveit_ros_move_group/move_group",
+    "--ros-args",
+    "--params-file",
+    "/tmp/mtc_shutdown_audit/final_retained_cyclone/move_group.yaml"
+  ],
+  "core_pattern": "|/wsl-capture-crash %t %E %p %s",
+  "motion_requests": 0,
+  "ready": true,
+  "escalated": false,
+  "versions": "ros-jazzy-moveit-ros-move-group\t2.12.4-1noble.20260915.202214\nros-jazzy-moveit-ros-planning\t2.12.4-1noble.20260915.195310\nros-jazzy-rclcpp\t28.1.22-1noble.20260911.105434\nros-jazzy-rmw-cyclonedds-cpp\t2.2.4-1noble.20260911.095700\nros-jazzy-rmw-fastrtps-cpp\t8.4.4-1noble.20260911.100940\n",
+  "seconds_after_sigint": 0.1,
+  "supervisor_returncode": 0,
+  "clean_exit": true
+}

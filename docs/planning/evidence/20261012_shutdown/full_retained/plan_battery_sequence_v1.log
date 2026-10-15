@@ -1,0 +1,19 @@
+[INFO] [launch]: All log files can be found below /tmp/aubo_s3_mock_logs/2026-10-12-05-43-51-698864-CJS-LAPTOP-111507
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [plan_battery_sequence-1]: process started with pid [111510]
+[plan_battery_sequence-1] [INFO] [1791801832.022989698] [moveit_3043316816.moveit.ros.rdf_loader]: Loaded robot model in 0.00360216 seconds
+[plan_battery_sequence-1] [INFO] [1791801832.023124940] [moveit_3043316816.moveit.core.robot_model]: Loading robot model 'aubo_robot'...
+[plan_battery_sequence-1] [INFO] [1791801832.033213349] [moveit_3043316816.moveit.kinematics.kdl_kinematics_plugin]: Joint weights for group 'manipulator': 1 1 1 1 1 1
+[plan_battery_sequence-1] [INFO] [1791801832.053808265] [moveit_3043316816.moveit.ros.move_group_interface]: Ready to take commands for planning group manipulator.
+[plan_battery_sequence-1] [INFO] [1791801832.072930518] [mtc_plan_battery_sequence]: planning scene: 1 static obstacle(s) applied
+[plan_battery_sequence-1] [INFO] [1791801832.107516966] [mtc_plan_battery_sequence]: [ACQUIRE] ok=true code=0 planned 2 primitive(s) in frame 'world' for 'ee_link'; simulation_only=true (uncalibrated: tool_geometry=ESTIMATED TCP=ESTIMATED payload=PLACEHOLDER)
+[plan_battery_sequence-1] [INFO] [1791801832.107610826] [mtc_plan_battery_sequence]:   side_insert   FREE_SPACE cartesian_preferred           ok=true  plan=0.011s dur=13.31s pts=41 scale=3.38 v=0.020m/s w=0.008rad/s watchdog=30s explicit_start_state
+[plan_battery_sequence-1] [INFO] [1791801832.107627666] [mtc_plan_battery_sequence]:   test_lift     CARTESIAN  cartesian           [payload] ok=true  plan=0.002s dur=1.87s pts=9 scale=2.47 v=0.010m/s w=0.000rad/s watchdog=15s simulated ENGAGE_INSERT 0.06 m along TCP axis 2 (ToolPort motion, not emitted)
+[plan_battery_sequence-1] [INFO] [1791801832.158781873] [mtc_plan_battery_sequence]: [TRANSPORT] ok=true code=0 planned 5 primitive(s) in frame 'world' for 'ee_link'; simulation_only=true (uncalibrated: tool_geometry=ESTIMATED payload=PLACEHOLDER slot T0=PLACEHOLDER TCP=ESTIMATED)
+[plan_battery_sequence-1] [INFO] [1791801832.158852930] [mtc_plan_battery_sequence]:   lift          CARTESIAN  cartesian           [payload] ok=true  plan=0.003s dur=3.29s pts=18 scale=1.99 v=0.029m/s w=0.000rad/s watchdog=30s explicit_start_state
+[plan_battery_sequence-1] [INFO] [1791801832.158866603] [mtc_plan_battery_sequence]:   transport     FREE_SPACE cartesian_preferred [payload] ok=true  plan=0.008s dur=2.42s pts=26 scale=1.00 v=0.115m/s w=0.000rad/s watchdog=60s previous_primitive_end
+[plan_battery_sequence-1] [INFO] [1791801832.158874964] [mtc_plan_battery_sequence]:   pre_seat      CARTESIAN  cartesian           [payload] ok=true  plan=0.005s dur=5.30s pts=23 scale=2.52 v=0.029m/s w=0.000rad/s watchdog=30s previous_primitive_end
+[plan_battery_sequence-1] [INFO] [1791801832.158882073] [mtc_plan_battery_sequence]:   seat_contact  CARTESIAN  cartesian           [payload] ok=true  plan=0.002s dur=7.72s pts=12 scale=7.28 v=0.005m/s w=0.000rad/s watchdog=20s [contact intent only] previous_primitive_end
+[plan_battery_sequence-1] [INFO] [1791801832.158889210] [mtc_plan_battery_sequence]:   retreat       CARTESIAN  cartesian                     ok=true  plan=0.006s dur=6.09s pts=26 scale=2.53 v=0.029m/s w=0.000rad/s watchdog=30s simulated WITHDRAW 0.06 m along TCP axis 2 (ToolPort motion, not emitted)
+[plan_battery_sequence-1] [INFO] [1791801832.160540229] [mtc_plan_battery_sequence]: SEQUENCE PLAN OK -> /tmp/mtc_shutdown_audit/full_retained/battery_sequence_passive_hook_v1_T0_20261012_054352.yaml
+[INFO] [plan_battery_sequence-1]: process has finished cleanly [pid 111510]

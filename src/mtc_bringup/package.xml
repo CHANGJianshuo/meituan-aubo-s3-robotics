@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>mtc_bringup</name>
+  <version>0.1.0</version>
+  <description>
+    美团挑战赛 AUBO S3：启动、参数组合与配置校验包（P9）。
+    提供 mock_bringup.launch.py（离线 Mock 组合启动，明确打印“Mock 模式，
+    未连接真实 AUBO S3”告警）、sim_bringup.launch.py（V1 Gazebo 仿真）、
+    real_bringup.launch.py（存在但默认拒绝启动），以及纯 Python 的
+    config_loader / validate_config 配置校验工具（不依赖 rclpy，可离线直接运行）。
+    安全默认值：Mock / 离线；任何真实设备节点都不由本包启动。
+  </description>
+  <maintainer email="team@example.invalid">meituan_challenge team</maintainer>
+  <license>Apache-2.0</license>
+
+  <!-- 运行时依赖：本包只做启动编排与参数装配，需要被启动的功能包都在此列出 -->
+  <depend>rclpy</depend>
+  <depend>mtc_interfaces</depend>
+  <depend>mtc_motion_execution</depend>
+  <depend>mtc_task</depend>
+  <depend>mtc_manipulation</depend>
+  <depend>mtc_tool</depend>
+  <depend>mtc_safety</depend>
+  <depend>mtc_aubo_bridge</depend>
+
+  <exec_depend>launch</exec_depend>
+  <exec_depend>mtc_simulation</exec_depend>
+  <exec_depend>launch_ros</exec_depend>
+  <exec_depend>ament_index_python</exec_depend>
+  <exec_depend>python3-yaml</exec_depend>
+
+  <test_depend>python3-pytest</test_depend>
+  <test_depend>ament_flake8</test_depend>
+  <test_depend>ament_pep257</test_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>

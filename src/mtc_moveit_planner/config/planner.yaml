@@ -1,0 +1,100 @@
+# mtc_moveit_planner 规划工具参数（Mock / Fake Hardware 专用）。
+#
+# !! 安全声明 !!
+# TCP、工位、提环位姿均为 PLACEHOLDER（规划层为仿真临时填写），未经任何实物标定，
+# 禁止用于真实运动。实测值由韩明赫（Calibration/TF/TCP）提供后替换并改为 MEASURED。
+# 任一几何输入不是 MEASURED 时，规划输出强制 simulation_only=true。
+/**:
+  ros__parameters:
+    backend:
+      planning_group: "manipulator"        # aubo_robot.srdf
+      end_effector_link: "ee_link"         # SRDF chain tip；腕部法兰坐标，不含工具
+      planning_pipeline: "ompl"
+      planner_id: "RRTConnectkConfigDefault"
+      tf_timeout_s: 0.5
+      state_timeout_s: 5.0
+      ik_timeout_s: 0.05                   # 位姿延拓中单步 IK 时限
+      ik_continuation_steps: 10            # 位姿延拓 IK 步数（跟踪离起点最近的解）
+      ee_limited_retiming: true            # 关节插值路径：末端限速时间最优参数化（上限不变）
+      ik_seed_timeout_s: 0.01              # 固定种子网格（起点 + 腕关节 ±90° 组合，27 个）单个 IK 时限
+
+    planner:
+      velocity_scaling: 0.1                # config/manipulation.yaml；上限 0.2
+      acceleration_scaling: 0.1
+      planning_time_s: 1.0                 # PLAN_ACQUIRE 看门狗仅 2.0 s
+      cartesian_step_m: 0.005
+      insertion_axis: 2                    # 提环/TCP 局部 +Z = 插入方向（TF_CONVENTIONS §2.1 提案，待确认）
+      allow_uncalibrated_geometry: true    # 今晚 Mock 必须 true；实机前改 false
+      force_simulation_only: true          # 团队批准前保持 true
+      # 工具行程：舌规舌尖在挂环点前方 30 mm，预对准时 TCP 退 60 mm（舌尖离提环中心 30 mm），
+      # 插入 60 mm 后提环落在挂环点（倒钩内侧 25 mm）。退钩行程相同。数值来自 CAD，需与工具模块一致。
+      insert_travel_m: 0.06
+      withdraw_travel_m: 0.06
+      approach_backoff_m: 0.02             # 拆分提案 side_approach 再多退的距离
+      hook_up_alignment: true              # 侧插时钩口（TCP +X）朝世界 +Z，忽略感知给出的绕插入轴滚转
+      hook_up_min_tilt_deg: 30.0           # 插入轴离竖直 < 30°（V2 竖直下插）时不调整
+
+    # ---- V1 舌规工具模型：来自 舌规V1.STEP（SolidWorks 2022，2026-09-29），单位 m，CAD 坐标系 ----
+    # CAD：+Y = 离开法兰（对应 ee_link +Z），舌头沿 +Z 伸出，舌尖倒钩朝 -Y（朝法兰）翘起。
+    # 安装盘 Ø75×15，背面 Ø63×7 凹槽套在 ISO 9409-1-50 法兰上，4×Ø6.1 孔、孔距 Ø50。
+    # 启用后 TCP 由此计算（覆盖下面的 tcp.*）；外形作为碰撞体随每次规划下发。
+    tool:
+      enabled: true
+      name: "passive_hook_v1"
+      source: "舌规V1.STEP SolidWorks 2022 2026-09-29"
+      status: "ESTIMATED"                  # CAD 名义值；安装角与贴合面未现场核对
+      mount_yaw_deg: 0.0                   # PLACEHOLDER：舌头沿 ee_link +X。孔位每 90° 对称，可装 0/90/180/270
+      mate_offset_m: -0.0005               # ESTIMATED：凹槽底面（CAD y=-0.5 mm）贴法兰端面；若外缘贴合则为 -0.0075
+      flange_axis_cad: [0.0, 1.0, 0.0]
+      insertion_cad: [0.0, 0.0, 1.0]
+      hook_up_cad: [0.0, -1.0, 0.0]
+      tcp_cad_m: [0.0, 0.110, 0.045]       # 挂环点：舌头中线、厚度中面、舌尖后 30 mm
+      bodies:
+        names: ["disc", "stem", "tongue", "lip"]
+        disc:   {shape: "cylinder", size_m: [0.075, 0.075, 0.015], xyz_m: [0.0, 0.0, 0.0],
+                 quat_xyzw: [-0.70710678, 0.0, 0.0, 0.70710678]}   # 圆柱轴（局部 z）转到 CAD +Y
+        stem:   {shape: "box", size_m: [0.030, 0.100, 0.020], xyz_m: [0.0, 0.0575, 0.0]}
+        tongue: {shape: "box", size_m: [0.044, 0.005, 0.085], xyz_m: [0.0, 0.110, 0.0325]}
+        lip:    {shape: "box", size_m: [0.044, 0.005, 0.005], xyz_m: [0.0, 0.105, 0.0725]}
+
+    tcp:                                   # ee_link -> hook_tcp（tool.enabled=true 时不使用）
+      xyz: [0.0, 0.0, 0.0]                 # PLACEHOLDER：单位变换
+      quat_xyzw: [0.0, 0.0, 0.0, 1.0]
+      status: "PLACEHOLDER"
+
+    slots:                                 # 工位中心（落座时 TCP 高度 = z）
+      # z=0.13：载荷底面 = 0.13-0.07-0.05 = 0.01 m，比桌面高 1 cm；最后的接触闭合不由规划完成。
+      names: ["T0", "P1", "P2", "P3"]
+      T0: {frame_id: "base_link", xyz: [0.35, -0.20, 0.13], status: "PLACEHOLDER"}
+      P1: {frame_id: "base_link", xyz: [0.35, -0.05, 0.13], status: "PLACEHOLDER"}
+      P2: {frame_id: "base_link", xyz: [0.35, 0.10, 0.13], status: "PLACEHOLDER"}
+      P3: {frame_id: "base_link", xyz: [0.35, 0.25, 0.13], status: "PLACEHOLDER"}
+
+    payload:                               # 试提后挂在钩尖下方的电池碰撞体（PLACEHOLDER 尺寸）
+      enabled: true
+      size_m: [0.06, 0.06, 0.10]
+      hang_below_tcp_m: 0.07               # 载荷中心在 TCP 正下方的距离
+      status: "PLACEHOLDER"
+
+    scene:                                 # 写入 move_group 的静态障碍物（PLACEHOLDER）；ID 写本地名，场景中自动加前缀 mtc_moveit_planner/
+      boxes:
+        names: ["table"]
+        # 桌面：机械臂底座立在桌面上（base_link z=0），桌面顶面取 z=-0.005。
+        table: {frame_id: "base_link", xyz: [0.30, 0.0, -0.030], size_m: [0.90, 1.20, 0.05]}
+
+    target:                                # plan_fixed_pose
+      mode: "named_state_fk"               # 或 "pose"（配合 target.frame_id/xyz/quat_xyzw）
+      named_state: "home"                  # aubo_robot.srdf group_state
+      max_linear_speed_m_s: 0.0            # 0 = 只按 velocity_scaling 时间参数化
+      max_angular_speed_rad_s: 0.0
+
+    sequence:                              # plan_battery_sequence（占位提环位姿）
+      tool_type: "passive_hook_v1"         # 或 "magnetic_latch_v2"
+      slot: "T0"
+      start_named_state: "home"           # 规划起点（SRDF 命名状态）；"" = 当前 /joint_states
+      object_id: "battery_1"
+      color: 1
+      ring:
+        frame_id: "base_link"
+        xyz: [0.40, -0.05, 0.13]           # PLACEHOLDER：电池立在桌面上，提环高 0.13 m
+        quat_xyzw: [0.0, 0.70710678, 0.0, 0.70710678]  # 绕 y 90°：插入方向(+Z) 指向 +X

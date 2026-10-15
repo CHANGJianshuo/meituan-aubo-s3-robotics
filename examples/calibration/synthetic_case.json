@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "data_kind": "SYNTHETIC",
+  "length_unit": "m",
+  "quaternion_order": "xyzw",
+  "time_domain": "synthetic",
+  "description": "Pure math fixture; all geometry is synthetic, not D435i mounting or TCP calibration. The zero camera_link->optical translation is synthetic too: a real color optical frame sits about 15 mm from camera_link and must come from the device TF.",
+  "transforms": [
+    {"parent": "base_link", "child": "wrist3_Link", "status": "ESTIMATED", "static": false,
+     "stamp_ns": 10000000000, "translation": [1, 0, 0],
+     "rotation_xyzw": [0, 0, 0.7071067811865476, 0.7071067811865476]},
+    {"parent": "wrist3_Link", "child": "camera_link", "status": "ESTIMATED", "static": true,
+     "translation": [0.1, 0, 0.05], "rotation_xyzw": [0, 0, 0, 1]},
+    {"parent": "camera_link", "child": "camera_color_optical_frame", "status": "ESTIMATED", "static": true,
+     "translation": [0, 0, 0], "rotation_xyzw": [-0.5, 0.5, -0.5, 0.5]}
+  ],
+  "pose": {"frame_id": "camera_color_optical_frame", "stamp_ns": 10000000000,
+           "time_domain": "synthetic", "length_unit": "m", "position": [0, 0, 1],
+           "orientation_xyzw": [0, 0, 0, 1], "valid": true, "ring_pose_valid": true},
+  "target_frame": "base_link", "now_ns": 10100000000, "max_age_ns": 300000000
+}

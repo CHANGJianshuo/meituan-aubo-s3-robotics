@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>mtc_tool</name>
+  <version>0.1.0</version>
+  <description>
+    V1 被动舌规 / V2 电磁锁止末端策略的统一管理节点（工具层权威实现）。
+    工具核心（strategy/manager/io_port/codes）为纯 Python，可离线单元测试；
+    真实电磁解锁 IO 默认禁用（DisabledUnlockIo）。
+  </description>
+  <maintainer email="todo@example.invalid">meituan_challenge_ws tool layer</maintainer>
+  <license>Proprietary</license>
+
+  <depend>rclpy</depend>
+  <depend>mtc_interfaces</depend>
+  <depend>std_msgs</depend>
+
+  <test_depend>python3-pytest</test_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>

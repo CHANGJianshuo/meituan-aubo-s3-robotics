@@ -1,0 +1,197 @@
+{
+  "task": "basic",
+  "table_z": 0.65,
+  "battery": {
+    "source": "\u7535\u6c60\u9053\u5177.stp",
+    "sha256": "534c0892b173f1dc7e198648672784bfd221ecb35741f93dab98248399544a50",
+    "units": "m",
+    "native_units": "mm",
+    "native_to_model": [
+      [
+        0.001,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        -0.001,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        -0.001,
+        0.05
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "dimensions": [
+      0.07,
+      0.08,
+      0.08
+    ],
+    "mass": 0.4,
+    "mass_source": "simulation assumption; physical mass not provided",
+    "volume": 0.00030519150768421326,
+    "center_of_mass": [
+      2.1068807266006854e-10,
+      -1.0757294501802628e-10,
+      0.029136860306641105
+    ],
+    "inertia": [
+      [
+        0.0003365051036290376,
+        1.0123428372612715e-12,
+        -1.6718901799013274e-12
+      ],
+      [
+        1.0123428372612715e-12,
+        0.00031196241038509986,
+        8.590086059303207e-13
+      ],
+      [
+        -1.6718901799013274e-12,
+        8.590086059303207e-13,
+        0.0003592565750594821
+      ]
+    ],
+    "handle_center": [
+      0,
+      0,
+      0.074
+    ],
+    "handle_bar_size": [
+      0.07,
+      0.026,
+      0.012
+    ],
+    "collision": [
+      {
+        "kind": "mesh",
+        "file": "assets/meshes/battery_body_collision.stl",
+        "xyz": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "kind": "box",
+        "size": [
+          0.01,
+          0.026,
+          0.02
+        ],
+        "xyz": [
+          -0.03,
+          0,
+          0.06
+        ]
+      },
+      {
+        "kind": "box",
+        "size": [
+          0.01,
+          0.026,
+          0.02
+        ],
+        "xyz": [
+          0.03,
+          0,
+          0.06
+        ]
+      },
+      {
+        "kind": "box",
+        "size": [
+          0.07,
+          0.026,
+          0.012
+        ],
+        "xyz": [
+          0,
+          0,
+          0.074
+        ]
+      }
+    ],
+    "faces": 16612
+  },
+  "initial_objects": {
+    "A": [
+      0.345577792,
+      0.214778535,
+      0.651
+    ],
+    "B": [
+      0.345577792,
+      0.135593295,
+      0.651
+    ],
+    "C": [
+      0.257831942,
+      0.214778535,
+      0.651
+    ],
+    "D": [
+      0.257831942,
+      0.135593295,
+      0.651
+    ]
+  },
+  "yaw": 1.5707963267948966,
+  "initial_joints": {
+    "shoulder_joint": 0.0,
+    "upperArm_joint": 0.35,
+    "foreArm_joint": 1.3,
+    "wrist1_joint": -0.35,
+    "wrist2_joint": 1.57,
+    "wrist3_joint": 0.0
+  },
+  "targets": {
+    "T0": [
+      0.299848413,
+      -0.115038402,
+      0.65
+    ]
+  },
+  "assumptions": {
+    "battery_mass_kg": 0.4,
+    "battery_friction": 0.8,
+    "joint_acceleration_jerk": "simulation commissioning limits, not certified AUBO specifications",
+    "tool": "passive_hook_v1; contact dynamics only, no attachment constraint",
+    "perception": "Gazebo ground truth, not camera recognition",
+    "arm_control": "Gazebo position servo; not motor torque validation",
+    "camera": "static overview camera; wrist camera not modeled"
+  },
+  "tool_mount_yaw_deg": 270.0,
+  "approach_backoff_m": {
+    "left": 0.045,
+    "right": 0.06
+  },
+  "delivery_direction": {
+    "left": [
+      0,
+      1
+    ],
+    "right": [
+      -1,
+      0
+    ]
+  },
+  "feedback_wall_timeout_s": 2.0,
+  "transport_tcp_z": 1.0,
+  "tool_type": "passive_hook_v1",
+  "simulation_only": true,
+  "tool_mass_kg_assumed": 0.25,
+  "base_world_z": 0.651,
+  "session_id": "b3a3054b7c96432198c6bca3ceb870fa",
+  "requested_order": "A"
+}

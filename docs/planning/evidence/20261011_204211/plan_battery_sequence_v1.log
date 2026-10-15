@@ -1,0 +1,13 @@
+[INFO] [launch]: All log files can be found below /tmp/aubo_s3_mock_logs/2026-10-11-20-42-57-032141-CJS-LAPTOP-64742
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [plan_battery_sequence-1]: process started with pid [64745]
+[plan_battery_sequence-1] [INFO] [1791769377.284572953] [moveit_704438056.moveit.ros.rdf_loader]: Loaded robot model in 0.00250038 seconds
+[plan_battery_sequence-1] [INFO] [1791769377.284674605] [moveit_704438056.moveit.core.robot_model]: Loading robot model 'aubo_robot'...
+[plan_battery_sequence-1] [INFO] [1791769377.291353424] [moveit_704438056.moveit.kinematics.kdl_kinematics_plugin]: Joint weights for group 'manipulator': 1 1 1 1 1 1
+[plan_battery_sequence-1] [INFO] [1791769377.305794303] [moveit_704438056.moveit.ros.move_group_interface]: Ready to take commands for planning group manipulator.
+[plan_battery_sequence-1] [INFO] [1791769377.317772377] [mtc_plan_battery_sequence]: planning scene: 1 static obstacle(s) applied
+[plan_battery_sequence-1] [INFO] [1791769377.864722722] [mtc_plan_battery_sequence]: [ACQUIRE] ok=false code=200 [EXCEEDS_STATE_WATCHDOG] side_insert: trajectory lasts 39.5916 s, more than 80% of the MOVE_PRE_ALIGN watchdog (30 s)
+[plan_battery_sequence-1] [INFO] [1791769377.864783716] [mtc_plan_battery_sequence]:   side_insert   FREE_SPACE joint_interpolated_ik           ok=false plan=0.510s dur=39.59s pts=99 scale=4.08 v=0.016m/s w=0.098rad/s watchdog=30s EXCEEDS_STATE_WATCHDOG: trajectory lasts 39.5916 s, more than 80% of the MOVE_PRE_ALIGN watchdog (30 s)
+[plan_battery_sequence-1] [INFO] [1791769377.864794518] [mtc_plan_battery_sequence]:       backend: straight line rejected (fraction=0.505556, max_joint_step=0.032000 rad); ik candidates=6 est_s/span_rad=[39.59/2.786(seed_grid), 42.07/3.497(seed_grid), 123.1/3.448(seed_grid), 142.2/5.928(seed_grid), 154.3/5.928(seed_grid), 180.4/7.038(continuation)]; ik+rank 0.4363 s (rank 0.1375 s); chosen est 39.59 s, span 2.786 rad (seed_grid); ok
+[plan_battery_sequence-1] [INFO] [1791769377.865017267] [mtc_plan_battery_sequence]: SEQUENCE PLAN FAILED -> /home/operator/meituan/meituan_challenge_ws/docs/planning/evidence/20261011_204211/battery_sequence_passive_hook_v1_T0_20261011_204257.yaml
+[ERROR] [plan_battery_sequence-1]: process has died [pid 64745, exit code 1, cmd '/home/operator/meituan/meituan_challenge_ws/install/planner_r3/mtc_moveit_planner/lib/mtc_moveit_planner/plan_battery_sequence --ros-args --params-file /tmp/launch_params_kvdocetj --params-file /home/operator/meituan/meituan_challenge_ws/install/planner_r3/mtc_moveit_planner/share/mtc_moveit_planner/config/planner.yaml --params-file /tmp/launch_params_vbuptkca'].

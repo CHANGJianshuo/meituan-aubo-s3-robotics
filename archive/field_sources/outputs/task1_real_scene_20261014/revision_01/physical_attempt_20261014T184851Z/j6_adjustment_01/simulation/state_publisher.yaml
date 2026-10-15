@@ -1,0 +1,193 @@
+/**:
+  ros__parameters:
+    robot_description: "<?xml version='1.0' encoding='utf-8'?>\n<robot name=\"aubo_robot\"\
+      >\n  <link name=\"base_link\">\n    <inertial>\n      <origin xyz=\"-1.4795E-13\
+      \ 0.0015384 0.020951\" rpy=\"0 0 0\" />\n      <mass value=\"0.83419\" />\n\
+      \      <inertia ixx=\"0.0014414\" ixy=\"7.8809E-15\" ixz=\"8.5328E-16\" iyy=\"\
+      0.0013542\" iyz=\"-1.4364E-05\" izz=\"0.0024659\" />\n    </inertial>\n    <visual>\n\
+      \      <origin xyz=\"0 0 0\" rpy=\"0 0 0\" />\n      <geometry>\n        <mesh\
+      \ filename=\"file:///home/operator/meituan/meituan_challenge_ws/install/v1_sim/mtc_simulation/share/mtc_simulation/assets/meshes/aubo_S3/visual/link0.DAE\"\
+      \ />\n      </geometry>\n      <material name=\"\">\n        <color rgba=\"\
+      1 1 1 1\" />\n      </material>\n    </visual>\n    <collision>\n      <origin\
+      \ xyz=\"0 0 0\" rpy=\"0 0 0\" />\n      <geometry>\n        <mesh filename=\"\
+      file:///home/operator/meituan/meituan_challenge_ws/install/v1_sim/mtc_simulation/share/mtc_simulation/assets/meshes/aubo_S3/collision/link0.STL\"\
+      \ />\n      </geometry>\n    </collision>\n  </link>\n  <link name=\"shoulder_Link\"\
+      >\n    <inertial>\n      <origin xyz=\"0.00006553 0.00225024 -0.06268722\" rpy=\"\
+      0 0 0\" />\n      <mass value=\"1.99730902\" />\n      <inertia ixx=\"0.00360913\"\
+      \ ixy=\"0.00000248\" ixz=\"-0.00000248\" iyy=\"0.0034589\" iyz=\"-0.00030944\"\
+      \ izz=\"0.00197495\" />\n    </inertial>\n    <visual>\n      <origin xyz=\"\
+      0 0 0\" rpy=\"0 0 0\" />\n      <geometry>\n        <mesh filename=\"file:///home/operator/meituan/meituan_challenge_ws/install/v1_sim/mtc_simulation/share/mtc_simulation/assets/meshes/aubo_S3/visual/link1.DAE\"\
+      \ />\n      </geometry>\n      <material name=\"\">\n        <color rgba=\"\
+      1 1 1 1\" />\n      </material>\n    </visual>\n    <collision>\n      <origin\
+      \ xyz=\"0 0 0\" rpy=\"0 0 0\" />\n      <geometry>\n        <mesh filename=\"\
+      file:///home/operator/meituan/meituan_challenge_ws/install/v1_sim/mtc_simulation/share/mtc_simulation/assets/meshes/aubo_S3/collision/link1.STL\"\
+      \ />\n      </geometry>\n    </collision>\n  </link>\n  <joint name=\"shoulder_joint\"\
+      \ type=\"revolute\">\n    <origin xyz=\"-9.9315298090227937e-13 -1.0745262336493821e-12\
+      \ 0.15748023781635309\" rpy=\"3.3570923818615483e-12 -1.1768364061026659e-13\
+      \ -3.1415891970446577\" />\n    <parent link=\"base_link\" />\n    <child link=\"\
+      shoulder_Link\" />\n    <axis xyz=\"0 0 1\" />\n    <limit lower=\"-6.239552075879728\"\
+      \ upper=\"6.239552075879728\" effort=\"49\" velocity=\"2.5964\" />\n    <dynamics\
+      \ damping=\".025\" friction=\"0\" />\n  </joint>\n  <link name=\"upperArm_Link\"\
+      >\n    <inertial>\n      <origin xyz=\"0.1215199 -0.00148523 -0.02613124\" rpy=\"\
+      0 0 0\" />\n      <mass value=\"3.7584646\" />\n      <inertia ixx=\"0.00503071\"\
+      \ ixy=\"0.00063677\" ixz=\"-0.00216371\" iyy=\"0.06710456\" iyz=\"0.00003992\"\
+      \ izz=\"0.06547308\" />\n    </inertial>\n    <visual>\n      <origin xyz=\"\
+      0 0 0\" rpy=\"0 0 0\" />\n      <geometry>\n        <mesh filename=\"file:///home/operator/meituan/meituan_challenge_ws/install/v1_sim/mtc_simulation/share/mtc_simulation/assets/meshes/aubo_S3/visual/link2.DAE\"\
+      \ />\n      </geometry>\n      <material name=\"\">\n        <color rgba=\"\
+      1 1 1 1\" />\n      </material>\n    </visual>\n    <collision>\n      <origin\
+      \ xyz=\"0 0 0\" rpy=\"0 0 0\" />\n      <geometry>\n        <mesh filename=\"\
+      file:///home/operator/meituan/meituan_challenge_ws/install/v1_sim/mtc_simulation/share/mtc_simulation/assets/meshes/aubo_S3/collision/link2.STL\"\
+      \ />\n      </geometry>\n    </collision>\n  </link>\n  <joint name=\"upperArm_joint\"\
+      \ type=\"revolute\">\n    <origin xyz=\"0.00013955686492856173 0.13217526616703046\
+      \ -0.00021970237061885262\" rpy=\"-3.1337429532109429 -1.5674713743520383 1.5629431264796603\"\
+      \ />\n    <parent link=\"shoulder_Link\" />\n    <child link=\"upperArm_Link\"\
+      \ />\n    <axis xyz=\"0 0 1\" />\n    <limit lower=\"-3.097959422289935\" upper=\"\
+      3.097959422289935\" effort=\"49\" velocity=\"2.5964\" />\n    <dynamics damping=\"\
+      .025\" friction=\"0\" />\n  </joint>\n  <link name=\"foreArm_Link\">\n    <inertial>\n\
+      \      <origin xyz=\"0.1718233 0.001602 0.09177125\" rpy=\"0 0 0\" />\n    \
+      \  <mass value=\"1.66653267\" />\n      <inertia ixx=\"0.00187085\" ixy=\"-0.00010669\"\
+      \ ixz=\"0.00091847\" iyy=\"0.0149741\" iyz=\"0.000012\" izz=\"0.01449639\" />\n\
+      \    </inertial>\n    <visual>\n      <origin xyz=\"0 0 0\" rpy=\"0 0 0\" />\n\
+      \      <geometry>\n        <mesh filename=\"file:///home/operator/meituan/meituan_challenge_ws/install/v1_sim/mtc_simulation/share/mtc_simulation/assets/meshes/aubo_S3/visual/link3.DAE\"\
+      \ />\n      </geometry>\n      <material name=\"\">\n        <color rgba=\"\
+      1 1 1 1\" />\n      </material>\n    </visual>\n    <collision>\n      <origin\
+      \ xyz=\"0 0 0\" rpy=\"0 0 0\" />\n      <geometry>\n        <mesh filename=\"\
+      file:///home/operator/meituan/meituan_challenge_ws/install/v1_sim/mtc_simulation/share/mtc_simulation/assets/meshes/aubo_S3/collision/link3.STL\"\
+      \ />\n      </geometry>\n    </collision>\n  </link>\n  <joint name=\"foreArm_joint\"\
+      \ type=\"revolute\">\n    <origin xyz=\"0.2828751999109767 -7.7220105171354955e-06\
+      \ -0.00032521749103647454\" rpy=\"3.1409957535813469 2.7052264872651222e-08\
+      \ 1.9221302303140675e-05\" />\n    <parent link=\"upperArm_Link\" />\n    <child\
+      \ link=\"foreArm_Link\" />\n    <axis xyz=\"0 0 1\" />\n    <limit lower=\"\
+      -2.8361599358143996\" upper=\"2.8361599358143996\" effort=\"39\" velocity=\"\
+      2.5964\" />\n    <dynamics damping=\".025\" friction=\"0\" />\n  </joint>\n\
+      \  <link name=\"wrist1_Link\">\n    <inertial>\n      <origin xyz=\"0.04327757\
+      \ -0.0004601 -0.00286449\" rpy=\"0 0 0\" />\n      <mass value=\"1.06823262\"\
+      \ />\n      <inertia ixx=\"0.0007838\" ixy=\"0.0000072\" ixz=\"-0.00012333\"\
+      \ iyy=\"0.00143101\" iyz=\"0.00000247\" izz=\"0.00136502\" />\n    </inertial>\n\
+      \    <visual>\n      <origin xyz=\"0 0 0\" rpy=\"0 0 0\" />\n      <geometry>\n\
+      \        <mesh filename=\"file:///home/operator/meituan/meituan_challenge_ws/install/v1_sim/mtc_simulation/share/mtc_simulation/assets/meshes/aubo_S3/visual/link4.DAE\"\
+      \ />\n      </geometry>\n      <material name=\"\">\n        <color rgba=\"\
+      1 1 1 1\" />\n      </material>\n    </visual>\n    <collision>\n      <origin\
+      \ xyz=\"0 0 0\" rpy=\"0 0 0\" />\n      <geometry>\n        <mesh filename=\"\
+      file:///home/operator/meituan/meituan_challenge_ws/install/v1_sim/mtc_simulation/share/mtc_simulation/assets/meshes/aubo_S3/collision/link4.STL\"\
+      \ />\n      </geometry>\n    </collision>\n  </link>\n  <joint name=\"wrist1_joint\"\
+      \ type=\"revolute\">\n    <origin xyz=\"0.23698899974635293 1.0134007938284986e-05\
+      \ 0.00032519567563159751\" rpy=\"-3.1415924910367248 -0.00074699997242277938\
+      \ 1.5706240160848837\" />\n    <parent link=\"foreArm_Link\" />\n    <child\
+      \ link=\"wrist1_Link\" />\n    <axis xyz=\"0 0 1\" />\n    <limit lower=\"-6.239552075879728\"\
+      \ upper=\"6.239552075879728\" effort=\"9.8\" velocity=\"3.1105\" />\n    <dynamics\
+      \ damping=\".025\" friction=\"0\" />\n  </joint>\n  <link name=\"wrist2_Link\"\
+      >\n    <inertial>\n      <origin xyz=\"0 -0.04328001 -0.00286674\" rpy=\"0 0\
+      \ 0\" />\n      <mass value=\"1.06823262\" />\n      <inertia ixx=\"0.00143109\"\
+      \ ixy=\"-0.00000032\" ixz=\"0.00000116\" iyy=\"0.00078372\" iyz=\"0.00012335\"\
+      \ izz=\"0.00136502\" />\n    </inertial>\n    <visual>\n      <origin xyz=\"\
+      0 0 0\" rpy=\"0 0 0\" />\n      <geometry>\n        <mesh filename=\"file:///home/operator/meituan/meituan_challenge_ws/install/v1_sim/mtc_simulation/share/mtc_simulation/assets/meshes/aubo_S3/visual/link5.DAE\"\
+      \ />\n      </geometry>\n      <material name=\"\">\n        <color rgba=\"\
+      1 1 1 1\" />\n      </material>\n    </visual>\n    <collision>\n      <origin\
+      \ xyz=\"0 0 0\" rpy=\"0 0 0\" />\n      <geometry>\n        <mesh filename=\"\
+      file:///home/operator/meituan/meituan_challenge_ws/install/v1_sim/mtc_simulation/share/mtc_simulation/assets/meshes/aubo_S3/collision/link5.STL\"\
+      \ />\n      </geometry>\n    </collision>\n  </link>\n  <joint name=\"wrist2_joint\"\
+      \ type=\"revolute\">\n    <origin xyz=\"-0.00026464813372227948 0.13027452648630447\
+      \ -0.0003239844652758423\" rpy=\"-1.5788929354435686 0.0026435793991725909 -0.0002390361375450567\"\
+      \ />\n    <parent link=\"wrist1_Link\" />\n    <child link=\"wrist2_Link\" />\n\
+      \    <axis xyz=\"0 0 1\" />\n    <limit lower=\"-6.239552075879728\" upper=\"\
+      6.239552075879728\" effort=\"9.8\" velocity=\"3.1105\" />\n    <dynamics damping=\"\
+      .025\" friction=\"0\" />\n  </joint>\n  <link name=\"wrist3_Link\">\n    <inertial>\n\
+      \      <origin xyz=\"0.0002383 0.0004129 -0.01884263\" rpy=\"0 0 0\" />\n  \
+      \    <mass value=\"0.21445068\" />\n      <inertia ixx=\"0.00013087\" ixy=\"\
+      0.00000109\" ixz=\"0.00000047\" iyy=\"0.00012864\" iyz=\"0.00000065\" izz=\"\
+      0.00017894\" />\n    </inertial>\n    <visual>\n      <origin xyz=\"0 0 0\"\
+      \ rpy=\"0 0 0\" />\n      <geometry>\n        <mesh filename=\"file:///home/operator/meituan/meituan_challenge_ws/install/v1_sim/mtc_simulation/share/mtc_simulation/assets/meshes/aubo_S3/visual/link6.DAE\"\
+      \ />\n      </geometry>\n      <material name=\"\">\n        <color rgba=\"\
+      1 1 1 1\" />\n      </material>\n    </visual>\n    <collision>\n      <origin\
+      \ xyz=\"0 0 0\" rpy=\"0 0 0\" />\n      <geometry>\n        <mesh filename=\"\
+      file:///home/operator/meituan/meituan_challenge_ws/install/v1_sim/mtc_simulation/share/mtc_simulation/assets/meshes/aubo_S3/collision/link6.STL\"\
+      \ />\n      </geometry>\n    </collision>\n  </link>\n  <joint name=\"wrist3_joint\"\
+      \ type=\"revolute\">\n    <origin xyz=\"0.0011299767854314803 -0.12370230245155997\
+      \ 0.00027485540130302316\" rpy=\"1.5750462068762947 2.4644730700629225e-12 -0.0026436660489038699\"\
+      \ />\n    <parent link=\"wrist2_Link\" />\n    <child link=\"wrist3_Link\" />\n\
+      \    <axis xyz=\"0 0 1\" />\n    <limit lower=\"-6.239552075879728\" upper=\"\
+      6.239552075879728\" effort=\"9.8\" velocity=\"3.1105\" />\n    <dynamics damping=\"\
+      .025\" friction=\"0\" />\n  </joint>\n  <link name=\"world\" />\n  <joint name=\"\
+      world_mount\" type=\"fixed\">\n    <parent link=\"world\" />\n    <child link=\"\
+      base_link\" />\n    <origin xyz=\"0 0 0.0\" />\n  </joint>\n  <link name=\"\
+      ee_link\" />\n  <joint name=\"ee_fixed\" type=\"fixed\">\n    <parent link=\"\
+      wrist3_Link\" />\n    <child link=\"ee_link\" />\n    <origin rpy=\"0 0 1.5707963267948966\"\
+      \ />\n  </joint>\n  <link name=\"v1_hook\">\n    <inertial>\n      <origin xyz=\"\
+      .015 0 .060\" />\n      <mass value=\"0.25\" />\n      <inertia ixx=\"0.0005\"\
+      \ iyy=\"0.0005\" izz=\"0.0002\" ixy=\"0\" ixz=\"0\" iyz=\"0\" />\n    </inertial>\n\
+      \    <visual name=\"v1_disc_visual\">\n      <origin xyz=\"0 0 .0005\" />\n\
+      \      <geometry>\n        <cylinder radius=\".0375\" length=\".015\" />\n \
+      \     </geometry>\n      <material name=\"steel\">\n        <color rgba=\".75\
+      \ .77 .80 1\" />\n      </material>\n    </visual>\n    <collision name=\"v1_disc_collision\"\
+      >\n      <origin xyz=\"0 0 .0005\" />\n      <geometry>\n        <cylinder radius=\"\
+      .0375\" length=\".015\" />\n      </geometry>\n    </collision>\n    <visual\
+      \ name=\"v1_stem_visual\">\n      <origin xyz=\"0 0 .058\" />\n      <geometry>\n\
+      \        <box size=\".020 .030 .100\" />\n      </geometry>\n      <material\
+      \ name=\"steel\">\n        <color rgba=\".75 .77 .80 1\" />\n      </material>\n\
+      \    </visual>\n    <collision name=\"v1_stem_collision\">\n      <origin xyz=\"\
+      0 0 .058\" />\n      <geometry>\n        <box size=\".020 .030 .100\" />\n \
+      \     </geometry>\n    </collision>\n    <visual name=\"v1_tongue_visual\">\n\
+      \      <origin xyz=\".0325 0 .1105\" />\n      <geometry>\n        <box size=\"\
+      .085 .044 .005\" />\n      </geometry>\n      <material name=\"steel\">\n  \
+      \      <color rgba=\".75 .77 .80 1\" />\n      </material>\n    </visual>\n\
+      \    <collision name=\"v1_tongue_collision\">\n      <origin xyz=\".0325 0 .1105\"\
+      \ />\n      <geometry>\n        <box size=\".085 .044 .005\" />\n      </geometry>\n\
+      \    </collision>\n    <visual name=\"v1_lip_visual\">\n      <origin xyz=\"\
+      .0725 0 .1055\" />\n      <geometry>\n        <box size=\".005 .044 .005\" />\n\
+      \      </geometry>\n      <material name=\"steel\">\n        <color rgba=\"\
+      .75 .77 .80 1\" />\n      </material>\n    </visual>\n    <collision name=\"\
+      v1_lip_collision\">\n      <origin xyz=\".0725 0 .1055\" />\n      <geometry>\n\
+      \        <box size=\".005 .044 .005\" />\n      </geometry>\n    </collision>\n\
+      \  </link>\n  <joint name=\"v1_mount\" type=\"fixed\">\n    <parent link=\"\
+      ee_link\" />\n    <child link=\"v1_hook\" />\n    <origin rpy=\"0 0 0.0\" />\n\
+      \  </joint>\n  <link name=\"tcp\">\n    <inertial>\n      <mass value=\".001\"\
+      \ />\n      <inertia ixx=\"1e-8\" iyy=\"1e-8\" izz=\"1e-8\" ixy=\"0\" ixz=\"\
+      0\" iyz=\"0\" />\n    </inertial>\n  </link>\n  <joint name=\"tcp_joint\" type=\"\
+      fixed\">\n    <parent link=\"v1_hook\" />\n    <child link=\"tcp\" />\n    <origin\
+      \ xyz=\".045 0 .1105\" rpy=\"0 1.5707963267948966 0\" />\n  </joint>\n  <gazebo\
+      \ reference=\"v1_mount\">\n    <preserveFixedJoint>true</preserveFixedJoint>\n\
+      \  </gazebo>\n  <gazebo reference=\"tcp_joint\">\n    <preserveFixedJoint>true</preserveFixedJoint>\n\
+      \  </gazebo>\n  <gazebo reference=\"v1_hook\">\n    <mu1>0.8</mu1>\n    <mu2>0.8</mu2>\n\
+      \  </gazebo>\n  <gazebo>\n    <self_collide>true</self_collide>\n  </gazebo>\n\
+      \  <ros2_control name=\"V1GazeboSystem\" type=\"system\">\n    <hardware>\n\
+      \      <plugin>gz_ros2_control/GazeboSimSystem</plugin>\n    </hardware>\n \
+      \   <joint name=\"shoulder_joint\">\n      <command_interface name=\"position\"\
+      >\n        <param name=\"min\">-6.239552075879728</param>\n        <param name=\"\
+      max\">6.239552075879728</param>\n      </command_interface>\n      <state_interface\
+      \ name=\"position\">\n        <param name=\"initial_value\">0.7876473627276855</param>\n\
+      \      </state_interface>\n      <state_interface name=\"velocity\" />\n   \
+      \   <state_interface name=\"effort\" />\n    </joint>\n    <joint name=\"upperArm_joint\"\
+      >\n      <command_interface name=\"position\">\n        <param name=\"min\"\
+      >-3.097959422289935</param>\n        <param name=\"max\">3.097959422289935</param>\n\
+      \      </command_interface>\n      <state_interface name=\"position\">\n   \
+      \     <param name=\"initial_value\">-0.6022120951841299</param>\n      </state_interface>\n\
+      \      <state_interface name=\"velocity\" />\n      <state_interface name=\"\
+      effort\" />\n    </joint>\n    <joint name=\"foreArm_joint\">\n      <command_interface\
+      \ name=\"position\">\n        <param name=\"min\">-2.8361599358143996</param>\n\
+      \        <param name=\"max\">2.8361599358143996</param>\n      </command_interface>\n\
+      \      <state_interface name=\"position\">\n        <param name=\"initial_value\"\
+      >1.5940438056353035</param>\n      </state_interface>\n      <state_interface\
+      \ name=\"velocity\" />\n      <state_interface name=\"effort\" />\n    </joint>\n\
+      \    <joint name=\"wrist1_joint\">\n      <command_interface name=\"position\"\
+      >\n        <param name=\"min\">-6.239552075879728</param>\n        <param name=\"\
+      max\">6.239552075879728</param>\n      </command_interface>\n      <state_interface\
+      \ name=\"position\">\n        <param name=\"initial_value\">0.6296761037152374</param>\n\
+      \      </state_interface>\n      <state_interface name=\"velocity\" />\n   \
+      \   <state_interface name=\"effort\" />\n    </joint>\n    <joint name=\"wrist2_joint\"\
+      >\n      <command_interface name=\"position\">\n        <param name=\"min\"\
+      >-6.239552075879728</param>\n        <param name=\"max\">6.239552075879728</param>\n\
+      \      </command_interface>\n      <state_interface name=\"position\">\n   \
+      \     <param name=\"initial_value\">1.5672317389390473</param>\n      </state_interface>\n\
+      \      <state_interface name=\"velocity\" />\n      <state_interface name=\"\
+      effort\" />\n    </joint>\n    <joint name=\"wrist3_joint\">\n      <command_interface\
+      \ name=\"position\">\n        <param name=\"min\">-6.239552075879728</param>\n\
+      \        <param name=\"max\">6.239552075879728</param>\n      </command_interface>\n\
+      \      <state_interface name=\"position\">\n        <param name=\"initial_value\"\
+      >-2.4114714878838037</param>\n      </state_interface>\n      <state_interface\
+      \ name=\"velocity\" />\n      <state_interface name=\"effort\" />\n    </joint>\n\
+      \  </ros2_control>\n  <gazebo>\n    <plugin filename=\"gz_ros2_control-system\"\
+      \ name=\"gz_ros2_control::GazeboSimROS2ControlPlugin\">\n      <parameters>/home/operator/meituan/meituan_challenge_ws/outputs/task1_real_scene_20261014/revision_01/physical_attempt_20261014T184851Z/j6_adjustment_01/simulation/controllers.yaml</parameters>\n\
+      \      <position_proportional_gain>0.5</position_proportional_gain>\n    </plugin>\n\
+      \  </gazebo>\n</robot>"
+    use_sim_time: true

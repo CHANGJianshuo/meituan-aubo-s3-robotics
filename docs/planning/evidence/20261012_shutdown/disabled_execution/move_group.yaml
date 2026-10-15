@@ -1,0 +1,307 @@
+/**:
+  ros__parameters:
+    allow_trajectory_execution: false
+    controller_names:
+    - joint_trajectory_controller
+    default_planning_pipeline: ompl
+    joint_trajectory_controller.action_ns: follow_joint_trajectory
+    joint_trajectory_controller.default: true
+    joint_trajectory_controller.joints:
+    - shoulder_joint
+    - foreArm_joint
+    - upperArm_joint
+    - wrist1_joint
+    - wrist2_joint
+    - wrist3_joint
+    joint_trajectory_controller.type: FollowJointTrajectory
+    moveit_controller_manager: moveit_simple_controller_manager/MoveItSimpleControllerManager
+    moveit_manage_controllers: false
+    moveit_simple_controller_manager.controller_names:
+    - joint_trajectory_controller
+    moveit_simple_controller_manager.joint_trajectory_controller.action_ns: follow_joint_trajectory
+    moveit_simple_controller_manager.joint_trajectory_controller.default: true
+    moveit_simple_controller_manager.joint_trajectory_controller.joints:
+    - shoulder_joint
+    - foreArm_joint
+    - upperArm_joint
+    - wrist1_joint
+    - wrist2_joint
+    - wrist3_joint
+    moveit_simple_controller_manager.joint_trajectory_controller.type: FollowJointTrajectory
+    ompl.manipulator.longest_valid_segment_fraction: 0.01
+    ompl.manipulator.planner_configs:
+    - SBLkConfigDefault
+    - ESTkConfigDefault
+    - LBKPIECEkConfigDefault
+    - BKPIECEkConfigDefault
+    - KPIECEkConfigDefault
+    - RRTkConfigDefault
+    - RRTConnectkConfigDefault
+    - RRTstarkConfigDefault
+    - TRRTkConfigDefault
+    - PRMkConfigDefault
+    - PRMstarkConfigDefault
+    ompl.planner_configs.BKPIECEkConfigDefault.border_fraction: 0.9
+    ompl.planner_configs.BKPIECEkConfigDefault.failed_expansion_score_factor: 0.5
+    ompl.planner_configs.BKPIECEkConfigDefault.min_valid_path_fraction: 0.5
+    ompl.planner_configs.BKPIECEkConfigDefault.range: 0.0
+    ompl.planner_configs.BKPIECEkConfigDefault.type: geometric::BKPIECE
+    ompl.planner_configs.ESTkConfigDefault.goal_bias: 0.05
+    ompl.planner_configs.ESTkConfigDefault.range: 0.0
+    ompl.planner_configs.ESTkConfigDefault.type: geometric::EST
+    ompl.planner_configs.KPIECEkConfigDefault.border_fraction: 0.9
+    ompl.planner_configs.KPIECEkConfigDefault.failed_expansion_score_factor: 0.5
+    ompl.planner_configs.KPIECEkConfigDefault.goal_bias: 0.05
+    ompl.planner_configs.KPIECEkConfigDefault.min_valid_path_fraction: 0.5
+    ompl.planner_configs.KPIECEkConfigDefault.range: 0.0
+    ompl.planner_configs.KPIECEkConfigDefault.type: geometric::KPIECE
+    ompl.planner_configs.LBKPIECEkConfigDefault.border_fraction: 0.9
+    ompl.planner_configs.LBKPIECEkConfigDefault.min_valid_path_fraction: 0.5
+    ompl.planner_configs.LBKPIECEkConfigDefault.range: 0.0
+    ompl.planner_configs.LBKPIECEkConfigDefault.type: geometric::LBKPIECE
+    ompl.planner_configs.PRMkConfigDefault.max_nearest_neighbors: 10
+    ompl.planner_configs.PRMkConfigDefault.type: geometric::PRM
+    ompl.planner_configs.PRMstarkConfigDefault.type: geometric::PRMstar
+    ompl.planner_configs.RRTConnectkConfigDefault.range: 0.0
+    ompl.planner_configs.RRTConnectkConfigDefault.type: geometric::RRTConnect
+    ompl.planner_configs.RRTkConfigDefault.goal_bias: 0.05
+    ompl.planner_configs.RRTkConfigDefault.range: 0.0
+    ompl.planner_configs.RRTkConfigDefault.type: geometric::RRT
+    ompl.planner_configs.RRTstarkConfigDefault.delay_collision_checking: 1
+    ompl.planner_configs.RRTstarkConfigDefault.goal_bias: 0.05
+    ompl.planner_configs.RRTstarkConfigDefault.range: 0.0
+    ompl.planner_configs.RRTstarkConfigDefault.type: geometric::RRTstar
+    ompl.planner_configs.SBLkConfigDefault.range: 0.0
+    ompl.planner_configs.SBLkConfigDefault.type: geometric::SBL
+    ompl.planner_configs.TRRTkConfigDefault.frountierNodeRatio: 0.1
+    ompl.planner_configs.TRRTkConfigDefault.frountier_threshold: 0.0
+    ompl.planner_configs.TRRTkConfigDefault.goal_bias: 0.05
+    ompl.planner_configs.TRRTkConfigDefault.init_temperature: 10e-6
+    ompl.planner_configs.TRRTkConfigDefault.k_constant: 0.0
+    ompl.planner_configs.TRRTkConfigDefault.max_states_failed: 10
+    ompl.planner_configs.TRRTkConfigDefault.min_temperature: 10e-10
+    ompl.planner_configs.TRRTkConfigDefault.range: 0.0
+    ompl.planner_configs.TRRTkConfigDefault.temp_change_factor: 2.0
+    ompl.planner_configs.TRRTkConfigDefault.type: geometric::TRRT
+    ompl.planning_plugins:
+    - ompl_interface/OMPLPlanner
+    ompl.request_adapters:
+    - default_planning_request_adapters/ResolveConstraintFrames
+    - default_planning_request_adapters/ValidateWorkspaceBounds
+    - default_planning_request_adapters/CheckStartStateBounds
+    - default_planning_request_adapters/CheckStartStateCollision
+    ompl.response_adapters:
+    - default_planning_response_adapters/AddTimeOptimalParameterization
+    - default_planning_response_adapters/ValidateSolution
+    - default_planning_response_adapters/DisplayMotionPath
+    planning_pipelines:
+    - ompl
+    planning_scene_monitor_options.wait_for_initial_state_timeout: 0.0
+    publish_geometry_updates: true
+    publish_planning_scene: true
+    publish_robot_description: false
+    publish_robot_description_semantic: false
+    publish_state_updates: true
+    publish_transforms_updates: true
+    robot_description: <?xml version="1.0" ?><!-- ===================================================================================
+      --><!-- |    This document was autogenerated by xacro from /home/operator/meituan/aubo_s3_mock_ws/install_no_symlink/aubo_description/share/aubo_description/urdf/xacro/inc/aubo_ros2.xacro
+      | --><!-- |    EDITING THIS FILE BY HAND IS NOT RECOMMENDED                                 |
+      --><!-- ===================================================================================
+      --><robot name="aubo_robot"><dh_type type="modified"/><safety_para singularity_consistent="0.02
+      0.01 10 0.2 0.045 10"/><render_settings ambient_light_color="0xffffff" ambient_light_intensity="0.7"
+      directional_light_color="0xffffff" directional_light_intensity="0.3"/><link
+      name="base_link"><inertial><origin rpy="0 0 0" xyz="-1.4795E-13 0.0015384 0.020951"/><mass
+      value="0.83419"/><inertia ixx="0.0014414" ixy="7.8809E-15" ixz="8.5328E-16"
+      iyy="0.0013542" iyz="-1.4364E-05" izz="0.0024659"/></inertial><visual><origin
+      rpy="0 0 0" xyz="0 0 0"/><geometry><mesh filename="package://aubo_description/meshes/aubo_S3/visual/link0.DAE"/></geometry><material
+      name=""><color rgba="1 1 1 1"/></material></visual><collision><origin rpy="0
+      0 0" xyz="0 0 0"/><geometry><mesh filename="package://aubo_description/meshes/aubo_S3/collision/link0.STL"/></geometry></collision></link><link
+      name="shoulder_Link"><inertial><origin rpy="0 0 0" xyz="0.00006553 0.00225024
+      -0.06268722"/><mass value="1.99730902"/><inertia ixx="0.00360913" ixy="0.00000248"
+      ixz="-0.00000248" iyy="0.0034589" iyz="-0.00030944" izz="0.00197495"/></inertial><visual><origin
+      rpy="0 0 0" xyz="0 0 0"/><geometry><mesh filename="package://aubo_description/meshes/aubo_S3/visual/link1.DAE"/></geometry><material
+      name=""><color rgba="1 1 1 1"/></material></visual><collision><origin rpy="0
+      0 0" xyz="0 0 0"/><geometry><mesh filename="package://aubo_description/meshes/aubo_S3/collision/link1.STL"/></geometry></collision></link><joint
+      name="shoulder_joint" type="revolute"><origin rpy="0 0 3.1415926535897932384626433832795"
+      xyz="0 0 0.1577"/><parent link="base_link"/><child link="shoulder_Link"/><axis
+      xyz="0 0 1"/><limit effort="49" lower="-6.283185307179586476925286766559" start_stop="82"
+      upper="6.283185307179586476925286766559" velocity="2.5964"/></joint><link name="upperArm_Link"><inertial><origin
+      rpy="0 0 0" xyz="0.1215199 -0.00148523 -0.02613124"/><mass value="3.7584646"/><inertia
+      ixx="0.00503071" ixy="0.00063677" ixz="-0.00216371" iyy="0.06710456" iyz="0.00003992"
+      izz="0.06547308"/></inertial><visual><origin rpy="0 0 0" xyz="0 0 0"/><geometry><mesh
+      filename="package://aubo_description/meshes/aubo_S3/visual/link2.DAE"/></geometry><material
+      name=""><color rgba="1 1 1 1"/></material></visual><collision><origin rpy="0
+      0 0" xyz="0 0 0"/><geometry><mesh filename="package://aubo_description/meshes/aubo_S3/collision/link2.STL"/></geometry></collision></link><joint
+      name="upperArm_joint" type="revolute"><origin rpy="-1.5707963267948966192313216916398
+      -1.5707963267948966192313216916398 0" xyz="0 0.1325 0"/><parent link="shoulder_Link"/><child
+      link="upperArm_Link"/><axis xyz="0 0 1"/><limit effort="49" lower="-3.1415926535897932384626433832795"
+      start_stop="82" upper="3.1415926535897932384626433832795" velocity="2.5964"/></joint><link
+      name="foreArm_Link"><inertial><origin rpy="0 0 0" xyz="0.1718233 0.001602 0.09177125"/><mass
+      value="1.66653267"/><inertia ixx="0.00187085" ixy="-0.00010669" ixz="0.00091847"
+      iyy="0.0149741" iyz="0.000012" izz="0.01449639"/></inertial><visual><origin
+      rpy="0 0 0" xyz="0 0 0"/><geometry><mesh filename="package://aubo_description/meshes/aubo_S3/visual/link3.DAE"/></geometry><material
+      name=""><color rgba="1 1 1 1"/></material></visual><collision><origin rpy="0
+      0 0" xyz="0 0 0"/><geometry><mesh filename="package://aubo_description/meshes/aubo_S3/collision/link3.STL"/></geometry></collision></link><joint
+      name="foreArm_joint" type="revolute"><origin rpy="-3.1415926535897932384626433832795
+      0 0" xyz="0.2835 0 0"/><parent link="upperArm_Link"/><child link="foreArm_Link"/><axis
+      xyz="0 0 1"/><limit effort="39" lower="-2.87979326579064" start_stop="54" upper="2.87979326579064"
+      velocity="2.5964"/></joint><link name="wrist1_Link"><inertial><origin rpy="0
+      0 0" xyz="0.04327757 -0.0004601 -0.00286449"/><mass value="1.06823262"/><inertia
+      ixx="0.0007838" ixy="0.0000072" ixz="-0.00012333" iyy="0.00143101" iyz="0.00000247"
+      izz="0.00136502"/></inertial><visual><origin rpy="0 0 0" xyz="0 0 0"/><geometry><mesh
+      filename="package://aubo_description/meshes/aubo_S3/visual/link4.DAE"/></geometry><material
+      name=""><color rgba="1 1 1 1"/></material></visual><collision><origin rpy="0
+      0 0" xyz="0 0 0"/><geometry><mesh filename="package://aubo_description/meshes/aubo_S3/collision/link4.STL"/></geometry></collision></link><joint
+      name="wrist1_joint" type="revolute"><origin rpy="3.1415926535897932384626433832795
+      0 1.5707963267948966192313216916398" xyz="0.236 0 0"/><parent link="foreArm_Link"/><child
+      link="wrist1_Link"/><axis xyz="0 0 1"/><limit effort="9.8" lower="-6.283185307179586476925286766559"
+      start_stop="17" upper="6.283185307179586476925286766559" velocity="3.1105"/></joint><link
+      name="wrist2_Link"><inertial><origin rpy="0 0 0" xyz="0 -0.04328001 -0.00286674"/><mass
+      value="1.06823262"/><inertia ixx="0.00143109" ixy="-0.00000032" ixz="0.00000116"
+      iyy="0.00078372" iyz="0.00012335" izz="0.00136502"/></inertial><visual><origin
+      rpy="0 0 0" xyz="0 0 0"/><geometry><mesh filename="package://aubo_description/meshes/aubo_S3/visual/link5.DAE"/></geometry><material
+      name=""><color rgba="1 1 1 1"/></material></visual><collision><origin rpy="0
+      0 0" xyz="0 0 0"/><geometry><mesh filename="package://aubo_description/meshes/aubo_S3/collision/link5.STL"/></geometry></collision></link><joint
+      name="wrist2_joint" type="revolute"><origin rpy="-1.5707963267948966192313216916398
+      0 0" xyz="0 0.130 0"/><parent link="wrist1_Link"/><child link="wrist2_Link"/><axis
+      xyz="0 0 1"/><limit effort="9.8" lower="-6.283185307179586476925286766559" start_stop="17"
+      upper="6.283185307179586476925286766559" velocity="3.1105"/></joint><link name="wrist3_Link"><inertial><origin
+      rpy="0 0 0" xyz="0.0002383 0.0004129 -0.01884263"/><mass value="0.21445068"/><inertia
+      ixx="0.00013087" ixy="0.00000109" ixz="0.00000047" iyy="0.00012864" iyz="0.00000065"
+      izz="0.00017894"/></inertial><visual><origin rpy="0 0 0" xyz="0 0 0"/><geometry><mesh
+      filename="package://aubo_description/meshes/aubo_S3/visual/link6.DAE"/></geometry><material
+      name=""><color rgba="1 1 1 1"/></material></visual><collision><origin rpy="0
+      0 0" xyz="0 0 0"/><geometry><mesh filename="package://aubo_description/meshes/aubo_S3/collision/link6.STL"/></geometry></collision></link><joint
+      name="wrist3_joint" type="revolute"><origin rpy="1.5707963267948966192313216916398
+      0 1.7907E-15" xyz="0 -0.1237 0"/><parent link="wrist2_Link"/><child link="wrist3_Link"/><axis
+      xyz="0 0 1"/><limit effort="9.8" lower="-6.283185307179586476925286766559" start_stop="17"
+      upper="6.283185307179586476925286766559" velocity="3.1105"/></joint><link name="world"/><joint
+      name="world_joint" type="fixed"><parent link="world"/><child link="base_link"/><origin
+      rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/></joint><joint name="ee_fixed_joint" type="fixed"><parent
+      link="wrist3_Link"/><child link="ee_link"/><origin rpy="0.0 0.0 1.5707963267948966"
+      xyz="0.0 0.0 0.0"/></joint><link name="ee_link"><collision><geometry><box size="0.01
+      0.01 0.01"/></geometry><origin rpy="0 0 0" xyz="-0.01 0 0"/></collision></link><transmission
+      name="shoulder_trans"><type>transmission_interface/SimpleTransmission</type><joint
+      name="shoulder_joint"><hardwareInterface></hardwareInterface></joint><actuator
+      name="shoulder_motor"><mechanicalReduction>1</mechanicalReduction></actuator></transmission><transmission
+      name="foreArm_trans"><type>transmission_interface/SimpleTransmission</type><joint
+      name="foreArm_joint"><hardwareInterface></hardwareInterface></joint><actuator
+      name="foreArm_motor"><mechanicalReduction>1</mechanicalReduction></actuator></transmission><transmission
+      name="upperArm_trans"><type>transmission_interface/SimpleTransmission</type><joint
+      name="upperArm_joint"><hardwareInterface></hardwareInterface></joint><actuator
+      name="upperArm_motor"><mechanicalReduction>1</mechanicalReduction></actuator></transmission><transmission
+      name="wrist1_trans"><type>transmission_interface/SimpleTransmission</type><joint
+      name="wrist1_joint"><hardwareInterface></hardwareInterface></joint><actuator
+      name="wrist1_motor"><mechanicalReduction>1</mechanicalReduction></actuator></transmission><transmission
+      name="wrist2_trans"><type>transmission_interface/SimpleTransmission</type><joint
+      name="wrist2_joint"><hardwareInterface></hardwareInterface></joint><actuator
+      name="wrist2_motor"><mechanicalReduction>1</mechanicalReduction></actuator></transmission><transmission
+      name="wrist3_trans"><type>transmission_interface/SimpleTransmission</type><joint
+      name="wrist3_joint"><hardwareInterface></hardwareInterface></joint><actuator
+      name="wrist3_motor"><mechanicalReduction>1</mechanicalReduction></actuator></transmission><gazebo
+      reference="shoulder_Link"><selfCollide>true</selfCollide></gazebo><gazebo reference="upperArm_Link"><selfCollide>true</selfCollide></gazebo><gazebo
+      reference="foreArm_Link"><selfCollide>true</selfCollide></gazebo><gazebo reference="wrist1_Link"><selfCollide>true</selfCollide></gazebo><gazebo
+      reference="wrist2_Link"><selfCollide>true</selfCollide></gazebo><gazebo reference="wrist3_Link"><selfCollide>true</selfCollide></gazebo><gazebo
+      reference="ee_link"><selfCollide>true</selfCollide></gazebo><gazebo><!-- plugin
+      name="ros_control" filename="libgazebo_ros_control.so"/ --></gazebo><ros2_control
+      name="auboHardwareInterface" type="system"><hardware><plugin>mock_components/GenericSystem</plugin><param
+      name="mock_sensor_commands">false</param><param name="position_state_following_offset">0.0</param></hardware><joint
+      name="shoulder_joint"><command_interface name="position"><param name="min">{-2*pi}</param><param
+      name="max">{2*pi}</param></command_interface><command_interface name="velocity"/><state_interface
+      name="position"><param name="initial_value">0.0</param></state_interface><state_interface
+      name="velocity"/></joint><joint name="upperArm_joint"><command_interface name="position"><param
+      name="min">{-2*pi}</param><param name="max">{2*pi}</param></command_interface><command_interface
+      name="velocity"/><state_interface name="position"><param name="initial_value">0.0</param></state_interface><state_interface
+      name="velocity"/></joint><joint name="foreArm_joint"><command_interface name="position"><param
+      name="min">-2.41</param><param name="max">2.41</param></command_interface><command_interface
+      name="velocity"/><state_interface name="position"><param name="initial_value">0.0</param></state_interface><state_interface
+      name="velocity"/></joint><joint name="wrist1_joint"><command_interface name="position"><param
+      name="min">-2.66</param><param name="max">2.66</param></command_interface><command_interface
+      name="velocity"/><state_interface name="position"><param name="initial_value">0.0</param></state_interface><state_interface
+      name="velocity"/></joint><joint name="wrist2_joint"><command_interface name="position"><param
+      name="min">{-2*pi}</param><param name="max">{2*pi}</param></command_interface><command_interface
+      name="velocity"/><state_interface name="position"><param name="initial_value">0.0</param></state_interface><state_interface
+      name="velocity"/></joint><joint name="wrist3_joint"><command_interface name="position"><param
+      name="min">-2.23</param><param name="max">2.23</param></command_interface><command_interface
+      name="velocity"/><state_interface name="position"><param name="initial_value">0.0</param></state_interface><state_interface
+      name="velocity"/></joint></ros2_control></robot>
+    robot_description_kinematics.manipulator.kinematics_solver: kdl_kinematics_plugin/KDLKinematicsPlugin
+    robot_description_kinematics.manipulator.kinematics_solver_attempts: 3
+    robot_description_kinematics.manipulator.kinematics_solver_search_resolution: 0.005
+    robot_description_kinematics.manipulator.kinematics_solver_timeout: 0.005
+    robot_description_planning.default_acceleration_scaling_factor: 0.1
+    robot_description_planning.default_velocity_scaling_factor: 1.0
+    robot_description_planning.joint_limits.foreArm_joint.has_acceleration_limits: true
+    robot_description_planning.joint_limits.foreArm_joint.has_velocity_limits: true
+    robot_description_planning.joint_limits.foreArm_joint.max_acceleration: 3.15
+    robot_description_planning.joint_limits.foreArm_joint.max_velocity: 3.15
+    robot_description_planning.joint_limits.shoulder_joint.has_acceleration_limits: true
+    robot_description_planning.joint_limits.shoulder_joint.has_velocity_limits: true
+    robot_description_planning.joint_limits.shoulder_joint.max_acceleration: 3.15
+    robot_description_planning.joint_limits.shoulder_joint.max_velocity: 3.15
+    robot_description_planning.joint_limits.upperArm_joint.has_acceleration_limits: true
+    robot_description_planning.joint_limits.upperArm_joint.has_velocity_limits: true
+    robot_description_planning.joint_limits.upperArm_joint.max_acceleration: 3.15
+    robot_description_planning.joint_limits.upperArm_joint.max_velocity: 3.15
+    robot_description_planning.joint_limits.wrist1_joint.has_acceleration_limits: true
+    robot_description_planning.joint_limits.wrist1_joint.has_velocity_limits: true
+    robot_description_planning.joint_limits.wrist1_joint.max_acceleration: 3.2
+    robot_description_planning.joint_limits.wrist1_joint.max_velocity: 3.2
+    robot_description_planning.joint_limits.wrist2_joint.has_acceleration_limits: true
+    robot_description_planning.joint_limits.wrist2_joint.has_velocity_limits: true
+    robot_description_planning.joint_limits.wrist2_joint.max_acceleration: 3.2
+    robot_description_planning.joint_limits.wrist2_joint.max_velocity: 3.2
+    robot_description_planning.joint_limits.wrist3_joint.has_acceleration_limits: true
+    robot_description_planning.joint_limits.wrist3_joint.has_velocity_limits: true
+    robot_description_planning.joint_limits.wrist3_joint.max_acceleration: 3.2
+    robot_description_planning.joint_limits.wrist3_joint.max_velocity: 3.2
+    robot_description_semantic: "<?xml version=\"1.0\" ?><!-- ===================================================================================\
+      \ --><!-- |    This document was autogenerated by xacro from /home/operator/meituan/aubo_s3_mock_ws/install_no_symlink/aubo_moveit_config/share/aubo_moveit_config/config/aubo_robot.srdf\
+      \ | --><!-- |    EDITING THIS FILE BY HAND IS NOT RECOMMENDED              \
+      \                   | --><!-- ===================================================================================\
+      \ --><!--This does not replace URDF, and is not an extension of URDF.\n    This\
+      \ is a format for representing semantic information about the robot structure.\n\
+      \    A URDF file must exist for this robot as well, where the joints and the\
+      \ links that are referenced are defined\n--><robot name=\"aubo_robot\"><!--GROUPS:\
+      \ Representation of a set of joints and links. This can be useful for specifying\
+      \ DOF to plan for, defining arms, end effectors, etc--><!--LINKS: When a link\
+      \ is specified, the parent joint of that link (if it exists) is automatically\
+      \ included--><!--JOINTS: When a joint is specified, the child link of that joint\
+      \ (which will always exist) is automatically included--><!--CHAINS: When a chain\
+      \ is specified, all the links along the chain (including endpoints) are included\
+      \ in the group. Additionally, all the joints that are parents to included links\
+      \ are also included. This means that joints along the chain and the parent joint\
+      \ of the base link are included in the group--><!--SUBGROUPS: Groups can also\
+      \ be formed by referencing to already defined group names--><group name=\"manipulator\"\
+      ><chain base_link=\"base_link\" tip_link=\"ee_link\"/></group><group name=\"\
+      endeffector\"><link name=\"ee_link\"/></group><!--GROUP STATES: Purpose: Define\
+      \ a named state for a particular group, in terms of joint values. This is useful\
+      \ to define states like 'folded arms'--><group_state group=\"manipulator\" name=\"\
+      up\"><joint name=\"foreArm_joint\" value=\"0\"/><joint name=\"shoulder_joint\"\
+      \ value=\"0\"/><joint name=\"upperArm_joint\" value=\"0\"/><joint name=\"wrist1_joint\"\
+      \ value=\"0\"/><joint name=\"wrist2_joint\" value=\"0\"/><joint name=\"wrist3_joint\"\
+      \ value=\"0\"/></group_state><group_state group=\"manipulator\" name=\"home\"\
+      ><joint name=\"foreArm_joint\" value=\"1.236\"/><joint name=\"shoulder_joint\"\
+      \ value=\"0\"/><joint name=\"upperArm_joint\" value=\"-0.0334\"/><joint name=\"\
+      wrist1_joint\" value=\"-0.3675\"/><joint name=\"wrist2_joint\" value=\"1.5701\"\
+      /><joint name=\"wrist3_joint\" value=\"0\"/></group_state><!--END EFFECTOR:\
+      \ Purpose: Represent information about an end effector.--><end_effector group=\"\
+      endeffector\" name=\"moveit_ee\" parent_link=\"ee_link\"/><!--VIRTUAL JOINT:\
+      \ Purpose: this element defines a virtual joint between a robot link and an\
+      \ external frame of reference (considered fixed with respect to the robot)--><virtual_joint\
+      \ child_link=\"base_link\" name=\"fixed_base\" parent_frame=\"world\" type=\"\
+      fixed\"/><!--DISABLE COLLISIONS: By default it is assumed that any link of the\
+      \ robot could potentially come into collision with any other link in the robot.\
+      \ This tag disables collision checking between a specified pair of links. --><disable_collisions\
+      \ link1=\"base_link\" link2=\"shoulder_Link\" reason=\"Adjacent\"/><disable_collisions\
+      \ link1=\"base_link\" link2=\"upperArm_Link\" reason=\"Never\"/><disable_collisions\
+      \ link1=\"ee_link\" link2=\"wrist1_Link\" reason=\"Never\"/><disable_collisions\
+      \ link1=\"ee_link\" link2=\"wrist2_Link\" reason=\"Never\"/><disable_collisions\
+      \ link1=\"ee_link\" link2=\"wrist3_Link\" reason=\"Adjacent\"/><disable_collisions\
+      \ link1=\"foreArm_Link\" link2=\"upperArm_Link\" reason=\"Adjacent\"/><disable_collisions\
+      \ link1=\"foreArm_Link\" link2=\"wrist1_Link\" reason=\"Adjacent\"/><disable_collisions\
+      \ link1=\"shoulder_Link\" link2=\"upperArm_Link\" reason=\"Adjacent\"/><disable_collisions\
+      \ link1=\"shoulder_Link\" link2=\"wrist1_Link\" reason=\"Never\"/><disable_collisions\
+      \ link1=\"wrist1_Link\" link2=\"wrist2_Link\" reason=\"Adjacent\"/><disable_collisions\
+      \ link1=\"wrist1_Link\" link2=\"wrist3_Link\" reason=\"Never\"/><disable_collisions\
+      \ link1=\"wrist2_Link\" link2=\"wrist3_Link\" reason=\"Adjacent\"/></robot>"

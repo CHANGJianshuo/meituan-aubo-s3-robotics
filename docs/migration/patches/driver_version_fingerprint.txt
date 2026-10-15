@@ -1,0 +1,20 @@
+# 官方 AUBO 驱动验证工作空间版本指纹
+# 采集时间: 2026-10-11T12:59:44+08:00
+
+## aubo_ros2_driver (父仓库)
+remote: https://github.com/AuboRobot/aubo_ros2_driver.git
+branch: jazzy
+HEAD:   53aab83735236f0c262ecb11e04ef2600241d9d9
+subject: Merge pull request #21 from HysteriaC/Jazzy
+date:   2026-03-19 19:04:53 +0800
+
+## aubo_description (子模块)
+remote: https://github.com/AuboRobot/aubo_description.git
+HEAD:   47fa5e02fa873f27f7e812d31f31e3f4cf5e56b1  (detached)
+subject: Merge pull request #3 from HysteriaC/main
+
+## git status --short --ignore-submodules=none (父仓库)
+ m aubo_description
+
+## submodule status
+ 47fa5e02fa873f27f7e812d31f31e3f4cf5e56b1 aubo_description (heads/main)

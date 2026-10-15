@@ -1,0 +1,38 @@
+[
+  {
+    "case": "basic_A",
+    "object": "battery_A",
+    "slot": "T0",
+    "trial_lift_mm": 19.501336637379406,
+    "center_error_mm": 0.036285760281908795,
+    "stable_seconds": 28.92,
+    "passed": true
+  },
+  {
+    "case": "sequence_CAB",
+    "object": "battery_C",
+    "slot": "P1",
+    "trial_lift_mm": 19.49935910632572,
+    "center_error_mm": 0.01352174511581291,
+    "stable_seconds": 366.91999999999996,
+    "passed": true
+  },
+  {
+    "case": "sequence_CAB",
+    "object": "battery_A",
+    "slot": "P2",
+    "trial_lift_mm": 19.501430075019922,
+    "center_error_mm": 0.03958010146024901,
+    "stable_seconds": 157.51999999999998,
+    "passed": true
+  },
+  {
+    "case": "sequence_CAB",
+    "object": "battery_B",
+    "slot": "P3",
+    "trial_lift_mm": 19.5014360572886,
+    "center_error_mm": 0.0405411712580396,
+    "stable_seconds": 28.659999999999968,
+    "passed": true
+  }
+]

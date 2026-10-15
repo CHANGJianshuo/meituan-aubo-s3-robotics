@@ -1,0 +1,13 @@
+# 在 planner.yaml 之上覆盖：V2 电磁锁止，从上方插入（插入方向 +Z 指向 -Z_world）。
+/**:
+  ros__parameters:
+    sequence:
+      tool_type: "magnetic_latch_v2"
+      ring:
+        quat_xyzw: [1.0, 0.0, 0.0, 0.0]    # 绕 x 180°：插入方向指向下方（PLACEHOLDER）
+    # V2 电磁锁止没有 CAD：关闭 V1 舌规工具模型，TCP 回到单位变换占位，插入行程保持 3 cm。
+    tool:
+      enabled: false
+    planner:
+      insert_travel_m: 0.03
+      withdraw_travel_m: 0.03
